@@ -1,0 +1,465 @@
+[2025-05-25 20:38:14][info][::1] Iniciando instalador de AUTOEXAM2
+[2025-05-25 20:38:14][success][::1] Directorio creado: /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AUTOEXAM2/tmp/cache
+[2025-05-25 20:38:14][info][::1] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 1
+[2025-05-25 20:38:14][info][::1] Comprobación versión PHP: OK - Version actual: 8.4.6
+[2025-05-25 20:38:14][info][::1] Extensión mysqli: OK
+[2025-05-25 20:38:14][info][::1] Extensión pdo: OK
+[2025-05-25 20:38:14][info][::1] Extensión pdo_mysql: OK
+[2025-05-25 20:38:14][info][::1] Extensión mbstring: OK
+[2025-05-25 20:38:14][info][::1] Extensión json: OK
+[2025-05-25 20:38:14][info][::1] Extensión gd: OK
+[2025-05-25 20:38:14][info][::1] Extensión xml: OK
+[2025-05-25 20:38:14][info][::1] Extensión curl: OK
+[2025-05-25 20:38:14][info][::1] Extensión zip: OK
+[2025-05-25 20:38:14][info][::1] Comprobación extensión mysqli: OK (CRÍTICA)
+[2025-05-25 20:38:14][info][::1] Comprobación extensión mbstring: OK (CRÍTICA)
+[2025-05-25 20:38:14][info][::1] Comprobación extensión json: OK (CRÍTICA)
+[2025-05-25 20:38:14][info][::1] Comprobación extensión openssl: OK (CRÍTICA)
+[2025-05-25 20:38:14][info][::1] Comprobación extensión fileinfo: OK
+[2025-05-25 20:38:14][info][::1] Comprobación extensión zip: OK
+[2025-05-25 20:38:14][info][::1] Comprobación extensión gd: OK
+[2025-05-25 20:38:14][info][::1] Comprobación extensión curl: OK
+[2025-05-25 20:38:14][info][::1] Comprobación extensión pdo: OK
+[2025-05-25 20:38:14][info][::1] Comprobación directorio raíz: OK
+[2025-05-25 20:38:14][info][::1] Comprobación directorio tmp: OK (CRÍTICO)
+[2025-05-25 20:38:14][info][::1] Comprobación directorio tmp/logs: OK (CRÍTICO)
+[2025-05-25 20:38:14][info][::1] Comprobación directorio tmp/cache: OK
+[2025-05-25 20:38:14][info][::1] Comprobación directorio config: OK (CRÍTICO)
+[2025-05-25 20:38:14][info][::1] Comprobación directorio publico/recursos: OK
+[2025-05-25 20:38:14][info][::1] Comprobación directorio publico/subidas: OK
+[2025-05-25 20:38:14][info][::1] Comprobación directorio documentacion: OK
+[2025-05-25 20:38:14][success][::1] Prueba de escritura .env exitosa
+[2025-05-25 20:38:28][info][::1] Iniciando instalador de AUTOEXAM2
+[2025-05-25 20:38:28][info][::1] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-05-25 20:38:28][info][::1] Comprobación versión PHP: OK - Version actual: 8.4.6
+[2025-05-25 20:38:28][info][::1] Extensión mysqli: OK
+[2025-05-25 20:38:28][info][::1] Extensión pdo: OK
+[2025-05-25 20:38:28][info][::1] Extensión pdo_mysql: OK
+[2025-05-25 20:38:28][info][::1] Extensión mbstring: OK
+[2025-05-25 20:38:28][info][::1] Extensión json: OK
+[2025-05-25 20:38:28][info][::1] Extensión gd: OK
+[2025-05-25 20:38:28][info][::1] Extensión xml: OK
+[2025-05-25 20:38:28][info][::1] Extensión curl: OK
+[2025-05-25 20:38:28][info][::1] Extensión zip: OK
+[2025-05-25 20:38:28][info][::1] Comprobación extensión mysqli: OK (CRÍTICA)
+[2025-05-25 20:38:28][info][::1] Comprobación extensión mbstring: OK (CRÍTICA)
+[2025-05-25 20:38:28][info][::1] Comprobación extensión json: OK (CRÍTICA)
+[2025-05-25 20:38:28][info][::1] Comprobación extensión openssl: OK (CRÍTICA)
+[2025-05-25 20:38:28][info][::1] Comprobación extensión fileinfo: OK
+[2025-05-25 20:38:28][info][::1] Comprobación extensión zip: OK
+[2025-05-25 20:38:28][info][::1] Comprobación extensión gd: OK
+[2025-05-25 20:38:28][info][::1] Comprobación extensión curl: OK
+[2025-05-25 20:38:28][info][::1] Comprobación extensión pdo: OK
+[2025-05-25 20:38:28][info][::1] Comprobación directorio raíz: OK
+[2025-05-25 20:38:28][info][::1] Comprobación directorio tmp: OK (CRÍTICO)
+[2025-05-25 20:38:28][info][::1] Comprobación directorio tmp/logs: OK (CRÍTICO)
+[2025-05-25 20:38:28][info][::1] Comprobación directorio tmp/cache: OK
+[2025-05-25 20:38:28][info][::1] Comprobación directorio config: OK (CRÍTICO)
+[2025-05-25 20:38:28][info][::1] Comprobación directorio publico/recursos: OK
+[2025-05-25 20:38:28][info][::1] Comprobación directorio publico/subidas: OK
+[2025-05-25 20:38:28][info][::1] Comprobación directorio documentacion: OK
+[2025-05-25 20:38:28][success][::1] Prueba de escritura .env exitosa
+[2025-05-25 20:38:50][info][::1] Iniciando instalador de AUTOEXAM2
+[2025-05-25 20:38:50][info][::1] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-05-25 20:38:50][info][::1] Comprobación versión PHP: OK - Version actual: 8.4.6
+[2025-05-25 20:38:50][info][::1] Extensión mysqli: OK
+[2025-05-25 20:38:50][info][::1] Extensión pdo: OK
+[2025-05-25 20:38:50][info][::1] Extensión pdo_mysql: OK
+[2025-05-25 20:38:50][info][::1] Extensión mbstring: OK
+[2025-05-25 20:38:50][info][::1] Extensión json: OK
+[2025-05-25 20:38:50][info][::1] Extensión gd: OK
+[2025-05-25 20:38:50][info][::1] Extensión xml: OK
+[2025-05-25 20:38:50][info][::1] Extensión curl: OK
+[2025-05-25 20:38:50][info][::1] Extensión zip: OK
+[2025-05-25 20:38:50][info][::1] Comprobación extensión mysqli: OK (CRÍTICA)
+[2025-05-25 20:38:50][info][::1] Comprobación extensión mbstring: OK (CRÍTICA)
+[2025-05-25 20:38:50][info][::1] Comprobación extensión json: OK (CRÍTICA)
+[2025-05-25 20:38:50][info][::1] Comprobación extensión openssl: OK (CRÍTICA)
+[2025-05-25 20:38:50][info][::1] Comprobación extensión fileinfo: OK
+[2025-05-25 20:38:50][info][::1] Comprobación extensión zip: OK
+[2025-05-25 20:38:50][info][::1] Comprobación extensión gd: OK
+[2025-05-25 20:38:50][info][::1] Comprobación extensión curl: OK
+[2025-05-25 20:38:50][info][::1] Comprobación extensión pdo: OK
+[2025-05-25 20:38:50][info][::1] Comprobación directorio raíz: OK
+[2025-05-25 20:38:50][info][::1] Comprobación directorio tmp: OK (CRÍTICO)
+[2025-05-25 20:38:50][info][::1] Comprobación directorio tmp/logs: OK (CRÍTICO)
+[2025-05-25 20:38:50][info][::1] Comprobación directorio tmp/cache: OK
+[2025-05-25 20:38:50][info][::1] Comprobación directorio config: OK (CRÍTICO)
+[2025-05-25 20:38:50][info][::1] Comprobación directorio publico/recursos: OK
+[2025-05-25 20:38:50][info][::1] Comprobación directorio publico/subidas: OK
+[2025-05-25 20:38:50][info][::1] Comprobación directorio documentacion: OK
+[2025-05-25 20:38:50][success][::1] Prueba de escritura .env exitosa
+[2025-05-25 20:39:13][info][::1] Iniciando instalador de AUTOEXAM2
+[2025-05-25 20:39:13][info][::1] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-05-25 20:39:13][info][::1] Comprobación versión PHP: OK - Version actual: 8.4.6
+[2025-05-25 20:39:13][info][::1] Extensión mysqli: OK
+[2025-05-25 20:39:13][info][::1] Extensión pdo: OK
+[2025-05-25 20:39:13][info][::1] Extensión pdo_mysql: OK
+[2025-05-25 20:39:13][info][::1] Extensión mbstring: OK
+[2025-05-25 20:39:13][info][::1] Extensión json: OK
+[2025-05-25 20:39:13][info][::1] Extensión gd: OK
+[2025-05-25 20:39:13][info][::1] Extensión xml: OK
+[2025-05-25 20:39:13][info][::1] Extensión curl: OK
+[2025-05-25 20:39:13][info][::1] Extensión zip: OK
+[2025-05-25 20:39:13][info][::1] Comprobación extensión mysqli: OK (CRÍTICA)
+[2025-05-25 20:39:13][info][::1] Comprobación extensión mbstring: OK (CRÍTICA)
+[2025-05-25 20:39:13][info][::1] Comprobación extensión json: OK (CRÍTICA)
+[2025-05-25 20:39:13][info][::1] Comprobación extensión openssl: OK (CRÍTICA)
+[2025-05-25 20:39:13][info][::1] Comprobación extensión fileinfo: OK
+[2025-05-25 20:39:13][info][::1] Comprobación extensión zip: OK
+[2025-05-25 20:39:13][info][::1] Comprobación extensión gd: OK
+[2025-05-25 20:39:13][info][::1] Comprobación extensión curl: OK
+[2025-05-25 20:39:13][info][::1] Comprobación extensión pdo: OK
+[2025-05-25 20:39:13][info][::1] Comprobación directorio raíz: OK
+[2025-05-25 20:39:13][info][::1] Comprobación directorio tmp: OK (CRÍTICO)
+[2025-05-25 20:39:13][info][::1] Comprobación directorio tmp/logs: OK (CRÍTICO)
+[2025-05-25 20:39:13][info][::1] Comprobación directorio tmp/cache: OK
+[2025-05-25 20:39:13][info][::1] Comprobación directorio config: OK (CRÍTICO)
+[2025-05-25 20:39:13][info][::1] Comprobación directorio publico/recursos: OK
+[2025-05-25 20:39:13][info][::1] Comprobación directorio publico/subidas: OK
+[2025-05-25 20:39:13][info][::1] Comprobación directorio documentacion: OK
+[2025-05-25 20:39:13][success][::1] Prueba de escritura .env exitosa
+[2025-05-27 12:33:28][info][::1] Iniciando instalador de AUTOEXAM2
+[2025-05-27 12:33:28][warning][::1] Archivo .env no encontrado en: /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AUTOEXAM2/.env
+[2025-05-27 12:34:27][info][::1] Iniciando instalador de AUTOEXAM2
+[2025-05-27 12:34:27][warning][::1] Archivo .env no encontrado en: /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AUTOEXAM2/.env
+[2025-05-27 12:34:30][info][::1] Iniciando instalador de AUTOEXAM2
+[2025-05-27 12:34:30][warning][::1] Archivo .env no encontrado en: /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AUTOEXAM2/.env
+[2025-05-27 13:27:10][info][desconocida] Iniciando instalador de AUTOEXAM2
+[2025-05-27 13:27:10][warning][desconocida] Archivo .env no encontrado en: /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AUTOEXAM2/.env
+[2025-06-10 14:54:25][info][::1] Iniciando instalador de AUTOEXAM2
+[2025-06-10 14:54:25][info][::1] Funciones de gestión de tablas cargadas correctamente
+[2025-06-10 14:54:25][info][::1] Archivo .env detectado pero falta .lock. Permitiendo reinstalación con datos precargados.
+[2025-06-10 14:54:25][debug][::1] Variable DB_HOST cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable DB_NAME cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable DB_USER cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable DB_PASS cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable DB_PORT cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable SMTP_HOST cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable SMTP_USER cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable SMTP_PASS cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable SMTP_PORT cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable SMTP_SECURE cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_HOST cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_USER cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_PASS cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_PORT cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_PATH cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_SECURE cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_TYPE cargada desde .env
+[2025-06-10 14:54:25][info][::1] Configuración existente cargada desde .env: 17 variables
+[2025-06-10 14:54:25][debug][::1] Variable DB_HOST cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable DB_NAME cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable DB_USER cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable DB_PASS cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable DB_PORT cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable SMTP_HOST cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable SMTP_USER cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable SMTP_PASS cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable SMTP_PORT cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable SMTP_SECURE cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_HOST cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_USER cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_PASS cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_PORT cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_PATH cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_SECURE cargada desde .env
+[2025-06-10 14:54:25][debug][::1] Variable FTP_TYPE cargada desde .env
+[2025-06-10 14:54:25][info][::1] Configuración existente cargada desde .env: 17 variables
+[2025-06-10 14:54:25][info][::1] Tipo de conexión obtenido directamente de FTP_TYPE: sftp
+[2025-06-10 14:54:25][debug][::1] Puerto FTP/SFTP configurado: 22 (por defecto: 22)
+[2025-06-10 14:54:25][info][::1] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-10 14:54:25][info][::1] Comprobación versión PHP: OK - Version actual: 8.4.6
+[2025-06-10 14:54:25][info][::1] Extensión mysqli: OK
+[2025-06-10 14:54:25][info][::1] Extensión pdo: OK
+[2025-06-10 14:54:25][info][::1] Extensión pdo_mysql: OK
+[2025-06-10 14:54:25][info][::1] Extensión mbstring: OK
+[2025-06-10 14:54:25][info][::1] Extensión json: OK
+[2025-06-10 14:54:25][info][::1] Extensión gd: OK
+[2025-06-10 14:54:25][info][::1] Extensión xml: OK
+[2025-06-10 14:54:25][info][::1] Extensión curl: OK
+[2025-06-10 14:54:25][info][::1] Extensión zip: OK
+[2025-06-10 14:54:25][info][::1] Comprobación extensión mysqli: OK (CRÍTICA)
+[2025-06-10 14:54:25][info][::1] Comprobación extensión mbstring: OK (CRÍTICA)
+[2025-06-10 14:54:25][info][::1] Comprobación extensión json: OK (CRÍTICA)
+[2025-06-10 14:54:25][info][::1] Comprobación extensión openssl: OK (CRÍTICA)
+[2025-06-10 14:54:25][info][::1] Comprobación extensión fileinfo: OK
+[2025-06-10 14:54:25][info][::1] Comprobación extensión zip: OK
+[2025-06-10 14:54:25][info][::1] Comprobación extensión gd: OK
+[2025-06-10 14:54:25][info][::1] Comprobación extensión curl: OK
+[2025-06-10 14:54:25][info][::1] Comprobación extensión pdo: OK
+[2025-06-10 14:54:25][info][::1] Comprobación directorio raíz: OK
+[2025-06-10 14:54:25][info][::1] Comprobación directorio tmp: OK (CRÍTICO)
+[2025-06-10 14:54:25][info][::1] Comprobación directorio tmp/logs: OK (CRÍTICO)
+[2025-06-10 14:54:25][info][::1] Comprobación directorio tmp/cache: OK
+[2025-06-10 14:54:25][info][::1] Comprobación directorio config: OK (CRÍTICO)
+[2025-06-10 14:54:25][info][::1] Comprobación directorio publico/recursos: OK
+[2025-06-10 14:54:25][info][::1] Comprobación directorio publico/subidas: OK
+[2025-06-10 14:54:25][info][::1] Comprobación directorio documentacion: OK
+[2025-06-10 14:54:25][success][::1] Prueba de escritura .env exitosa
+[2025-06-10 15:11:39][info][::1] Iniciando instalador de AUTOEXAM2
+[2025-06-10 15:11:39][info][::1] Funciones de gestión de tablas cargadas correctamente
+[2025-06-10 15:11:39][info][::1] Archivo .env detectado pero falta .lock. Permitiendo reinstalación con datos precargados.
+[2025-06-10 15:11:39][debug][::1] Variable DB_HOST cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable DB_NAME cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable DB_USER cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable DB_PASS cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable DB_PORT cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable SMTP_HOST cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable SMTP_USER cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable SMTP_PASS cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable SMTP_PORT cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable SMTP_SECURE cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_HOST cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_USER cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_PASS cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_PORT cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_PATH cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_SECURE cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_TYPE cargada desde .env
+[2025-06-10 15:11:39][info][::1] Configuración existente cargada desde .env: 17 variables
+[2025-06-10 15:11:39][debug][::1] Variable DB_HOST cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable DB_NAME cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable DB_USER cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable DB_PASS cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable DB_PORT cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable SMTP_HOST cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable SMTP_USER cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable SMTP_PASS cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable SMTP_PORT cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable SMTP_SECURE cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_HOST cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_USER cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_PASS cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_PORT cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_PATH cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_SECURE cargada desde .env
+[2025-06-10 15:11:39][debug][::1] Variable FTP_TYPE cargada desde .env
+[2025-06-10 15:11:39][info][::1] Configuración existente cargada desde .env: 17 variables
+[2025-06-10 15:11:39][info][::1] Tipo de conexión obtenido directamente de FTP_TYPE: sftp
+[2025-06-10 15:11:39][debug][::1] Puerto FTP/SFTP configurado: 22 (por defecto: 22)
+[2025-06-10 15:11:39][info][::1] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-10 15:11:39][info][::1] Comprobación versión PHP: OK - Version actual: 8.4.6
+[2025-06-10 15:11:39][info][::1] Extensión mysqli: OK
+[2025-06-10 15:11:39][info][::1] Extensión pdo: OK
+[2025-06-10 15:11:39][info][::1] Extensión pdo_mysql: OK
+[2025-06-10 15:11:39][info][::1] Extensión mbstring: OK
+[2025-06-10 15:11:39][info][::1] Extensión json: OK
+[2025-06-10 15:11:39][info][::1] Extensión gd: OK
+[2025-06-10 15:11:39][info][::1] Extensión xml: OK
+[2025-06-10 15:11:39][info][::1] Extensión curl: OK
+[2025-06-10 15:11:39][info][::1] Extensión zip: OK
+[2025-06-10 15:11:39][info][::1] Comprobación extensión mysqli: OK (CRÍTICA)
+[2025-06-10 15:11:39][info][::1] Comprobación extensión mbstring: OK (CRÍTICA)
+[2025-06-10 15:11:39][info][::1] Comprobación extensión json: OK (CRÍTICA)
+[2025-06-10 15:11:39][info][::1] Comprobación extensión openssl: OK (CRÍTICA)
+[2025-06-10 15:11:39][info][::1] Comprobación extensión fileinfo: OK
+[2025-06-10 15:11:39][info][::1] Comprobación extensión zip: OK
+[2025-06-10 15:11:39][info][::1] Comprobación extensión gd: OK
+[2025-06-10 15:11:39][info][::1] Comprobación extensión curl: OK
+[2025-06-10 15:11:39][info][::1] Comprobación extensión pdo: OK
+[2025-06-10 15:11:39][info][::1] Comprobación directorio raíz: OK
+[2025-06-10 15:11:39][info][::1] Comprobación directorio tmp: OK (CRÍTICO)
+[2025-06-10 15:11:39][info][::1] Comprobación directorio tmp/logs: OK (CRÍTICO)
+[2025-06-10 15:11:39][info][::1] Comprobación directorio tmp/cache: OK
+[2025-06-10 15:11:39][info][::1] Comprobación directorio config: OK (CRÍTICO)
+[2025-06-10 15:11:39][info][::1] Comprobación directorio publico/recursos: OK
+[2025-06-10 15:11:39][info][::1] Comprobación directorio publico/subidas: OK
+[2025-06-10 15:11:39][info][::1] Comprobación directorio documentacion: OK
+[2025-06-10 15:11:39][success][::1] Prueba de escritura .env exitosa
+[2025-06-10 15:12:13][info][::1] Iniciando instalador de AUTOEXAM2
+[2025-06-10 15:12:13][info][::1] Funciones de gestión de tablas cargadas correctamente
+[2025-06-10 15:12:13][info][::1] Archivo .env detectado pero falta .lock. Permitiendo reinstalación con datos precargados.
+[2025-06-10 15:12:13][debug][::1] Variable DB_HOST cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable DB_NAME cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable DB_USER cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable DB_PASS cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable DB_PORT cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable SMTP_HOST cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable SMTP_USER cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable SMTP_PASS cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable SMTP_PORT cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable SMTP_SECURE cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_HOST cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_USER cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_PASS cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_PORT cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_PATH cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_SECURE cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_TYPE cargada desde .env
+[2025-06-10 15:12:13][info][::1] Configuración existente cargada desde .env: 17 variables
+[2025-06-10 15:12:13][debug][::1] Variable DB_HOST cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable DB_NAME cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable DB_USER cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable DB_PASS cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable DB_PORT cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable SMTP_HOST cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable SMTP_USER cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable SMTP_PASS cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable SMTP_PORT cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable SMTP_SECURE cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_HOST cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_USER cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_PASS cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_PORT cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_PATH cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_SECURE cargada desde .env
+[2025-06-10 15:12:13][debug][::1] Variable FTP_TYPE cargada desde .env
+[2025-06-10 15:12:13][info][::1] Configuración existente cargada desde .env: 17 variables
+[2025-06-10 15:12:13][info][::1] Tipo de conexión obtenido directamente de FTP_TYPE: sftp
+[2025-06-10 15:12:13][debug][::1] Puerto FTP/SFTP configurado: 22 (por defecto: 22)
+[2025-06-10 15:12:13][info][::1] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-10 15:12:13][info][::1] Comprobación versión PHP: OK - Version actual: 8.4.6
+[2025-06-10 15:12:13][info][::1] Extensión mysqli: OK
+[2025-06-10 15:12:13][info][::1] Extensión pdo: OK
+[2025-06-10 15:12:13][info][::1] Extensión pdo_mysql: OK
+[2025-06-10 15:12:13][info][::1] Extensión mbstring: OK
+[2025-06-10 15:12:13][info][::1] Extensión json: OK
+[2025-06-10 15:12:13][info][::1] Extensión gd: OK
+[2025-06-10 15:12:13][info][::1] Extensión xml: OK
+[2025-06-10 15:12:13][info][::1] Extensión curl: OK
+[2025-06-10 15:12:13][info][::1] Extensión zip: OK
+[2025-06-10 15:12:13][info][::1] Comprobación extensión mysqli: OK (CRÍTICA)
+[2025-06-10 15:12:13][info][::1] Comprobación extensión mbstring: OK (CRÍTICA)
+[2025-06-10 15:12:13][info][::1] Comprobación extensión json: OK (CRÍTICA)
+[2025-06-10 15:12:13][info][::1] Comprobación extensión openssl: OK (CRÍTICA)
+[2025-06-10 15:12:13][info][::1] Comprobación extensión fileinfo: OK
+[2025-06-10 15:12:13][info][::1] Comprobación extensión zip: OK
+[2025-06-10 15:12:13][info][::1] Comprobación extensión gd: OK
+[2025-06-10 15:12:13][info][::1] Comprobación extensión curl: OK
+[2025-06-10 15:12:13][info][::1] Comprobación extensión pdo: OK
+[2025-06-10 15:12:13][info][::1] Comprobación directorio raíz: OK
+[2025-06-10 15:12:13][info][::1] Comprobación directorio tmp: OK (CRÍTICO)
+[2025-06-10 15:12:13][info][::1] Comprobación directorio tmp/logs: OK (CRÍTICO)
+[2025-06-10 15:12:13][info][::1] Comprobación directorio tmp/cache: OK
+[2025-06-10 15:12:13][info][::1] Comprobación directorio config: OK (CRÍTICO)
+[2025-06-10 15:12:13][info][::1] Comprobación directorio publico/recursos: OK
+[2025-06-10 15:12:13][info][::1] Comprobación directorio publico/subidas: OK
+[2025-06-10 15:12:13][info][::1] Comprobación directorio documentacion: OK
+[2025-06-10 15:12:13][success][::1] Prueba de escritura .env exitosa
+[2025-06-12 11:35:46][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:35:46][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:35:46][warning][2a09:bac3:3146:191::28:e6] Instalación previa detectada (.env y .lock existen). Redirigiendo al índice principal.
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:36:37][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Tipo de conexión inferido desde FTP_SECURE (false): ftp
+[2025-06-12 11:36:37][debug][2a09:bac3:3146:191::28:e6] Puerto FTP/SFTP configurado: 21 (por defecto: 21)
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación versión PHP: OK - Version actual: 8.4.7
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Extensión mysqli: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Extensión pdo: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Extensión pdo_mysql: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Extensión mbstring: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Extensión json: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Extensión gd: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Extensión xml: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Extensión curl: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Extensión zip: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación extensión mysqli: OK (CRÍTICA)
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación extensión mbstring: OK (CRÍTICA)
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación extensión json: OK (CRÍTICA)
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación extensión openssl: OK (CRÍTICA)
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación extensión fileinfo: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación extensión zip: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación extensión gd: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación extensión curl: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación extensión pdo: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación directorio raíz: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación directorio tmp: OK (CRÍTICO)
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación directorio tmp/logs: OK (CRÍTICO)
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación directorio tmp/cache: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación directorio config: OK (CRÍTICO)
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación directorio publico/recursos: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación directorio publico/subidas: OK
+[2025-06-12 11:36:37][info][2a09:bac3:3146:191::28:e6] Comprobación directorio documentacion: OK
+[2025-06-12 11:36:37][success][2a09:bac3:3146:191::28:e6] Prueba de escritura .env exitosa
+[2025-06-12 11:36:40][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:36:40][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:36:40][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:36:40][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:36:40][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:37:16][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:37:16][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:37:16][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:37:16][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:37:16][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:37:16][info][2a09:bac3:3146:191::28:e6] Procesando formulario de BD: host=db5017707563.hosting-data.io, db=dbs14153299, user=dbu2169305
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:37:17][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Procesando formulario de BD: host=db5017707563.hosting-data.io, db=dbs14153299, user=dbu2169305
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Usando el verificador avanzado de base de datos para: db5017707563.hosting-data.io / dbs14153299
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Intentando verificar base de datos: host=db5017707563.hosting-data.io, usuario=dbu2169305, base=dbs14153299
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Base de datos 'dbs14153299' encontrada
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Verificación de permisos: Todos los permisos necesarios disponibles
+[2025-06-12 11:37:17][success][2a09:bac3:3146:191::28:e6] Validación de BD completada con éxito: host=db5017707563.hosting-data.io, db=dbs14153299
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Estado de verificación de BD guardado en sesión: VERIFICADA
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Resultado verificación BD - Success: SI | DB Existe: SI | Puede crear: NO
+[2025-06-12 11:37:17][info][2a09:bac3:3146:191::28:e6] Se encontraron 14 tablas existentes del sistema AUTOEXAM2 en la base de datos.
+[2025-06-12 11:37:18][warning][2a09:bac3:3146:191::28:e6] Las siguientes tablas ya contienen datos: usuarios (1 registros)
+[2025-06-12 11:37:18][warning][2a09:bac3:3146:191::28:e6] Se encontraron 14 tablas existentes
+[2025-06-12 11:37:20][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:37:20][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:37:20][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:37:20][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:37:20][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:37:20][info][2a09:bac3:3146:191::28:e6] Procesando formulario de BD: host=db5017707563.hosting-data.io, db=dbs14153299, user=dbu2169305
+[2025-06-12 11:37:30][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:37:30][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:37:30][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:37:30][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:37:30][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:37:31][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:37:31][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:37:31][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:37:31][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:37:31][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:37:58][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:37:58][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:37:58][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:37:58][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:37:58][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:37:58][info][2a09:bac3:3146:191::28:e6] Puerto FTP/SFTP ajustado automáticamente a 22 basado en el tipo de conexión (sftp)
+[2025-06-12 11:37:58][info][2a09:bac3:3146:191::28:e6] Probando conexión sftp a home491590459.1and1-data.host:22 con usuario acc941762433
+[2025-06-12 11:37:58][success][2a09:bac3:3146:191::28:e6] Conexión sftp a home491590459.1and1-data.host:22 verificada con éxito
+[2025-06-12 11:37:59][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:37:59][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:37:59][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:37:59][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:37:59][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:38:02][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:38:02][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:38:02][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:38:02][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:38:02][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:38:04][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:38:04][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:38:04][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:38:04][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:38:04][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:38:04][info][2a09:bac3:3146:191::28:e6] Se encontraron 14 tablas existentes del sistema AUTOEXAM2 en la base de datos.
+[2025-06-12 11:38:04][warning][2a09:bac3:3146:191::28:e6] Las siguientes tablas ya contienen datos: usuarios (1 registros)
+[2025-06-12 11:38:04][warning][2a09:bac3:3146:191::28:e6] Se encontraron 14 tablas existentes en la base de datos
+[2025-06-12 11:38:11][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:38:11][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:38:11][info][2a09:bac3:3146:191::28:e6] No se detectó instalación previa. Procediendo con instalación nueva.
+[2025-06-12 11:38:11][warning][2a09:bac3:3146:191::28:e6] Archivo .env no encontrado en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:38:11][info][2a09:bac3:3146:191::28:e6] Verificación de directorios - Correctos: 7, Incorrectos: 0, Creados: 0
+[2025-06-12 11:38:11][warning][2a09:bac3:3146:191::28:e6] Eliminando todas las tablas existentes...
+[2025-06-12 11:38:11][info][2a09:bac3:3146:191::28:e6] Todas las tablas existentes han sido eliminadas de la base de datos 'dbs14153299'
+[2025-06-12 11:38:11][success][2a09:bac3:3146:191::28:e6] Se eliminaron  tablas correctamente
+[2025-06-12 11:38:11][info][2a09:bac3:3146:191::28:e6] Ejecutando script SQL completo desde: /homepages/22/d491590459/htdocs/autoexam/documentacion/00_sql/autoexam2.sql
+[2025-06-12 11:38:11][info][2a09:bac3:3146:191::28:e6] Tamaño del archivo SQL: 0.01 MB
+[2025-06-12 11:38:11][info][2a09:bac3:3146:191::28:e6] Ejecutando SQL con método estándar
+[2025-06-12 11:38:12][info][2a09:bac3:3146:191::28:e6] Tiempo total de ejecución SQL: 0.36 segundos
+[2025-06-12 11:38:12][success][2a09:bac3:3146:191::28:e6] Ejecución SQL exitosa
+[2025-06-12 11:38:12][success][2a09:bac3:3146:191::28:e6] Usuario administrador creado: no_contestar@autoexam.epla.es (ID: 1)
+[2025-06-12 11:38:12][info][2a09:bac3:3146:191::28:e6] Configuración FTP guardada en .env: tipo=sftp, puerto=22
+[2025-06-12 11:38:12][info][2a09:bac3:3146:191::28:e6] Generando archivo de configuración .env en: /homepages/22/d491590459/htdocs/autoexam/.env
+[2025-06-12 11:38:26][info][2a09:bac3:3146:191::28:e6] Iniciando instalador de AUTOEXAM2
+[2025-06-12 11:38:26][info][2a09:bac3:3146:191::28:e6] Funciones de gestión de tablas cargadas correctamente
+[2025-06-12 11:38:26][warning][2a09:bac3:3146:191::28:e6] Instalación previa detectada (.env y .lock existen). Redirigiendo al índice principal.

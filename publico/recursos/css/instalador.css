@@ -1,0 +1,257 @@
+/* 
+ * AUTOEXAM2 - Hoja de estilos del instalador
+ * Estilos para la interfaz del instalador con Bootstrap
+ */
+
+body { 
+    background: #f8f9fa; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.app-container { 
+    max-width: 900px; 
+    margin: 40px auto; 
+    background: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
+    padding: 32px; 
+}
+
+h1 { 
+    color: #0d6efd; 
+    margin-top: 0; 
+}
+
+/* Barra de progreso personalizada */
+.custom-progress-container { 
+    display: flex; 
+    justify-content: space-between; 
+    margin: 40px 0; 
+    position: relative; 
+}
+
+.custom-progress-container::before { 
+    content: ""; 
+    position: absolute; 
+    top: 24px; 
+    left: 0; 
+    width: 100%; 
+    height: 4px; 
+    background: #e9ecef; 
+    z-index: 0; 
+}
+
+.custom-progress-inner { 
+    position: absolute; 
+    top: 24px; 
+    left: 0; 
+    height: 4px; 
+    background: #0d6efd; 
+    z-index: 1; 
+    transition: width 0.4s ease; 
+}
+
+.custom-step { 
+    position: relative; 
+    z-index: 2; 
+    text-align: center; 
+}
+
+.custom-step-number { 
+    width: 48px; 
+    height: 48px; 
+    border-radius: 50%; 
+    background: #e9ecef; 
+    color: #6c757d; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    font-weight: bold; 
+    border: none; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+
+.custom-step.active .custom-step-number { 
+    background: #0d6efd; 
+    color: white; 
+}
+
+.custom-step.completed .custom-step-number { 
+    background: #198754; 
+    color: white; 
+}
+
+.custom-step.disabled .custom-step-number { 
+    cursor: not-allowed; 
+}
+
+.custom-step-label { 
+    margin-top: 8px;
+    text-align: center;
+}
+
+.custom-step-paso {
+    font-size: 16px;
+    font-weight: bold;
+    color: #495057;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.custom-step-nombre {
+    font-size: 12px; 
+    color: #6c757d;
+    font-weight: 500;
+    display: block;
+}
+
+.custom-step.active .custom-step-paso { 
+    color: #0d6efd; 
+}
+
+.custom-step.active .custom-step-nombre { 
+    color: #0d6efd; 
+    font-weight: bold; 
+}
+
+/* Contenido de pestañas */
+.tab-content { 
+    display: none; 
+}
+
+.tab-content.active { 
+    display: block; 
+}
+
+/* Iconos y elementos de formulario */
+.input-group-text { 
+    background-color: #f8f9fa; 
+}
+
+.form-floating > label { 
+    padding: 1rem 0.75rem; 
+}
+
+/* Otros elementos */
+.icon-success { 
+    color: #198754; 
+}
+
+.icon-error { 
+    color: #dc3545; 
+}
+
+/* Tooltip personalizado */
+.custom-tooltip { 
+    position: relative; 
+    display: inline-block; 
+}
+
+.custom-tooltip .tooltip-text { 
+    visibility: hidden; 
+    width: 200px; 
+    background-color: #212529; 
+    color: #fff; 
+    text-align: center; 
+    border-radius: 6px; 
+    padding: 5px; 
+    position: absolute; 
+    z-index: 1; 
+    bottom: 125%; 
+    left: 50%; 
+    margin-left: -100px; 
+    opacity: 0; 
+    transition: opacity 0.3s; 
+    font-size: 12px; 
+}
+
+.custom-tooltip .tooltip-text::after { 
+    content: ""; 
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    margin-left: -5px; 
+    border-width: 5px; 
+    border-style: solid; 
+    border-color: #212529 transparent transparent transparent; 
+}
+
+.custom-tooltip:hover .tooltip-text { 
+    visibility: visible; 
+    opacity: 1; 
+}
+
+/* Ajustes adicionales */
+.form-section { 
+    margin-top: 30px; 
+}
+
+/* Elementos específicos de formularios */
+.card-header {
+    padding: 1rem 1.25rem;
+}
+
+.card {
+    margin-bottom: 2rem;
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Mejoras para dispositivos móviles */
+@media (max-width: 768px) {
+    .app-container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+    
+    .custom-step-label {
+        font-size: 11px;
+    }
+    
+    .custom-step-number {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Contenedor de mensajes unificado para el paso 2 */
+.mensajes-container {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+}
+
+/* Ajustes para las alertas dentro del contenedor de mensajes */
+.mensajes-container .alert {
+    margin-bottom: 8px;
+}
+
+.mensajes-container .alert:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilo cuando no hay mensajes para mostrar */
+.mensajes-container:empty {
+    display: none;
+}
+
+/* Añade un poco de animación a los mensajes */
+.mensajes-container .alert {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

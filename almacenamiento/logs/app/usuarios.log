@@ -1,0 +1,5 @@
+[2025-06-14 19:11:57] [INFO] [usuarios] Usuario encontrado por correo | {"proceso_id":3434986,"memoria_uso":2097152,"archivo":"usuario_modelo.php","linea":81,"usuario_id":1,"correo":"no_contestar@autoexam.epla.es","rol":"admin"}
+[2025-06-14 19:19:48] [INFO] [usuarios] Usuario encontrado por correo | {"proceso_id":3473833,"memoria_uso":2097152,"archivo":"usuario_modelo.php","linea":81,"usuario_id":1,"correo":"no_contestar@autoexam.epla.es","rol":"admin"}
+[2025-06-14 19:20:33] [INFO] [usuarios] Usuario encontrado por correo | {"proceso_id":3477950,"memoria_uso":2097152,"archivo":"usuario_modelo.php","linea":81,"usuario_id":1,"correo":"no_contestar@autoexam.epla.es","rol":"admin"}
+[2025-06-14 19:20:46] [INFO] [usuarios] Usuario encontrado por correo | {"proceso_id":3478681,"memoria_uso":2097152,"archivo":"usuario_modelo.php","linea":81,"usuario_id":1,"correo":"no_contestar@autoexam.epla.es","rol":"admin"}
+[2025-06-14 19:20:54] [INFO] [usuarios] Usuario encontrado por correo | {"proceso_id":3478950,"memoria_uso":2097152,"archivo":"usuario_modelo.php","linea":81,"usuario_id":1,"correo":"no_contestar@autoexam.epla.es","rol":"admin"}

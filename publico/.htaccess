@@ -1,0 +1,37 @@
+# filepath: /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AUTOEXAM2/publico/.htaccess
+
+# Habilitar el módulo de reescritura
+RewriteEngine On
+RewriteBase /
+
+# Excluir completamente el directorio diagnóstico de cualquier regla
+RewriteCond %{REQUEST_URI} !^/diagnostico/
+RewriteCond %{REQUEST_URI} !^/diagnostico$
+
+# Redirigir todas las solicitudes a index.php excepto para archivos y directorios reales
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Impedir acceso directo a archivos .htaccess
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Impedir navegación de directorios
+Options -Indexes
+
+# Establecer cabeceras para mejorar la seguridad
+<IfModule mod_headers.c>
+    # Protección XSS
+    Header set X-XSS-Protection "1; mode=block"
+    # Prevenir que el navegador intente MIME-sniffing
+    Header set X-Content-Type-Options "nosniff"
+    # Control de frames - misma fuente únicamente
+    Header set X-Frame-Options "SAMEORIGIN"
+    # Content-Security-Policy básica
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'"
+    # Habilitar HTTP Strict Transport Security (HSTS)
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>

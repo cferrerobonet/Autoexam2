@@ -1,0 +1,40 @@
+# Respaldos de Base de Datos
+
+Esta carpeta está destinada para almacenar copias de seguridad de la base de datos AUTOEXAM2.
+
+## 📋 Tipos de Respaldo Recomendados
+
+### 🔄 Respaldo Completo
+```bash
+# Ejemplo de comando para crear respaldo completo
+mysqldump -u usuario -p base_datos > respaldos/autoexam2_completo_YYYYMMDD.sql
+```
+
+### 📊 Respaldo Solo Datos
+```bash
+# Solo datos, sin estructura
+mysqldump -u usuario -p --no-create-info base_datos > respaldos/autoexam2_datos_YYYYMMDD.sql
+```
+
+### 🏗️ Respaldo Solo Estructura
+```bash
+# Solo estructura, sin datos
+mysqldump -u usuario -p --no-data base_datos > respaldos/autoexam2_estructura_YYYYMMDD.sql
+```
+
+## 📅 Convención de Nombres
+
+- `autoexam2_completo_YYYYMMDD_HHMM.sql` - Respaldo completo
+- `autoexam2_datos_YYYYMMDD_HHMM.sql` - Solo datos
+- `autoexam2_estructura_YYYYMMDD_HHMM.sql` - Solo estructura
+- `autoexam2_pre_actualizacion_YYYYMMDD.sql` - Antes de actualizaciones
+
+## ⚠️ Importante
+
+- Programa respaldos automáticos regulares
+- Verifica la integridad de los respaldos periódicamente
+- Mantén respaldos en ubicaciones seguras
+- Elimina respaldos antiguos según tu política de retención
+
+---
+*Esta carpeta se mantiene intencionalmente vacía en el repositorio*

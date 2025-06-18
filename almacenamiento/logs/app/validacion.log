@@ -1,0 +1,3 @@
+[2025-06-14 16:52:10] [INFO] [validacion] Test de validación simplificada | {"proceso_id":13660,"memoria_uso":2097152,"archivo":"validar_logs_simple.php","linea":61,"timestamp":"2025-06-14 16:52:10","test":"simplificado"}
+[2025-06-14 16:52:10] [WARNING] [validacion] Test warning | {"proceso_id":13660,"memoria_uso":2097152,"archivo":"validar_logs_simple.php","linea":67}
+[2025-06-14 16:52:10] [ERROR] [validacion] Test error | {"proceso_id":13660,"memoria_uso":2097152,"archivo":"validar_logs_simple.php","linea":68}

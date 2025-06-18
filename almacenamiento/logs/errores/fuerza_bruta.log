@@ -1,0 +1,3 @@
+[2025-06-13 21:18:09] Error al limpiar registros antiguos: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbs14153299.intentos_login' doesn't exist
+[2025-06-13 21:18:09] Error al verificar bloqueo: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbs14153299.intentos_login' doesn't exist
+[2025-06-13 21:18:09] Error al reiniciar intentos: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbs14153299.intentos_login' doesn't exist

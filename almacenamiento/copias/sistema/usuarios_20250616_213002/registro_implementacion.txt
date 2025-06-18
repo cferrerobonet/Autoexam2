@@ -1,0 +1,6 @@
+Implementación de módulo de usuarios refactorizado
+Fecha: lunes, 16 de junio de 2025, 21:30:02 CEST
+Archivos refactorizados:
+- app/modelos/usuario_modelo.php
+- app/controladores/usuarios_controlador.php
+Copias de seguridad ubicadas en: /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AUTOEXAM2/almacenamiento/copias/sistema/usuarios_20250616_213002

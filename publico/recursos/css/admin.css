@@ -1,0 +1,609 @@
+/**
+ * Estilos para el Dashboard de Administración - AUTOEXAM2
+ * 
+ * Específicos para el panel de control de administradores
+ */
+
+/* Colores personalizados */
+:root {
+  --color-admin-primary: #4285F4;
+  --color-admin-secondary: #34A853;
+  --color-admin-danger: #EA4335;
+  --color-admin-warning: #FBBC05;
+  --color-admin-info: #46BFBD;
+  --color-admin-sidebar-bg: #f8f9fa;
+  --color-admin-sidebar-text: #495057;
+  --color-admin-sidebar-active: #4285F4;
+  --color-admin-sidebar-hover: #e9ecef;
+  --color-admin-sidebar-border: #dee2e6;
+}
+
+/* Colores de fondo para contadores */
+.bg-admin-secondary {
+  background-color: var(--color-admin-secondary);
+}
+
+.bg-admin-danger {
+  background-color: var(--color-admin-danger);
+}
+
+.bg-admin-warning {
+  background-color: var(--color-admin-warning);
+}
+
+.bg-admin-info {
+  background-color: var(--color-admin-info);
+}
+
+/* Iconos en los accesos rápidos */
+.admin-acceso-rapido {
+  transition: all 0.3s ease;
+}
+
+.admin-acceso-rapido:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.admin-acceso-rapido i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Tablas de datos */
+.table-admin th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+}
+
+.table-admin.table-hover tbody tr:hover {
+  background-color: rgba(66, 133, 244, 0.05);
+}
+
+/* Indicadores de estado */
+.estado-sistema {
+  display: flex;
+  align-items: center;
+}
+
+.estado-sistema .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.estado-sistema .indicator.active {
+  background-color: #34A853;
+}
+
+.estado-sistema .indicator.warning {
+  background-color: #FBBC05;
+}
+
+.estado-sistema .indicator.danger {
+  background-color: #EA4335;
+}
+
+/* Panel de estadísticas */
+.admin-estadisticas-card {
+  height: 100%;
+  min-height: 300px;
+}
+
+/* Actividad reciente */
+.actividad-item {
+  padding: 10px 15px;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.actividad-item:hover {
+  background-color: rgba(66, 133, 244, 0.05);
+  border-left-color: var(--color-admin-primary);
+}
+
+.actividad-item.usuario_creado {
+  border-left-color: #4285F4;
+}
+
+.actividad-item.curso_modificado {
+  border-left-color: #34A853;
+}
+
+.actividad-item.backup_sistema {
+  border-left-color: #FBBC05;
+}
+
+.actividad-item.error_sistema {
+  border-left-color: #EA4335;
+}
+
+/* Fotos de usuario y avatars */
+.user-avatar {
+  object-fit: cover;
+  border: 2px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.user-avatar:hover {
+  border-color: var(--color-admin-primary);
+  transform: scale(1.05);
+}
+
+.user-avatar-placeholder {
+  background-color: #6c757d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.user-avatar-placeholder:hover {
+  background-color: var(--color-admin-primary);
+  border-color: var(--color-admin-primary);
+}
+
+.user-avatar-preview {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+}
+
+/* Formularios de subida de archivos */
+.form-control[type="file"] {
+  padding: 0.375rem 0.75rem;
+}
+
+.form-control[type="file"]:focus {
+  border-color: var(--color-admin-primary);
+  box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25);
+}
+
+/* Estilos para el menú lateral simplificado */
+.sidebar {
+  border-right: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+}
+
+.sidebar-sticky {
+  height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar .nav-link:hover {
+  color: var(--color-admin-primary);
+  background-color: rgba(66, 133, 244, 0.05);
+}
+
+.sidebar .nav-link.active {
+  color: var(--color-admin-primary);
+  background-color: rgba(66, 133, 244, 0.1);
+  border-left-color: var(--color-admin-primary);
+}
+
+.sidebar .nav-link i {
+  margin-right: 8px;
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-heading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Estilos para el avatar en el menú lateral */
+.user-info {
+  padding: 10px;
+  background-color: rgba(66, 133, 244, 0.05);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.user-info .user-avatar {
+  border: 2px solid var(--color-admin-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info .user-avatar-placeholder {
+  background-color: var(--color-admin-primary);
+  color: white;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ====================
+   ESTILOS DE CALENDARIO
+   Importados desde calendario-personalizado.css
+   ==================== */
+
+/* Estilos generales para todos los calendarios */
+.fc .fc-toolbar-title {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Estilos para los botones de la barra de herramientas */
+.fc .fc-button-primary {
+  background-color: #f8f9fa;
+  color: #495057;
+  border-color: #dee2e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.fc .fc-button-primary:hover {
+  background-color: #e9ecef;
+  color: #212529;
+  border-color: #ced4da;
+}
+
+.fc .fc-button-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25);
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  background-color: #4285F4;
+  color: #fff;
+  border-color: #4285F4;
+}
+
+/* Botón Today/Hoy */
+.fc .fc-button-primary.fc-today-button {
+  background-color: var(--color-admin-primary);
+  color: white;
+  border-color: var(--color-admin-primary);
+}
+
+.fc .fc-button-primary.fc-today-button:hover {
+  background-color: #3b77db;
+  border-color: #3b77db;
+}
+
+.fc .fc-button-primary.fc-today-button:disabled {
+  background-color: rgba(66, 133, 244, 0.5);
+  border-color: rgba(66, 133, 244, 0.5);
+  color: white;
+}
+
+/* Botones de navegación prev/next */
+.fc .fc-prev-button, 
+.fc .fc-next-button {
+  background-color: #ffffff;
+  color: var(--color-admin-primary);
+  border-color: #dee2e6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.fc .fc-prev-button:hover, 
+.fc .fc-next-button:hover {
+  background-color: var(--color-admin-primary);
+  color: #ffffff;
+  border-color: var(--color-admin-primary);
+}
+
+/* Botones de vista */
+.fc .fc-button-group > .fc-button {
+  background-color: #f8f9fa;
+  color: var(--color-admin-primary);
+  border-color: #dee2e6;
+}
+
+.fc .fc-button-group > .fc-button:hover {
+  background-color: #e9ecef;
+  color: var(--color-admin-primary);
+}
+
+.fc .fc-button-group > .fc-button.fc-button-active {
+  background-color: var(--color-admin-primary);
+  color: #ffffff;
+  border-color: var(--color-admin-primary);
+}
+
+/* Estilos para días de la semana */
+.fc .fc-col-header-cell-cushion {
+  color: #495057;
+  font-weight: 500;
+  padding: 10px 4px;
+}
+
+/* Estilos para números de día */
+.fc .fc-daygrid-day-number {
+  color: #333;
+  font-weight: 400;
+  padding: 4px 8px;
+}
+
+/* Estilos para el día actual */
+.fc .fc-day-today {
+  background-color: rgba(66, 133, 244, 0.05) !important;
+}
+
+.fc .fc-day-today .fc-daygrid-day-number {
+  background-color: var(--color-admin-primary);
+  color: white;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+}
+
+/* Estilos para eventos - Mejorado para mayor legibilidad con fondos sólidos */
+.fc-event {
+  border-radius: 4px !important;
+  border-left: 4px solid !important;
+  padding: 2px 5px !important;
+  margin: 1px 0 !important;
+  background-color: #4285F4 !important; /* Color azul sólido para el fondo */
+  border-color: #3266c2 !important;
+  color: #ffffff !important; /* Texto blanco para contraste */
+  font-weight: 500 !important;
+}
+
+/* Asegurar que todos los textos dentro de eventos sean blancos y legibles en fondos oscuros */
+.fc-event-title,
+.fc-event-time,
+.fc-event-main,
+.fc-list-event-title a,
+.fc-list-event-title {
+  color: #ffffff !important; /* Texto blanco para contraste */
+  font-weight: 500 !important;
+  font-size: 0.85em;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil para mejor legibilidad */
+}
+
+.fc-event-time {
+  font-size: 0.8em;
+  opacity: 1;
+  font-weight: 600 !important;
+}
+
+/* Eventos con color de fondo definido manualmente - Asegurar legibilidad */
+.fc-event[style*="background"] .fc-event-title,
+.fc-event[style*="background"] .fc-event-time,
+.fc-event[style*="background"] .fc-event-main {
+  color: white !important; /* Para eventos con fondo oscuro */
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5) !important; /* Sombra para mejor legibilidad */
+  font-weight: 600 !important;
+}
+
+/* Vista de lista */
+.fc-list-day-cushion {
+  background-color: #f8f9fa !important;
+}
+
+.fc-list-event:hover td {
+  background-color: rgba(66, 133, 244, 0.05) !important;
+}
+
+/* Eventos de lista específicos */
+.fc-list-event {
+  background-color: transparent !important;
+}
+
+.fc-list-event-dot {
+  border-color: #4285F4 !important;
+}
+
+.fc-list-event .fc-list-event-title {
+  font-weight: 500 !important;
+}
+
+/* Admin - Estilo azul oscuro */
+.admin-calendar .fc-event {
+  background-color: #2c60d3 !important; /* Azul oscuro para contraste con texto blanco */
+  border-color: #1e4eb6 !important;
+  color: white !important;
+}
+
+/* ====================
+   ESTILOS COMUNES
+   Importados desde autoexam-common.css
+   ==================== */
+
+/* Estilos para badges de roles */
+.badge[data-rol="admin"] {
+    background-color: rgba(234, 67, 53, 0.1) !important;
+    color: #EA4335 !important;
+    border: 1px solid rgba(234, 67, 53, 0.3) !important;
+}
+
+.badge[data-rol="profesor"] {
+    background-color: rgba(66, 133, 244, 0.1) !important;
+    color: #4285F4 !important;
+    border: 1px solid rgba(66, 133, 244, 0.3) !important;
+}
+
+.badge[data-rol="alumno"] {
+    background-color: #8a5cd1 !important;
+    color: #FFFFFF !important;
+}
+
+/* Estilos para badges de estado */
+.badge[data-estado="activo"], 
+.badge[data-estado="1"],
+.badge[data-estado="aprobado"],
+.badge[data-estado="completado"] {
+    background-color: rgba(52, 168, 83, 0.1) !important;
+    color: #34A853 !important;
+    border: 1px solid rgba(52, 168, 83, 0.3) !important;
+}
+
+.badge[data-estado="inactivo"], 
+.badge[data-estado="0"] {
+    background-color: rgba(108, 117, 125, 0.1) !important;
+    color: #6c757d !important;
+    border: 1px solid rgba(108, 117, 125, 0.3) !important;
+}
+
+.badge[data-estado="pendiente"] {
+    background-color: rgba(251, 188, 5, 0.1) !important;
+    color: #FBBC05 !important;
+    border: 1px solid rgba(251, 188, 5, 0.3) !important;
+}
+
+.badge[data-estado="suspendido"] {
+    background-color: rgba(234, 67, 53, 0.1) !important;
+    color: #EA4335 !important;
+    border: 1px solid rgba(234, 67, 53, 0.3) !important;
+}
+
+.badge[data-estado="revisado"] {
+    background-color: rgba(66, 133, 244, 0.1) !important;
+    color: #4285F4 !important;
+    border: 1px solid rgba(66, 133, 244, 0.3) !important;
+}
+
+/* Estilos para tiempo restante */
+.badge[data-estado*="min"] {
+    background-color: rgba(234, 67, 53, 0.1) !important;
+    color: #EA4335 !important;
+    border: 1px solid rgba(234, 67, 53, 0.3) !important;
+}
+
+.badge[data-estado*="hora"] {
+    background-color: rgba(251, 188, 5, 0.1) !important;
+    color: #FBBC05 !important;
+    border: 1px solid rgba(251, 188, 5, 0.3) !important;
+}
+
+.badge[data-estado*="día"] {
+    background-color: rgba(52, 168, 83, 0.1) !important;
+    color: #34A853 !important;
+    border: 1px solid rgba(52, 168, 83, 0.3) !important;
+}
+
+/* Estilos para botones de acción (redondeados con iconos coloreados) */
+.btn-accion {
+    border-radius: 50px;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #dee2e6;
+    background-color: white;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.btn-accion:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-accion .fas.fa-edit,
+.btn-accion .fas.fa-pencil-alt {
+    color: #4285F4; /* Azul para editar */
+}
+
+.btn-accion .fas.fa-eye {
+    color: #4285F4; /* Azul para ver */
+}
+
+.btn-accion .fas.fa-download {
+    color: #34A853; /* Verde para descargar */
+}
+
+.btn-accion .fas.fa-trash,
+.btn-accion .fas.fa-trash-alt {
+    color: #EA4335; /* Rojo para eliminar */
+}
+
+.btn-accion .fas.fa-ban {
+    color: #EA4335; /* Rojo para desactivar/bloquear */
+}
+
+.btn-accion .fas.fa-history {
+    color: #4285F4; /* Azul para historial */
+}
+
+.btn-accion .fas.fa-check-circle {
+    color: #34A853; /* Verde para activar */
+}
+
+.btn-accion .fas.fa-chart-bar,
+.btn-accion .fas.fa-chart-line,
+.btn-accion .fas.fa-chart-pie {
+    color: #FBBC05; /* Amarillo para estadísticas */
+}
+
+.btn-accion .fas.fa-plus {
+    color: #34A853; /* Verde para añadir */
+}
+
+/* Colores personalizados para el tema morado (alumno) */
+.bg-purple {
+    background-color: #8a5cd1 !important;
+}
+
+.text-purple {
+    color: #8a5cd1 !important;
+}
+
+.border-purple {
+    border-color: #8a5cd1 !important;
+}
+
+.bg-purple-subtle {
+    background-color: rgba(138, 92, 209, 0.1) !important;
+}
+
+.btn-purple {
+    background-color: #8a5cd1 !important;
+    border-color: #8a5cd1 !important;
+    color: white !important;
+}
+
+.btn-outline-purple {
+    color: #8a5cd1 !important;
+    border-color: #8a5cd1 !important;
+}
+
+.btn-outline-purple:hover {
+    color: #ffffff !important;
+    background-color: #8a5cd1 !important;
+}
+
+/* Mejoras visuales para tablas */
+.table thead th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Mejoras para tarjetas */
+.card-header {
+    background-color: #f8f9fa !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Badges redondos consistentes */
+.badge {
+    border-radius: 50rem;
+    padding: 0.35em 0.65em;
+}
+
+/* Encabezados de sección con iconos */
+.card-header h5 i {
+    margin-right: 0.5rem;
+}

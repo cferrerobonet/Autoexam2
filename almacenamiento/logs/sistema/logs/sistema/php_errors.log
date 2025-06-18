@@ -1,0 +1,12 @@
+[27-May-2025 11:19:14 Europe/Madrid] PHP Warning:  Undefined array key "REQUEST_URI" in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AUTOEXAM2/publico/verificar_config.php on line 71
+[12-Jun-2025 12:35:46 Europe/Madrid] Error de conexión a la base de datos: SQLSTATE[HY000] [2002] No such file or directory
+[12-Jun-2025 12:35:51 Europe/Madrid] Error de conexión a la base de datos: SQLSTATE[HY000] [2002] No such file or directory
+[13-Jun-2025 12:07:03 Europe/Madrid] Inicializando clase Correo para envío de correos
+[13-Jun-2025 12:07:03 Europe/Madrid] Configuración de correo - De: no_contestar@autoexam.epla.es, Nombre: AUTOEXAM2, Host: smtp.office365.com, Puerto: 587, Usuario: no_contestar@autoexam.epla.es, Seguridad: tls, Debug: No
+[13-Jun-2025 12:07:15 Europe/Madrid] Inicializando clase Correo para envío de correos
+[13-Jun-2025 12:07:15 Europe/Madrid] Configuración de correo - De: no_contestar@autoexam.epla.es, Nombre: AUTOEXAM2, Host: smtp.office365.com, Puerto: 587, Usuario: no_contestar@autoexam.epla.es, Seguridad: tls, Debug: No
+[13-Jun-2025 12:07:15 Europe/Madrid] PHPMailer no disponible. Usando función mail() nativa para enviar a: cferrerobonet@gmail.com
+[13-Jun-2025 12:07:15 Europe/Madrid] ADVERTENCIA: Configuración SMTP disponible pero PHPMailer no está instalado. El correo puede no enviarse correctamente.
+[13-Jun-2025 12:07:15 Europe/Madrid] Correo enviado correctamente con mail() nativo a: cferrerobonet@gmail.com
+[13-Jun-2025 12:08:57 Europe/Madrid] Error de conexión a la base de datos: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db5017707563.hosting-data.io failed: nodename nor servname provided, or not known
+[13-Jun-2025 12:09:32 Europe/Madrid] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for db5017707563.hosting-data.io failed: nodename nor servname provided, or not known in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/diagnostico/test_bd.php on line 26

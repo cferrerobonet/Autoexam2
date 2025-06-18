@@ -1,0 +1,20 @@
+[14-Jun-2025 18:48:12 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to private Logger::__construct() from scope ValidadorLogs in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/validar_logs.php:26
+Stack trace:
+#0 /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/validar_logs.php(239): ValidadorLogs->__construct()
+#1 {main}
+  thrown in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/validar_logs.php on line 26
+[14-Jun-2025 18:49:06 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to private Logger::__construct() from scope ValidadorLogs in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/validar_logs.php:25
+Stack trace:
+#0 /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/validar_logs.php(238): ValidadorLogs->__construct()
+#1 {main}
+  thrown in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/validar_logs.php on line 25
+[14-Jun-2025 18:49:18 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to private Logger::__construct() from scope ValidadorLogs in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/validar_logs.php:25
+Stack trace:
+#0 /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/validar_logs.php(238): ValidadorLogs->__construct()
+#1 {main}
+  thrown in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/validar_logs.php on line 25
+[14-Jun-2025 18:49:30 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to private Logger::__construct() from scope TestLogger in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/test_logs.php:26
+Stack trace:
+#0 /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/test_logs.php(239): TestLogger->__construct()
+#1 {main}
+  thrown in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/herramientas/mantenimiento/test_logs.php on line 26

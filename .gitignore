@@ -1,0 +1,9 @@
+# Configuraciones críticas de la aplicación y 
+# archivos del sistema operativo
+.vscode/
+sftp.json
+.env
+.DS_Store
+ntunnel_mysql.php
+.AppleDouble
+.LSOverride
