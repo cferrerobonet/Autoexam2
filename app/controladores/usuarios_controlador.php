@@ -48,11 +48,11 @@ class UsuariosControlador {
         
         // Permitir a los profesores acceder a ciertas funcionalidades específicas
         $metodo = isset($_GET['url']) ? explode('/', $_GET['url']) : [];
-        $accion = isset($metodo[1]) ? $metodo[1] : '';
+        $accion = isset($metodo[1]) ? $metodo[1] : 'index'; // Por defecto 'index'
         $esProfesor = ($_SESSION['rol'] === 'profesor');
         
         // Lista de acciones permitidas para profesores
-        $accionesPermitidas = ['editar', 'actualizar', 'ver', 'todos', 'crear', 'guardar'];
+        $accionesPermitidas = ['index', 'editar', 'actualizar', 'ver', 'todos', 'crear', 'guardar', 'eliminar'];
         
         // Si no es administrador ni un profesor en una acción permitida
         if ($_SESSION['rol'] !== 'admin' && !($esProfesor && in_array($accion, $accionesPermitidas))) {
@@ -68,7 +68,13 @@ class UsuariosControlador {
      */
     public function index() {
         try {
-            // Parámetros de paginación y filtros
+            // Si es profesor, mostrar solo sus alumnos
+            if ($_SESSION['rol'] === 'profesor') {
+                $this->mostrarAlumnosDelProfesor();
+                return;
+            }
+            
+            // Parámetros de paginación y filtros para administradores
             $paginacion = $this->obtenerParametrosPaginacion();
             $filtros = $this->obtenerFiltrosBusqueda();
             
@@ -91,12 +97,17 @@ class UsuariosControlador {
                 'csrf_token' => $this->sesion->generarTokenCSRF()
             ];
             
-            // Cargar vista según el rol del usuario
-            if ($_SESSION['rol'] === 'profesor') {
-                require_once APP_PATH . '/vistas/profesor/usuarios/todos.php';
-            } else {
-                require_once APP_PATH . '/vistas/admin/usuarios/listar.php';
-            }
+            // Cargar vista para administradores
+            require_once APP_PATH . '/vistas/parciales/head_admin.php';
+            echo '<body class="bg-light">';
+            require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
+            echo '<div class="container-fluid mt-4"><div class="row"><div class="col-12">';
+            
+            require_once APP_PATH . '/vistas/admin/usuarios/listar.php';
+            
+            echo '</div></div></div>';
+            require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+            require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
             
         } catch (Exception $e) {
             // Registro detallado del error para fines de depuración
@@ -1040,5 +1051,172 @@ class UsuariosControlador {
         }
         
         return $resultados;
+    }
+    
+    /**
+     * Muestra los alumnos asignados a los cursos del profesor
+     * 
+     * @return void
+     */
+    private function mostrarAlumnosDelProfesor() {
+        try {
+            // Cargar modelo de curso
+            require_once APP_PATH . '/modelos/curso_modelo.php';
+            $cursoModelo = new Curso();
+            
+            // Obtener alumnos asignados a cursos del profesor
+            $alumnosAsignados = $cursoModelo->obtenerAlumnosPorProfesor($_SESSION['id_usuario']);
+            
+            // Obtener solo alumnos sin asignar a ningún curso (no todos los alumnos)
+            $alumnosSinAsignar = $cursoModelo->obtenerAlumnosSinAsignar();
+            
+            // Combinar: alumnos del profesor + alumnos disponibles para asignar
+            $alumnos = array_merge($alumnosAsignados, $alumnosSinAsignar);
+            
+            // Calcular estadísticas
+            $cursosConAlumnos = count(array_unique(array_column($alumnosAsignados, 'id_curso')));
+            
+            // Datos para la vista
+            $datos = [
+                'titulo' => 'Mis Alumnos',
+                'alumnos' => $alumnos,
+                'total_alumnos' => count($alumnos),
+                'alumnos_asignados' => count($alumnosAsignados),
+                'alumnos_sin_asignar' => count($alumnosSinAsignar),
+                'cursos_con_alumnos' => $cursosConAlumnos,
+                'csrf_token' => $this->sesion->generarTokenCSRF()
+            ];
+            
+            // Cargar vista específica para profesor
+            require_once APP_PATH . '/vistas/parciales/head_profesor.php';
+            echo '<body class="bg-light">';
+            require_once APP_PATH . '/vistas/parciales/navbar_profesor.php';
+            echo '<div class="container-fluid mt-4"><div class="row"><div class="col-12">';
+            
+            require_once APP_PATH . '/vistas/profesor/usuarios/mis_alumnos.php';
+            
+            echo '</div></div></div>';
+            require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+            require_once APP_PATH . '/vistas/parciales/scripts_profesor.php';
+            
+        } catch (Exception $e) {
+            error_log("Error al cargar alumnos del profesor: " . $e->getMessage());
+            $_SESSION['error'] = 'Error al cargar la lista de alumnos';
+            
+            // Mostrar vista vacía
+            $this->mostrarListaVaciaProfesor();
+        }
+    }
+
+    /**
+     * Muestra una lista vacía para profesores en caso de error
+     * 
+     * @return void
+     */
+    private function mostrarListaVaciaProfesor() {
+        $datos = [
+            'titulo' => 'Mis Alumnos',
+            'alumnos' => [],
+            'total_alumnos' => 0,
+            'csrf_token' => $this->sesion->generarTokenCSRF()
+        ];
+        
+        require_once APP_PATH . '/vistas/parciales/head_profesor.php';
+        echo '<body class="bg-light">';
+        require_once APP_PATH . '/vistas/parciales/navbar_profesor.php';
+        echo '<div class="container-fluid mt-4"><div class="row"><div class="col-12">';
+        
+        require_once APP_PATH . '/vistas/profesor/usuarios/mis_alumnos.php';
+        
+        echo '</div></div></div>';
+        require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+        require_once APP_PATH . '/vistas/parciales/scripts_profesor.php';
+    }
+    
+    /**
+     * Elimina un usuario del sistema
+     * 
+     * @param int|null $id ID del usuario a eliminar
+     * @return void
+     */
+    public function eliminar($id = null) {
+        try {
+            // Validar ID del usuario
+            if (!$id || !is_numeric($id)) {
+                $_SESSION['error'] = 'ID de usuario inválido';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+            
+            $id = (int)$id;
+            
+            // Verificar si es una petición POST con token CSRF válido
+            if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+                $_SESSION['error'] = 'Método de petición inválido';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+            
+            // Verificar token CSRF
+            if (!isset($_POST['csrf_token']) || !$this->sesion->validarTokenCSRF($_POST['csrf_token'])) {
+                $_SESSION['error'] = 'Token de seguridad inválido';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+            
+            // Verificar que el usuario existe
+            $usuario = $this->usuarioModelo->buscarPorId($id, false);
+            if (!$usuario) {
+                $_SESSION['error'] = 'El usuario no existe';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+            
+            // Si es profesor, solo puede eliminar alumnos
+            if ($_SESSION['rol'] === 'profesor' && $usuario['rol'] !== 'alumno') {
+                $_SESSION['error'] = 'Solo puedes eliminar alumnos';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+            
+            // No permitir eliminar el propio usuario
+            if ($id == $_SESSION['id_usuario']) {
+                $_SESSION['error'] = 'No puedes eliminar tu propio usuario';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+            
+            // Intentar eliminar el usuario
+            if ($this->usuarioModelo->eliminar($id)) {
+                // Registrar la actividad
+                $this->registroActividad->registrar([
+                    'id_usuario' => $_SESSION['id_usuario'],
+                    'actividad' => 'eliminar_usuario',
+                    'detalles' => json_encode([
+                        'usuario_eliminado' => $usuario['nombre'] . ' ' . $usuario['apellidos'],
+                        'correo_eliminado' => $usuario['correo'],
+                        'rol_eliminado' => $usuario['rol']
+                    ]),
+                    'ip' => $_SERVER['REMOTE_ADDR'] ?? 'Desconocida',
+                    'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'Desconocido'
+                ]);
+                
+                $_SESSION['exito'] = 'Usuario eliminado correctamente';
+            } else {
+                $_SESSION['error'] = 'No se pudo eliminar el usuario';
+            }
+            
+        } catch (Exception $e) {
+            error_log("Error al eliminar usuario: " . $e->getMessage());
+            $_SESSION['error'] = $e->getMessage();
+        }
+        
+        // Redirigir según el rol del usuario
+        if ($_SESSION['rol'] === 'profesor') {
+            header('Location: ' . BASE_URL . '/usuarios');
+        } else {
+            header('Location: ' . BASE_URL . '/usuarios');
+        }
+        exit;
     }
 }

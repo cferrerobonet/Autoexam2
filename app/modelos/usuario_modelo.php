@@ -683,4 +683,99 @@ class Usuario {
             return false;
         }
     }
+    
+    /**
+     * Elimina un usuario de la base de datos
+     * 
+     * @param int $id ID del usuario a eliminar
+     * @return bool True si se eliminó correctamente
+     * @throws Exception Si hay un error en la eliminación
+     */
+    public function eliminar($id) {
+        try {
+            $id = (int)$id;
+            if ($id <= 0) {
+                throw new Exception("ID de usuario inválido");
+            }
+            
+            // Verificar que no sea el administrador principal
+            if ($this->esAdministradorPrincipal($id)) {
+                throw new Exception("No se puede eliminar el administrador principal");
+            }
+            
+            // Verificar que el usuario existe
+            if (!$this->existeUsuario($id, false)) {
+                throw new Exception("El usuario no existe");
+            }
+            
+            // Iniciar transacción
+            $this->conexion->beginTransaction();
+            
+            try {
+                // Primero eliminar referencias en otras tablas relacionadas
+                // Eliminar asignaciones de cursos (por id_alumno)
+                $sql = "DELETE FROM curso_alumno WHERE id_alumno = :id";
+                $stmt = $this->conexion->prepare($sql);
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->execute();
+                
+                // Eliminar calificaciones del alumno
+                $sql = "DELETE FROM calificaciones WHERE id_alumno = :id";
+                $stmt = $this->conexion->prepare($sql);
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->execute();
+                
+                // Eliminar notificaciones del usuario
+                $sql = "DELETE FROM notificaciones WHERE id_usuario = :id";
+                $stmt = $this->conexion->prepare($sql);
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->execute();
+                
+                // Eliminar registros de actividad del usuario
+                $sql = "DELETE FROM registro_actividad WHERE id_usuario = :id";
+                $stmt = $this->conexion->prepare($sql);
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->execute();
+                
+                // Eliminar sesiones activas
+                $sql = "DELETE FROM sesiones_activas WHERE id_usuario = :id";
+                $stmt = $this->conexion->prepare($sql);
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->execute();
+                
+                // Eliminar tokens de recuperación
+                $sql = "DELETE FROM tokens_recuperacion WHERE id_usuario = :id";
+                $stmt = $this->conexion->prepare($sql);
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->execute();
+                
+                // Finalmente eliminar el usuario
+                $sql = "DELETE FROM usuarios WHERE id_usuario = :id";
+                $stmt = $this->conexion->prepare($sql);
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $resultado = $stmt->execute();
+                
+                if ($stmt->rowCount() === 0) {
+                    throw new Exception("No se pudo eliminar el usuario");
+                }
+                
+                // Confirmar transacción
+                $this->conexion->commit();
+                
+                return true;
+                
+            } catch (Exception $e) {
+                // Revertir transacción en caso de error
+                $this->conexion->rollBack();
+                throw $e;
+            }
+            
+        } catch (PDOException $e) {
+            error_log("Error al eliminar usuario: " . $e->getMessage());
+            if ($this->conexion->inTransaction()) {
+                $this->conexion->rollBack();
+            }
+            throw new Exception("Error al eliminar el usuario de la base de datos");
+        }
+    }
 }

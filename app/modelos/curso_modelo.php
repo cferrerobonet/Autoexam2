@@ -741,4 +741,101 @@ class Curso {
             return null;
         }
     }
+    
+    /**
+     * Obtiene todos los alumnos de los cursos de un profesor específico
+     * 
+     * @param int $id_profesor ID del profesor
+     * @return array Lista de alumnos con información del curso
+     */
+    public function obtenerAlumnosPorProfesor($id_profesor) {
+        try {
+            $query = "SELECT DISTINCT u.id_usuario, u.nombre, u.apellidos, u.correo, u.activo,
+                      c.id_curso, c.nombre_curso, ca.fecha_asignacion
+                      FROM usuarios u 
+                      INNER JOIN curso_alumno ca ON u.id_usuario = ca.id_alumno 
+                      INNER JOIN cursos c ON ca.id_curso = c.id_curso
+                      WHERE c.id_profesor = ? AND u.rol = 'alumno'
+                      ORDER BY c.nombre_curso, u.apellidos, u.nombre";
+            
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("i", $id_profesor);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            
+            $alumnos = [];
+            while ($alumno = $resultado->fetch_assoc()) {
+                $alumnos[] = $alumno;
+            }
+            
+            return $alumnos;
+        } catch (Exception $e) {
+            // Registrar error en log
+            error_log("Error al obtener alumnos del profesor: " . $e->getMessage(), 0, 
+                      __DIR__ . "/../../almacenamiento/logs/app/cursos_error.log");
+            return [];
+        }
+    }
+    
+    /**
+     * Obtiene todos los alumnos que no están asignados a ningún curso
+     * 
+     * @return array Lista de alumnos sin asignar
+     */
+    public function obtenerAlumnosSinAsignar() {
+        try {
+            $query = "SELECT u.id_usuario, u.nombre, u.apellidos, u.correo, u.activo, 
+                      NULL as fecha_asignacion
+                      FROM usuarios u 
+                      LEFT JOIN curso_alumno ca ON u.id_usuario = ca.id_alumno 
+                      WHERE u.rol = 'alumno' AND ca.id_alumno IS NULL
+                      ORDER BY u.apellidos, u.nombre";
+            
+            $stmt = $this->db->prepare($query);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            
+            $alumnos = [];
+            while ($alumno = $resultado->fetch_assoc()) {
+                $alumno['id_curso'] = null;
+                $alumno['nombre_curso'] = 'Sin asignar';
+                $alumnos[] = $alumno;
+            }
+            
+            return $alumnos;
+        } catch (Exception $e) {
+            // Registrar error en log
+            error_log("Error al obtener alumnos sin asignar: " . $e->getMessage(), 0, 
+                      __DIR__ . "/../../almacenamiento/logs/app/cursos_error.log");
+            return [];
+        }
+    }
+
+    /**
+     * Obtiene todos los alumnos: los de los cursos del profesor + los sin asignar
+     * 
+     * @param int $id_profesor ID del profesor
+     * @return array Lista completa de alumnos
+     */
+    public function obtenerTodosLosAlumnosDelProfesor($id_profesor) {
+        try {
+            // Obtener alumnos asignados a cursos del profesor
+            $alumnosAsignados = $this->obtenerAlumnosPorProfesor($id_profesor);
+            
+            // Obtener alumnos sin asignar
+            $alumnosSinAsignar = $this->obtenerAlumnosSinAsignar();
+            
+            // Combinar ambas listas
+            $todosLosAlumnos = array_merge($alumnosAsignados, $alumnosSinAsignar);
+            
+            return $todosLosAlumnos;
+        } catch (Exception $e) {
+            // Registrar error en log
+            error_log("Error al obtener todos los alumnos del profesor: " . $e->getMessage(), 0, 
+                      __DIR__ . "/../../almacenamiento/logs/app/cursos_error.log");
+            return [];
+        }
+    }
+
+    // ...existing code...
 }
