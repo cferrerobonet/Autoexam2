@@ -822,10 +822,26 @@ class Usuario {
     public function obtenerEstadisticasConteo() {
         try {
             $estadisticas = [
-                'administradores' => $this->contarPorRol('admin'),
-                'profesores' => $this->contarPorRol('profesor'),
-                'alumnos' => $this->contarPorRol('alumno'),
-                'cursos_activos' => $this->contarCursosActivos()
+                'administradores' => [
+                    'activos' => $this->contarPorRol('admin', true),
+                    'inactivos' => $this->contarPorRol('admin', false) - $this->contarPorRol('admin', true),
+                    'total' => $this->contarPorRol('admin', false)
+                ],
+                'profesores' => [
+                    'activos' => $this->contarPorRol('profesor', true),
+                    'inactivos' => $this->contarPorRol('profesor', false) - $this->contarPorRol('profesor', true),
+                    'total' => $this->contarPorRol('profesor', false)
+                ],
+                'alumnos' => [
+                    'activos' => $this->contarPorRol('alumno', true),
+                    'inactivos' => $this->contarPorRol('alumno', false) - $this->contarPorRol('alumno', true),
+                    'total' => $this->contarPorRol('alumno', false)
+                ],
+                'cursos_activos' => [
+                    'activos' => $this->contarCursosActivos(),
+                    'inactivos' => $this->contarCursosInactivos(),
+                    'total' => $this->contarCursosActivos() + $this->contarCursosInactivos()
+                ]
             ];
             
             return $estadisticas;
@@ -860,6 +876,33 @@ class Usuario {
             
             error_log("Error al contar cursos activos: " . $e->getMessage());
             throw new Exception("Error al consultar cursos activos");
+        }
+    }
+    
+    /**
+     * Cuenta los cursos inactivos en el sistema
+     * 
+     * @return int Número de cursos inactivos
+     * @throws Exception Si hay error en la consulta
+     */
+    private function contarCursosInactivos() {
+        try {
+            $sql = "SELECT COUNT(*) as total FROM cursos WHERE activo = 0";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            
+            $resultado = $stmt->fetch();
+            return (int)$resultado['total'];
+            
+        } catch (PDOException $e) {
+            // Si la tabla cursos no existe aún, devolver 0
+            if (strpos($e->getMessage(), "doesn't exist") !== false || 
+                strpos($e->getMessage(), "Table") !== false) {
+                return 0;
+            }
+            
+            error_log("Error al contar cursos inactivos: " . $e->getMessage());
+            throw new Exception("Error al consultar cursos inactivos");
         }
     }
 }
