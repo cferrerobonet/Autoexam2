@@ -184,10 +184,17 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
                             <tr class="<?= $alumno['activo'] == 0 ? 'table-secondary opacity-75' : '' ?>">
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <div class="avatar-sm me-2">
-                                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
-                                                <i class="fas fa-user text-white"></i>
-                                            </div>
+                                        <div class="me-3">
+                                            <?php if (!empty($alumno['foto'])): ?>
+                                                <img src="<?= BASE_URL ?>/<?= htmlspecialchars($alumno['foto']) ?>" 
+                                                     class="rounded-circle" width="56" height="56" 
+                                                     alt="Avatar" style="object-fit: cover;">
+                                            <?php else: ?>
+                                                <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center" 
+                                                     style="width: 56px; height: 56px; min-width: 56px;">
+                                                    <i class="fas fa-user text-white" style="font-size: 24px;"></i>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
                                         <div>
                                             <h6 class="mb-0"><?= htmlspecialchars($alumno['apellidos'] . ', ' . $alumno['nombre']) ?></h6>
@@ -200,11 +207,14 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
                                 </td>
                                 <td>
                                     <?php if ($alumno['id_curso'] === null): ?>
-                                        <span class="badge curso-badge bg-warning text-dark">
-                                            <i class="fas fa-exclamation-triangle me-1"></i><?= htmlspecialchars($alumno['nombre_curso']) ?>
+                                        <span class="badge rounded-pill bg-light text-muted border border-secondary-subtle small">
+                                            <i class="fas fa-exclamation-triangle me-1"></i>Sin asignar
                                         </span>
                                     <?php else: ?>
-                                        <span class="badge curso-badge bg-info text-dark">
+                                        <?php 
+                                        $coloresCurso = generarColorCurso($alumno['nombre_curso']);
+                                        ?>
+                                        <span class="badge rounded-pill <?= $coloresCurso[0] ?> <?= $coloresCurso[1] ?> border <?= $coloresCurso[2] ?> small">
                                             <i class="fas fa-book me-1"></i><?= htmlspecialchars($alumno['nombre_curso']) ?>
                                         </span>
                                     <?php endif; ?>
@@ -307,6 +317,29 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
 <form id="formEliminar" method="POST" style="display: none;">
     <input type="hidden" name="csrf_token" value="<?= $datos['csrf_token'] ?>">
 </form>
+
+<?php 
+// Función para generar colores consistentes por curso
+function generarColorCurso($nombreCurso) {
+    if (empty($nombreCurso)) {
+        return ['bg-light', 'text-muted', 'border-secondary'];
+    }
+    
+    $colores = [
+        ['bg-primary-subtle', 'text-primary', 'border-primary-subtle'],
+        ['bg-info-subtle', 'text-info', 'border-info-subtle'],
+        ['bg-success-subtle', 'text-success', 'border-success-subtle'],
+        ['bg-warning-subtle', 'text-warning', 'border-warning-subtle'],
+        ['bg-danger-subtle', 'text-danger', 'border-danger-subtle'],
+        ['bg-purple-subtle', 'text-purple', 'border-purple'],
+        ['bg-secondary-subtle', 'text-secondary', 'border-secondary-subtle']
+    ];
+    
+    // Usar hash del nombre para consistencia
+    $indice = crc32($nombreCurso) % count($colores);
+    return $colores[abs($indice)];
+}
+?>
 
 <script>
 // Variables globales

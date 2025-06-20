@@ -750,7 +750,7 @@ class Curso {
      */
     public function obtenerAlumnosPorProfesor($id_profesor) {
         try {
-            $query = "SELECT DISTINCT u.id_usuario, u.nombre, u.apellidos, u.correo, u.activo,
+            $query = "SELECT DISTINCT u.id_usuario, u.nombre, u.apellidos, u.correo, u.activo, u.foto,
                       c.id_curso, c.nombre_curso, ca.fecha_asignacion
                       FROM usuarios u 
                       INNER JOIN curso_alumno ca ON u.id_usuario = ca.id_alumno 

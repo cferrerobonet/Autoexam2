@@ -248,6 +248,28 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php 
+                                            // Función para generar colores consistentes por curso
+                                            function generarColorCurso($nombreCurso) {
+                                                if (empty($nombreCurso)) {
+                                                    return ['bg-light', 'text-muted', 'border-secondary'];
+                                                }
+                                                
+                                                $colores = [
+                                                    ['bg-primary-subtle', 'text-primary', 'border-primary-subtle'],
+                                                    ['bg-info-subtle', 'text-info', 'border-info-subtle'],
+                                                    ['bg-success-subtle', 'text-success', 'border-success-subtle'],
+                                                    ['bg-warning-subtle', 'text-warning', 'border-warning-subtle'],
+                                                    ['bg-danger-subtle', 'text-danger', 'border-danger-subtle'],
+                                                    ['bg-purple-subtle', 'text-purple', 'border-purple'],
+                                                    ['bg-secondary-subtle', 'text-secondary', 'border-secondary-subtle']
+                                                ];
+                                                
+                                                // Usar hash del nombre para consistencia
+                                                $indice = crc32($nombreCurso) % count($colores);
+                                                return $colores[abs($indice)];
+                                            }
+                                            ?>
                                             <?php foreach ($datos['usuarios'] as $usuario): ?>
                                                 <tr class="<?= $usuario['activo'] ? 'align-middle border-bottom' : 'align-middle border-bottom bg-light' ?>">
                                                     <td class="py-3">
@@ -265,26 +287,62 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                                         </div>
                                                     </td>
                                                     <td><?= htmlspecialchars($usuario['id_usuario']) ?></td>
-                                                    <td>
-                                                        <div class="d-flex align-items-center">
-                                                            <?php if (!empty($usuario['foto'])): ?>
-                                                                <img src="<?= BASE_URL ?>/<?= htmlspecialchars($usuario['foto']) ?>" 
-                                                                     class="rounded-circle me-2" width="32" height="32" 
-                                                                     alt="Avatar" style="object-fit: cover;">
-                                                            <?php else: ?>
-                                                                <div class="bg-secondary rounded-circle me-2 d-flex align-items-center justify-content-center" 
-                                                                     style="width: 32px; height: 32px; min-width: 32px;">
-                                                                    <i class="fas fa-user text-white" style="font-size: 14px;"></i>
-                                                                </div>
-                                                            <?php endif; ?>
+                                                    <td>                                        <div class="d-flex align-items-center">
+                                            <?php if (!empty($usuario['foto'])): ?>
+                                                <img src="<?= BASE_URL ?>/<?= htmlspecialchars($usuario['foto']) ?>" 
+                                                     class="rounded-circle me-3" width="56" height="56" 
+                                                     alt="Avatar" style="object-fit: cover;">
+                                            <?php else: ?>
+                                                <div class="bg-secondary rounded-circle me-3 d-flex align-items-center justify-content-center" 
+                                                     style="width: 56px; height: 56px; min-width: 56px;">
+                                                    <i class="fas fa-user text-white" style="font-size: 24px;"></i>
+                                                </div>
+                                            <?php endif; ?>
                                                             <div>
                                                                 <strong><?= htmlspecialchars($usuario['apellidos'] . ', ' . $usuario['nombre']) ?></strong>
                                                                 <?php if ($usuario['rol'] === 'alumno'): ?>
                                                                     <?php if (!empty($usuario['nombre_curso'])): ?>
-                                                                        <small class="curso-descripcion d-block"><i class="fas fa-book-reader me-1"></i><?= htmlspecialchars($usuario['nombre_curso']) ?></small>
+                                                                        <?php 
+                                                                        $coloresCurso = generarColorCurso($usuario['nombre_curso']);
+                                                                        ?>
+                                                                        <div class="mt-1">
+                                                                            <span class="badge rounded-pill <?= $coloresCurso[0] ?> <?= $coloresCurso[1] ?> border <?= $coloresCurso[2] ?> small">
+                                                                                <i class="fas fa-book-reader me-1"></i>
+                                                                                <?= htmlspecialchars($usuario['nombre_curso']) ?>
+                                                                            </span>
+                                                                        </div>
                                                                         <?php if (!empty($usuario['curso_descripcion'])): ?>
-                                                                            <small class="text-muted d-block ps-3 fst-italic"><?= htmlspecialchars(mb_substr($usuario['curso_descripcion'], 0, 50)) . (mb_strlen($usuario['curso_descripcion']) > 50 ? '...' : '') ?></small>
+                                                                            <small class="text-muted d-block mt-1 fst-italic"><?= htmlspecialchars(mb_substr($usuario['curso_descripcion'], 0, 50)) . (mb_strlen($usuario['curso_descripcion']) > 50 ? '...' : '') ?></small>
                                                                         <?php endif; ?>
+                                                                    <?php else: ?>
+                                                                        <div class="mt-1">
+                                                                            <span class="badge rounded-pill bg-light text-muted border border-secondary-subtle small">
+                                                                                <i class="fas fa-exclamation-triangle me-1"></i>
+                                                                                Sin asignar
+                                                                            </span>
+                                                                        </div>
+                                                                    <?php endif; ?>
+                                                                <?php elseif ($usuario['rol'] === 'profesor'): ?>
+                                                                    <?php if (!empty($usuario['nombre_curso'])): ?>
+                                                                        <?php 
+                                                                        $coloresCurso = generarColorCurso($usuario['nombre_curso']);
+                                                                        ?>
+                                                                        <div class="mt-1">
+                                                                            <span class="badge rounded-pill <?= $coloresCurso[0] ?> <?= $coloresCurso[1] ?> border <?= $coloresCurso[2] ?> small">
+                                                                                <i class="fas fa-chalkboard-teacher me-1"></i>
+                                                                                <?= htmlspecialchars($usuario['nombre_curso']) ?>
+                                                                            </span>
+                                                                        </div>
+                                                                        <?php if (!empty($usuario['curso_descripcion'])): ?>
+                                                                            <small class="text-muted d-block mt-1 fst-italic"><?= htmlspecialchars(mb_substr($usuario['curso_descripcion'], 0, 50)) . (mb_strlen($usuario['curso_descripcion']) > 50 ? '...' : '') ?></small>
+                                                                        <?php endif; ?>
+                                                                    <?php else: ?>
+                                                                        <div class="mt-1">
+                                                                            <span class="badge rounded-pill bg-light text-muted border border-secondary-subtle small">
+                                                                                <i class="fas fa-exclamation-triangle me-1"></i>
+                                                                                Sin curso asignado
+                                                                            </span>
+                                                                        </div>
                                                                     <?php endif; ?>
                                                                 <?php endif; ?>
                                                             </div>
