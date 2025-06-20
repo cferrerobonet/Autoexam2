@@ -857,7 +857,7 @@ class CursosControlador {
                 $errores['id_profesor'] = "Debe seleccionar un profesor.";
             } else {
                 // Verificar que el profesor exista
-                $profesor = $this->usuario->obtenerPorId($datos['id_profesor']);
+                $profesor = $this->usuario->buscarPorId($datos['id_profesor']);
                 if (!$profesor || $profesor['rol'] != 'profesor') {
                     $errores['id_profesor'] = "El profesor seleccionado no existe o no es válido.";
                 }
