@@ -69,21 +69,44 @@ class PerfilControlador {
         switch ($_SESSION['rol']) {
             case 'admin':
                 require_once APP_PATH . '/vistas/parciales/head_admin.php';
+                echo '<body class="bg-light">'; // Asumiendo una clase de body común
                 require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                 break;
             case 'profesor':
-                require_once APP_PATH . '/vistas/comunes/cabecera.php';
+                require_once APP_PATH . '/vistas/parciales/head_profesor.php';
+                echo '<body class="bg-light">'; // Asumiendo una clase de body común
+                require_once APP_PATH . '/vistas/parciales/navbar_profesor.php';
                 break;
             case 'alumno':
-                require_once APP_PATH . '/vistas/comunes/cabecera.php';
+                require_once APP_PATH . '/vistas/parciales/head_alumno.php';
+                echo '<body class="bg-light">'; // Asumiendo una clase de body común
+                require_once APP_PATH . '/vistas/parciales/navbar_alumno.php';
                 break;
             default:
-                require_once APP_PATH . '/vistas/comunes/cabecera.php';
+                // Fallback o error, idealmente no debería llegar aquí con sesión validada
+                require_once APP_PATH . '/vistas/parciales/head_alumno.php'; // O un head genérico
+                echo '<body class="bg-light">';
+                require_once APP_PATH . '/vistas/parciales/navbar_alumno.php'; // O un navbar genérico
         }
         
         require_once APP_PATH . '/vistas/perfil/index.php';
-        require_once APP_PATH . '/vistas/parciales/footer_admin.php';
-        require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
+        
+        // Cargar footer y scripts según el rol
+        switch ($_SESSION['rol']) {
+            case 'admin':
+                require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+                require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
+                break;
+            case 'profesor':
+                require_once APP_PATH . '/vistas/parciales/footer_profesor.php';
+                require_once APP_PATH . '/vistas/parciales/scripts_profesor.php';
+                break;
+            case 'alumno':
+                require_once APP_PATH . '/vistas/parciales/footer_alumno.php';
+                require_once APP_PATH . '/vistas/parciales/scripts_alumno.php';
+                break;
+        }
+        echo '</body>'; // Cerrar etiqueta body
     }
     
     /**

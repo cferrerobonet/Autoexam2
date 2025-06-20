@@ -35,4 +35,3 @@
     <!-- Tema color para dispositivos móviles -->
     <meta name="theme-color" content="#4285F4">
 </head>
-<body class="profesor-dashboard">

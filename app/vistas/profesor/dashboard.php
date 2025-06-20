@@ -267,14 +267,6 @@
     </div>
 </div>
 
-<?php
-// Incluir pie de página
-require_once APP_PATH . '/vistas/parciales/footer_profesor.php';
-
-// Incluir scripts
-require_once APP_PATH . '/vistas/parciales/scripts_profesor.php';
-?>
-
 <script>
     // Script de inicialización para dashboard de profesor
     document.addEventListener('DOMContentLoaded', function() {

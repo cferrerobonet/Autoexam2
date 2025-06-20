@@ -30,11 +30,23 @@
             return new bootstrap.Tooltip(tooltipTriggerEl)
         });
         
-        // Inicializar dropdowns (menús desplegables)
+        // Inicializar dropdowns (menús desplegables) con configuración explícita
         const dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
         const dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-            return new bootstrap.Dropdown(dropdownToggleEl)
+            return new bootstrap.Dropdown(dropdownToggleEl, {
+                autoClose: true,
+                boundary: 'clippingParents'
+            })
         });
+        
+        // Forzar la inicialización del menú de perfil específicamente
+        const perfilDropdown = document.getElementById('perfilDropdown');
+        if (perfilDropdown) {
+            new bootstrap.Dropdown(perfilDropdown, {
+                autoClose: true,
+                boundary: 'clippingParents'
+            });
+        }
         
         // Asegurar que los menús de navegación funcionen correctamente en móviles
         const navbarToggler = document.querySelector('.navbar-toggler');

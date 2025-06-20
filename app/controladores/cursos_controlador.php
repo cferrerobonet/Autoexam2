@@ -132,8 +132,8 @@ class CursosControlador {
             echo '</div></div></div>';
         }
         
-        require_once APP_PATH . '/vistas/parciales/footer_admin.php';
-        require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
+        require_once APP_PATH . '/vistas/parciales/footer_profesor.php'; // Alineado con rol profesor
+        require_once APP_PATH . '/vistas/parciales/scripts_profesor.php'; // Alineado con rol profesor
     }
     
     /**
