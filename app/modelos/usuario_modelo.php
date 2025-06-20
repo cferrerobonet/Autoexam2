@@ -778,4 +778,88 @@ class Usuario {
             throw new Exception("Error al eliminar el usuario de la base de datos");
         }
     }
+    
+    /**
+     * Cuenta usuarios por rol específico
+     * 
+     * @param string $rol El rol a contar (admin, profesor, alumno)
+     * @param bool $soloActivos Si es true, solo cuenta usuarios activos
+     * @return int Número de usuarios con ese rol
+     * @throws Exception Si hay error en la consulta
+     */
+    public function contarPorRol($rol, $soloActivos = true) {
+        try {
+            // Validar que el rol sea válido
+            if (!in_array($rol, ['admin', 'profesor', 'alumno'])) {
+                throw new Exception("Rol no válido: $rol");
+            }
+            
+            $sql = "SELECT COUNT(*) as total FROM usuarios WHERE rol = :rol";
+            
+            if ($soloActivos) {
+                $sql .= " AND activo = 1";
+            }
+            
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->bindParam(':rol', $rol, PDO::PARAM_STR);
+            $stmt->execute();
+            
+            $resultado = $stmt->fetch();
+            return (int)$resultado['total'];
+            
+        } catch (PDOException $e) {
+            error_log("Error al contar usuarios por rol '$rol': " . $e->getMessage());
+            throw new Exception("Error al consultar conteo de usuarios");
+        }
+    }
+    
+    /**
+     * Obtiene estadísticas de conteo para el dashboard del admin
+     * 
+     * @return array Array con conteos por rol y cursos activos
+     * @throws Exception Si hay error en la consulta
+     */
+    public function obtenerEstadisticasConteo() {
+        try {
+            $estadisticas = [
+                'administradores' => $this->contarPorRol('admin'),
+                'profesores' => $this->contarPorRol('profesor'),
+                'alumnos' => $this->contarPorRol('alumno'),
+                'cursos_activos' => $this->contarCursosActivos()
+            ];
+            
+            return $estadisticas;
+            
+        } catch (Exception $e) {
+            error_log("Error al obtener estadísticas de conteo: " . $e->getMessage());
+            throw new Exception("Error al obtener estadísticas");
+        }
+    }
+    
+    /**
+     * Cuenta los cursos activos en el sistema
+     * 
+     * @return int Número de cursos activos
+     * @throws Exception Si hay error en la consulta
+     */
+    private function contarCursosActivos() {
+        try {
+            $sql = "SELECT COUNT(*) as total FROM cursos WHERE activo = 1";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            
+            $resultado = $stmt->fetch();
+            return (int)$resultado['total'];
+            
+        } catch (PDOException $e) {
+            // Si la tabla cursos no existe aún, devolver 0
+            if (strpos($e->getMessage(), "doesn't exist") !== false || 
+                strpos($e->getMessage(), "Table") !== false) {
+                return 0;
+            }
+            
+            error_log("Error al contar cursos activos: " . $e->getMessage());
+            throw new Exception("Error al consultar cursos activos");
+        }
+    }
 }

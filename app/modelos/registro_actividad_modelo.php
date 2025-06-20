@@ -126,4 +126,42 @@ class RegistroActividad {
             return [];
         }
     }
+    
+    /**
+     * Obtener actividades recientes para el dashboard
+     */
+    public function obtenerActividadesRecientes($limite = 4) {
+        try {
+            $sql = "SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite";
+            
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->bindValue(':limite', $limite, PDO::PARAM_INT);
+            $stmt->execute();
+            
+            $resultado = $stmt->fetchAll();
+            
+            // Debug para verificar la consulta
+            error_log("SQL ejecutado: " . $sql);
+            error_log("Límite: " . $limite);
+            error_log("Resultados obtenidos: " . count($resultado));
+            error_log("Datos: " . print_r($resultado, true));
+            
+            return $resultado;
+            
+        } catch (PDOException $e) {
+            error_log("Error al obtener actividades recientes: " . $e->getMessage());
+            return [];
+        }
+    }
 }

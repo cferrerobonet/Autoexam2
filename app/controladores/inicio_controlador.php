@@ -67,7 +67,7 @@ class InicioControlador {
         // Obtener datos del usuario actual
         $usuarioActual = $this->usuarioModelo->buscarPorId($_SESSION['id_usuario']);
         
-        // Cargar estadísticas y conteos (serían reemplazados por datos reales)
+        // Cargar estadísticas y conteos
         $estadisticas = $this->obtenerEstadisticasAdmin();
         
         // Definir datos para la vista
@@ -189,36 +189,32 @@ class InicioControlador {
      * @return array Datos estadísticos 
      */
     private function obtenerEstadisticasAdmin() {
-        // Aquí iría la lógica real para obtener estadísticas de la BD
-        // Por ahora devolvemos datos de ejemplo
-        return [
-            'conteo' => [
-                'administradores' => 3,
-                'profesores' => 12,
-                'alumnos' => 145,
-                'cursos_activos' => 8
-            ],
-            'actividad_reciente' => [
-                [
-                    'tipo' => 'usuario_creado',
-                    'descripcion' => 'María López (alumno) ha sido registrado',
-                    'tiempo' => '30 minutos',
-                    'usuario' => 'Admin'
+        try {
+            // Obtener conteos reales de la base de datos
+            $conteo = $this->usuarioModelo->obtenerEstadisticasConteo();
+            
+            // Obtener actividades recientes reales
+            require_once APP_PATH . '/modelos/registro_actividad_modelo.php';
+            $registroModelo = new RegistroActividad();
+            $actividadesRecientes = $registroModelo->obtenerActividadesRecientes(4);
+            
+            return [
+                'conteo' => $conteo,
+                'actividad_reciente' => $actividadesRecientes
+            ];
+        } catch (Exception $e) {
+            error_log('Error al obtener estadísticas del admin: ' . $e->getMessage());
+            // Si hay error, devolver datos de respaldo
+            return [
+                'conteo' => [
+                    'administradores' => 0,
+                    'profesores' => 0,
+                    'alumnos' => 0,
+                    'cursos_activos' => 0
                 ],
-                [
-                    'tipo' => 'curso_modificado',
-                    'descripcion' => 'Matemáticas 3º ESO - Añadido nuevo módulo',
-                    'tiempo' => '2 horas',
-                    'usuario' => 'Admin'
-                ],
-                [
-                    'tipo' => 'backup_sistema',
-                    'descripcion' => 'Backup automático completo: BD y archivos',
-                    'tiempo' => '3 días',
-                    'usuario' => 'Sistema'
-                ]
-            ]
-        ];
+                'actividad_reciente' => []
+            ];
+        }
     }
     
     /**

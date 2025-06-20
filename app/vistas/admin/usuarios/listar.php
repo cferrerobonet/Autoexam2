@@ -66,7 +66,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                         </a>
 
                         <!-- Nuevo usuario -->
-                        <a href="<?= BASE_URL ?>/usuarios/crear" class="btn btn-primary">
+                        <a href="<?= BASE_URL ?>/usuarios/crear<?= !empty($datos['filtros']['rol']) ? '?rol=' . urlencode($datos['filtros']['rol']) : '' ?>" class="btn btn-primary">
                             <i class="fas fa-plus"></i> Nuevo Usuario
                         </a>
                         

@@ -155,6 +155,9 @@ class AutenticacionControlador {
                         // Registrar último acceso
                         $this->usuarioModelo->registrarUltimoAcceso($usuarioBD['id_usuario']);
                         
+                        // Registrar actividad de inicio de sesión
+                        $this->registrarActividadLogin($usuarioBD['id_usuario'], $usuarioBD['nombre'], $usuarioBD['apellidos']);
+                        
                         // Verificar si se solicitó la opción de sesión única
                         $sesionUnica = isset($_POST['sesion_unica']) ? true : false;
                         
@@ -483,6 +486,26 @@ class AutenticacionControlador {
             }
         } catch (Exception $e) {
             error_log("Error al registrar intento de acceso bloqueado: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Registrar actividad de inicio de sesión exitoso
+     */
+    private function registrarActividadLogin($idUsuario, $nombre, $apellidos) {
+        try {
+            require_once APP_PATH . '/modelos/registro_actividad_modelo.php';
+            $registroActividad = new RegistroActividad();
+            
+            $descripcion = "Inicio de sesión: {$apellidos}, {$nombre}";
+            $registroActividad->registrar(
+                $idUsuario,
+                'inicio_sesion',
+                $descripcion,
+                'autenticacion'
+            );
+        } catch (Exception $e) {
+            error_log("Error al registrar actividad de login: " . $e->getMessage());
         }
     }
 }

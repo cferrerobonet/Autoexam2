@@ -9,9 +9,6 @@
 
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar contadores
-    initContadores();
-    
     // Cargar actividad reciente 
     cargarActividadReciente();
     
@@ -20,11 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Comprobar estado del sistema
     comprobarEstadoSistema();
+    
+    // Inicializar tooltips de Bootstrap
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
 });
 
 /**
- * Inicializa los contadores con animación
+ * Inicializa los contadores con animación (DESHABILITADO - ahora se muestran datos reales directamente)
  */
+/*
 function initContadores() {
     // Lista de elementos a animar
     const contadores = [
@@ -60,6 +64,7 @@ function initContadores() {
         }, 50);
     });
 }
+*/
 
 /**
  * Carga la actividad reciente del sistema

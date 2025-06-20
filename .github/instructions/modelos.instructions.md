@@ -23,7 +23,10 @@ En /base_datos están los sql de la aplicación. Deberá utilizarse para añadir
 
 EN /almacenamiento están los logs, copias de seguridad, /tmp y archivos de subidas de los usuarios
 
-Siempre que se vaya a crear un archivo de diagnostico o test, que luego ya no se utilice se hará en /publico/diagnostico
+Siempre que se vaya a crear un archivo de diagnostico o test, que luego ya no se utilice se hará en /publico/diagnostico y cada archivo tendrá
+un link de volver a /publico/diagnostico/index.php 
+Crea un index.php en /diagnostico donde se muestren automáticamente y dinámicamente los php de test y diagnosticos que haya en esa carpeta y se
+muestren por orden decreciente de fecha de creación (y que se vea la fecha).
 
 EL dominio de la aplicación siempre apunta a /publico y el punto de entrada es index.php
 

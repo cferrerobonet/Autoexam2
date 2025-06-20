@@ -127,13 +127,13 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                         <span class="input-group-text"><i class="fas fa-users-cog"></i></span>
                                         <select class="form-select" id="rol" name="rol" required>
                                             <option value="">Seleccione un rol</option>
-                                            <option value="admin" <?= (isset($_POST['rol']) && $_POST['rol'] === 'admin') ? 'selected' : '' ?>>
+                                            <option value="admin" <?= (isset($_POST['rol']) && $_POST['rol'] === 'admin') || (isset($_GET['rol']) && $_GET['rol'] === 'admin') ? 'selected' : '' ?>>
                                                 Administrador
                                             </option>
-                                            <option value="profesor" <?= (isset($_POST['rol']) && $_POST['rol'] === 'profesor') ? 'selected' : '' ?>>
+                                            <option value="profesor" <?= (isset($_POST['rol']) && $_POST['rol'] === 'profesor') || (isset($_GET['rol']) && $_GET['rol'] === 'profesor') ? 'selected' : '' ?>>
                                                 Profesor
                                             </option>
-                                            <option value="alumno" <?= (isset($_POST['rol']) && $_POST['rol'] === 'alumno') ? 'selected' : '' ?>>
+                                            <option value="alumno" <?= (isset($_POST['rol']) && $_POST['rol'] === 'alumno') || (isset($_GET['rol']) && $_GET['rol'] === 'alumno') ? 'selected' : '' ?>>
                                                 Alumno
                                             </option>
                                         </select>

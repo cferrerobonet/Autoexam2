@@ -46,13 +46,11 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-users-cog me-2"></i> Administradores</h5>
                     <h2 class="display-4 mb-0" id="contador-admin">
-                        <div class="spinner-border spinner-border-sm text-light" role="status">
-                            <span class="visually-hidden">Cargando...</span>
-                        </div>
+                        <?= isset($datos['estadisticas']['conteo']['administradores']) ? $datos['estadisticas']['conteo']['administradores'] : 0 ?>
                     </h2>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between bg-primary border-top-0">
-                    <a href="<?= BASE_URL ?>/usuarios/administradores" class="text-white text-decoration-none">
+                    <a href="<?= BASE_URL ?>/usuarios?rol=admin" class="text-white text-decoration-none">
                         Ver detalles <i class="fas fa-arrow-circle-right"></i>
                     </a>
                     <button class="btn btn-sm btn-outline-light" data-bs-toggle="tooltip" 
@@ -67,13 +65,11 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-chalkboard-teacher me-2"></i> Profesores</h5>
                     <h2 class="display-4 mb-0" id="contador-profesores">
-                        <div class="spinner-border spinner-border-sm text-light" role="status">
-                            <span class="visually-hidden">Cargando...</span>
-                        </div>
+                        <?= isset($datos['estadisticas']['conteo']['profesores']) ? $datos['estadisticas']['conteo']['profesores'] : 0 ?>
                     </h2>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between bg-info border-top-0">
-                    <a href="<?= BASE_URL ?>/usuarios/profesores" class="text-white text-decoration-none">
+                    <a href="<?= BASE_URL ?>/usuarios?rol=profesor" class="text-white text-decoration-none">
                         Ver detalles <i class="fas fa-arrow-circle-right"></i>
                     </a>
                     <button class="btn btn-sm btn-outline-light" data-bs-toggle="tooltip" 
@@ -88,13 +84,11 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-user-graduate me-2"></i> Alumnos</h5>
                     <h2 class="display-4 mb-0" id="contador-alumnos">
-                        <div class="spinner-border spinner-border-sm text-light" role="status">
-                            <span class="visually-hidden">Cargando...</span>
-                        </div>
+                        <?= isset($datos['estadisticas']['conteo']['alumnos']) ? $datos['estadisticas']['conteo']['alumnos'] : 0 ?>
                     </h2>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between bg-success border-top-0">
-                    <a href="<?= BASE_URL ?>/usuarios/alumnos" class="text-white text-decoration-none">
+                    <a href="<?= BASE_URL ?>/usuarios?rol=alumno" class="text-white text-decoration-none">
                         Ver detalles <i class="fas fa-arrow-circle-right"></i>
                     </a>
                     <button class="btn btn-sm btn-outline-light" data-bs-toggle="tooltip" 
@@ -109,9 +103,7 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-book-open me-2"></i> Cursos Activos</h5>
                     <h2 class="display-4 mb-0" id="contador-cursos">
-                        <div class="spinner-border spinner-border-sm text-light" role="status">
-                            <span class="visually-hidden">Cargando...</span>
-                        </div>
+                        <?= isset($datos['estadisticas']['conteo']['cursos_activos']) ? $datos['estadisticas']['conteo']['cursos_activos'] : 0 ?>
                     </h2>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between bg-secondary border-top-0">
@@ -161,14 +153,27 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                 </div>
                 <div class="card-body p-0">
                     <div class="list-group list-group-flush" id="acciones-recientes">
-                        <div class="list-group-item">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h6 class="mb-1">Cargando actividad reciente...</h6>
+                        <?php if (!empty($datos['actividad_reciente'])): ?>
+                            <?php foreach($datos['actividad_reciente'] as $actividad): ?>
+                                <div class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1"><?= htmlspecialchars($actividad['descripcion']) ?></h6>
+                                        <small><?= date('d/m/Y H:i', strtotime($actividad['fecha'])) ?></small>
+                                    </div>
+                                    <p class="mb-1">
+                                        <span class="badge bg-primary"><?= ucfirst(str_replace('_', ' ', $actividad['accion'])) ?></span>
+                                        <?php if (!empty($actividad['nombre'])): ?>
+                                            por <?= htmlspecialchars($actividad['nombre'] . ' ' . $actividad['apellidos']) ?>
+                                        <?php endif; ?>
+                                    </p>
+                                    <small class="text-muted"><?= ucfirst($actividad['modulo']) ?></small>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <div class="list-group-item text-center text-muted">
+                                <i class="fas fa-info-circle me-2"></i>No hay actividad reciente registrada
                             </div>
-                            <div class="spinner-border spinner-border-sm text-primary" role="status">
-                                <span class="visually-hidden">Cargando...</span>
-                            </div>
-                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="card-footer text-end">
@@ -301,83 +306,3 @@ require_once APP_PATH . '/vistas/parciales/footer_admin.php';
 // Incluir scripts
 require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
 ?>
-
-<script>
-    // Cargar datos para los contadores
-    document.addEventListener('DOMContentLoaded', function() {
-        // Simular carga de datos (aquí irían las llamadas AJAX reales)
-        setTimeout(() => {
-            document.getElementById('contador-admin').innerHTML = '3';
-            document.getElementById('contador-profesores').innerHTML = '12';
-            document.getElementById('contador-alumnos').innerHTML = '145';
-            document.getElementById('contador-cursos').innerHTML = '8';
-            
-            // Cargar acciones recientes
-            const accionesRecientes = document.getElementById('acciones-recientes');
-            accionesRecientes.innerHTML = `
-                <div class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h6 class="mb-1">Nuevo usuario creado</h6>
-                        <small class="text-muted">Hace 30 min</small>
-                    </div>
-                    <p class="mb-1 small">María López (alumno) ha sido registrado</p>
-                    <small>Por: Admin</small>
-                </div>
-                <div class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h6 class="mb-1">Curso modificado</h6>
-                        <small class="text-muted">Hace 2 horas</small>
-                    </div>
-                    <p class="mb-1 small">Matemáticas 3º ESO - Añadido nuevo módulo</p>
-                    <small>Por: Admin</small>
-                </div>
-                <div class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h6 class="mb-1">Backup realizado</h6>
-                        <small class="text-muted">Hace 3 días</small>
-                    </div>
-                    <p class="mb-1 small">Backup automático completo: BD y archivos</p>
-                    <small>Por: Sistema</small>
-                </div>
-            `;
-            
-            // Inicializar gráfico de estadísticas
-            const ctx = document.getElementById('graficoEstadisticas').getContext('2d');
-            const chart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
-                    datasets: [{
-                        label: 'Exámenes creados',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        borderWidth: 2,
-                        tension: 0.1
-                    }, {
-                        label: 'Exámenes realizados',
-                        data: [7, 11, 5, 8, 3, 7],
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        borderWidth: 2,
-                        tension: 0.1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        }
-                    },
-                    responsive: true,
-                    maintainAspectRatio: false
-                }
-            });
-        }, 1000);
-    });
-</script>
