@@ -39,6 +39,7 @@ CREATE TABLE `modulos` (
   `titulo` VARCHAR(150) NOT NULL,
   `descripcion` TEXT,
   `id_profesor` INT,
+  `activo` TINYINT(1) DEFAULT 1,
   FOREIGN KEY (`id_profesor`) REFERENCES `usuarios`(`id_usuario`)
 ) ENGINE=InnoDB;
 

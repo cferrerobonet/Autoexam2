@@ -26,6 +26,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="<?= BASE_URL ?>/modulos">
+                        <i class="fas fa-puzzle-piece"></i> Módulos
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="<?= BASE_URL ?>/usuarios">
                         <i class="fas fa-users"></i> Mis Alumnos
                     </a>

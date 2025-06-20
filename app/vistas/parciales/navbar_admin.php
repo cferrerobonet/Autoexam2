@@ -114,6 +114,14 @@ if (!isset($_SESSION)) {
                     </li>
                     
                     <li class="nav-item">
+                        <a class="nav-link <?= ($GLOBALS['controlador'] ?? '') === 'modulos' ? 'active' : '' ?>" 
+                           href="<?= BASE_URL ?>/modulos">
+                            <i class="fas fa-puzzle-piece text-primary me-2"></i>
+                            Módulos
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
                         <a class="nav-link <?= ($GLOBALS['controlador'] ?? '') === 'examenes' ? 'active' : '' ?>" 
                            href="<?= BASE_URL ?>/examenes">
                             <i class="fas fa-file-alt text-primary me-2"></i>
