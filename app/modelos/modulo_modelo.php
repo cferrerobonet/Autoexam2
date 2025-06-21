@@ -102,30 +102,74 @@ class ModuloModelo {
     }
 
     /**
-     * Crear nuevo módulo
+     * Crear nuevo módulo con validaciones
      */
     public function crear($datos) {
         try {
-            $query = "INSERT INTO modulos (titulo, descripcion, id_profesor, activo) VALUES (?, ?, ?, 1)";
+            // Validar datos de entrada
+            $this->validarDatosModulo($datos);
+            
+            // Verificar que no existe otro módulo con el mismo título para el mismo profesor
+            if ($this->existeTituloProfesor($datos['titulo'], $datos['id_profesor'])) {
+                throw new Exception('Ya existe un módulo con ese título para este profesor');
+            }
+            
+            $query = "INSERT INTO modulos (titulo, descripcion, id_profesor, activo, fecha_creacion) 
+                     VALUES (?, ?, ?, 1, NOW())";
             $stmt = $this->db->prepare($query);
+            
+            if (!$stmt) {
+                throw new Exception('Error al preparar consulta: ' . $this->db->error);
+            }
+            
             $stmt->bind_param("ssi", 
                 $datos['titulo'], 
                 $datos['descripcion'], 
                 $datos['id_profesor']
             );
             
-            if ($stmt->execute()) {
-                $id_modulo = $stmt->insert_id;
-                $stmt->close();
-                return $id_modulo;
-            } else {
-                error_log("Error al ejecutar consulta de creación de módulo: " . $stmt->error);
-                $stmt->close();
-                return false;
+            if (!$stmt->execute()) {
+                throw new Exception('Error al ejecutar consulta: ' . $stmt->error);
             }
+            
+            $idModulo = $stmt->insert_id;
+            $stmt->close();
+            
+            return $idModulo;
+            
         } catch (Exception $e) {
             error_log("Error al crear módulo: " . $e->getMessage());
-            return false;
+            throw $e;
+        }
+    }
+    
+    /**
+     * Obtener módulo por ID
+     */
+    public function obtenerPorId($idModulo) {
+        try {
+            $query = "SELECT m.*, u.nombre, u.apellidos 
+                     FROM modulos m
+                     LEFT JOIN usuarios u ON m.id_profesor = u.id_usuario
+                     WHERE m.id_modulo = ?";
+            
+            $stmt = $this->db->prepare($query);
+            if (!$stmt) {
+                throw new Exception('Error al preparar consulta: ' . $this->db->error);
+            }
+            
+            $stmt->bind_param("i", $idModulo);
+            $stmt->execute();
+            
+            $resultado = $stmt->get_result();
+            $modulo = $resultado->fetch_assoc();
+            $stmt->close();
+            
+            return $modulo;
+            
+        } catch (Exception $e) {
+            error_log("Error al obtener módulo por ID: " . $e->getMessage());
+            return null;
         }
     }
 
@@ -237,25 +281,54 @@ class ModuloModelo {
             return [];
         }
     }
-
+    
+    // ============ MÉTODOS DE VALIDACIÓN Y UTILIDADES ============
+    
     /**
-     * Obtener módulo por ID
+     * Validar datos del módulo
      */
-    public function obtenerPorId($id_modulo) {
+    private function validarDatosModulo($datos) {
+        if (empty($datos['titulo'])) {
+            throw new Exception('El título del módulo es obligatorio');
+        }
+        
+        if (strlen($datos['titulo']) > 255) {
+            throw new Exception('El título no puede exceder 255 caracteres');
+        }
+        
+        if (empty($datos['id_profesor']) || !is_numeric($datos['id_profesor'])) {
+            throw new Exception('El ID del profesor es inválido');
+        }
+    }
+    
+    /**
+     * Verificar si existe un módulo con el mismo título para un profesor
+     */
+    private function existeTituloProfesor($titulo, $idProfesor, $excluirId = null) {
         try {
-            $query = "SELECT m.*, u.nombre, u.apellidos 
-                      FROM modulos m
-                      LEFT JOIN usuarios u ON m.id_profesor = u.id_usuario
-                      WHERE m.id_modulo = ?";
-            $stmt = $this->db->prepare($query);
-            $stmt->bind_param("i", $id_modulo);
-            $stmt->execute();
-            $resultado = $stmt->get_result();
+            $query = "SELECT id_modulo FROM modulos WHERE titulo = ? AND id_profesor = ?";
+            $params = [$titulo, $idProfesor];
+            $tipos = "si";
             
-            return $resultado->fetch_assoc();
+            if ($excluirId) {
+                $query .= " AND id_modulo != ?";
+                $params[] = $excluirId;
+                $tipos .= "i";
+            }
+            
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param($tipos, ...$params);
+            $stmt->execute();
+            
+            $resultado = $stmt->get_result();
+            $existe = $resultado->num_rows > 0;
+            $stmt->close();
+            
+            return $existe;
+            
         } catch (Exception $e) {
-            error_log("Error al obtener módulo por ID: " . $e->getMessage());
-            return null;
+            error_log("Error al verificar título duplicado: " . $e->getMessage());
+            return false;
         }
     }
 

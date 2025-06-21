@@ -53,18 +53,13 @@ class MantenimientoControlador {
      * Limpiar caché del sistema
      */
     public function limpiarCache() {
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: ' . BASE_URL . '/mantenimiento');
-            exit;
-        }
-        
-        if (!$this->sesion->verificarTokenCSRF($_POST['csrf_token'] ?? '')) {
-            $_SESSION['error'] = 'Token de seguridad inválido';
-            header('Location: ' . BASE_URL . '/mantenimiento');
-            exit;
-        }
-        
         try {
+            // Verificar método POST
+            $this->verificarMetodoPost();
+            
+            // Verificar token CSRF
+            $this->verificarTokenCSRF($_POST['csrf_token'] ?? '', 'mantenimiento');
+            
             $archivosEliminados = $this->limpiarCacheArchivos();
             
             $this->registrarActividad('cache_limpiado', [
@@ -72,7 +67,9 @@ class MantenimientoControlador {
             ]);
             
             $_SESSION['exito'] = "Caché limpiado correctamente. Se eliminaron $archivosEliminados archivos.";
+            
         } catch (Exception $e) {
+            error_log("Error al limpiar caché: " . $e->getMessage());
             $_SESSION['error'] = 'Error al limpiar caché: ' . $e->getMessage();
         }
         
@@ -374,6 +371,26 @@ class MantenimientoControlador {
             ]);
         } catch (Exception $e) {
             error_log("Error registrando actividad: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Verificar que la petición usa método POST
+     */
+    private function verificarMetodoPost() {
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            throw new Exception("Método no permitido");
+        }
+    }
+    
+    /**
+     * Verificar token CSRF
+     */
+    private function verificarTokenCSRF($token, $rutaError = 'mantenimiento') {
+        if (empty($token) || !$this->sesion->validarTokenCSRF($token)) {
+            $_SESSION['error'] = 'Error de validación de seguridad.';
+            header('Location: ' . BASE_URL . '/' . $rutaError);
+            exit;
         }
     }
 }
