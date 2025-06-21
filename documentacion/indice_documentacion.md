@@ -1,12 +1,33 @@
 # Índice de Documentación - AUTOEXAM2
 
-**Última actualización:** 17 de junio de 2025
+**Última actualización:** 21 de junio de 2025
 
 Este documento proporciona un índice organizado de toda la documentación disponible para AUTOEXAM2, facilitando el acceso a la información específica necesaria para el desarrollo y mantenimiento.
 
 > **NOTA:** La documentación ha sido reorganizada en dos secciones principales: `/actual/` (contiene la documentación actualizada y unificada) y `/historial/` (contiene versiones anteriores para referencia histórica).
 >
 > **ESTADO DE MIGRACIÓN:** Los directorios numerados (01_estructura_presentación, etc.) contienen documentación original que está en proceso de migración a la estructura unificada `/actual/`. Se mantendrán hasta completar la migración de todos sus documentos.
+
+---
+
+## 🚀 DOCUMENTACIÓN ACTUALIZADA (Junio 2025)
+
+### 📋 Resumen de Funcionalidades Implementadas
+- [**Módulos Funcionales Implementados**](actual/sistema/modulos_funcionales_implementados.md) - **✨ NUEVO** - Estado completo del sistema implementado
+
+### 🎓 Sistema de Examenes
+- [**Sistema de Gestión de Exámenes**](actual/examenes/sistema_gestion_examenes.md) - **✨ NUEVO** - Sistema completo de exámenes online
+- [**Sistema de Banco de Preguntas**](actual/examenes/sistema_banco_preguntas.md) - **✨ NUEVO** - Gestión centralizada de preguntas reutilizables
+
+### 📚 Gestión Académica
+- [**Sistema de Gestión de Módulos**](actual/modulos/sistema_gestion_modulos.md) - **✨ NUEVO** - CRUD completo de módulos v3.0
+
+### 👥 Usuarios y Dashboards
+- [**Dashboards por Rol**](actual/usuarios/dashboards_por_rol.md) - **✨ NUEVO** - Interfaces personalizadas por rol
+
+### 🔒 Seguridad y Auditoría
+- [**Sistema de Actividad y Auditoría**](actual/sistema/actividad_auditoria.md) - **✨ NUEVO** - Registro completo de actividad
+- [**Sistema de Gestión de Sesiones Activas**](actual/seguridad/sesiones_activas.md) - **✨ NUEVO** - Control de sesiones en tiempo real
 
 ---
 
