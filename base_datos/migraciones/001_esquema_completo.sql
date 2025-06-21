@@ -1,8 +1,9 @@
 -- AUTOEXAM2 - Esquema completo de base de datos
 -- Compatible con MySQL 8.x
--- Autor: Carlos Ferrero Bonet - v1.2 - 2025
--- Última actualización: 14 de junio de 2025
+-- Autor: Carlos Ferrero Bonet - v1.3 - 2025
+-- Última actualización: 21 de junio de 2025
 -- Este archivo contiene la estructura completa de tablas del sistema
+-- v1.3: Agregado módulo completo de exámenes con versionado y control de intentos
 
 SET NAMES utf8mb4;
 SET sql_mode = 'STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
@@ -48,10 +49,19 @@ CREATE TABLE `examenes` (
   `id_examen` INT AUTO_INCREMENT PRIMARY KEY,
   `titulo` VARCHAR(255) NOT NULL,
   `id_modulo` INT,
+  `id_curso` INT,
+  `tiempo_limite` INT,
+  `aleatorio_preg` TINYINT(1) DEFAULT 0,
+  `aleatorio_resp` TINYINT(1) DEFAULT 0,
   `fecha_inicio` DATETIME,
   `fecha_fin` DATETIME,
+  `visible` TINYINT(1) DEFAULT 1,
+  `activo` TINYINT(1) DEFAULT 1,
+  `id_examen_origen` INT DEFAULT NULL,
   `estado` ENUM('borrador', 'activo', 'finalizado') DEFAULT 'borrador',
-  FOREIGN KEY (`id_modulo`) REFERENCES `modulos`(`id_modulo`)
+  FOREIGN KEY (`id_modulo`) REFERENCES `modulos`(`id_modulo`),
+  FOREIGN KEY (`id_curso`) REFERENCES `cursos`(`id_curso`),
+  FOREIGN KEY (`id_examen_origen`) REFERENCES `examenes`(`id_examen`)
 ) ENGINE=InnoDB;
 
 -- Banco de preguntas
@@ -77,6 +87,78 @@ CREATE TABLE `respuestas_banco` (
   `media_tipo` ENUM('imagen','video','url','pdf','ninguno'),
   `media_valor` TEXT,
   FOREIGN KEY (`id_pregunta`) REFERENCES `preguntas_banco`(`id_pregunta`)
+) ENGINE=InnoDB;
+
+-- Preguntas de exámenes específicos
+CREATE TABLE `preguntas` (
+  `id_pregunta` INT AUTO_INCREMENT PRIMARY KEY,
+  `id_examen` INT NOT NULL,
+  `tipo` ENUM('test', 'desarrollo') NOT NULL,
+  `enunciado` TEXT NOT NULL,
+  `media_tipo` ENUM('imagen', 'video', 'url', 'pdf', 'ninguno') DEFAULT 'ninguno',
+  `media_valor` TEXT,
+  `habilitada` TINYINT(1) DEFAULT 1,
+  `orden` INT DEFAULT 0,
+  FOREIGN KEY (`id_examen`) REFERENCES `examenes`(`id_examen`) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- Respuestas de preguntas tipo test
+CREATE TABLE `respuestas` (
+  `id_respuesta` INT AUTO_INCREMENT PRIMARY KEY,
+  `id_pregunta` INT NOT NULL,
+  `texto` TEXT NOT NULL,
+  `correcta` TINYINT(1) DEFAULT 0,
+  `media_tipo` ENUM('imagen', 'video', 'url', 'pdf', 'ninguno') DEFAULT 'ninguno',
+  `media_valor` TEXT,
+  `orden` INT DEFAULT 0,
+  FOREIGN KEY (`id_pregunta`) REFERENCES `preguntas`(`id_pregunta`) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- Versionado de exámenes
+CREATE TABLE `examenes_versiones` (
+  `id_version` INT AUTO_INCREMENT PRIMARY KEY,
+  `id_examen_original` INT NOT NULL,
+  `titulo` VARCHAR(150) NOT NULL,
+  `preguntas_json` TEXT NOT NULL,
+  `activo` TINYINT(1) DEFAULT 0,
+  `autor` INT NOT NULL,
+  `fecha_creacion` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `comentario` TEXT,
+  FOREIGN KEY (`id_examen_original`) REFERENCES `examenes`(`id_examen`) ON DELETE CASCADE,
+  FOREIGN KEY (`autor`) REFERENCES `usuarios`(`id_usuario`)
+) ENGINE=InnoDB;
+
+-- Respuestas de estudiantes
+CREATE TABLE `respuestas_estudiante` (
+  `id_respuesta_estudiante` INT AUTO_INCREMENT PRIMARY KEY,
+  `id_examen` INT NOT NULL,
+  `id_alumno` INT NOT NULL,
+  `id_pregunta` INT NOT NULL,
+  `id_respuesta` INT DEFAULT NULL,
+  `texto_respuesta` TEXT,
+  `fecha_respuesta` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `puntuacion` DECIMAL(5,2) DEFAULT NULL,
+  `corregida` TINYINT(1) DEFAULT 0,
+  FOREIGN KEY (`id_examen`) REFERENCES `examenes`(`id_examen`) ON DELETE CASCADE,
+  FOREIGN KEY (`id_alumno`) REFERENCES `usuarios`(`id_usuario`),
+  FOREIGN KEY (`id_pregunta`) REFERENCES `preguntas`(`id_pregunta`) ON DELETE CASCADE,
+  FOREIGN KEY (`id_respuesta`) REFERENCES `respuestas`(`id_respuesta`) ON DELETE CASCADE,
+  UNIQUE KEY `unique_alumno_pregunta` (`id_alumno`, `id_pregunta`)
+) ENGINE=InnoDB;
+
+-- Control de intentos de examen
+CREATE TABLE `intentos_examen` (
+  `id_intento` INT AUTO_INCREMENT PRIMARY KEY,
+  `id_examen` INT NOT NULL,
+  `id_alumno` INT NOT NULL,
+  `fecha_inicio` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `fecha_fin` DATETIME DEFAULT NULL,
+  `tiempo_usado` INT DEFAULT 0,
+  `finalizado` TINYINT(1) DEFAULT 0,
+  `ip` VARCHAR(45),
+  `user_agent` TEXT,
+  FOREIGN KEY (`id_examen`) REFERENCES `examenes`(`id_examen`) ON DELETE CASCADE,
+  FOREIGN KEY (`id_alumno`) REFERENCES `usuarios`(`id_usuario`)
 ) ENGINE=InnoDB;
 
 -- Archivos multimedia
@@ -142,6 +224,15 @@ CREATE TABLE IF NOT EXISTS `config_sistema` (
 
 INSERT IGNORE INTO `config_sistema` (`clave`, `valor`) VALUES ('modo_mantenimiento', '0');
 
+-- Configuraciones específicas para el módulo de exámenes
+INSERT IGNORE INTO `config_sistema` (`clave`, `valor`) VALUES 
+('examenes_tiempo_maximo', '240'),
+('examenes_intentos_maximos', '3'),
+('examenes_autoguardado_intervalo', '30'),
+('examenes_modo_seguro', '1'),
+('examenes_bloquear_copia', '1'),
+('examenes_mostrar_resultados', '1');
+
 -- Sesiones activas
 CREATE TABLE IF NOT EXISTS `sesiones_activas` (
   `id_sesion` INT AUTO_INCREMENT PRIMARY KEY,
@@ -160,6 +251,22 @@ CREATE TABLE IF NOT EXISTS `sesiones_activas` (
 -- Índices para mejorar el rendimiento de las sesiones activas
 CREATE INDEX `idx_sesiones_token` ON `sesiones_activas` (`token`);
 CREATE INDEX `idx_sesiones_php_id` ON `sesiones_activas` (`php_session_id`);
+
+-- Índices para módulo de exámenes
+CREATE INDEX `idx_preguntas_examen` ON `preguntas` (`id_examen`);
+CREATE INDEX `idx_preguntas_tipo` ON `preguntas` (`tipo`);
+CREATE INDEX `idx_preguntas_habilitada` ON `preguntas` (`habilitada`);
+CREATE INDEX `idx_respuestas_pregunta` ON `respuestas` (`id_pregunta`);
+CREATE INDEX `idx_respuestas_correcta` ON `respuestas` (`correcta`);
+CREATE INDEX `idx_resp_est_examen` ON `respuestas_estudiante` (`id_examen`);
+CREATE INDEX `idx_resp_est_alumno` ON `respuestas_estudiante` (`id_alumno`);
+CREATE INDEX `idx_resp_est_corregida` ON `respuestas_estudiante` (`corregida`);
+CREATE INDEX `idx_intentos_examen` ON `intentos_examen` (`id_examen`);
+CREATE INDEX `idx_intentos_alumno` ON `intentos_examen` (`id_alumno`);
+CREATE INDEX `idx_intentos_finalizado` ON `intentos_examen` (`finalizado`);
+CREATE INDEX `idx_versiones_original` ON `examenes_versiones` (`id_examen_original`);
+CREATE INDEX `idx_versiones_activo` ON `examenes_versiones` (`activo`);
+CREATE INDEX `idx_versiones_autor` ON `examenes_versiones` (`autor`);
 
 -- Tabla para tokens de recuperación de contraseña
 CREATE TABLE IF NOT EXISTS `tokens_recuperacion` (

@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE_URL ?>/examenes/historial">
+                    <a class="nav-link" href="<?= BASE_URL ?>/examenes/historial-examenes">
                         <i class="fas fa-history"></i> Historial
                     </a>
                 </li>

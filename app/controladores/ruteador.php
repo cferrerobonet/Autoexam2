@@ -50,6 +50,12 @@ class Ruteador {
                 } elseif ($url[0] === 'mantenimiento' && file_exists(APP_PATH . '/controladores/mantenimiento_controlador.php')) {
                     $this->controlador = 'mantenimiento';
                     unset($url[0]);
+                } elseif ($url[0] === 'banco-preguntas' && file_exists(APP_PATH . '/controladores/banco_preguntas_controlador.php')) {
+                    $this->controlador = 'banco_preguntas';
+                    unset($url[0]);
+                } elseif ($url[0] === 'sesiones-activas' && file_exists(APP_PATH . '/controladores/sesiones_activas_controlador.php')) {
+                    $this->controlador = 'sesiones_activas';
+                    unset($url[0]);
                 } elseif (file_exists(APP_PATH . '/controladores/' . $url[0] . '_controlador.php')) {
                     $this->controlador = $url[0];
                     unset($url[0]);
@@ -78,7 +84,13 @@ class Ruteador {
             
             // Validar acción
             if (isset($url[1]) && !empty($url[1])) {
-                if (method_exists($this->controlador, $url[1])) {
+                // Convertir guiones a guiones bajos para los nombres de métodos
+                $accion_con_guiones_bajos = str_replace('-', '_', $url[1]);
+                
+                if (method_exists($this->controlador, $accion_con_guiones_bajos)) {
+                    $this->accion = $accion_con_guiones_bajos;
+                    unset($url[1]);
+                } elseif (method_exists($this->controlador, $url[1])) {
                     $this->accion = $url[1];
                     unset($url[1]);
                 } else {
