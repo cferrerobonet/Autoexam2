@@ -11,94 +11,17 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
 }
 ?>
 
-<!-- Título y estadísticas -->
+<!-- Título y botón de acción -->
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <div>
-        <h1 class="h3 mb-0">
-            <i class="fas fa-puzzle-piece text-primary me-2"></i>
-            Gestión de Módulos
-        </h1>
-        <p class="text-muted mb-0">Administra los módulos del sistema</p>
-    </div>
+    <h1><i class="fas fa-puzzle-piece me-2"></i> Gestión de Módulos</h1>
     <div class="d-flex gap-2">
         <a href="<?= BASE_URL ?>/modulos/nuevo" class="btn btn-primary">
             <i class="fas fa-plus me-1"></i> Nuevo Módulo
         </a>
     </div>
 </div>
-
-<!-- Estadísticas -->
-<div class="row mb-4">
-    <div class="col-md-3">
-        <div class="card border-0 shadow-sm">
-            <div class="card-body">
-                <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0">
-                        <div class="bg-primary bg-gradient rounded-3 p-3">
-                            <i class="fas fa-puzzle-piece text-white fa-lg"></i>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <div class="fs-6 fw-semibold text-muted">Total Módulos</div>
-                        <div class="fs-4 fw-bold text-dark"><?= $datos['total_registros'] ?></div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="card border-0 shadow-sm">
-            <div class="card-body">
-                <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0">
-                        <div class="bg-success bg-gradient rounded-3 p-3">
-                            <i class="fas fa-chalkboard-teacher text-white fa-lg"></i>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <div class="fs-6 fw-semibold text-muted">Con Profesor</div>
-                        <div class="fs-4 fw-bold text-dark"><?= count(array_filter($datos['modulos'], function($m) { return !empty($m['id_profesor']); })) ?></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card border-0 shadow-sm">
-            <div class="card-body">
-                <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0">
-                        <div class="bg-info bg-gradient rounded-3 p-3">
-                            <i class="fas fa-file-alt text-white fa-lg"></i>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <div class="fs-6 fw-semibold text-muted">Total Exámenes</div>
-                        <div class="fs-4 fw-bold text-dark"><?= array_sum(array_column($datos['modulos'], 'total_examenes')) ?></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card border-0 shadow-sm">
-            <div class="card-body">
-                <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0">
-                        <div class="bg-warning bg-gradient rounded-3 p-3">
-                            <i class="fas fa-exclamation-triangle text-white fa-lg"></i>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <div class="fs-6 fw-semibold text-muted">Sin Profesor</div>
-                        <div class="fs-4 fw-bold text-dark"><?= count(array_filter($datos['modulos'], function($m) { return empty($m['id_profesor']); })) ?></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Mensajes -->
 <?php if (isset($_SESSION['exito'])): ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -176,7 +99,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
             </div>
             
             <div class="col-md-3 d-flex align-items-end gap-2">
-                <a href="<?= BASE_URL ?>/modulos" class="btn btn-outline-secondary">
+                <a href="<?= BASE_URL ?>/modulos" class="btn btn-light border shadow-sm rounded-pill w-100">
                     <i class="fas fa-times me-1"></i>Limpiar
                 </a>
             </div>
@@ -234,6 +157,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                     <?php endif; ?>
                                 </a>
                             </th>
+                            <th class="py-3 text-muted fw-semibold">Curso</th>
                             <th class="py-3 text-muted fw-semibold">
                                 <a href="<?= BASE_URL ?>/modulos?<?= http_build_query(array_merge($datos['filtros'], ['ordenar_por' => 'total_examenes', 'orden' => (isset($datos['filtros']['ordenar_por']) && $datos['filtros']['ordenar_por'] == 'total_examenes' && isset($datos['filtros']['orden']) && $datos['filtros']['orden'] == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="text-decoration-none text-muted d-flex align-items-center">
                                     Exámenes
@@ -276,6 +200,30 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                         <span class="badge rounded-pill bg-warning-subtle text-warning border border-warning-subtle">
                                             <i class="fas fa-exclamation-triangle me-1"></i>
                                             Sin asignar
+                                        </span>
+                                    <?php endif; ?>
+                                </td>
+                                <td class="py-3">
+                                    <?php if (!empty($modulo['cursos_asignados'])): ?>
+                                        <?php 
+                                        // Dividir los cursos por comas y crear badges para cada uno
+                                        $cursos = explode(', ', $modulo['cursos_asignados']);
+                                        foreach ($cursos as $curso): 
+                                            $curso = trim($curso);
+                                            if (!empty($curso)):
+                                        ?>
+                                            <span class="badge rounded-pill bg-info-subtle text-info border border-info-subtle me-1 mb-1">
+                                                <i class="fas fa-book me-1"></i>
+                                                <?= htmlspecialchars($curso) ?>
+                                            </span>
+                                        <?php 
+                                            endif;
+                                        endforeach; 
+                                        ?>
+                                    <?php else: ?>
+                                        <span class="badge rounded-pill bg-secondary-subtle text-secondary border border-secondary-subtle">
+                                            <i class="fas fa-minus me-1"></i>
+                                            Sin cursos
                                         </span>
                                     <?php endif; ?>
                                 </td>

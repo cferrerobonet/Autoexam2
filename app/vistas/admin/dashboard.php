@@ -193,7 +193,7 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                     </div>
                 </div>
                 <div class="card-body">
-                    <canvas id="graficoEstadisticas" height="415"></canvas>
+                    <canvas id="graficoEstadisticas" height="340"></canvas>
                 </div>
             </div>
         </div>

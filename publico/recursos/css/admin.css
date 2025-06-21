@@ -686,6 +686,22 @@ main {
   }
 }
 
+/* Ajustar altura del canvas de estadísticas globales */
+#graficoEstadisticas {
+  max-height: 360px !important;
+  height: 360px !important;
+}
+
+/* Estilos para botones de accesos rápidos */
+.card-body .btn span.small {
+  font-size: 0.9rem !important;
+  font-weight: 500;
+}
+
+.card-body .btn i {
+  margin-bottom: 0.75rem !important;
+}
+
 /* Botón de menú solo en móviles */
 .nav-item .btn-link {
   border: none;

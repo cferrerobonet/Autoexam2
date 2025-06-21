@@ -50,10 +50,13 @@ class ModuloModelo {
             // Consulta principal
             $query = "SELECT m.id_modulo, m.titulo, m.descripcion, m.id_profesor, m.activo,
                              u.nombre, u.apellidos,
-                             COUNT(e.id_examen) as total_examenes
+                             COUNT(DISTINCT e.id_examen) as total_examenes,
+                             GROUP_CONCAT(DISTINCT c.nombre_curso ORDER BY c.nombre_curso SEPARATOR ', ') as cursos_asignados
                       FROM modulos m
                       LEFT JOIN usuarios u ON m.id_profesor = u.id_usuario
                       LEFT JOIN examenes e ON m.id_modulo = e.id_modulo
+                      LEFT JOIN modulo_curso mc ON m.id_modulo = mc.id_modulo
+                      LEFT JOIN cursos c ON mc.id_curso = c.id_curso
                       $where
                       GROUP BY m.id_modulo, m.titulo, m.descripcion, m.id_profesor, m.activo, u.nombre, u.apellidos
                       ORDER BY m.titulo ASC
