@@ -114,8 +114,8 @@ class ModuloModelo {
                 throw new Exception('Ya existe un módulo con ese título para este profesor');
             }
             
-            $query = "INSERT INTO modulos (titulo, descripcion, id_profesor, activo, fecha_creacion) 
-                     VALUES (?, ?, ?, 1, NOW())";
+            $query = "INSERT INTO modulos (titulo, descripcion, id_profesor, activo) 
+                     VALUES (?, ?, ?, 1)";
             $stmt = $this->db->prepare($query);
             
             if (!$stmt) {
@@ -149,30 +149,123 @@ class ModuloModelo {
     public function obtenerPorId($idModulo) {
         try {
             $query = "SELECT m.*, u.nombre, u.apellidos 
-                     FROM modulos m
-                     LEFT JOIN usuarios u ON m.id_profesor = u.id_usuario
+                     FROM modulos m 
+                     LEFT JOIN usuarios u ON m.id_profesor = u.id_usuario 
                      WHERE m.id_modulo = ?";
-            
             $stmt = $this->db->prepare($query);
-            if (!$stmt) {
-                throw new Exception('Error al preparar consulta: ' . $this->db->error);
-            }
-            
             $stmt->bind_param("i", $idModulo);
             $stmt->execute();
-            
             $resultado = $stmt->get_result();
-            $modulo = $resultado->fetch_assoc();
-            $stmt->close();
-            
-            return $modulo;
-            
+            return $resultado->fetch_assoc();
         } catch (Exception $e) {
             error_log("Error al obtener módulo por ID: " . $e->getMessage());
-            return null;
+            return false;
         }
     }
-
+    
+    /**
+     * Obtener exámenes de un módulo
+     */
+    public function obtenerExamenes($idModulo) {
+        try {
+            $query = "SELECT id_examen, titulo, descripcion, activo 
+                     FROM examenes 
+                     WHERE id_modulo = ? 
+                     ORDER BY titulo ASC";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("i", $idModulo);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            
+            $examenes = [];
+            while ($examen = $resultado->fetch_assoc()) {
+                $examenes[] = $examen;
+            }
+            return $examenes;
+        } catch (Exception $e) {
+            error_log("Error al obtener exámenes del módulo: " . $e->getMessage());
+            return [];
+        }
+    }
+    
+    /**
+     * Eliminar un módulo
+     */
+    public function eliminar($idModulo) {
+        try {
+            // Primero eliminar las asignaciones de cursos
+            $this->eliminarAsignacionesCursos($idModulo);
+            
+            // Luego eliminar el módulo
+            $query = "DELETE FROM modulos WHERE id_modulo = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("i", $idModulo);
+            return $stmt->execute();
+        } catch (Exception $e) {
+            error_log("Error al eliminar módulo: " . $e->getMessage());
+            return false;
+        }
+    }
+    
+    /**
+     * Obtener cursos asignados a un módulo
+     */
+    public function obtenerCursosAsignados($idModulo) {
+        try {
+            $query = "SELECT mc.id_curso 
+                     FROM modulo_curso mc 
+                     WHERE mc.id_modulo = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("i", $idModulo);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            
+            $cursos = [];
+            while ($fila = $resultado->fetch_assoc()) {
+                $cursos[] = $fila['id_curso'];
+            }
+            return $cursos;
+        } catch (Exception $e) {
+            error_log("Error al obtener cursos asignados: " . $e->getMessage());
+            return [];
+        }
+    }
+    
+    /**
+     * Actualizar cursos asignados a un módulo
+     */
+    public function actualizarCursosAsignados($idModulo, $cursosNuevos) {
+        try {
+            // Eliminar asignaciones existentes
+            $this->eliminarAsignacionesCursos($idModulo);
+            
+            // Agregar nuevas asignaciones
+            if (!empty($cursosNuevos)) {
+                $this->asignarCursos($idModulo, $cursosNuevos);
+            }
+            
+            return true;
+        } catch (Exception $e) {
+            error_log("Error al actualizar cursos asignados: " . $e->getMessage());
+            return false;
+        }
+    }
+    
+    /**
+     * Eliminar asignaciones de cursos de un módulo
+     */
+    private function eliminarAsignacionesCursos($idModulo) {
+        try {
+            $query = "DELETE FROM modulo_curso WHERE id_modulo = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("i", $idModulo);
+            return $stmt->execute();
+        } catch (Exception $e) {
+            error_log("Error al eliminar asignaciones de cursos: " . $e->getMessage());
+            return false;
+        }
+    }
+    
     /**
      * Asignar módulo a múltiples cursos
      */

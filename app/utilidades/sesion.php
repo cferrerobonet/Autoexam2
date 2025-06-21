@@ -264,23 +264,32 @@ class Sesion {
     }
     
     /**
-     * Genera un token CSRF único
+     * Genera un token CSRF único o reutiliza uno existente válido
      * @return string Token CSRF
      */
     public function generarTokenCSRF() {
-        if (!isset($_SESSION['csrf_token'])) {
-            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-            $_SESSION['csrf_token_time'] = time();
+        // Si ya existe un token válido, reutilizarlo
+        if (isset($_SESSION['csrf_token']) && isset($_SESSION['csrf_token_time'])) {
+            $tiempoValidez = defined('TOKEN_VALIDITY_TIME') ? TOKEN_VALIDITY_TIME : 3600;
+            if (time() - $_SESSION['csrf_token_time'] <= $tiempoValidez) {
+                return $_SESSION['csrf_token'];
+            }
         }
+        
+        // Generar nuevo token si no existe o expiró
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+        $_SESSION['csrf_token_time'] = time();
+        
         return $_SESSION['csrf_token'];
     }
     
     /**
      * Valida un token CSRF
      * @param string $token Token a validar
+     * @param boolean $consumir Si debe eliminar el token tras validarlo (default: false)
      * @return boolean True si el token es válido
      */
-    public function validarTokenCSRF($token) {
+    public function validarTokenCSRF($token, $consumir = false) {
         if (!isset($_SESSION['csrf_token']) || empty($token)) {
             return false;
         }
@@ -297,9 +306,11 @@ class Sesion {
             return false;
         }
         
-        // Eliminar el token para evitar reutilización
-        unset($_SESSION['csrf_token']);
-        unset($_SESSION['csrf_token_time']);
+        // Solo eliminar el token si se solicita explícitamente
+        if ($consumir) {
+            unset($_SESSION['csrf_token']);
+            unset($_SESSION['csrf_token_time']);
+        }
         
         return true;
     }

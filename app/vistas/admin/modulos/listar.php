@@ -126,13 +126,13 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
         </h5>
     </div>
     <div class="card-body">
-        <form method="GET" action="<?= BASE_URL ?>/modulos" class="row g-3">
+        <form method="GET" action="<?= BASE_URL ?>/modulos" class="row g-3" id="formFiltros">
             <div class="col-md-3">
                 <label for="buscar" class="form-label">
                     <i class="fas fa-search me-1"></i>Buscar
                 </label>
-                <input type="text" class="form-control" id="buscar" name="buscar" 
-                       value="<?= htmlspecialchars($datos['filtros']['buscar']) ?>" 
+                <input type="text" class="form-control filtro-auto" id="buscar" name="buscar" 
+                       value="<?= htmlspecialchars($datos['filtros']['buscar'] ?? '') ?>" 
                        placeholder="Título, descripción o profesor">
             </div>
             
@@ -140,11 +140,11 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                 <label for="profesor" class="form-label">
                     <i class="fas fa-chalkboard-teacher me-1"></i>Profesor
                 </label>
-                <select class="form-select" id="profesor" name="profesor">
+                <select class="form-select filtro-auto" id="profesor" name="profesor">
                     <option value="">Todos</option>
                     <?php foreach ($datos['profesores'] as $profesor): ?>
                         <option value="<?= $profesor['id_usuario'] ?>" 
-                                <?= $datos['filtros']['profesor'] == $profesor['id_usuario'] ? 'selected' : '' ?>>
+                                <?= ($datos['filtros']['profesor'] ?? '') == $profesor['id_usuario'] ? 'selected' : '' ?>>
                             <?= htmlspecialchars($profesor['apellidos'] . ', ' . $profesor['nombre']) ?>
                         </option>
                     <?php endforeach; ?>
@@ -155,7 +155,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                 <label for="estado" class="form-label">
                     <i class="fas fa-toggle-on me-1"></i>Estado
                 </label>
-                <select class="form-select" id="estado" name="estado">
+                <select class="form-select filtro-auto" id="estado" name="estado">
                     <option value="">Todos</option>
                     <option value="1" <?= (isset($datos['filtros']['estado']) && $datos['filtros']['estado'] == '1') ? 'selected' : '' ?>>Activos</option>
                     <option value="0" <?= (isset($datos['filtros']['estado']) && $datos['filtros']['estado'] == '0') ? 'selected' : '' ?>>Inactivos</option>
@@ -166,19 +166,16 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                 <label for="limite" class="form-label">
                     <i class="fas fa-list me-1"></i>Mostrar
                 </label>
-                <select class="form-select" id="limite" name="limite">
-                    <option value="5" <?= $datos['limite'] == 5 ? 'selected' : '' ?>>5</option>
-                    <option value="10" <?= $datos['limite'] == 10 ? 'selected' : '' ?>>10</option>
-                    <option value="15" <?= $datos['limite'] == 15 ? 'selected' : '' ?>>15</option>
-                    <option value="20" <?= $datos['limite'] == 20 ? 'selected' : '' ?>>20</option>
-                    <option value="50" <?= $datos['limite'] == 50 ? 'selected' : '' ?>>50</option>
+                <select class="form-select filtro-auto" id="limite" name="limite">
+                    <option value="5" <?= ($datos['limite'] ?? 15) == 5 ? 'selected' : '' ?>>5</option>
+                    <option value="10" <?= ($datos['limite'] ?? 15) == 10 ? 'selected' : '' ?>>10</option>
+                    <option value="15" <?= ($datos['limite'] ?? 15) == 15 ? 'selected' : '' ?>>15</option>
+                    <option value="20" <?= ($datos['limite'] ?? 15) == 20 ? 'selected' : '' ?>>20</option>
+                    <option value="50" <?= ($datos['limite'] ?? 15) == 50 ? 'selected' : '' ?>>50</option>
                 </select>
             </div>
             
             <div class="col-md-3 d-flex align-items-end gap-2">
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-search me-1"></i>Buscar
-                </button>
                 <a href="<?= BASE_URL ?>/modulos" class="btn btn-outline-secondary">
                     <i class="fas fa-times me-1"></i>Limpiar
                 </a>
@@ -362,8 +359,9 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                    <form method="POST" action="<?= BASE_URL ?>/modulos/eliminar/<?= $modulo['id_modulo'] ?>" class="d-inline">
-                                                        <input type="hidden" name="csrf_token" value="<?= $datos['csrf_token'] ?>">
+                                                    <form method="POST" action="<?= BASE_URL ?>/modulos/eliminar" class="d-inline">
+                                                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($datos['csrf_token']) ?>">
+                                                        <input type="hidden" name="id_modulo" value="<?= $modulo['id_modulo'] ?>">
                                                         <button type="submit" class="btn btn-danger">Eliminar</button>
                                                     </form>
                                                 </div>
@@ -421,3 +419,97 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
         </ul>
     </nav>
 <?php endif; ?>
+
+<script>
+    /**
+     * Configura los campos de filtro para que se apliquen automáticamente
+     */
+    function configurarFiltrosAutomaticos() {
+        // Obtener todos los elementos con la clase filtro-auto
+        const filtros = document.querySelectorAll('.filtro-auto');
+        
+        // Variable para almacenar el temporizador de debounce para el campo de texto
+        let buscarTimeout;
+        
+        // Agregar event listeners según el tipo de elemento
+        filtros.forEach(function(filtro) {
+            if (filtro.tagName === 'SELECT') {
+                // Para los selectores, aplicar el filtro inmediatamente al cambiar
+                filtro.addEventListener('change', function() {
+                    aplicarFiltros();
+                });
+            } else if (filtro.tagName === 'INPUT' && filtro.type === 'text') {
+                // Para campos de texto, utilizar debounce para evitar demasiadas búsquedas
+                filtro.addEventListener('input', function() {
+                    // Limpiar el temporizador anterior si existe
+                    clearTimeout(buscarTimeout);
+                    
+                    // Establecer un nuevo temporizador (500ms de espera)
+                    buscarTimeout = setTimeout(function() {
+                        // Solo aplicar si hay al menos 3 caracteres o ninguno
+                        const texto = filtro.value.trim();
+                        if (texto === '' || texto.length >= 3) {
+                            aplicarFiltros();
+                        }
+                    }, 500); // Esperar 500ms después de que el usuario deje de escribir
+                });
+                
+                // También aplicar al presionar Enter solo si cumple los requisitos
+                filtro.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault(); // Evitar el envío del formulario
+                        clearTimeout(buscarTimeout);
+                        
+                        // Solo aplicar si hay al menos 3 caracteres o ninguno
+                        const texto = filtro.value.trim();
+                        if (texto === '' || texto.length >= 3) {
+                            aplicarFiltros();
+                        } else if (texto.length > 0 && texto.length < 3) {
+                            alert('Por favor, ingresa al menos 3 caracteres para buscar o deja el campo vacío.');
+                        }
+                    }
+                });
+            }
+        });
+    }
+    
+    /**
+     * Aplica los filtros enviando el formulario
+     */
+    function aplicarFiltros() {
+        try {
+            // Verificar el campo de búsqueda antes de enviar
+            const campoBuscar = document.getElementById('buscar');
+            if (campoBuscar) {
+                const textoBuscar = campoBuscar.value.trim();
+                
+                // Si tiene texto pero menos de 3 caracteres, no aplicar filtro
+                if (textoBuscar.length > 0 && textoBuscar.length < 3) {
+                    alert('Por favor, ingresa al menos 3 caracteres para buscar o deja el campo vacío.');
+                    return; // No enviar el formulario
+                }
+            }
+            
+            // Enviar formulario directamente sin manipular los valores
+            document.getElementById('formFiltros').submit();
+        } catch (error) {
+            console.error('Error al aplicar filtros:', error);
+            alert('Ocurrió un error al aplicar los filtros. Por favor, inténtalo nuevamente.');
+        }
+    }
+
+    // Inicializar estado al cargar la página
+    document.addEventListener('DOMContentLoaded', function() {
+        // Configurar filtros automáticos
+        configurarFiltrosAutomaticos();
+        
+        // Tooltips de Bootstrap
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
+</script>
+
+</body>
+</html>

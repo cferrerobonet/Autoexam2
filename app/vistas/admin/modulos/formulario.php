@@ -1,6 +1,10 @@
 <?php
 /**
- * Vista de formulario de módulos para administrador
+ * Vista de formulario de módulos para                 <form method="POST" action="<?= BASE_URL ?>/modulos/<?= isset($datos['modulo']) ? 'actualizar' : 'crear' ?>" novalidate>
+                    <input type="hidden" name="csrf_token" value="<?= $datos['csrf_token'] ?>">
+                    <?php if (isset($datos['modulo'])): ?>
+                        <input type="hidden" name="id_modulo" value="<?= $datos['modulo']['id_modulo'] ?>">
+                    <?php endif; ?>ministrador
  * AUTOEXAM2 - Siguiendo el patrón de usuarios y cursos
  */
 
@@ -18,7 +22,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
             <i class="fas fa-puzzle-piece text-primary me-2"></i>
             <?= $datos['titulo'] ?>
         </h1>
-        <p class="text-muted mb-0">Complete los campos para crear un nuevo módulo</p>
+        <p class="text-muted mb-0"><?= isset($datos['modulo']) ? 'Modifique los campos necesarios del módulo' : 'Complete los campos para crear un nuevo módulo' ?></p>
     </div>
     <div>
         <a href="<?= BASE_URL ?>/modulos" class="btn btn-outline-secondary">
@@ -47,7 +51,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                 </h5>
             </div>
             <div class="card-body">
-                <form method="POST" action="<?= BASE_URL ?>/modulos/crear" novalidate>
+                <form method="POST" action="<?= BASE_URL ?>/modulos/<?= isset($datos['modulo']) ? 'actualizar' : 'crear' ?>" novalidate>
                     <input type="hidden" name="csrf_token" value="<?= $datos['csrf_token'] ?>">
                     
                     <div class="mb-4">
@@ -61,7 +65,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                required 
                                maxlength="150"
                                placeholder="Ej: Matemáticas, Física, Literatura..."
-                               value="<?= htmlspecialchars($_POST['titulo'] ?? '') ?>">
+                               value="<?= htmlspecialchars($_POST['titulo'] ?? $datos['modulo']['titulo'] ?? '') ?>">
                         <div class="form-text">
                             <i class="fas fa-info-circle me-1"></i>
                             Nombre identificativo del módulo (máximo 150 caracteres)
@@ -76,7 +80,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                   id="descripcion" 
                                   name="descripcion" 
                                   rows="4" 
-                                  placeholder="Describe brevemente el contenido y objetivos del módulo..."><?= htmlspecialchars($_POST['descripcion'] ?? '') ?></textarea>
+                                  placeholder="Describe brevemente el contenido y objetivos del módulo..."><?= htmlspecialchars($_POST['descripcion'] ?? $datos['modulo']['descripcion'] ?? '') ?></textarea>
                         <div class="form-text">
                             <i class="fas fa-info-circle me-1"></i>
                             Información adicional sobre el módulo (opcional)
@@ -91,7 +95,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                             <option value="">Seleccione un profesor</option>
                             <?php foreach ($datos['profesores'] as $profesor): ?>
                                 <option value="<?= $profesor['id_usuario'] ?>" 
-                                        <?= ($_POST['id_profesor'] ?? '') == $profesor['id_usuario'] ? 'selected' : '' ?>>
+                                        <?= ($_POST['id_profesor'] ?? $datos['modulo']['id_profesor'] ?? '') == $profesor['id_usuario'] ? 'selected' : '' ?>>
                                     <?= htmlspecialchars($profesor['apellidos'] . ', ' . $profesor['nombre'] . ' (' . $profesor['correo'] . ')') ?>
                                 </option>
                             <?php endforeach; ?>
@@ -121,7 +125,10 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                                        name="cursos[]" 
                                                        value="<?= $curso['id_curso'] ?>" 
                                                        id="curso_<?= $curso['id_curso'] ?>"
-                                                       <?= (isset($_POST['cursos']) && in_array($curso['id_curso'], $_POST['cursos'])) ? 'checked' : '' ?>>
+                                                       <?php 
+                                                       $cursosSeleccionados = $_POST['cursos'] ?? $datos['cursos_asignados'] ?? [];
+                                                       echo in_array($curso['id_curso'], $cursosSeleccionados) ? 'checked' : '';
+                                                       ?>>
                                                 <label class="form-check-label" for="curso_<?= $curso['id_curso'] ?>">
                                                     <strong><?= htmlspecialchars($curso['nombre_curso']) ?></strong>
                                                     <?php if (!empty($curso['descripcion'])): ?>
@@ -143,7 +150,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                     
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-primary btn-lg">
-                            <i class="fas fa-save me-1"></i>Crear módulo
+                            <i class="fas fa-save me-1"></i><?= isset($datos['modulo']) ? 'Guardar cambios' : 'Crear módulo' ?>
                         </button>
                         <a href="<?= BASE_URL ?>/modulos" class="btn btn-outline-secondary btn-lg">
                             <i class="fas fa-times me-1"></i>Cancelar

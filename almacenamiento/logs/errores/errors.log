@@ -1318,3 +1318,981 @@
 [2025-06-21 07:49:35][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
 [2025-06-21 07:49:39][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
 [2025-06-21 07:49:39][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:54:45][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:54:45][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:54:49][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:54:49][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:55:25][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:55:25][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:55:28][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:55:28][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:55:46][45.133.3.1] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:24
+[2025-06-21 07:56:29][45.133.3.1] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 07:56:30][45.133.3.1] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 07:56:38][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:56:38][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:56:39][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:56:39][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:56:59][45.133.3.1] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 07:57:09][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:57:09][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:57:10][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:57:10][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:57:11][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:57:11][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:57:15][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:57:15][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:57:16][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:57:16][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:59:22][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:59:22][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:59:23][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:59:23][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:59:25][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:59:25][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:59:29][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 07:59:29][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 08:00:58][45.133.3.1] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:00:59][45.133.3.1] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:01:14][45.133.3.1] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:01:34][45.133.3.1] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:01:48][45.133.3.1] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:01:48][45.133.3.1] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:02:37][45.133.3.1] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:02:41][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 08:02:41][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 08:02:42][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 08:02:42][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 08:02:48][2a09:bac3:3137:245a::39f:7a] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:02:50][2a09:bac3:3137:245a::39f:7a] ERROR | session_destroy(): Trying to destroy uninitialized session | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:149
+[2025-06-21 08:02:50][2a09:bac3:3137:245a::39f:7a] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:02:55][2a09:bac3:3137:245a::39f:7a] ERROR | Undefined property: ModuloModelo::$conexion | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 08:02:55][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to a member function prepare() on null | /homepages/22/d491590459/htdocs/autoexam/app/modelos/modulo_modelo.php:386
+[2025-06-21 08:09:57][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:09:59][2a09:bac3:3137:245a::39f:7a] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:10:30][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:11:23][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:11:48][2a09:bac3:3137:245a::39f:7a] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:17:31][2a09:bac3:3130:191::28:13b] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:18:50][2a09:bac3:3130:191::28:13b] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:18:54][2a09:bac3:3130:191::28:13b] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:18:58][2a09:bac3:3130:191::28:13b] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:19:02][2a09:bac3:3130:191::28:13b] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:27:42][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:27:44][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:27:58][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:28:09][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:31:48][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:33:21][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:33:25][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:34:59][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:35:03][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:35:04][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:35:15][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:39:44][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:39:54][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:240
+[2025-06-21 08:41:02][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:163
+[2025-06-21 08:41:06][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "ModuloModelo" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:20
+[2025-06-21 08:41:07][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: ModulosControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:68
+[2025-06-21 08:41:08][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:21
+[2025-06-21 08:41:09][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "SesionActiva" not found | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:23
+[2025-06-21 08:41:11][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:41:13][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 08:41:13][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 08:41:13][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 08:41:22][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:163
+[2025-06-21 08:41:27][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:48:24][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 08:48:24][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 08:48:24][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 08:48:34][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "SesionActiva" not found | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:23
+[2025-06-21 08:48:47][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 08:48:47][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 08:48:47][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 08:48:48][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:53:08][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "SesionActiva" not found | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:23
+[2025-06-21 08:53:13][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:53:18][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: ConfiguracionControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:71
+[2025-06-21 08:53:22][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:19
+[2025-06-21 08:53:23][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: InicioControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:71
+[2025-06-21 08:53:25][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: InicioControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:71
+[2025-06-21 08:53:25][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: InicioControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:71
+[2025-06-21 08:53:26][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:23
+[2025-06-21 08:53:26][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:23
+[2025-06-21 08:53:27][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:23
+[2025-06-21 08:53:27][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:23
+[2025-06-21 08:53:27][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:23
+[2025-06-21 08:53:28][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:19
+[2025-06-21 08:53:33][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:54:07][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:54:12][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:54:17][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "SesionActiva" not found | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:23
+[2025-06-21 08:54:55][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:54:56][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:54:57][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:54:57][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:55:00][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:99
+[2025-06-21 08:55:23][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "ConfiguracionModelo" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:20
+[2025-06-21 08:55:46][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:133
+[2025-06-21 08:55:47][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:55:51][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:133
+[2025-06-21 08:55:53][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:55:54][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:99
+[2025-06-21 08:56:30][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:133
+[2025-06-21 08:56:33][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:99
+[2025-06-21 08:56:38][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 08:56:41][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:99
+[2025-06-21 08:56:58][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:00:54][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:106
+[2025-06-21 09:01:40][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:01:41][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:01:42][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:01:43][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:01:44][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:01:49][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:01:50][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:02:21][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:02:21][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "ConfiguracionModelo" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:20
+[2025-06-21 09:02:24][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:02:24][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: ConfiguracionControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:71
+[2025-06-21 09:02:25][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:02:40][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:03:32][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:03:33][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:03:48][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:03:49][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:03:51][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:04:00][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:460
+[2025-06-21 09:04:03][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:05:11][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:05:12][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:06:39][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:06:40][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:06:45][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:07:12][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:07:14][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "SesionActiva" not found | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:23
+[2025-06-21 09:07:17][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "ConfiguracionModelo" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:20
+[2025-06-21 09:07:18][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:07:20][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:07:23][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:07:23][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:07:27][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method mysqli_stmt::fetchAll() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/mantenimiento_controlador.php:169
+[2025-06-21 09:07:29][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method mysqli_stmt::fetchAll() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/mantenimiento_controlador.php:169
+[2025-06-21 09:07:31][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:07:44][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method mysqli_stmt::fetchAll() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/mantenimiento_controlador.php:169
+[2025-06-21 09:07:45][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:07:46][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:07:49][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:08:05][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:08:07][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:08:08][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:08:11][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method mysqli_stmt::fetchAll() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/mantenimiento_controlador.php:169
+[2025-06-21 09:08:13][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:08:14][2a09:bac3:3131:245a::39f:79] ERROR | Method mysqli::ping() is deprecated since 8.4, because the reconnect feature has been removed in PHP 8.2 and this method is now redundant | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:107
+[2025-06-21 09:13:50][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: Sesiones_activasControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:74
+[2025-06-21 09:13:52][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:13:54][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:13:55][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 09:13:55][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 09:13:55][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:124
+[2025-06-21 09:13:55][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:125
+[2025-06-21 09:13:55][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:126
+[2025-06-21 09:13:55][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:136
+[2025-06-21 09:13:55][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:137
+[2025-06-21 09:13:55][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:13:55][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:13:55][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:14:12][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:14:12][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:14:14][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:14:14][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:14:15][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:14:16][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:14:17][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 09:14:17][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 09:14:17][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:124
+[2025-06-21 09:14:17][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:125
+[2025-06-21 09:14:17][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:126
+[2025-06-21 09:14:17][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:136
+[2025-06-21 09:14:17][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:137
+[2025-06-21 09:14:19][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method mysqli_stmt::fetchAll() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/mantenimiento_controlador.php:169
+[2025-06-21 09:14:21][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method mysqli_stmt::fetchAll() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/mantenimiento_controlador.php:169
+[2025-06-21 09:14:21][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method mysqli_stmt::fetchAll() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/mantenimiento_controlador.php:169
+[2025-06-21 09:14:23][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:14:25][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:14:27][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:14:27][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:14:27][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 09:14:27][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:14:27][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:14:27][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:14:36][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::verificarTokenCSRF() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:163
+[2025-06-21 09:14:37][34.22.197.110] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:14:37][34.22.197.110] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:14:37][34.22.197.110] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:14:38][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:14:40][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:14:42][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:14:42][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:14:43][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:15:16][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:15:16][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:15:18][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:15:40][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:15:42][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:15:42][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:15:45][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:16:15][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:16:17][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "private" | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:362
+[2025-06-21 09:16:19][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:17:37][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:17:41][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "SesionActiva" not found | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:23
+[2025-06-21 09:17:44][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method mysqli_stmt::fetchAll() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/mantenimiento_controlador.php:166
+[2025-06-21 09:17:51][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 09:17:51][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 09:17:51][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:124
+[2025-06-21 09:17:51][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:125
+[2025-06-21 09:17:51][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:126
+[2025-06-21 09:17:51][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:136
+[2025-06-21 09:17:51][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:137
+[2025-06-21 09:20:13][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method ModulosControlador::cargarVista() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:88
+[2025-06-21 09:20:15][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method ModulosControlador::cargarVista() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:88
+[2025-06-21 09:20:15][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method ModulosControlador::cargarVista() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:88
+[2025-06-21 09:21:25][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:21:25][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:21:25][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 09:21:25][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 09:21:25][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 09:21:25][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 09:21:25][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 09:21:25][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 09:21:26][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:21:26][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:21:26][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 09:21:26][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 09:21:26][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 09:21:26][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 09:21:26][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 09:21:26][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 09:21:27][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:21:27][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:21:27][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 09:21:27][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 09:21:27][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 09:21:27][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 09:21:27][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 09:21:27][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 09:28:23][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:28:26][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:28:27][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:30:21][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:30:22][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Curso" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:30:24][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:30:28][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/configuracion_controlador.php:23
+[2025-06-21 09:30:37][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:32:32][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: MantenimientoControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:74
+[2025-06-21 09:32:34][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:32:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:32:38][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:32:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 09:32:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 09:32:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 09:32:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 09:32:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 09:32:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 09:32:41][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:35:43][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:35:45][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:35:48][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "SesionActiva" not found | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:23
+[2025-06-21 09:38:21][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:23
+[2025-06-21 09:38:22][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:23
+[2025-06-21 09:38:22][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:23
+[2025-06-21 09:38:23][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "SesionActiva" not found | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:23
+[2025-06-21 09:38:31][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:38:33][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:23
+[2025-06-21 09:38:35][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:40:03][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:40:05][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:23
+[2025-06-21 09:40:08][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:23
+[2025-06-21 09:41:07][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:23
+[2025-06-21 09:41:09][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:41:23][2a09:bac3:3131:245a::39f:79] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:22
+[2025-06-21 09:42:05][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:39
+[2025-06-21 09:42:10][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:39
+[2025-06-21 09:42:11][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: CursosControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:74
+[2025-06-21 09:43:04][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:39
+[2025-06-21 09:43:05][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:39
+[2025-06-21 09:43:26][2a09:bac2:3131:245a::39f:8a] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:43:26][2a09:bac2:3131:245a::39f:8a] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:43:28][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:43:28][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:43:30][2a09:bac3:3131:245a::39f:79] ERROR | session_destroy(): Trying to destroy uninitialized session | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:149
+[2025-06-21 09:43:30][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:43:35][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:39
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:43:38][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:43:39][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:39
+[2025-06-21 09:43:41][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:43:44][2a09:bac3:3131:245a::39f:79] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 09:44:11][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method Sesion::estaAutenticado() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:39
+[2025-06-21 09:46:04][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: CursosControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:74
+[2025-06-21 09:46:05][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:8
+[2025-06-21 09:46:05][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:8
+[2025-06-21 09:46:05][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:9
+[2025-06-21 09:46:05][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:9
+[2025-06-21 09:46:05][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:10
+[2025-06-21 09:46:05][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:10
+[2025-06-21 09:46:05][2a09:bac3:3131:245a::39f:79] EXCEPCION | count(): Argument #1 ($value) must be of type Countable|array, null given | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:169
+[2025-06-21 09:46:05][2a09:bac3:3131:245a::39f:79] ERROR | http_response_code(): Cannot set response code - headers already sent (output started at /homepages/22/d491590459/htdocs/autoexam/app/vistas/parciales/head_admin.php:6) | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:187
+[2025-06-21 09:46:07][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:8
+[2025-06-21 09:46:07][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:8
+[2025-06-21 09:46:07][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:9
+[2025-06-21 09:46:07][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:9
+[2025-06-21 09:46:07][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:10
+[2025-06-21 09:46:07][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:10
+[2025-06-21 09:46:07][2a09:bac3:3131:245a::39f:79] EXCEPCION | count(): Argument #1 ($value) must be of type Countable|array, null given | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:169
+[2025-06-21 09:46:07][2a09:bac3:3131:245a::39f:79] ERROR | http_response_code(): Cannot set response code - headers already sent (output started at /homepages/22/d491590459/htdocs/autoexam/app/vistas/parciales/head_admin.php:6) | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:187
+[2025-06-21 09:46:09][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:8
+[2025-06-21 09:46:09][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:8
+[2025-06-21 09:46:09][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:9
+[2025-06-21 09:46:09][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:9
+[2025-06-21 09:46:09][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:10
+[2025-06-21 09:46:09][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:10
+[2025-06-21 09:46:09][2a09:bac3:3131:245a::39f:79] EXCEPCION | count(): Argument #1 ($value) must be of type Countable|array, null given | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:169
+[2025-06-21 09:46:09][2a09:bac3:3131:245a::39f:79] ERROR | http_response_code(): Cannot set response code - headers already sent (output started at /homepages/22/d491590459/htdocs/autoexam/app/vistas/parciales/head_admin.php:6) | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:187
+[2025-06-21 09:46:32][2a09:bac3:3131:245a::39f:79] EXCEPCION | Clase de controlador no encontrada: CursosControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:74
+[2025-06-21 09:46:33][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:8
+[2025-06-21 09:46:33][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:8
+[2025-06-21 09:46:33][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:9
+[2025-06-21 09:46:33][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:9
+[2025-06-21 09:46:33][2a09:bac3:3131:245a::39f:79] ERROR | Undefined variable $resultado | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:10
+[2025-06-21 09:46:33][2a09:bac3:3131:245a::39f:79] ERROR | Trying to access array offset on null | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:10
+[2025-06-21 09:46:33][2a09:bac3:3131:245a::39f:79] EXCEPCION | count(): Argument #1 ($value) must be of type Countable|array, null given | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/cursos.php:169
+[2025-06-21 09:46:33][2a09:bac3:3131:245a::39f:79] ERROR | http_response_code(): Cannot set response code - headers already sent (output started at /homepages/22/d491590459/htdocs/autoexam/app/vistas/parciales/head_admin.php:6) | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:187
+[2025-06-21 09:48:00][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method CursosControlador::cargarVistaPorRol() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:124
+[2025-06-21 09:48:01][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method CursosControlador::cargarVistaPorRol() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:124
+[2025-06-21 09:48:01][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method CursosControlador::cargarVistaPorRol() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:124
+[2025-06-21 09:48:02][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method CursosControlador::cargarVistaPorRol() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:124
+[2025-06-21 09:48:09][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method CursosControlador::cargarVistaPorRol() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:124
+[2025-06-21 09:48:09][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method CursosControlador::cargarVistaPorRol() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:124
+[2025-06-21 09:48:10][2a09:bac3:3131:245a::39f:79] EXCEPCION | Call to undefined method CursosControlador::cargarVistaPorRol() | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:124
+[2025-06-21 09:49:16][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 09:49:17][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 09:49:17][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 09:49:43][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 09:49:46][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 09:49:46][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 09:50:33][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 09:50:34][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 09:50:34][2a09:bac3:3131:245a::39f:79] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:24:59][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:25:00][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:25:07][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:25:08][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:25:12][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:25:30][2a09:bac2:3131:191::28:133] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 12:25:30][2a09:bac2:3131:191::28:133] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 12:25:30][2a09:bac2:3131:191::28:133] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 12:25:30][2a09:bac2:3131:191::28:133] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 12:25:30][2a09:bac2:3131:191::28:133] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 12:25:33][2a09:bac2:3131:191::28:133] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 12:25:34][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:25:36][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 12:25:36][2a09:bac2:3131:191::28:133] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 12:25:36][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 12:25:36][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 12:25:36][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 12:25:36][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 12:25:36][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 12:25:36][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 12:25:39][2a09:bac2:3131:191::28:133] EXCEPCION | Clase de controlador no encontrada: MantenimientoControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:74
+[2025-06-21 12:25:40][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 12:25:40][2a09:bac2:3131:191::28:133] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 12:25:40][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 12:25:40][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 12:25:40][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 12:25:40][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 12:25:40][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 12:25:40][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 12:25:45][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 12:25:45][2a09:bac2:3131:191::28:133] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 12:25:45][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:124
+[2025-06-21 12:25:45][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:125
+[2025-06-21 12:25:45][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:126
+[2025-06-21 12:25:45][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:136
+[2025-06-21 12:25:45][2a09:bac2:3131:191::28:133] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:137
+[2025-06-21 12:25:47][2a09:bac2:3131:191::28:133] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 12:25:47][2a09:bac2:3131:191::28:133] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 12:25:47][2a09:bac2:3131:191::28:133] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 12:26:23][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:26:24][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:27:11][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:27:12][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:27:13][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:30:16][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:30:17][2a09:bac2:3131:191::28:133] EXCEPCION | syntax error, unexpected token "public", expecting end of file | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:62
+[2025-06-21 12:32:45][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:32:45][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:33:24][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:33:24][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:39:37][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:39:38][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:40:26][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:40:26][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:43:32][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:43:33][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:43:33][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:48:15][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:48:16][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 12:48:17][2a09:bac2:3131:191::28:133] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 15:36:32][2a09:bac3:3132:245a::39f:59] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 15:36:33][2a09:bac3:3132:245a::39f:59] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 14:36:34][2a09:bac3:3132:245a::39f:59] EXCEPCION | Undefined constant "DB_HOST" | /homepages/22/d491590459/htdocs/autoexam/app/modelos/sesion_activa_modelo.php:36
+[2025-06-21 15:36:39][2a09:bac3:3132:245a::39f:59] EXCEPCION | Class "Curso" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:36:43][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:36:43][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:36:43][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:36:43][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:36:43][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:36:46][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:36:46][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:36:46][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:36:46][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:36:46][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:36:55][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:36:58][2a09:bac3:3132:245a::39f:59] EXCEPCION | Unmatched '}' | /homepages/22/d491590459/htdocs/autoexam/app/controladores/cursos_controlador.php:107
+[2025-06-21 15:37:00][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:37:00][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:37:00][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:37:00][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:37:00][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:37:00][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:37:00][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:37:00][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:37:56][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:37:56][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:37:56][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:37:56][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:37:56][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:37:56][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:37:56][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:37:56][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:37:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:37:58][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:37:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:37:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:37:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:37:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:37:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:37:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:38:00][2a09:bac3:3132:245a::39f:59] EXCEPCION | Clase de controlador no encontrada: InicioControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:74
+[2025-06-21 15:38:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:38:03][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:38:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:38:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:38:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:38:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:38:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:38:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:44:05][2a09:bac3:3132:245a::39f:59] EXCEPCION | Class "ModuloModelo" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:23
+[2025-06-21 14:44:07][2a09:bac3:3132:245a::39f:59] EXCEPCION | Undefined constant "DB_HOST" | /homepages/22/d491590459/htdocs/autoexam/app/modelos/sesion_activa_modelo.php:36
+[2025-06-21 15:44:14][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:44:14][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:14][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:14][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:14][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:15][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:44:15][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:15][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:15][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:15][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:18][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:18][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:18][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:44:18][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:44:18][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:44:18][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:44:18][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:44:18][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:44:30][2a09:bac3:3132:245a::39f:59] EXCEPCION | Too few arguments to function RegistroActividad::registrar(), 1 passed in /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php on line 386 and at least 3 expected | /homepages/22/d491590459/htdocs/autoexam/app/modelos/registro_actividad_modelo.php:42
+[2025-06-21 15:44:32][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:44:32][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:32][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:32][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:32][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:44:34][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:34][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:34][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:44:34][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:44:34][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:44:34][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:44:34][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:44:34][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:44:49][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:49][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:49][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:44:49][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:44:49][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:44:49][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:44:49][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:44:49][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:44:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:52][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:44:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:44:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:44:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:44:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:44:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:44:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:54][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:44:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:44:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:44:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:44:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:44:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:44:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:58][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:44:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:44:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:44:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:44:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:44:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:44:58][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:45:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:45:03][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:45:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:45:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:45:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:45:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:45:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:45:03][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:45:07][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:45:07][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:45:07][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:45:07][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:45:07][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:45:07][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:45:07][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:45:07][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:45:45][2a09:bac3:3132:245a::39f:59] EXCEPCION | Too few arguments to function RegistroActividad::registrar(), 1 passed in /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php on line 386 and at least 3 expected | /homepages/22/d491590459/htdocs/autoexam/app/modelos/registro_actividad_modelo.php:42
+[2025-06-21 15:45:51][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:45:51][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:45:51][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:45:51][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:45:51][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:45:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:45:52][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:45:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:45:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:45:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:45:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:45:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:45:52][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:47:59][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:47:59][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:47:59][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:47:59][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:47:59][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:47:59][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:47:59][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:47:59][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:48:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:48:01][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:48:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:48:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:48:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:48:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:48:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:48:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:48:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:48:22][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:48:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:48:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:48:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:48:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:48:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:48:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:48:23][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:48:23][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:48:23][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:48:23][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:48:23][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:48:23][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:48:23][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:48:23][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:49:08][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:08][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:08][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:49:08][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:49:08][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:49:08][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:49:08][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:49:08][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:49:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:09][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:49:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:49:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:49:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:49:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:49:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:49:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:49:14][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:14][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:14][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:49:14][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:49:14][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:49:14][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:49:14][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:49:14][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:49:15][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:15][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:15][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:49:15][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:49:15][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:49:15][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:49:15][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:49:15][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:49:16][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:16][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:16][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:49:16][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:49:16][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:49:16][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:49:16][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:49:16][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:49:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:22][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:49:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:49:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:49:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:49:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:49:22][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:49:26][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:49:26][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:49:26][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:49:26][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:49:26][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:49:26][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:49:29][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:29][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:49:29][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:49:29][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:49:29][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:49:29][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:49:29][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:49:29][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:50:20][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 15:50:20][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 15:50:20][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:124
+[2025-06-21 15:50:20][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:125
+[2025-06-21 15:50:20][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:126
+[2025-06-21 15:50:20][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:136
+[2025-06-21 15:50:20][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:137
+[2025-06-21 15:50:37][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:50:37][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:50:37][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:50:37][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:50:37][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/dashboard.php:221
+[2025-06-21 15:50:39][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:50:39][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:50:39][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:50:39][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:50:39][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:50:39][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:50:39][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:50:39][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:50:46][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:50:50][2a09:bac3:3132:245a::39f:59] ERROR | session_destroy(): Trying to destroy uninitialized session | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:149
+[2025-06-21 15:50:50][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:50:50][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:50:50][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:50:53][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:50:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/profesor/modulos/listar.php:135
+[2025-06-21 15:50:55][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/profesor/modulos/listar.php:135
+[2025-06-21 15:50:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/profesor/modulos/listar.php:155
+[2025-06-21 15:50:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/profesor/modulos/listar.php:156
+[2025-06-21 15:50:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/profesor/modulos/listar.php:157
+[2025-06-21 15:50:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/profesor/modulos/listar.php:158
+[2025-06-21 15:50:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/profesor/modulos/listar.php:159
+[2025-06-21 15:50:56][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:00][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:05][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:06][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:06][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:14][2a09:bac3:3132:245a::39f:59] ERROR | Constant FILTER_SANITIZE_STRING is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/modelos/usuario_modelo.php:65
+[2025-06-21 15:51:14][2a09:bac3:3132:245a::39f:59] ERROR | Constant FILTER_SANITIZE_STRING is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/modelos/usuario_modelo.php:65
+[2025-06-21 15:51:15][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:18][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:31][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:35][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:39][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:39][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:39][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:44][2a09:bac3:3132:245a::39f:59] ERROR | Constant FILTER_SANITIZE_STRING is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/modelos/usuario_modelo.php:65
+[2025-06-21 15:51:44][2a09:bac3:3132:245a::39f:59] ERROR | Constant FILTER_SANITIZE_STRING is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/modelos/usuario_modelo.php:65
+[2025-06-21 15:51:45][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:47][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:47][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:54][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:56][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:56][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:51:57][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:52:13][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:52:21][2a09:bac3:3132:245a::39f:59] ERROR | session_destroy(): Trying to destroy uninitialized session | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:149
+[2025-06-21 15:52:21][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:47][2a09:bac3:3132:245a::39f:59] ERROR | ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/actividad/historial.php:106
+[2025-06-21 15:52:59][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:54:19][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:54:19][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:54:19][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:54:19][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:54:19][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:54:19][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:54:19][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:54:19][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:54:28][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:54:28][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:54:28][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:54:28][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:54:28][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:54:28][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:54:28][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:54:28][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:54:53][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:54:53][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:54:53][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:54:53][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:54:53][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:54:53][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:54:53][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:54:53][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:54:55][2a09:bac3:3132:245a::39f:59] ERROR | require_once(/homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/ver.php): Failed to open stream: No such file or directory | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:668
+[2025-06-21 15:54:55][2a09:bac3:3132:245a::39f:59] EXCEPCION | Failed opening required '/homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/ver.php' (include_path='.:/usr/lib/php8.4') | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:668
+[2025-06-21 15:54:55][2a09:bac3:3132:245a::39f:59] ERROR | http_response_code(): Cannot set response code - headers already sent (output started at /homepages/22/d491590459/htdocs/autoexam/app/vistas/parciales/head_admin.php:6) | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:187
+[2025-06-21 15:54:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:54:57][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:54:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:54:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:54:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:54:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:54:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:54:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:55:40][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:55:40][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:55:40][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:55:40][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:55:40][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:55:40][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:55:40][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:55:40][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:55:42][2a09:bac3:3132:245a::39f:59] EXCEPCION | Clase de controlador no encontrada: ModulosControlador | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:74
+[2025-06-21 15:55:43][2a09:bac3:3132:245a::39f:59] EXCEPCION | Class "SesionActiva" not found | /homepages/22/d491590459/htdocs/autoexam/app/utilidades/sesion.php:23
+[2025-06-21 15:55:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:55:44][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:55:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:55:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:55:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:55:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:55:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:55:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:55:48][2a09:bac3:3132:245a::39f:59] EXCEPCION | Class "Sesion" not found | /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php:24
+[2025-06-21 15:55:50][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:55:52][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:55:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:55:55][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:55:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:55:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:55:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:55:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:55:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:55:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:56:10][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:13][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:14][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:16][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:17][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:19][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:20][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:21][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:23][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:24][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:28][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:56:32][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:56:32][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:56:32][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:56:32][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:56:32][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:56:32][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:56:32][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:56:32][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:56:41][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:56:41][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:56:41][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:56:41][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:56:41][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:56:41][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:56:41][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:56:41][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:56:47][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:56:47][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:56:47][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:56:47][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:56:47][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:56:47][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:56:47][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:56:47][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:56:49][2a09:bac3:3132:245a::39f:59] ERROR | require_once(/homepages/22/d491590459/htdocs/autoexam/app/vistas/parciales/footer.php): Failed to open stream: No such file or directory | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/ver.php:203
+[2025-06-21 15:56:49][2a09:bac3:3132:245a::39f:59] EXCEPCION | Failed opening required '/homepages/22/d491590459/htdocs/autoexam/app/vistas/parciales/footer.php' (include_path='.:/usr/lib/php8.4') | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/ver.php:203
+[2025-06-21 15:56:49][2a09:bac3:3132:245a::39f:59] ERROR | http_response_code(): Cannot set response code - headers already sent (output started at /homepages/22/d491590459/htdocs/autoexam/app/vistas/parciales/head_admin.php:6) | /homepages/22/d491590459/htdocs/autoexam/app/controladores/ruteador.php:187
+[2025-06-21 15:56:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:56:54][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:56:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:56:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:56:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:56:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:56:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:56:54][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:56:59][2a09:bac3:3132:245a::39f:59] EXCEPCION | Too few arguments to function RegistroActividad::registrar(), 1 passed in /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php on line 680 and at least 3 expected | /homepages/22/d491590459/htdocs/autoexam/app/modelos/registro_actividad_modelo.php:42
+[2025-06-21 15:57:00][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:57:02][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:57:02][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:57:02][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:57:02][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:57:02][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:57:02][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:57:02][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:57:02][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:57:06][2a09:bac3:3132:245a::39f:59] EXCEPCION | Too few arguments to function RegistroActividad::registrar(), 1 passed in /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php on line 680 and at least 3 expected | /homepages/22/d491590459/htdocs/autoexam/app/modelos/registro_actividad_modelo.php:42
+[2025-06-21 15:57:07][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:57:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:57:09][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:57:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:57:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:57:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:57:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:57:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:57:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:57:13][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:57:13][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:57:13][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:57:13][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:57:13][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:57:13][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:57:13][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:57:13][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:57:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 15:57:57][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 15:57:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:124
+[2025-06-21 15:57:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:125
+[2025-06-21 15:57:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:126
+[2025-06-21 15:57:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:136
+[2025-06-21 15:57:57][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:137
+[2025-06-21 15:58:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:58:01][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:58:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:58:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:58:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:58:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:58:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:58:01][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:58:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 15:58:09][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:114
+[2025-06-21 15:58:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:124
+[2025-06-21 15:58:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:125
+[2025-06-21 15:58:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "rol" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:126
+[2025-06-21 15:58:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:136
+[2025-06-21 15:58:09][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "activo" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/usuarios/listar.php:137
+[2025-06-21 15:58:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:58:11][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:58:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:58:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:58:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:58:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:58:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:58:11][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:58:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:58:44][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:58:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:58:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:58:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:58:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:58:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:58:44][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:58:48][2a09:bac3:3132:245a::39f:59] EXCEPCION | Too few arguments to function RegistroActividad::registrar(), 1 passed in /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php on line 680 and at least 3 expected | /homepages/22/d491590459/htdocs/autoexam/app/modelos/registro_actividad_modelo.php:42
+[2025-06-21 15:58:49][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:58:51][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:58:51][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:58:51][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:58:51][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:58:51][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:58:51][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:58:51][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:58:51][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
+[2025-06-21 15:59:51][2a09:bac3:3132:245a::39f:59] EXCEPCION | Too few arguments to function RegistroActividad::registrar(), 1 passed in /homepages/22/d491590459/htdocs/autoexam/app/controladores/modulos_controlador.php on line 680 and at least 3 expected | /homepages/22/d491590459/htdocs/autoexam/app/modelos/registro_actividad_modelo.php:42
+[2025-06-21 15:59:53][2a09:bac3:3132:245a::39f:59] ERROR | Creation of dynamic property InicioControlador::$cursoModelo is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/controladores/inicio_controlador.php:32
+[2025-06-21 15:59:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "buscar" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:59:55][2a09:bac3:3132:245a::39f:59] ERROR | htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:135
+[2025-06-21 15:59:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "profesor" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:147
+[2025-06-21 15:59:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:170
+[2025-06-21 15:59:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:171
+[2025-06-21 15:59:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:172
+[2025-06-21 15:59:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:173
+[2025-06-21 15:59:55][2a09:bac3:3132:245a::39f:59] ERROR | Undefined array key "limite" | /homepages/22/d491590459/htdocs/autoexam/app/vistas/admin/modulos/listar.php:174
