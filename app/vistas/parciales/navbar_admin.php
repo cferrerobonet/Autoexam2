@@ -96,6 +96,14 @@ if (!isset($_SESSION)) {
                             Configuración
                         </a>
                     </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($GLOBALS['controlador'] ?? '') === 'mantenimiento' ? 'active' : '' ?>" 
+                           href="<?= BASE_URL ?>/mantenimiento">
+                            <i class="fas fa-tools text-primary me-2"></i>
+                            Mantenimiento
+                        </a>
+                    </li>
                     <?php endif; ?>
                 </ul>
                 

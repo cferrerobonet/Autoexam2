@@ -1,0 +1,5 @@
+[2025-06-21 21:40:00] INFO: Sistema de configuración inicializado
+[2025-06-21 21:41:15] INFO: Respaldo automático de base de datos completado
+[2025-06-21 21:42:30] WARNING: Espacio de disco bajo en /almacenamiento
+[2025-06-21 21:43:00] INFO: Limpieza automática de archivos temporales
+[2025-06-21 21:44:15] INFO: Sistema de logs rotado correctamente

@@ -1,0 +1,6 @@
+[2025-06-21 21:45:01] INFO: Sistema iniciado correctamente
+[2025-06-21 21:45:02] INFO: Usuario admin autenticado exitosamente
+[2025-06-21 21:45:10] INFO: Acceso al panel de configuración por usuario: admin
+[2025-06-21 21:45:15] DEBUG: Cargando configuración del sistema
+[2025-06-21 21:45:16] INFO: Configuración cargada desde archivo .env
+[2025-06-21 21:46:01] INFO: Panel de configuración accedido

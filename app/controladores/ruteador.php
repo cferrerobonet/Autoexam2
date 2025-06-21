@@ -40,9 +40,15 @@ class Ruteador {
             
             // Validar controlador
             if (isset($url[0]) && !empty($url[0])) {
-                // Caso especial para "calendario" - redirección al controlador calendario_controlador.php
+                // Casos especiales para controladores con nombres específicos
                 if ($url[0] === 'calendario' && file_exists(APP_PATH . '/controladores/calendario_controlador.php')) {
                     $this->controlador = 'calendario';
+                    unset($url[0]);
+                } elseif ($url[0] === 'configuracion' && file_exists(APP_PATH . '/controladores/configuracion_controlador.php')) {
+                    $this->controlador = 'configuracion';
+                    unset($url[0]);
+                } elseif ($url[0] === 'mantenimiento' && file_exists(APP_PATH . '/controladores/mantenimiento_controlador.php')) {
+                    $this->controlador = 'mantenimiento';
                     unset($url[0]);
                 } elseif (file_exists(APP_PATH . '/controladores/' . $url[0] . '_controlador.php')) {
                     $this->controlador = $url[0];

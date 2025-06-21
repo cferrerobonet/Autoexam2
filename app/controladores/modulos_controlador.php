@@ -3,9 +3,10 @@
  * Controlador de Módulos - AUTOEXAM2
  * 
  * Gestiona las operaciones CRUD de módulos del sistema
+ * Reescrito completamente siguiendo el patrón de controladores funcionales
  * 
  * @author GitHub Copilot
- * @version 1.0
+ * @version 2.0
  */
 
 require_once APP_PATH . '/modelos/modulo_modelo.php';
@@ -16,24 +17,15 @@ class ModulosControlador {
     private $sesion;
     
     public function __construct() {
-        try {
-            // Cargar modelos
-            require_once __DIR__ . '/../modelos/modulo_modelo.php';
-            require_once __DIR__ . '/../utilidades/sesion.php';
-            $this->modulo = new ModuloModelo();
-            $this->sesion = new Sesion();
-        } catch (Exception $e) {
-            error_log('Error cargando modelos en ModulosControlador: ' . $e->getMessage());
-            $this->modulo = null;
-            $this->sesion = null;
-        }
+        $this->modulo = new ModuloModelo();
+        $this->sesion = new Sesion();
     }
     
     /**
      * Acción principal - listar módulos
      */
     public function index() {
-        // Verificar permisos (solo admin y profesor)
+        // Verificar permisos
         $rol = $_SESSION['rol'];
         if ($rol != 'admin' && $rol != 'profesor') {
             header("Location: " . BASE_URL);
@@ -44,8 +36,11 @@ class ModulosControlador {
         $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
         $limite = isset($_GET['limite']) ? (int)$_GET['limite'] : 15;
         
-        // Obtener filtros y parámetros de ordenación
-        $filtros = $this->obtenerFiltros();
+        // Obtener filtros
+        $filtros = [];
+        if (isset($_GET['buscar']) && !empty($_GET['buscar'])) {
+            $filtros['buscar'] = $_GET['buscar'];
+        }
         
         // Para profesores, mostrar solo sus módulos
         if ($rol == 'profesor') {
@@ -53,27 +48,12 @@ class ModulosControlador {
         }
         
         // Obtener datos
-        if ($this->modulo !== null) {
-            try {
-                $resultado = $this->modulo->obtenerTodos($limite, $pagina, $filtros);
-            } catch (Exception $e) {
-                error_log("Error al obtener módulos: " . $e->getMessage());
-                $resultado = ['modulos' => [], 'total' => 0, 'paginas' => 1];
-            }
-        } else {
-            $resultado = ['modulos' => [], 'total' => 0, 'paginas' => 1];
-        }
+        $resultado = $this->modulo->obtenerTodos($limite, $pagina, $filtros);
         
         // Obtener profesores para el filtro (solo para administradores)
         $profesores = [];
         if ($rol == 'admin') {
-            if ($this->modulo !== null) {
-                try {
-                    $profesores = $this->modulo->obtenerProfesores();
-                } catch (Exception $e) {
-                    $profesores = [];
-                }
-            }
+            $profesores = $this->modulo->obtenerProfesores();
         }
         
         // Datos para la vista
@@ -89,15 +69,13 @@ class ModulosControlador {
             'csrf_token' => $this->sesion->generarTokenCSRF()
         ];
         
-        // Cargar la vista
+        // Cargar la vista según el rol
         if ($rol == 'admin') {
             require_once APP_PATH . '/vistas/parciales/head_admin.php';
             echo '<body class="bg-light">';
             require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
             echo '<div class="container-fluid mt-4"><div class="row"><div class="col-12">';
-            
             require_once APP_PATH . '/vistas/admin/modulos/listar.php';
-            
             echo '</div></div></div>';
             require_once APP_PATH . '/vistas/parciales/footer_admin.php';
             require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
@@ -111,19 +89,7 @@ class ModulosControlador {
             require_once APP_PATH . '/vistas/parciales/footer_profesor.php';
             require_once APP_PATH . '/vistas/parciales/scripts_profesor.php';
         }
-    }
-    
-    /**
-     * Obtiene los filtros desde la URL
-     */
-    private function obtenerFiltros() {
-        return [
-            'buscar' => $_GET['buscar'] ?? '',
-            'profesor' => $_GET['profesor'] ?? '',
-            'estado' => $_GET['estado'] ?? '',
-            'ordenar_por' => $_GET['ordenar_por'] ?? 'titulo',
-            'orden' => $_GET['orden'] ?? 'ASC'
-        ];
+        echo '</body></html>';
     }
     
     /**
@@ -132,29 +98,24 @@ class ModulosControlador {
     public function nuevo() {
         $rol = $_SESSION['rol'];
         
+        // Verificar permisos
+        if ($rol != 'admin' && $rol != 'profesor') {
+            header("Location: " . BASE_URL);
+            exit;
+        }
+        
         // Obtener profesores para el selector (solo admin)
         $profesores = [];
-        if ($rol === 'admin' && $this->modulo !== null) {
-            try {
-                $profesores = $this->modulo->obtenerProfesores();
-            } catch (Exception $e) {
-                error_log("Error al obtener profesores: " . $e->getMessage());
-            }
+        if ($rol === 'admin') {
+            $profesores = $this->modulo->obtenerProfesores();
         }
         
         // Obtener cursos para selección
         $cursos = [];
-        if ($this->modulo !== null) {
-            try {
-                // Para admin: todos los cursos, Para profesor: solo sus cursos
-                if ($rol === 'admin') {
-                    $cursos = $this->modulo->obtenerCursos();
-                } else {
-                    $cursos = $this->modulo->obtenerCursosPorProfesor($_SESSION['id_usuario']);
-                }
-            } catch (Exception $e) {
-                error_log("Error al obtener cursos: " . $e->getMessage());
-            }
+        if ($rol === 'admin') {
+            $cursos = $this->modulo->obtenerCursos();
+        } else {
+            $cursos = $this->modulo->obtenerCursosPorProfesor($_SESSION['id_usuario']);
         }
         
         // Datos para la vista
@@ -185,14 +146,21 @@ class ModulosControlador {
             require_once APP_PATH . '/vistas/parciales/footer_profesor.php';
             require_once APP_PATH . '/vistas/parciales/scripts_profesor.php';
         }
+        echo '</body></html>';
     }
     
     /**
      * Crear nuevo módulo
      */
     public function crear() {
+        // Verificar método POST
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            header('Location: ' . BASE_URL . '/modulos/nuevo');
+            exit;
+        }
+        
         // Verificar token CSRF
-        if (!$this->sesion->verificarTokenCSRF($_POST['csrf_token'])) {
+        if (!$this->sesion->verificarTokenCSRF($_POST['csrf_token'] ?? '')) {
             $_SESSION['error'] = 'Token de seguridad inválido';
             header('Location: ' . BASE_URL . '/modulos/nuevo');
             exit;
@@ -227,35 +195,30 @@ class ModulosControlador {
         }
         
         // Crear módulo
-        if ($this->modulo !== null) {
-            try {
-                $id_modulo = $this->modulo->crear([
-                    'titulo' => $titulo,
-                    'descripcion' => $descripcion,
-                    'id_profesor' => $id_profesor
-                ]);
+        try {
+            $id_modulo = $this->modulo->crear([
+                'titulo' => $titulo,
+                'descripcion' => $descripcion,
+                'id_profesor' => $id_profesor
+            ]);
+            
+            if ($id_modulo) {
+                // Asignar módulo a cursos
+                $cursos_asignados = $this->modulo->asignarCursos($id_modulo, $cursos);
                 
-                if ($id_modulo) {
-                    // Asignar módulo a cursos
-                    $cursos_asignados = $this->modulo->asignarCursos($id_modulo, $cursos);
-                    
-                    if ($cursos_asignados) {
-                        $_SESSION['exito'] = 'Módulo creado y asignado a cursos exitosamente';
-                    } else {
-                        $_SESSION['error'] = 'Módulo creado pero hubo error al asignar cursos';
-                    }
-                    header('Location: ' . BASE_URL . '/modulos');
+                if ($cursos_asignados) {
+                    $_SESSION['exito'] = 'Módulo creado y asignado a cursos exitosamente';
                 } else {
-                    $_SESSION['error'] = 'Error al crear el módulo';
-                    header('Location: ' . BASE_URL . '/modulos/nuevo');
+                    $_SESSION['error'] = 'Módulo creado pero hubo error al asignar cursos';
                 }
-            } catch (Exception $e) {
-                error_log("Error al crear módulo: " . $e->getMessage());
-                $_SESSION['error'] = 'Error interno del servidor';
+                header('Location: ' . BASE_URL . '/modulos');
+            } else {
+                $_SESSION['error'] = 'Error al crear el módulo';
                 header('Location: ' . BASE_URL . '/modulos/nuevo');
             }
-        } else {
-            $_SESSION['error'] = 'Error de conexión';
+        } catch (Exception $e) {
+            error_log("Error al crear módulo: " . $e->getMessage());
+            $_SESSION['error'] = 'Error interno del servidor';
             header('Location: ' . BASE_URL . '/modulos/nuevo');
         }
         exit;
@@ -264,95 +227,20 @@ class ModulosControlador {
     /**
      * Activar/Desactivar módulo
      */
-    public function cambiarEstado() {
-        $id_modulo = $_POST['id_modulo'] ?? 0;
-        $accion = $_POST['accion'] ?? '';
-        
-        if (!$this->sesion->verificarTokenCSRF($_POST['csrf_token'])) {
-            $_SESSION['error'] = 'Token de seguridad inválido';
-            header('Location: ' . BASE_URL . '/modulos');
-            exit;
-        }
-        
-        if ($this->modulo !== null && $id_modulo > 0) {
-            try {
-                if ($accion === 'activar') {
-                    $resultado = $this->modulo->activar($id_modulo);
-                    $mensaje = $resultado ? 'Módulo activado exitosamente' : 'Error al activar el módulo';
-                } else {
-                    $resultado = $this->modulo->desactivar($id_modulo);
-                    $mensaje = $resultado ? 'Módulo desactivado exitosamente' : 'Error al desactivar el módulo';
-                }
-                
-                $_SESSION[$resultado ? 'exito' : 'error'] = $mensaje;
-            } catch (Exception $e) {
-                error_log("Error al cambiar estado del módulo: " . $e->getMessage());
-                $_SESSION['error'] = 'Error interno del servidor';
-            }
-        }
-        
-        header('Location: ' . BASE_URL . '/modulos');
-        exit;
-    }
-    
-    /**
-     * Activar módulo
-     */
-    public function activar($id_modulo) {
-        // Verificar permisos
-        if (!isset($_SESSION['rol']) || !in_array($_SESSION['rol'], ['admin', 'profesor'])) {
-            header('Location: ' . BASE_URL . '/error/acceso');
-            exit;
-        }
-        
-        $id_modulo = (int)$id_modulo;
-        if ($id_modulo <= 0) {
+    public function toggle() {
+        if (!isset($_POST['id_modulo']) || !is_numeric($_POST['id_modulo'])) {
             $_SESSION['error'] = 'ID de módulo inválido';
             header('Location: ' . BASE_URL . '/modulos');
             exit;
         }
         
-        try {
-            if ($this->modulo->activar($id_modulo)) {
-                $_SESSION['exito'] = 'Módulo activado exitosamente';
-            } else {
-                $_SESSION['error'] = 'Error al activar el módulo';
-            }
-        } catch (Exception $e) {
-            error_log("Error al activar módulo: " . $e->getMessage());
-            $_SESSION['error'] = 'Error interno del servidor';
-        }
+        $id_modulo = (int)$_POST['id_modulo'];
+        $activo = isset($_POST['activo']) ? 1 : 0;
         
-        header('Location: ' . BASE_URL . '/modulos');
-        exit;
-    }
-    
-    /**
-     * Desactivar módulo
-     */
-    public function desactivar($id_modulo) {
-        // Verificar permisos
-        if (!isset($_SESSION['rol']) || !in_array($_SESSION['rol'], ['admin', 'profesor'])) {
-            header('Location: ' . BASE_URL . '/error/acceso');
-            exit;
-        }
-        
-        $id_modulo = (int)$id_modulo;
-        if ($id_modulo <= 0) {
-            $_SESSION['error'] = 'ID de módulo inválido';
-            header('Location: ' . BASE_URL . '/modulos');
-            exit;
-        }
-        
-        try {
-            if ($this->modulo->desactivar($id_modulo)) {
-                $_SESSION['exito'] = 'Módulo desactivado exitosamente';
-            } else {
-                $_SESSION['error'] = 'Error al desactivar el módulo';
-            }
-        } catch (Exception $e) {
-            error_log("Error al desactivar módulo: " . $e->getMessage());
-            $_SESSION['error'] = 'Error interno del servidor';
+        if ($this->modulo->cambiarEstado($id_modulo, $activo)) {
+            $_SESSION['exito'] = 'Estado del módulo actualizado correctamente';
+        } else {
+            $_SESSION['error'] = 'Error al actualizar el estado del módulo';
         }
         
         header('Location: ' . BASE_URL . '/modulos');
