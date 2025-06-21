@@ -28855,12 +28855,2921 @@ Stack trace:
     [0] => modulos
 )
 
-[21-Jun-2025 16:11:13 Europe/Madrid] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for db5017707563.hosting-data.io failed: nodename nor servname provided, or not known in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/config/database.php on line 20
-[21-Jun-2025 16:11:13 Europe/Madrid] Error de conexión a base de datos: php_network_getaddresses: getaddrinfo for db5017707563.hosting-data.io failed: nodename nor servname provided, or not known
-[21-Jun-2025 16:11:13 Europe/Madrid] PHP Fatal error:  Uncaught Exception: Error de conexión a la base de datos. Contacte al administrador. in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/config/database.php:44
+[21-Jun-2025 16:00:55 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:00:55 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => ver
+    [2] => 3
+)
+
+[21-Jun-2025 16:00:55 Europe/Madrid] Error al obtener exámenes del módulo: Unknown column 'descripcion' in 'field list'
+[21-Jun-2025 16:00:59 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:00:59 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:01:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 3
+)
+
+[21-Jun-2025 16:01:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:01:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[21-Jun-2025 16:01:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[21-Jun-2025 16:01:42 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:42 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => crear
+)
+
+[21-Jun-2025 16:01:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:01:44 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:01:44 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:01:44 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:01:44 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 15:52:21
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => actualizar_usuario
+            [descripcion] => Usuario actualizado: CINTAS PÉREZ, Álvaro (alvacintpe@gmail.com)
+            [fecha] => 2025-06-21 15:51:44
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Carlos M.
+            [apellidos] => FERRERO BONET
+        )
+
+    [2] => Array
+        (
+            [accion] => actualizar_usuario
+            [descripcion] => Usuario actualizado: CINTAS PÉREZ, Álvaro (alvacintpe@gmail.com)
+            [fecha] => 2025-06-21 15:51:14
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Carlos M.
+            [apellidos] => FERRERO BONET
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: FERRERO BONET, Carlos M.
+            [fecha] => 2025-06-21 15:50:50
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Carlos M.
+            [apellidos] => FERRERO BONET
+        )
+
+)
+
+[21-Jun-2025 16:01:49 Europe/Madrid] Error de conexión a base de datos: No such file or directory
+[21-Jun-2025 16:01:49 Europe/Madrid] PHP Fatal error:  Uncaught Exception: Error de conexión a la base de datos. Contacte al administrador. in /homepages/22/d491590459/htdocs/autoexam/config/database.php:44
 Stack trace:
-#0 /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/config/config.php(178): require_once()
-#1 /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/index.php(100): require_once('/Users/cferrero...')
-#2 /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/publico/index.php(17): require_once('/Users/cferrero...')
+#0 /homepages/22/d491590459/htdocs/autoexam/config/config.php(178): require_once()
+#1 /homepages/22/d491590459/htdocs/autoexam/index.php(100): require_once('/homepages/22/d...')
+#2 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once('/homepages/22/d...')
 #3 {main}
-  thrown in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/config/database.php on line 44
+  thrown in /homepages/22/d491590459/htdocs/autoexam/config/database.php on line 44
+[21-Jun-2025 16:01:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:01:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:01:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:01:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:01:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:01:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:02:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:02:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[21-Jun-2025 16:02:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:02:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:02:00 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:02:00 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:02:00 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:02:00 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 15:52:21
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => actualizar_usuario
+            [descripcion] => Usuario actualizado: CINTAS PÉREZ, Álvaro (alvacintpe@gmail.com)
+            [fecha] => 2025-06-21 15:51:44
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Carlos M.
+            [apellidos] => FERRERO BONET
+        )
+
+    [2] => Array
+        (
+            [accion] => actualizar_usuario
+            [descripcion] => Usuario actualizado: CINTAS PÉREZ, Álvaro (alvacintpe@gmail.com)
+            [fecha] => 2025-06-21 15:51:14
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Carlos M.
+            [apellidos] => FERRERO BONET
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: FERRERO BONET, Carlos M.
+            [fecha] => 2025-06-21 15:50:50
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Carlos M.
+            [apellidos] => FERRERO BONET
+        )
+
+)
+
+[21-Jun-2025 16:02:02 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:02:02 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:02:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:02:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[21-Jun-2025 16:02:16 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:02:16 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => crear
+)
+
+[21-Jun-2025 16:02:16 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:02:16 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:02:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:02:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[21-Jun-2025 16:02:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:02:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => crear
+)
+
+[21-Jun-2025 16:02:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:02:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:03:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:03:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[21-Jun-2025 16:03:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:03:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => crear
+)
+
+[21-Jun-2025 16:03:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:03:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:03:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:03:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[21-Jun-2025 16:03:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:03:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => crear
+)
+
+[21-Jun-2025 16:03:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:03:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:03:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:03:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:04:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:04:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:04:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:04:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:05:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:05:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:06:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:06:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:06:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:06:09 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class "Ruteador" not found in /homepages/22/d491590459/htdocs/autoexam/index.php:114
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once()
+#1 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/index.php on line 114
+[21-Jun-2025 16:06:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:06:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:06:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:06:16 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:16 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:06:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 5
+)
+
+[21-Jun-2025 16:06:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:06:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:06:43 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:06:43 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 4
+)
+
+[21-Jun-2025 16:07:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:07:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:08:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:08:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:08:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 5
+)
+
+[21-Jun-2025 16:08:29 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:29 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 5
+)
+
+[21-Jun-2025 16:08:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 5
+)
+
+[21-Jun-2025 16:08:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:08:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 3
+)
+
+[21-Jun-2025 16:08:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 3
+)
+
+[21-Jun-2025 16:08:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 3
+)
+
+[21-Jun-2025 16:08:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 3
+)
+
+[21-Jun-2025 16:08:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:08:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:11:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:11:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:11:40 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:11:40 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:11:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:11:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => editar
+    [2] => 2
+)
+
+[21-Jun-2025 16:11:43 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:11:43 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:11:48 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:11:48 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[21-Jun-2025 16:11:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:11:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:12:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:12:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:12:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:12:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:12:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:12:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:12:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:12:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:12:09 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:12:09 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:12:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:12:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:12:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:12:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[21-Jun-2025 16:23:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:23:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[21-Jun-2025 16:23:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:23:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[21-Jun-2025 16:23:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:23:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => logout
+)
+
+[21-Jun-2025 16:23:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:23:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 16:23:41 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[21-Jun-2025 16:23:41 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:23:41 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:23:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:23:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estilos
+    [1] => formulario.css
+)
+
+[21-Jun-2025 16:23:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:23:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 16:23:41 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[21-Jun-2025 16:23:41 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:23:41 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:24:02 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:02 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 16:24:02 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:02 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 16:24:02 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:02 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => alumno.js
+)
+
+[21-Jun-2025 16:24:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => misCursos
+)
+
+[21-Jun-2025 16:24:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => ver
+)
+
+[21-Jun-2025 16:24:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => misCursos
+)
+
+[21-Jun-2025 16:24:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => misCursos
+)
+
+[21-Jun-2025 16:24:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => misCursos
+)
+
+[21-Jun-2025 16:24:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+    [1] => disponibles
+)
+
+[21-Jun-2025 16:24:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:24:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => alumno.js
+)
+
+[21-Jun-2025 16:24:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => calendario
+)
+
+[21-Jun-2025 16:24:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => alumno.js
+)
+
+[21-Jun-2025 16:24:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+    [1] => historial
+)
+
+[21-Jun-2025 16:24:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:24:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:24:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => alumno.js
+)
+
+[21-Jun-2025 16:25:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:25:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+    [1] => disponibles
+)
+
+[21-Jun-2025 16:25:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:25:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+    [1] => historial
+)
+
+[21-Jun-2025 16:25:17 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:25:17 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+    [1] => historial
+)
+
+[21-Jun-2025 16:25:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:25:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:25:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:25:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => alumno.js
+)
+
+[21-Jun-2025 16:25:42 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:25:42 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => misCursos
+)
+
+[21-Jun-2025 16:25:45 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:25:45 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => ver
+)
+
+[21-Jun-2025 16:25:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:25:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => misCursos
+)
+
+[21-Jun-2025 16:26:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:26:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 16:26:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:26:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => alumno.js
+)
+
+[21-Jun-2025 16:26:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:26:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => logout
+)
+
+[21-Jun-2025 16:26:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:26:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 16:26:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[21-Jun-2025 16:26:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:26:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:26:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:26:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estilos
+    [1] => formulario.css
+)
+
+[21-Jun-2025 16:26:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:26:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 16:26:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[21-Jun-2025 16:26:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:26:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:26:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:26:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 16:26:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:26:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 16:26:15 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:26:15 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:26:15 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:26:15 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:27:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:27:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 16:27:32 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:27:32 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:27:32 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:27:32 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:27:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:27:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:27:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:27:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:27:36 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:27:36 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:27:36 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:27:36 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:27:43 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:27:43 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => configuracion
+)
+
+[21-Jun-2025 16:27:43 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:27:43 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => configuracion
+    [1] => logs
+)
+
+[21-Jun-2025 16:27:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:27:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:27:48 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:27:48 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:27:48 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:27:48 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:27:48 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:27:48 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:40:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:40:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:40:21 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:40:21 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:40:21 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:40:21 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:40:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:40:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:40:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:40:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:40:24 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:40:24 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:40:24 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:40:24 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:45:42 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:45:42 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:45:42 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:45:42 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:45:42 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:45:42 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:45:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:45:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:45:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:45:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:45:46 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:45:46 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:45:46 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:45:46 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:48:47 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:48:47 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:48:47 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:48:47 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:48:47 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:48:47 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:48:48 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:48:48 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:48:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:48:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:48:49 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:48:49 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:48:49 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:48:49 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:48:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:48:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:48:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:48:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:48:51 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:48:51 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:48:51 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:48:51 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:48:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:48:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:48:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:48:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:48:56 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:48:56 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:48:56 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:48:56 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:51:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:51:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:51:27 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:51:27 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:51:27 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:51:27 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:51:29 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:51:29 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:51:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:51:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:51:31 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:51:31 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:51:31 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:51:31 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:52:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:52:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:52:41 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:52:41 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:52:41 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:52:41 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:52:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:52:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:52:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:52:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:52:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:52:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:53:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:53:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:53:59 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:53:59 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[21-Jun-2025 16:54:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:54:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[21-Jun-2025 16:54:01 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 16:54:01 Europe/Madrid] Límite: 4
+[21-Jun-2025 16:54:01 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 16:54:01 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":7,"titulo":"Proyecto intermodular","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:41
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => modulo_creado
+            [descripcion] => modulo_creado: {"id_modulo":6,"titulo":"DT","id_profesor":2}
+            [fecha] => 2025-06-21 16:03:18
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[21-Jun-2025 16:54:17 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:54:17 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => logout
+)
+
+[21-Jun-2025 16:54:17 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:54:17 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 16:54:17 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[21-Jun-2025 16:54:17 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:54:17 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:54:17 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:54:17 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estilos
+    [1] => formulario.css
+)
+
+[21-Jun-2025 16:54:17 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:54:17 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 16:54:17 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[21-Jun-2025 16:54:17 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:54:17 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 16:54:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:54:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 16:54:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:54:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 16:54:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:54:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:57:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:57:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:57:33 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:33 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:57:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:57:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 16:57:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 16:57:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:57:40 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:40 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:57:40 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:40 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:57:48 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:48 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:57:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:57:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:57:50 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class "Ruteador" not found in /homepages/22/d491590459/htdocs/autoexam/index.php:114
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once()
+#1 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/index.php on line 114
+[21-Jun-2025 16:57:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:57:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:57:53 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class "Ruteador" not found in /homepages/22/d491590459/htdocs/autoexam/index.php:114
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once()
+#1 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/index.php on line 114
+[21-Jun-2025 16:57:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:57:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:57:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => sesiones
+)
+
+[21-Jun-2025 16:57:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => sesiones
+)
+
+[21-Jun-2025 16:57:59 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:57:59 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:58:43 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class "Ruteador" not found in /homepages/22/d491590459/htdocs/autoexam/index.php:114
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once()
+#1 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/index.php on line 114
+[21-Jun-2025 16:58:45 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:58:45 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 16:58:45 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:58:45 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:58:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:58:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 16:58:47 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:58:47 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 16:58:47 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:58:47 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:58:48 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:58:48 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 16:58:48 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:58:48 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:58:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:58:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 16:58:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:58:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:59:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 16:59:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:59:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[21-Jun-2025 16:59:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:59:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 16:59:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:59:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => crear
+)
+
+[21-Jun-2025 16:59:28 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:28 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 16:59:33 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:33 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+    [1] => crear
+)
+
+[21-Jun-2025 16:59:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 16:59:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 16:59:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:59:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 16:59:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:59:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 16:59:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 16:59:57 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 16:59:57 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 17:00:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:00:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 17:00:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:00:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 17:02:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:02:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 17:02:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:02:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 17:02:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:02:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 17:02:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:02:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 17:02:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:02:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 17:02:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:02:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 17:02:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:02:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 17:02:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:02:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 17:02:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:02:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 17:02:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:02:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 17:04:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 17:04:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 17:04:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 17:04:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 17:04:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 17:04:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 17:04:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 17:04:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 17:04:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => logout
+)
+
+[21-Jun-2025 17:04:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 17:04:36 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[21-Jun-2025 17:04:36 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 17:04:36 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 17:04:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estilos
+    [1] => formulario.css
+)
+
+[21-Jun-2025 17:04:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 17:04:36 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[21-Jun-2025 17:04:36 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 17:04:36 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 17:04:40 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:40 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 17:04:40 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:40 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 17:04:40 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 17:04:40 Europe/Madrid] Límite: 4
+[21-Jun-2025 17:04:40 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 17:04:40 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:04:40
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: FERRERO BONET, Carlos M.
+            [fecha] => 2025-06-21 16:54:25
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Carlos M.
+            [apellidos] => FERRERO BONET
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+)
+
+[21-Jun-2025 17:04:45 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:45 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+)
+
+[21-Jun-2025 17:04:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 17:04:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[21-Jun-2025 17:04:49 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 17:04:49 Europe/Madrid] Límite: 4
+[21-Jun-2025 17:04:49 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 17:04:49 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:04:40
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: FERRERO BONET, Carlos M.
+            [fecha] => 2025-06-21 16:54:25
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Carlos M.
+            [apellidos] => FERRERO BONET
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+)
+
+[21-Jun-2025 17:04:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 17:04:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:04:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => perfil
+    [1] => cambiar-contrasena
+)
+
+[21-Jun-2025 17:05:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:05:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 17:05:03 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[21-Jun-2025 17:05:03 Europe/Madrid] Límite: 4
+[21-Jun-2025 17:05:03 Europe/Madrid] Resultados obtenidos: 4
+[21-Jun-2025 17:05:03 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:04:40
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: FERRERO BONET, Carlos M.
+            [fecha] => 2025-06-21 16:54:25
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Carlos M.
+            [apellidos] => FERRERO BONET
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 16:26:15
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: BENLLOCH CABALLERO, Iván
+            [fecha] => 2025-06-21 16:24:02
+            [modulo] => autenticacion
+            [ip] => 2a09:bac3:3132:245a::39f:59
+            [nombre] => Iván
+            [apellidos] => BENLLOCH CABALLERO
+        )
+
+)
+
+[21-Jun-2025 17:05:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:05:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => logout
+)
+
+[21-Jun-2025 17:05:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:05:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 17:05:13 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[21-Jun-2025 17:05:13 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 17:05:13 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 17:05:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:05:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estilos
+    [1] => formulario.css
+)
+
+[21-Jun-2025 17:05:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:05:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 17:05:13 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[21-Jun-2025 17:05:13 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 17:05:13 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[21-Jun-2025 17:05:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:05:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[21-Jun-2025 17:05:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:05:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[21-Jun-2025 17:05:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[21-Jun-2025 17:05:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+

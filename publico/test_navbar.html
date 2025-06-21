@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Navbar - AUTOEXAM2</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Estilos para navbar comunes -->
+    <link href="/recursos/css/navbar.css" rel="stylesheet">
+    <!-- Estilos de admin -->
+    <link href="/recursos/css/admin.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Test de Navbar - Menú de Usuario</h1>
+        
+        <!-- Test Navbar Admin -->
+        <div class="mb-4">
+            <h3>Navbar Admin</h3>
+            <header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
+                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">
+                    <img src="/recursos/logo.png" alt="Logo AUTOEXAM2" height="32" class="d-inline-block align-middle me-2" onerror="this.style.display='none'"> 
+                    AUTOEXAM2
+                </a>
+                
+                <div class="w-100 d-none d-md-block"></div>
+                
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3" href="#" id="perfilDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i> 
+                            <span class="user-name">Usuario Con Nombre Muy Largo Para Probar</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="perfilDropdown">
+                            <li><a class="dropdown-item" href="#">
+                                <i class="fas fa-id-card text-primary"></i> Mi Perfil
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <i class="fas fa-key text-warning"></i> Cambiar Contraseña
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">
+                                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </div>
+        
+        <!-- Test Navbar Profesor/Alumno -->
+        <div class="mb-4">
+            <h3>Navbar Profesor/Alumno</h3>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="/recursos/logo.png" alt="AUTOEXAM2" height="32" onerror="this.style.display='none'">
+                        AUTOEXAM2
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProfesor">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarProfesor">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-book-open"></i> Cursos</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown2" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user-circle"></i> 
+                                    <span class="user-name">Nombre Apellido Muy Largo Para Prueba</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="perfilDropdown2">
+                                    <li><a class="dropdown-item" href="#">
+                                        <i class="fas fa-id-card text-primary"></i> Mi Perfil
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="#">
+                                        <i class="fas fa-key text-warning"></i> Cambiar Contraseña
+                                    </a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item text-danger" href="#">
+                                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="alert alert-info">
+            <h5>Instrucciones de prueba:</h5>
+            <ul>
+                <li>Verifica que el nombre del usuario se muestre sin recortes</li>
+                <li>Comprueba que el dropdown se posicione correctamente</li>
+                <li>Prueba en diferentes tamaños de pantalla</li>
+                <li>Verifica que el menú no deforme la navbar</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

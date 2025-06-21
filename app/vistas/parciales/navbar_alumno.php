@@ -63,17 +63,36 @@
                     <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user-circle"></i> 
-                        <?= isset($datos['usuario']['nombre']) ? $datos['usuario']['nombre'] : 'Usuario' ?>
+                        <span class="user-name">
+                        <?php
+                        // Mostrar nombre completo del usuario si está disponible
+                        $nombreUsuario = isset($datos['usuario']['nombre']) ? $datos['usuario']['nombre'] : ($_SESSION['nombre'] ?? 'Usuario');
+                        $apellidosUsuario = isset($datos['usuario']['apellidos']) ? $datos['usuario']['apellidos'] : ($_SESSION['apellidos'] ?? '');
+                        
+                        $nombreCompleto = htmlspecialchars($nombreUsuario);
+                        if (!empty($apellidosUsuario)) {
+                            $nombreCompleto .= ' ' . htmlspecialchars($apellidosUsuario);
+                        }
+                        
+                        // Si el nombre es muy largo, mostrar solo el nombre de pila
+                        if (strlen($nombreCompleto) > 20) {
+                            echo htmlspecialchars($nombreUsuario);
+                        } else {
+                            echo $nombreCompleto;
+                        }
+                        ?>
+                        </span>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="perfilDropdown">
                         <li><a class="dropdown-item" href="<?= BASE_URL ?>/perfil">
-                            <i class="fas fa-id-card"></i> Mi Perfil
+                            <i class="fas fa-id-card text-primary"></i> Mi Perfil
                         </a></li>
                         <li><a class="dropdown-item" href="<?= BASE_URL ?>/perfil/cambiar-contrasena">
-                            <i class="fas fa-key"></i> Cambiar Contraseña
+                            <i class="fas fa-key text-warning"></i> Cambiar Contraseña
                         </a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="<?= BASE_URL ?>/autenticacion/logout">
+                        <li><a class="dropdown-item text-danger" href="<?= BASE_URL ?>/autenticacion/logout"
+                               onclick="return confirm('¿Seguro que desea cerrar sesión?')">
                             <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
                         </a></li>
                     </ul>

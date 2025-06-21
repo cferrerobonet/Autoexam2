@@ -905,4 +905,80 @@ class Usuario {
             throw new Exception("Error al consultar cursos inactivos");
         }
     }
+
+    /**
+     * Actualiza el perfil de un usuario
+     * 
+     * @param int $idUsuario ID del usuario
+     * @param array $datos Datos a actualizar (nombre, apellidos, correo, foto)
+     * @return bool True si se actualiza correctamente
+     * @throws Exception Si hay error en la actualización
+     */
+    public function actualizarPerfil($idUsuario, $datos) {
+        try {
+            // Construir la consulta dinámicamente según los datos proporcionados
+            $campos = [];
+            $valores = [];
+            
+            if (isset($datos['nombre'])) {
+                $campos[] = "nombre = ?";
+                $valores[] = $datos['nombre'];
+            }
+            
+            if (isset($datos['apellidos'])) {
+                $campos[] = "apellidos = ?";
+                $valores[] = $datos['apellidos'];
+            }
+            
+            if (isset($datos['correo'])) {
+                $campos[] = "correo = ?";
+                $valores[] = $datos['correo'];
+            }
+            
+            if (isset($datos['foto'])) {
+                $campos[] = "foto = ?";
+                $valores[] = $datos['foto'];
+            }
+            
+            if (empty($campos)) {
+                throw new Exception("No hay datos para actualizar");
+            }
+            
+            // Agregar fecha de actualización
+            $campos[] = "fecha_actualizacion = NOW()";
+            $valores[] = $idUsuario;
+            
+            $sql = "UPDATE usuarios SET " . implode(", ", $campos) . " WHERE id_usuario = ?";
+            
+            $stmt = $this->conexion->prepare($sql);
+            return $stmt->execute($valores);
+            
+        } catch (PDOException $e) {
+            error_log("Error al actualizar perfil: " . $e->getMessage());
+            throw new Exception("Error al actualizar el perfil del usuario");
+        }
+    }
+
+    /**
+     * Actualiza la contraseña de un usuario
+     * 
+     * @param int $idUsuario ID del usuario
+     * @param string $nuevaContrasena Nueva contraseña (sin hashear)
+     * @return bool True si se actualiza correctamente
+     * @throws Exception Si hay error en la actualización
+     */
+    public function actualizarContrasena($idUsuario, $nuevaContrasena) {
+        try {
+            $contrasenaHasheada = password_hash($nuevaContrasena, PASSWORD_DEFAULT);
+            
+            $sql = "UPDATE usuarios SET contrasena = ?, fecha_actualizacion = NOW() WHERE id_usuario = ?";
+            $stmt = $this->conexion->prepare($sql);
+            
+            return $stmt->execute([$contrasenaHasheada, $idUsuario]);
+            
+        } catch (PDOException $e) {
+            error_log("Error al actualizar contraseña: " . $e->getMessage());
+            throw new Exception("Error al actualizar la contraseña del usuario");
+        }
+    }
 }

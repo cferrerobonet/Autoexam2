@@ -25,6 +25,9 @@
     <!-- FullCalendar -->
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
     
+    <!-- Estilos para navbar comunes -->
+    <link href="<?= BASE_URL ?>/recursos/css/navbar.css?v=<?= time() ?>" rel="stylesheet">
+    
     <!-- Estilos personalizados unificados -->
     <link href="<?= BASE_URL ?>/recursos/css/estilos.css?v=<?= time() ?>" rel="stylesheet">
     <link href="<?= BASE_URL ?>/recursos/css/profesor.css?v=<?= time() ?>" rel="stylesheet">

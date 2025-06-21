@@ -7,26 +7,69 @@ if (!isset($_SESSION)) {
     session_start();
 }
 ?>
-<header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="<?= BASE_URL ?>">
-        <img src="<?= BASE_URL ?>/recursos/logo.png" alt="Logo AUTOEXAM2" height="32" class="d-inline-block align-middle me-2"> 
-        <?= defined('SYSTEM_NAME') ? SYSTEM_NAME : 'AUTOEXAM2' ?>
-    </a>
-    
-    <button class="navbar-toggler position-absolute d-md-none collapsed border-0" type="button" 
-            data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" 
-            aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="w-100 d-none d-md-block"></div>
-    
-    <div class="navbar-nav">
-        <div class="nav-item text-nowrap">
-            <a class="nav-link px-3" href="<?= BASE_URL ?>/autenticacion/logout" 
-               onclick="return confirm('¿Seguro que desea cerrar sesión?')">
-                <i class="fas fa-sign-out-alt me-1"></i> Cerrar sesión
-            </a>
+<header class="navbar navbar-expand-lg navbar-dark sticky-top bg-primary shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="<?= BASE_URL ?>">
+            <img src="<?= BASE_URL ?>/recursos/logo.png" alt="Logo AUTOEXAM2" height="32" class="d-inline-block align-middle me-2"> 
+            <?= defined('SYSTEM_NAME') ? SYSTEM_NAME : 'AUTOEXAM2' ?>
+        </a>
+        
+        <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" 
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarAdmin">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item d-md-none">
+                    <button class="nav-link btn btn-link text-white" type="button" 
+                            data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" 
+                            aria-expanded="false" aria-label="Toggle sidebar">
+                        <i class="fas fa-bars"></i> Menú
+                    </button>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i> 
+                        <span class="user-name">
+                        <?php
+                        // Mostrar nombre completo del usuario si está disponible
+                        $nombreUsuario = isset($datos['usuario']['nombre']) ? $datos['usuario']['nombre'] : ($_SESSION['nombre'] ?? 'Admin');
+                        $apellidosUsuario = isset($datos['usuario']['apellidos']) ? $datos['usuario']['apellidos'] : ($_SESSION['apellidos'] ?? '');
+                        
+                        $nombreCompleto = htmlspecialchars($nombreUsuario);
+                        if (!empty($apellidosUsuario)) {
+                            $nombreCompleto .= ' ' . htmlspecialchars($apellidosUsuario);
+                        }
+                        
+                        // Si el nombre es muy largo, mostrar solo el nombre de pila
+                        if (strlen($nombreCompleto) > 20) {
+                            echo htmlspecialchars($nombreUsuario);
+                        } else {
+                            echo $nombreCompleto;
+                        }
+                        ?>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="perfilDropdown">
+                        <li><a class="dropdown-item" href="<?= BASE_URL ?>/perfil">
+                            <i class="fas fa-id-card text-primary"></i> Mi Perfil
+                        </a></li>
+                        <li><a class="dropdown-item" href="<?= BASE_URL ?>/perfil/cambiar-contrasena">
+                            <i class="fas fa-key text-warning"></i> Cambiar Contraseña
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="<?= BASE_URL ?>/autenticacion/logout" 
+                               onclick="return confirm('¿Seguro que desea cerrar sesión?')">
+                            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </header>
