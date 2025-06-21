@@ -651,19 +651,13 @@
   color: rgba(255, 255, 255, 1) !important;
 }
 
-/* Ajustes específicos para la nueva estructura de navbar admin */
-.navbar-brand {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-}
-
 /* Mantener el sidebar alineado correctamente con navbar estándar */
 .sidebar {
   position: fixed;
-  top: 76px; /* Altura navbar Bootstrap con expand-lg */
+  top: 72px; /* Altura navbar compacta */
   bottom: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1020;
   padding: 0;
   overflow-y: auto;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
@@ -681,8 +675,15 @@
 
 /* Ajustar el contenido principal */
 main {
-  margin-top: 76px; /* Altura de navbar con expand-lg */
+  margin-top: 72px; /* Altura de navbar compacta */
   padding-top: 1rem;
+}
+
+/* Asegurar que el contenido no se solape con sidebar en móviles */
+@media (max-width: 767.98px) {
+  main {
+    margin-left: 0 !important;
+  }
 }
 
 /* Botón de menú solo en móviles */

@@ -123,3 +123,29 @@
   font-size: 0.7rem;
   padding: 0.2rem 0.4rem;
 }
+
+/* Navbar z-index para evitar solapamientos */
+.navbar {
+  z-index: 1030;
+}
+
+/* Estilos para el logo corporativo en círculo blanco */
+.logo-container {
+  width: 56px;
+  height: 56px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}

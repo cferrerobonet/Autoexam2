@@ -7,10 +7,12 @@ if (!isset($_SESSION)) {
     session_start();
 }
 ?>
-<header class="navbar navbar-expand-lg navbar-dark sticky-top bg-primary shadow">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?= BASE_URL ?>">
-            <img src="<?= BASE_URL ?>/recursos/logo.png" alt="Logo AUTOEXAM2" height="32" class="d-inline-block align-middle me-2"> 
+        <a class="navbar-brand fs-4 fw-bold d-flex align-items-center" href="<?= BASE_URL ?>">
+            <div class="logo-container me-3">
+                <img src="<?= BASE_URL ?>/recursos/logo.png" alt="Logo AUTOEXAM2" class="logo-img"> 
+            </div>
             <?= defined('SYSTEM_NAME') ? SYSTEM_NAME : 'AUTOEXAM2' ?>
         </a>
         
@@ -21,15 +23,6 @@ if (!isset($_SESSION)) {
         </button>
         
         <div class="collapse navbar-collapse" id="navbarAdmin">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item d-md-none">
-                    <button class="nav-link btn btn-link text-white" type="button" 
-                            data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" 
-                            aria-expanded="false" aria-label="Toggle sidebar">
-                        <i class="fas fa-bars"></i> Menú
-                    </button>
-                </li>
-            </ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="perfilDropdown" role="button"
@@ -72,7 +65,7 @@ if (!isset($_SESSION)) {
             </ul>
         </div>
     </div>
-</header>
+</nav>
 
 <div class="container-fluid">
     <div class="row">
@@ -84,12 +77,12 @@ if (!isset($_SESSION)) {
                         <div class="me-3">
                             <?php if (!empty($_SESSION['foto'])): ?>
                                 <img src="<?= BASE_URL ?>/<?= htmlspecialchars($_SESSION['foto']) ?>" 
-                                     class="rounded-circle me-2" width="60" height="60" 
-                                     alt="Avatar" style="object-fit: cover; border: 2px solid var(--color-admin-primary);">
+                                     class="rounded-circle me-2" width="80" height="80" 
+                                     alt="Avatar" style="object-fit: cover; border: 3px solid var(--color-admin-primary);">
                             <?php else: ?>
                                 <div class="bg-primary rounded-circle me-2 d-flex align-items-center justify-content-center" 
-                                     style="width: 60px; height: 60px; min-width: 60px; border: 2px solid var(--color-admin-sidebar-border);">
-                                    <i class="fas fa-user text-white" style="font-size: 24px;"></i>
+                                     style="width: 80px; height: 80px; min-width: 80px; border: 3px solid var(--color-admin-sidebar-border);">
+                                    <i class="fas fa-user text-white" style="font-size: 32px;"></i>
                                 </div>
                             <?php endif; ?>
                         </div>

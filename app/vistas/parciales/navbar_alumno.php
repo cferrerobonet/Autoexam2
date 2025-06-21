@@ -10,8 +10,10 @@
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?= BASE_URL ?>/inicio">
-            <img src="<?= BASE_URL ?>/recursos/logo.png" alt="<?= SYSTEM_NAME ?>" height="32">
+        <a class="navbar-brand fs-4 fw-bold d-flex align-items-center" href="<?= BASE_URL ?>/inicio">
+            <div class="logo-container me-3">
+                <img src="<?= BASE_URL ?>/recursos/logo.png" alt="<?= SYSTEM_NAME ?>" class="logo-img">
+            </div>
             <?= SYSTEM_NAME ?>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAlumno" 
