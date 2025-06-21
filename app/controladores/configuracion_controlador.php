@@ -1,57 +1,75 @@
 <?php
 /**
- * Controlador de Configuración - AUTOEXAM2 - SIMPLIFICADO
+ * Controlador de Configuración - AUTOEXAM2
  * 
  * Gestiona la configuración del sistema para administradores
+ * Refactorizado siguiendo el patrón de controladores seguros
  * 
  * @author GitHub Copilot
- * @version 1.1
+ * @version 2.0
  */
-
-require_once APP_PATH . '/utilidades/sesion.php';
-require_once APP_PATH . '/modelos/configuracion_modelo.php';
 
 class ConfiguracionControlador {
     private $sesion;
     private $modelo;
+    private $registroActividad;
     
     public function __construct() {
+        // Cargar dependencias
+        require_once APP_PATH . '/utilidades/sesion.php';
+        require_once APP_PATH . '/modelos/configuracion_modelo.php';
+        require_once APP_PATH . '/modelos/registro_actividad_modelo.php';
+        
         $this->sesion = new Sesion();
         $this->modelo = new ConfiguracionModelo();
+        $this->registroActividad = new RegistroActividad();
         
-        // Verificar que solo administradores accedan
+        // Verificar sesión activa
+        if (!$this->sesion->validarSesionActiva()) {
+            header('Location: ' . BASE_URL . '/autenticacion/login');
+            exit;
+        }
+        
+        // Verificar permisos de administrador
+        $this->verificarAccesoAdministrador();
+    }
+    
+    /**
+     * Verificar que el usuario tenga rol de administrador
+     */
+    private function verificarAccesoAdministrador() {
         if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
             header('Location: ' . BASE_URL . '/error/acceso');
             exit;
         }
     }
     
+    
     /**
      * Mostrar panel principal de configuración
      */
     public function index() {
-        // Obtener configuración actual
-        $configuracion = $this->obtenerConfiguracionActual();
-        $infoSistema = $this->modelo->obtenerInfoSistema();
-        
-        // Datos para la vista
-        $datos = [
-            'titulo' => 'Configuración del Sistema',
-            'configuracion' => $configuracion,
-            'info_sistema' => $infoSistema,
-            'csrf_token' => $this->sesion->generarTokenCSRF()
-        ];
-        
-        // Cargar vista
-        require_once APP_PATH . '/vistas/parciales/head_admin.php';
-        echo '<body class="bg-light">';
-        require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
-        echo '<div class="container-fluid mt-4"><div class="row"><div class="col-12">';
-        require_once APP_PATH . '/vistas/admin/configuracion/index.php';
-        echo '</div></div></div>';
-        require_once APP_PATH . '/vistas/parciales/footer_admin.php';
-        require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
-        echo '</body></html>';
+        try {
+            // Obtener configuración actual
+            $configuracion = $this->obtenerConfiguracionActual();
+            $infoSistema = $this->modelo->obtenerInfoSistema();
+            
+            // Datos para la vista
+            $datos = [
+                'titulo' => 'Configuración del Sistema',
+                'configuracion' => $configuracion,
+                'info_sistema' => $infoSistema,
+                'csrf_token' => $this->sesion->generarTokenCSRF()
+            ];
+            
+            // Cargar vista
+            $this->cargarVista('index', $datos);
+            
+        } catch (Exception $e) {
+            error_log("Error al cargar configuración: " . $e->getMessage());
+            $_SESSION['error'] = 'Error al cargar la configuración del sistema';
+            $this->cargarVista('index', ['error' => true]);
+        }
     }
     
     /**
@@ -124,12 +142,16 @@ class ConfiguracionControlador {
      * Actualizar configuración del sistema
      */
     private function actualizarConfiguracionSistema() {
-        $nombre_app = trim($_POST['nombre_app'] ?? '');
+        $nombre_app = $this->sanitizarTexto($_POST['nombre_app'] ?? '');
         $modo_debug = isset($_POST['modo_debug']) ? 'true' : 'false';
         $modo_mantenimiento = isset($_POST['modo_mantenimiento']) ? 'true' : 'false';
         
         if (empty($nombre_app)) {
             throw new Exception('El nombre de la aplicación es obligatorio');
+        }
+        
+        if (strlen($nombre_app) > 100) {
+            throw new Exception('El nombre de la aplicación no puede exceder 100 caracteres');
         }
         
         // Actualizar archivo .env
@@ -155,13 +177,13 @@ class ConfiguracionControlador {
      * Actualizar configuración de correo
      */
     private function actualizarConfiguracionCorreo() {
-        $smtp_host = trim($_POST['smtp_host'] ?? '');
-        $smtp_puerto = trim($_POST['smtp_puerto'] ?? '');
-        $smtp_usuario = trim($_POST['smtp_usuario'] ?? '');
-        $smtp_contrasena = trim($_POST['smtp_contrasena'] ?? '');
-        $smtp_seguridad = trim($_POST['smtp_seguridad'] ?? 'tls');
-        $smtp_from_email = trim($_POST['smtp_from_email'] ?? '');
-        $smtp_from_name = trim($_POST['smtp_from_name'] ?? '');
+        $smtp_host = $this->sanitizarTexto($_POST['smtp_host'] ?? '');
+        $smtp_puerto = $this->sanitizarTexto($_POST['smtp_puerto'] ?? '');
+        $smtp_usuario = $this->sanitizarTexto($_POST['smtp_usuario'] ?? '');
+        $smtp_contrasena = $_POST['smtp_contrasena'] ?? ''; // No sanitizar contraseñas
+        $smtp_seguridad = $this->sanitizarTexto($_POST['smtp_seguridad'] ?? 'tls');
+        $smtp_from_email = $this->sanitizarTexto($_POST['smtp_from_email'] ?? '');
+        $smtp_from_name = $this->sanitizarTexto($_POST['smtp_from_name'] ?? '');
         
         if (empty($smtp_host) || empty($smtp_puerto) || empty($smtp_usuario)) {
             throw new Exception('Los campos Host, Puerto y Usuario SMTP son obligatorios');
@@ -169,12 +191,18 @@ class ConfiguracionControlador {
         
         // Validar puerto
         if (!is_numeric($smtp_puerto) || $smtp_puerto < 1 || $smtp_puerto > 65535) {
-            throw new Exception('El puerto SMTP debe ser un número válido');
+            throw new Exception('El puerto SMTP debe ser un número válido entre 1 y 65535');
         }
         
         // Validar email
         if (!empty($smtp_from_email) && !filter_var($smtp_from_email, FILTER_VALIDATE_EMAIL)) {
             throw new Exception('El email FROM no es válido');
+        }
+        
+        // Validar seguridad
+        $seguridadPermitida = ['tls', 'ssl', 'none'];
+        if (!in_array($smtp_seguridad, $seguridadPermitida)) {
+            throw new Exception('Tipo de seguridad no válido');
         }
         
         // Actualizar archivo .env
@@ -263,15 +291,12 @@ class ConfiguracionControlador {
     }
     
     /**
-     * Registrar actividad de usuario
+     * Registrar actividad del usuario
      */
     private function registrarActividad($accion, $detalles = []) {
         try {
-            require_once APP_PATH . '/modelos/registro_actividad_modelo.php';
-            $registroActividad = new RegistroActividad();
-            
-            $registroActividad->registrar([
-                'usuario_id' => $_SESSION['usuario_id'],
+            $this->registroActividad->registrar([
+                'usuario_id' => $_SESSION['id_usuario'],
                 'accion' => $accion,
                 'detalles' => json_encode($detalles),
                 'ip' => $_SERVER['REMOTE_ADDR'] ?? 'desconocida',
@@ -280,5 +305,40 @@ class ConfiguracionControlador {
         } catch (Exception $e) {
             error_log("Error registrando actividad: " . $e->getMessage());
         }
+    }
+    
+    /**
+     * Sanitizar texto de entrada
+     */
+    private function sanitizarTexto($texto) {
+        return htmlspecialchars(trim($texto), ENT_QUOTES, 'UTF-8');
+    }
+    
+    /**
+     * Validar campos obligatorios
+     */
+    private function validarCamposObligatorios($campos, $rutaError = 'configuracion') {
+        foreach ($campos as $campo) {
+            if (!isset($_POST[$campo]) || trim($_POST[$campo]) === '') {
+                $_SESSION['error'] = 'Todos los campos obligatorios deben ser completados.';
+                header('Location: ' . BASE_URL . '/' . $rutaError);
+                exit;
+            }
+        }
+    }
+    
+    /**
+     * Cargar vista de administrador
+     */
+    private function cargarVista($vista, $datos = []) {
+        require_once APP_PATH . '/vistas/parciales/head_admin.php';
+        echo '<body class="bg-light">';
+        require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
+        echo '<div class="container-fluid mt-4"><div class="row"><div class="col-12">';
+        require_once APP_PATH . "/vistas/admin/configuracion/{$vista}.php";
+        echo '</div></div></div>';
+        require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+        require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
+        echo '</body></html>';
     }
 }
