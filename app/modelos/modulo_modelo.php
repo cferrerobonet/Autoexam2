@@ -47,6 +47,30 @@ class ModuloModelo {
                 $tipos .= "i";
             }
             
+            // Definir orden de la consulta
+            $orderBy = " ORDER BY m.titulo ASC";
+            
+            // Aplicar ordenamiento si viene en los filtros
+            if (isset($filtros['ordenar_por']) && isset($filtros['orden'])) {
+                // Validar campos permitidos para evitar inyección SQL
+                $camposPermitidos = [
+                    'id_modulo' => 'm.id_modulo',
+                    'titulo' => 'm.titulo',
+                    'apellidos' => 'u.apellidos',
+                    'total_examenes' => 'total_examenes',
+                    'activo' => 'm.activo',
+                    'fecha_creacion' => 'm.fecha_creacion',
+                    'cursos_asignados' => 'cursos_asignados'
+                ];
+                
+                // Si el campo es válido, ordenar por él
+                if (array_key_exists($filtros['ordenar_por'], $camposPermitidos)) {
+                    $campo = $camposPermitidos[$filtros['ordenar_por']];
+                    $orden = $filtros['orden'] === 'DESC' ? 'DESC' : 'ASC';
+                    $orderBy = " ORDER BY $campo $orden";
+                }
+            }
+            
             // Consulta principal
             $query = "SELECT m.id_modulo, m.titulo, m.descripcion, m.id_profesor, m.activo,
                              u.nombre, u.apellidos,
@@ -59,7 +83,7 @@ class ModuloModelo {
                       LEFT JOIN cursos c ON mc.id_curso = c.id_curso
                       $where
                       GROUP BY m.id_modulo, m.titulo, m.descripcion, m.id_profesor, m.activo, u.nombre, u.apellidos
-                      ORDER BY m.titulo ASC
+                      $orderBy
                       LIMIT ? OFFSET ?";
             
             $params[] = $limite;
@@ -378,6 +402,81 @@ class ModuloModelo {
         }
     }
     
+    /**
+     * Obtener estadísticas de módulos
+     */
+    public function obtenerEstadisticas() {
+        try {
+            $estadisticas = [];
+
+            // Total de módulos
+            $query = "SELECT COUNT(*) as total FROM modulos";
+            $resultado = $this->db->query($query);
+            $estadisticas['total_modulos'] = $resultado->fetch_assoc()['total'];
+
+            // Módulos activos vs inactivos
+            $query = "SELECT activo, COUNT(*) as total FROM modulos GROUP BY activo";
+            $resultado = $this->db->query($query);
+            $estadisticas['modulos_activos'] = 0;
+            $estadisticas['modulos_inactivos'] = 0;
+            while ($fila = $resultado->fetch_assoc()) {
+                if ($fila['activo'] == 1) {
+                    $estadisticas['modulos_activos'] = $fila['total'];
+                } else {
+                    $estadisticas['modulos_inactivos'] = $fila['total'];
+                }
+            }
+
+            // Cursos con módulos - usando la tabla examenes que relaciona modulos con cursos
+            $query = "SELECT COUNT(DISTINCT e.id_curso) as total 
+                      FROM examenes e 
+                      WHERE e.id_modulo IS NOT NULL";
+            $resultado = $this->db->query($query);
+            $estadisticas['cursos_con_modulos'] = $resultado->fetch_assoc()['total'];
+
+            // Módulos por curso - usando la relación a través de examenes
+            $query = "SELECT c.nombre_curso as curso, COUNT(DISTINCT e.id_modulo) as modulos
+                      FROM cursos c
+                      LEFT JOIN examenes e ON c.id_curso = e.id_curso AND e.id_modulo IS NOT NULL
+                      GROUP BY c.id_curso, c.nombre_curso
+                      HAVING modulos > 0
+                      ORDER BY modulos DESC
+                      LIMIT 10";
+            $resultado = $this->db->query($query);
+            $estadisticas['por_curso'] = [];
+            while ($fila = $resultado->fetch_assoc()) {
+                $estadisticas['por_curso'][] = $fila;
+            }
+
+            // Registros por mes (últimos 12 meses)
+            // Como no existe fecha_creacion, mostramos el total actual
+            $query = "SELECT 
+                        CONCAT(YEAR(NOW()), '-', LPAD(MONTH(NOW()), 2, '0')) as mes,
+                        COUNT(*) as total
+                      FROM modulos 
+                      GROUP BY mes
+                      ORDER BY mes";
+            $resultado = $this->db->query($query);
+            $estadisticas['registros_por_mes'] = [];
+            while ($fila = $resultado->fetch_assoc()) {
+                $estadisticas['registros_por_mes'][] = $fila;
+            }
+
+            return $estadisticas;
+
+        } catch (Exception $e) {
+            error_log("Error obteniendo estadísticas de módulos: " . $e->getMessage());
+            return [
+                'total_modulos' => 0,
+                'modulos_activos' => 0,
+                'modulos_inactivos' => 0,
+                'cursos_con_modulos' => 0,
+                'por_curso' => [],
+                'registros_por_mes' => []
+            ];
+        }
+    }
+
     // ============ MÉTODOS DE VALIDACIÓN Y UTILIDADES ============
     
     /**

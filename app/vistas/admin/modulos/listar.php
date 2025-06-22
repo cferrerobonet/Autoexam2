@@ -11,17 +11,49 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
 }
 ?>
 
-<!-- Título y botón de acción -->
+<!-- Título y botones de acción -->
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h1><i class="fas fa-puzzle-piece me-2"></i> Gestión de Módulos</h1>
     <div class="d-flex gap-2">
+        <!-- Acciones masivas -->
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" 
+                    id="accionesMasivas" data-bs-toggle="dropdown" 
+                    aria-expanded="false" disabled>
+                <i class="fas fa-tasks"></i> Acciones Masivas
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="accionesMasivas">
+                <li><a class="dropdown-item" href="#" onclick="accionMasiva('desactivar')">
+                    <i class="fas fa-ban text-danger"></i> Desactivar Seleccionados
+                </a></li>
+                <li><a class="dropdown-item" href="#" onclick="accionMasiva('exportar')">
+                    <i class="fas fa-download text-success"></i> Exportar Seleccionados
+                </a></li>
+            </ul>
+        </div>
+
+        <!-- Exportar todos -->
+        <a href="<?= BASE_URL ?>/modulos/exportar?<?= http_build_query($datos['filtros']) ?>" 
+           class="btn btn-outline-success">
+            <i class="fas fa-file-export"></i> Exportar Filtrados
+        </a>
+
+        <!-- Nuevo módulo -->
         <a href="<?= BASE_URL ?>/modulos/nuevo" class="btn btn-primary">
             <i class="fas fa-plus me-1"></i> Nuevo Módulo
         </a>
+        
+        <!-- Importar módulos -->
+        <a href="<?= BASE_URL ?>/modulos/importar" class="btn btn-success">
+            <i class="fas fa-upload"></i> Importar
+        </a>
+        
+        <!-- Estadísticas -->
+        <a href="<?= BASE_URL ?>/modulos/estadisticas" class="btn btn-info">
+            <i class="fas fa-chart-bar"></i> Estadísticas
+        </a>
     </div>
 </div>
-        </div>
-    </div>
 <!-- Mensajes -->
 <?php if (isset($_SESSION['exito'])): ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -127,6 +159,10 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                 <table class="table table-hover mb-0 border">
                     <thead class="bg-light border-bottom">
                         <tr>
+                            <th class="py-3 text-muted fw-semibold" style="width: 40px;">
+                                <input type="checkbox" class="form-check-input" id="seleccionar_todos" 
+                                       onchange="toggleSeleccionarTodos(this)">
+                            </th>
                             <th class="py-3 text-muted fw-semibold">
                                 <a href="<?= BASE_URL ?>/modulos?<?= http_build_query(array_merge($datos['filtros'], ['ordenar_por' => 'id_modulo', 'orden' => (isset($datos['filtros']['ordenar_por']) && $datos['filtros']['ordenar_por'] == 'id_modulo' && isset($datos['filtros']['orden']) && $datos['filtros']['orden'] == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="text-decoration-none text-muted d-flex align-items-center">
                                     ID
@@ -157,7 +193,16 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                     <?php endif; ?>
                                 </a>
                             </th>
-                            <th class="py-3 text-muted fw-semibold">Curso</th>
+                            <th class="py-3 text-muted fw-semibold">
+                                <a href="<?= BASE_URL ?>/modulos?<?= http_build_query(array_merge($datos['filtros'], ['ordenar_por' => 'cursos_asignados', 'orden' => (isset($datos['filtros']['ordenar_por']) && $datos['filtros']['ordenar_por'] == 'cursos_asignados' && isset($datos['filtros']['orden']) && $datos['filtros']['orden'] == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="text-decoration-none text-muted d-flex align-items-center">
+                                    Curso
+                                    <?php if (isset($datos['filtros']['ordenar_por']) && $datos['filtros']['ordenar_por'] == 'cursos_asignados'): ?>
+                                        <i class="ms-1 fas fa-sort-<?= $datos['filtros']['orden'] == 'ASC' ? 'up' : 'down' ?>"></i>
+                                    <?php else: ?>
+                                        <i class="ms-1 fas fa-sort text-muted opacity-50"></i>
+                                    <?php endif; ?>
+                                </a>
+                            </th>
                             <th class="py-3 text-muted fw-semibold">
                                 <a href="<?= BASE_URL ?>/modulos?<?= http_build_query(array_merge($datos['filtros'], ['ordenar_por' => 'total_examenes', 'orden' => (isset($datos['filtros']['ordenar_por']) && $datos['filtros']['ordenar_por'] == 'total_examenes' && isset($datos['filtros']['orden']) && $datos['filtros']['orden'] == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="text-decoration-none text-muted d-flex align-items-center">
                                     Exámenes
@@ -168,13 +213,26 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                     <?php endif; ?>
                                 </a>
                             </th>
-                            <th class="py-3 text-muted fw-semibold text-center">Estado</th>
+                            <th class="py-3 text-muted fw-semibold text-center">
+                                <a href="<?= BASE_URL ?>/modulos?<?= http_build_query(array_merge($datos['filtros'], ['ordenar_por' => 'activo', 'orden' => (isset($datos['filtros']['ordenar_por']) && $datos['filtros']['ordenar_por'] == 'activo' && isset($datos['filtros']['orden']) && $datos['filtros']['orden'] == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="text-decoration-none text-muted d-flex align-items-center justify-content-center">
+                                    Estado
+                                    <?php if (isset($datos['filtros']['ordenar_por']) && $datos['filtros']['ordenar_por'] == 'activo'): ?>
+                                        <i class="ms-1 fas fa-sort-<?= $datos['filtros']['orden'] == 'ASC' ? 'up' : 'down' ?>"></i>
+                                    <?php else: ?>
+                                        <i class="ms-1 fas fa-sort text-muted opacity-50"></i>
+                                    <?php endif; ?>
+                                </a>
+                            </th>
                             <th class="py-3 text-muted fw-semibold text-center">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($datos['modulos'] as $modulo): ?>
                             <tr class="align-middle border-bottom">
+                                <td class="py-3">
+                                    <input type="checkbox" class="form-check-input" name="seleccionar[]" 
+                                           value="<?= $modulo['id_modulo'] ?>" onchange="actualizarBotonesAcciones()">
+                                </td>
                                 <td class="py-3"><?= htmlspecialchars($modulo['id_modulo']) ?></td>
                                 <td class="py-3">
                                     <div class="d-flex align-items-center">

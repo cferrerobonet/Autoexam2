@@ -187,8 +187,8 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                                 <th width="40" class="py-3">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" 
-                                                               id="seleccionarTodos" onchange="toggleTodos()">
-                                                        <label class="form-check-label" for="seleccionarTodos">
+                                                               id="seleccionar_todos" onchange="toggleSeleccionarTodos(this)">
+                                                        <label class="form-check-label" for="seleccionar_todos">
                                                             <span class="visually-hidden">Seleccionar todos</span>
                                                         </label>
                                                     </div>
@@ -274,12 +274,12 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                                 <tr class="<?= $usuario['activo'] ? 'align-middle border-bottom' : 'align-middle border-bottom bg-light' ?>">
                                                     <td class="py-3">
                                                         <div class="form-check">
-                                                            <input class="form-check-input usuario-checkbox" 
+                                                            <input class="form-check-input" 
                                                                    type="checkbox" 
-                                                                   name="usuarios[]" 
+                                                                   name="seleccionar[]" 
                                                                    value="<?= $usuario['id_usuario'] ?>"
                                                                    id="usuario_<?= $usuario['id_usuario'] ?>"
-                                                                   onchange="toggleAccionesMasivas()"
+                                                                   onchange="actualizarBotonesAcciones()"
                                                                    <?= $usuario['id_usuario'] == $_SESSION['id_usuario'] ? 'disabled' : '' ?>>
                                                             <label class="form-check-label" for="usuario_<?= $usuario['id_usuario'] ?>">
                                                                 <span class="visually-hidden">Seleccionar usuario</span>
@@ -287,7 +287,8 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
                                                         </div>
                                                     </td>
                                                     <td><?= htmlspecialchars($usuario['id_usuario']) ?></td>
-                                                    <td>                                        <div class="d-flex align-items-center">
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
                                             <?php if (!empty($usuario['foto'])): ?>
                                                 <img src="<?= BASE_URL ?>/<?= htmlspecialchars($usuario['foto']) ?>" 
                                                      class="rounded-circle me-3" width="56" height="56" 
@@ -553,168 +554,37 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
     <?php require_once APP_PATH . '/vistas/parciales/footer_admin.php'; ?>
     <?php require_once APP_PATH . '/vistas/parciales/scripts_admin.php'; ?>
 
-    <!-- JavaScript para acciones masivas -->
+    <!-- JavaScript específico para usuarios -->
     <script>
-        // Variables globales
-        let checkboxes = document.querySelectorAll('.usuario-checkbox');
-        let botonAcciones = document.getElementById('accionesMasivas');
-        let checkboxTodos = document.getElementById('seleccionarTodos');
-
-        /**
-         * Alterna la selección de todos los checkboxes
-         */
-        function toggleTodos() {
-            checkboxes.forEach(checkbox => {
-                if (!checkbox.disabled) {
-                    checkbox.checked = checkboxTodos.checked;
-                }
-            });
-            toggleAccionesMasivas();
-        }
-
-        /**
-         * Habilita/deshabilita el botón de acciones masivas
-         */
-        function toggleAccionesMasivas() {
-            let seleccionados = document.querySelectorAll('.usuario-checkbox:checked');
-            botonAcciones.disabled = seleccionados.length === 0;
-            
-            // Actualizar estado del checkbox "Seleccionar todos"
-            let habilitados = document.querySelectorAll('.usuario-checkbox:not(:disabled)');
-            let seleccionadosHabilitados = document.querySelectorAll('.usuario-checkbox:checked:not(:disabled)');
-            
-            if (seleccionadosHabilitados.length === 0) {
-                checkboxTodos.indeterminate = false;
-                checkboxTodos.checked = false;
-            } else if (seleccionadosHabilitados.length === habilitados.length) {
-                checkboxTodos.indeterminate = false;
-                checkboxTodos.checked = true;
-            } else {
-                checkboxTodos.indeterminate = true;
-            }
-        }
-
-        /**
-         * Ejecuta una acción masiva
-         */
-        function accionMasiva(accion) {
-            let seleccionados = document.querySelectorAll('.usuario-checkbox:checked');
-            
-            if (seleccionados.length === 0) {
-                alert('Por favor, selecciona al menos un usuario.');
-                return;
-            }
-
-            let mensaje = '';
-            if (accion === 'desactivar') {
-                mensaje = `¿Está seguro de que desea desactivar ${seleccionados.length} usuario(s)?`;
-            } else if (accion === 'exportar') {
-                mensaje = `¿Desea exportar ${seleccionados.length} usuario(s) seleccionado(s)?`;
-            }
-
-            if (confirm(mensaje)) {
-                document.getElementById('accion_masiva').value = accion;
-                document.getElementById('formAccionMasiva').submit();
-            }
-        }
-
-        // JavaScript para filtros automáticos
-        document.getElementById('formFiltros').addEventListener('change', function() {
-            // Esperar un momento para agrupar cambios
-            setTimeout(() => {
-                this.submit();
-            }, 300);
-        });
-
-        // Inicializar estado al cargar la página
+        // Configurar filtros automáticos al cargar la página
         document.addEventListener('DOMContentLoaded', function() {
-            toggleAccionesMasivas();
-            
-            // Tooltips de Bootstrap
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                return new bootstrap.Tooltip(tooltipTriggerEl);
-            });
-            
-            // Configurar filtros automáticos
-            configurarFiltrosAutomaticos();
+            configurarFiltrosUsuarios();
         });
         
         /**
-         * Configura los campos de filtro para que se apliquen automáticamente
+         * Configura los filtros específicos para usuarios
          */
-        function configurarFiltrosAutomaticos() {
-            // Obtener todos los elementos con la clase filtro-auto
+        function configurarFiltrosUsuarios() {
             const filtros = document.querySelectorAll('.filtro-auto');
-            
-            // Variable para almacenar el temporizador de debounce para el campo de texto
             let buscarTimeout;
             
-            // Agregar event listeners según el tipo de elemento
             filtros.forEach(function(filtro) {
                 if (filtro.tagName === 'SELECT') {
-                    // Para los selectores, aplicar el filtro inmediatamente al cambiar
                     filtro.addEventListener('change', function() {
-                        aplicarFiltros();
+                        document.getElementById('formFiltros').submit();
                     });
                 } else if (filtro.tagName === 'INPUT' && filtro.type === 'text') {
-                    // Para campos de texto, utilizar debounce para evitar demasiadas búsquedas
                     filtro.addEventListener('input', function() {
-                        // Limpiar el temporizador anterior si existe
                         clearTimeout(buscarTimeout);
-                        
-                        // Establecer un nuevo temporizador (500ms de espera)
                         buscarTimeout = setTimeout(function() {
-                            // Solo aplicar si hay al menos 3 caracteres o ninguno
                             const texto = filtro.value.trim();
                             if (texto === '' || texto.length >= 3) {
-                                aplicarFiltros();
+                                document.getElementById('formFiltros').submit();
                             }
-                        }, 500); // Esperar 500ms después de que el usuario deje de escribir
-                    });
-                    
-                    // También aplicar al presionar Enter solo si cumple los requisitos
-                    filtro.addEventListener('keypress', function(e) {
-                        if (e.key === 'Enter') {
-                            e.preventDefault(); // Evitar el envío del formulario
-                            clearTimeout(buscarTimeout);
-                            
-                            // Solo aplicar si hay al menos 3 caracteres o ninguno
-                            const texto = filtro.value.trim();
-                            if (texto === '' || texto.length >= 3) {
-                                aplicarFiltros();
-                            } else if (texto.length > 0 && texto.length < 3) {
-                                alert('Por favor, ingresa al menos 3 caracteres para buscar o deja el campo vacío.');
-                            }
-                        }
+                        }, 500);
                     });
                 }
             });
-        }
-        
-        /**
-         * Aplica los filtros enviando el formulario
-         */
-        function aplicarFiltros() {
-            try {
-                // Verificar el campo de búsqueda antes de enviar
-                const campoBuscar = document.getElementById('buscar');
-                if (campoBuscar) {
-                    const textoBuscar = campoBuscar.value.trim();
-                    
-                    // Si tiene texto pero menos de 3 caracteres, no aplicar filtro
-                    if (textoBuscar.length > 0 && textoBuscar.length < 3) {
-                        alert('Por favor, ingresa al menos 3 caracteres para buscar o deja el campo vacío.');
-                        return; // No enviar el formulario
-                    }
-                }
-                
-                // Enviar formulario directamente sin manipular los valores
-                document.getElementById('formFiltros').submit();
-            } catch (error) {
-                console.error('Error al aplicar filtros:', error);
-                alert('Ocurrió un error al aplicar los filtros. Por favor, inténtalo nuevamente.');
-            }
         }
     </script>
 </body>

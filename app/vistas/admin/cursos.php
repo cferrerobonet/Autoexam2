@@ -67,6 +67,11 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                 <i class="fas fa-plus"></i> Nuevo Curso
             </a>
             
+            <!-- Importar cursos -->
+            <a href="<?= BASE_URL ?>/cursos/importar" class="btn btn-success">
+                <i class="fas fa-upload"></i> Importar
+            </a>
+            
             <!-- Estadísticas -->
             <a href="<?= BASE_URL ?>/cursos/estadisticas" class="btn btn-info">
                 <i class="fas fa-chart-bar"></i> Estadísticas
@@ -179,8 +184,8 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                 <th width="40" class="py-3">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" 
-                                               id="seleccionarTodos" onchange="toggleTodos()">
-                                        <label class="form-check-label" for="seleccionarTodos">
+                                               id="seleccionar_todos" onchange="toggleSeleccionarTodos(this)">
+                                        <label class="form-check-label" for="seleccionar_todos">
                                             <span class="visually-hidden">Seleccionar todos</span>
                                         </label>
                                     </div>
@@ -234,12 +239,12 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                         <tr class="<?= $curso['activo'] ? 'align-middle border-bottom' : 'align-middle border-bottom bg-light' ?>">
                             <td class="py-3">
                                 <div class="form-check">
-                                    <input class="form-check-input curso-checkbox" 
+                                    <input class="form-check-input" 
                                            type="checkbox" 
-                                           name="cursos[]" 
+                                           name="seleccionar[]" 
                                            value="<?= $curso['id_curso'] ?>"
                                            id="curso_<?= $curso['id_curso'] ?>"
-                                           onchange="toggleAccionesMasivas()">
+                                           onchange="actualizarBotonesAcciones()">
                                     <label class="form-check-label" for="curso_<?= $curso['id_curso'] ?>">
                                         <span class="visually-hidden">Seleccionar curso</span>
                                     </label>

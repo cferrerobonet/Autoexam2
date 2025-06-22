@@ -837,5 +837,95 @@ class Curso {
         }
     }
 
-    // ...existing code...
+    /**
+     * Obtener usuario por correo
+     */
+    public function obtenerUsuarioPorCorreo($correo) {
+        try {
+            $query = "SELECT id_usuario, nombre, apellidos, correo, rol 
+                      FROM usuarios 
+                      WHERE correo = ? AND activo = 1";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("s", $correo);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            
+            if ($resultado->num_rows > 0) {
+                return $resultado->fetch_assoc();
+            }
+            return false;
+        } catch (Exception $e) {
+            error_log("Error al obtener usuario por correo: " . $e->getMessage(), 0, 
+                      __DIR__ . "/../../almacenamiento/logs/app/cursos_error.log");
+            return false;
+        }
+    }
+
+    /**
+     * Obtener estadísticas de cursos
+     */
+    public function obtenerEstadisticas() {
+        try {
+            $estadisticas = [];
+
+            // Total de cursos
+            $query = "SELECT COUNT(*) as total FROM cursos";
+            $resultado = $this->db->query($query);
+            $estadisticas['total_cursos'] = $resultado->fetch_assoc()['total'];
+
+            // Cursos activos vs inactivos
+            $query = "SELECT activo, COUNT(*) as total FROM cursos GROUP BY activo";
+            $resultado = $this->db->query($query);
+            $estadisticas['cursos_activos'] = 0;
+            $estadisticas['cursos_inactivos'] = 0;
+            while ($fila = $resultado->fetch_assoc()) {
+                if ($fila['activo'] == 1) {
+                    $estadisticas['cursos_activos'] = $fila['total'];
+                } else {
+                    $estadisticas['cursos_inactivos'] = $fila['total'];
+                }
+            }
+
+            // Cursos por profesor
+            $query = "SELECT CONCAT(u.nombre, ' ', u.apellidos) as profesor, COUNT(c.id_curso) as cursos
+                      FROM usuarios u
+                      LEFT JOIN cursos c ON u.id_usuario = c.id_profesor
+                      WHERE u.rol = 'profesor'
+                      GROUP BY u.id_usuario
+                      ORDER BY cursos DESC
+                      LIMIT 10";
+            $resultado = $this->db->query($query);
+            $estadisticas['por_profesor'] = [];
+            while ($fila = $resultado->fetch_assoc()) {
+                $estadisticas['por_profesor'][] = $fila;
+            }
+
+            // Registros por mes (últimos 12 meses)
+            // Como no existe fecha_creacion, usamos el id_curso como aproximación temporal
+            $query = "SELECT 
+                        CONCAT(YEAR(NOW()), '-', LPAD(MONTH(NOW()), 2, '0')) as mes,
+                        COUNT(*) as total
+                      FROM cursos 
+                      GROUP BY mes
+                      ORDER BY mes";
+            $resultado = $this->db->query($query);
+            $estadisticas['registros_por_mes'] = [];
+            while ($fila = $resultado->fetch_assoc()) {
+                $estadisticas['registros_por_mes'][] = $fila;
+            }
+
+            return $estadisticas;
+
+        } catch (Exception $e) {
+            error_log("Error obteniendo estadísticas de cursos: " . $e->getMessage(), 0, 
+                      __DIR__ . "/../../almacenamiento/logs/app/cursos_error.log");
+            return [
+                'total_cursos' => 0,
+                'cursos_activos' => 0,
+                'cursos_inactivos' => 0,
+                'por_profesor' => [],
+                'registros_por_mes' => []
+            ];
+        }
+    }
 }

@@ -902,7 +902,7 @@ class CursosControlador {
                 $filtros['ordenar_por'] = $_GET['ordenar_por'];
                 
                 // Dirección de ordenación (ASC/DESC)
-                $filtros['orden'] = isset($_GET['direccion']) && strtoupper($_GET['direccion']) === 'DESC' ? 'DESC' : 'ASC';
+                $filtros['orden'] = isset($_GET['orden']) && strtoupper($_GET['orden']) === 'DESC' ? 'DESC' : 'ASC';
             }
         }
         
@@ -1082,6 +1082,192 @@ class CursosControlador {
         } catch (Exception $e) {
             error_log("Error al exportar cursos: " . $e->getMessage());
             throw new Exception("Error al exportar los cursos seleccionados");
+        }
+    }
+    
+    /**
+     * Mostrar página de importación de cursos
+     */
+    public function importar() {
+        try {
+            // Verificar permisos
+            if ($_SESSION['rol'] !== 'admin') {
+                $_SESSION['error'] = 'No tienes permisos para importar cursos';
+                header('Location: ' . BASE_URL . '/cursos');
+                exit;
+            }
+
+            // Cargar vista
+            require_once APP_PATH . '/vistas/parciales/head_admin.php';
+            echo '<body class="bg-light">';
+            require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
+            echo '<div class="container-fluid mt-4"><div class="row"><div class="col-12">';
+            
+            require_once APP_PATH . '/vistas/admin/cursos/importar.php';
+            
+            echo '</div></div></div>';
+            require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+            require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
+            echo '</body></html>';
+            
+        } catch (Exception $e) {
+            error_log("Error en página de importación de cursos: " . $e->getMessage());
+            $_SESSION['error'] = 'Error al cargar la página de importación';
+            header('Location: ' . BASE_URL . '/cursos');
+            exit;
+        }
+    }
+
+    /**
+     * Procesar importación de cursos desde CSV
+     */
+    public function procesarImportacion() {
+        try {
+            // Verificar permisos y método
+            if ($_SESSION['rol'] !== 'admin' || $_SERVER['REQUEST_METHOD'] !== 'POST') {
+                $_SESSION['error'] = 'Acceso no autorizado';
+                header('Location: ' . BASE_URL . '/cursos');
+                exit;
+            }
+
+            // Verificar que se subió un archivo
+            if (!isset($_FILES['archivo']) || $_FILES['archivo']['error'] !== UPLOAD_ERR_OK) {
+                $_SESSION['error'] = 'No se pudo cargar el archivo';
+                header('Location: ' . BASE_URL . '/cursos/importar');
+                exit;
+            }
+
+            // Validar tipo de archivo
+            $extension = strtolower(pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION));
+            if ($extension !== 'csv') {
+                $_SESSION['error'] = 'Solo se permiten archivos CSV';
+                header('Location: ' . BASE_URL . '/cursos/importar');
+                exit;
+            }
+
+            // Procesar archivo CSV
+            $archivo = $_FILES['archivo']['tmp_name'];
+            $handle = fopen($archivo, 'r');
+            
+            if (!$handle) {
+                $_SESSION['error'] = 'No se pudo leer el archivo';
+                header('Location: ' . BASE_URL . '/cursos/importar');
+                exit;
+            }
+
+            $importados = 0;
+            $errores = 0;
+            $fila = 0;
+
+            // Saltar encabezados
+            fgetcsv($handle, 1000, ';');
+
+            while (($datos = fgetcsv($handle, 1000, ';')) !== FALSE) {
+                $fila++;
+                
+                try {
+                    // Validar datos mínimos
+                    if (count($datos) < 3) {
+                        $errores++;
+                        continue;
+                    }
+
+                    $nombre = trim($datos[0]);
+                    $descripcion = trim($datos[1]);
+                    $correoProfesor = trim($datos[2]);
+
+                    // Validaciones básicas
+                    if (empty($nombre) || empty($descripcion) || empty($correoProfesor)) {
+                        $errores++;
+                        continue;
+                    }
+
+                    // Buscar profesor por correo
+                    $profesor = $this->curso->obtenerUsuarioPorCorreo($correoProfesor);
+                    if (!$profesor || $profesor['rol'] !== 'profesor') {
+                        $errores++;
+                        continue;
+                    }
+
+                    // Crear curso
+                    $datosCurso = [
+                        'nombre_curso' => $nombre,
+                        'descripcion' => $descripcion,
+                        'id_profesor' => $profesor['id_usuario'],
+                        'activo' => 1
+                    ];
+
+                    if ($this->curso->crear($datosCurso)) {
+                        $importados++;
+                    } else {
+                        $errores++;
+                    }
+
+                } catch (Exception $e) {
+                    error_log("Error importando fila $fila: " . $e->getMessage());
+                    $errores++;
+                }
+            }
+
+            fclose($handle);
+
+            // Mensaje de resultado
+            $mensaje = "Importación completada: $importados cursos importados";
+            if ($errores > 0) {
+                $mensaje .= ", $errores errores";
+            }
+
+            $_SESSION['exito'] = $mensaje;
+            header('Location: ' . BASE_URL . '/cursos');
+            exit;
+
+        } catch (Exception $e) {
+            error_log("Error procesando importación de cursos: " . $e->getMessage());
+            $_SESSION['error'] = 'Error procesando importación: ' . $e->getMessage();
+            header('Location: ' . BASE_URL . '/cursos/importar');
+            exit;
+        }
+    }
+
+    /**
+     * Mostrar estadísticas de cursos
+     */
+    public function estadisticas() {
+        try {
+            // Verificar permisos
+            if ($_SESSION['rol'] !== 'admin') {
+                $_SESSION['error'] = 'No tienes permisos para ver estadísticas';
+                header('Location: ' . BASE_URL . '/cursos');
+                exit;
+            }
+
+            // Obtener estadísticas desde el modelo
+            $estadisticas = $this->curso->obtenerEstadisticas();
+
+            // Preparar datos para la vista
+            $datos = [
+                'titulo' => 'Estadísticas de Cursos',
+                'estadisticas' => $estadisticas
+            ];
+
+            // Cargar vista
+            require_once APP_PATH . '/vistas/parciales/head_admin.php';
+            echo '<body class="bg-light">';
+            require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
+            echo '<div class="container-fluid mt-4"><div class="row"><div class="col-12">';
+            
+            require_once APP_PATH . '/vistas/admin/cursos/estadisticas.php';
+            
+            echo '</div></div></div>';
+            require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+            require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
+            echo '</body></html>';
+            
+        } catch (Exception $e) {
+            error_log("Error en estadísticas de cursos: " . $e->getMessage());
+            $_SESSION['error'] = 'Error al cargar estadísticas';
+            header('Location: ' . BASE_URL . '/cursos');
+            exit;
         }
     }
 }

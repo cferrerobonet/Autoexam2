@@ -16,7 +16,7 @@ $opciones_limite = [5, 10, 15, 20, 50];
 
 // Parámetros de ordenación
 $orden_columna = isset($_GET['ordenar_por']) ? $_GET['ordenar_por'] : 'id_curso';
-$orden_direccion = isset($_GET['direccion']) ? $_GET['direccion'] : 'ASC';
+$orden_direccion = isset($_GET['orden']) ? $_GET['orden'] : 'ASC';
 
 // Generar token CSRF para formularios
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -183,8 +183,8 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                 <?php if(isset($_GET['ordenar_por'])): ?>
                 <input type="hidden" name="ordenar_por" value="<?= htmlspecialchars($_GET['ordenar_por']) ?>">
                 <?php endif; ?>
-                <?php if(isset($_GET['direccion'])): ?>
-                <input type="hidden" name="direccion" value="<?= htmlspecialchars($_GET['direccion']) ?>">
+                <?php if(isset($_GET['orden'])): ?>
+                <input type="hidden" name="orden" value="<?= htmlspecialchars($_GET['orden']) ?>">
                 <?php endif; ?>
                 
                 <!-- Botón para limpiar todos los filtros -->
@@ -227,7 +227,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     </div>
                                 </th>
                                 <th scope="col" class="text-center" width="60">
-                                    <a href="<?= BASE_URL ?>/cursos?<?= http_build_query(array_merge(array_filter($_GET, function($key) { return $key != 'pagina' && $key != 'ordenar_por' && $key != 'direccion'; }, ARRAY_FILTER_USE_KEY), ['ordenar_por' => 'id_curso', 'direccion' => ($orden_columna == 'id_curso' && $orden_direccion == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="sort-icon <?= $orden_columna == 'id_curso' ? 'active' : '' ?>">
+                                    <a href="<?= BASE_URL ?>/cursos?<?= http_build_query(array_merge(array_filter($_GET, function($key) { return $key != 'pagina' && $key != 'ordenar_por' && $key != 'orden'; }, ARRAY_FILTER_USE_KEY), ['ordenar_por' => 'id_curso', 'orden' => ($orden_columna == 'id_curso' && $orden_direccion == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="sort-icon <?= $orden_columna == 'id_curso' ? 'active' : '' ?>">
                                         ID
                                         <?php if ($orden_columna == 'id_curso'): ?>
                                             <i class="fas fa-sort-<?= $orden_direccion == 'ASC' ? 'up' : 'down' ?> ms-1"></i>
@@ -237,7 +237,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     </a>
                                 </th>
                                 <th scope="col">
-                                    <a href="<?= BASE_URL ?>/cursos?<?= http_build_query(array_merge(array_filter($_GET, function($key) { return $key != 'pagina' && $key != 'ordenar_por' && $key != 'direccion'; }, ARRAY_FILTER_USE_KEY), ['ordenar_por' => 'nombre_curso', 'direccion' => ($orden_columna == 'nombre_curso' && $orden_direccion == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="sort-icon <?= $orden_columna == 'nombre_curso' ? 'active' : '' ?>">
+                                    <a href="<?= BASE_URL ?>/cursos?<?= http_build_query(array_merge(array_filter($_GET, function($key) { return $key != 'pagina' && $key != 'ordenar_por' && $key != 'orden'; }, ARRAY_FILTER_USE_KEY), ['ordenar_por' => 'nombre_curso', 'orden' => ($orden_columna == 'nombre_curso' && $orden_direccion == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="sort-icon <?= $orden_columna == 'nombre_curso' ? 'active' : '' ?>">
                                         Nombre del Curso
                                         <?php if ($orden_columna == 'nombre_curso'): ?>
                                             <i class="fas fa-sort-<?= $orden_direccion == 'ASC' ? 'up' : 'down' ?> ms-1"></i>
@@ -247,7 +247,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                                     </a>
                                 </th>
                                 <th scope="col" class="text-center" width="100">
-                                    <a href="<?= BASE_URL ?>/cursos?<?= http_build_query(array_merge(array_filter($_GET, function($key) { return $key != 'pagina' && $key != 'ordenar_por' && $key != 'direccion'; }, ARRAY_FILTER_USE_KEY), ['ordenar_por' => 'activo', 'direccion' => ($orden_columna == 'activo' && $orden_direccion == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="sort-icon <?= $orden_columna == 'activo' ? 'active' : '' ?>">
+                                    <a href="<?= BASE_URL ?>/cursos?<?= http_build_query(array_merge(array_filter($_GET, function($key) { return $key != 'pagina' && $key != 'ordenar_por' && $key != 'orden'; }, ARRAY_FILTER_USE_KEY), ['ordenar_por' => 'activo', 'orden' => ($orden_columna == 'activo' && $orden_direccion == 'ASC') ? 'DESC' : 'ASC'])) ?>" class="sort-icon <?= $orden_columna == 'activo' ? 'active' : '' ?>">
                                         Estado
                                         <?php if ($orden_columna == 'activo'): ?>
                                             <i class="fas fa-sort-<?= $orden_direccion == 'ASC' ? 'up' : 'down' ?> ms-1"></i>

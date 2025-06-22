@@ -129,6 +129,19 @@ class ModulosControlador {
             $filtros['id_profesor'] = (int)$_GET['id_profesor'];
         }
         
+        // Ordenación
+        if (isset($_GET['ordenar_por']) && !empty($_GET['ordenar_por'])) {
+            // Validar campos de ordenación permitidos
+            $camposPermitidos = ['id_modulo', 'titulo', 'apellidos', 'total_examenes', 'activo', 'fecha_creacion'];
+            
+            if (in_array($_GET['ordenar_por'], $camposPermitidos)) {
+                $filtros['ordenar_por'] = $_GET['ordenar_por'];
+                
+                // Dirección de ordenación (ASC/DESC)
+                $filtros['orden'] = isset($_GET['orden']) && strtoupper($_GET['orden']) === 'DESC' ? 'DESC' : 'ASC';
+            }
+        }
+        
         return $filtros;
     }
     
@@ -565,6 +578,252 @@ class ModulosControlador {
         
         header('Location: ' . BASE_URL . '/modulos');
         exit;
+    }
+
+    /**
+     * Exportar módulos filtrados
+     */
+    public function exportar() {
+        try {
+            // Verificar permisos
+            if ($_SESSION['rol'] !== 'admin') {
+                $_SESSION['error'] = 'No tienes permisos para exportar módulos';
+                header('Location: ' . BASE_URL . '/modulos');
+                exit;
+            }
+
+            // Obtener filtros
+            $filtros = $this->obtenerFiltrosBusqueda();
+            
+            // Obtener todos los módulos según filtros
+            $resultado = $this->modelo->obtenerTodos(999999, 1, $filtros);
+            $modulos = $resultado['modulos'];
+
+            if (empty($modulos)) {
+                $_SESSION['error'] = 'No hay módulos para exportar con los filtros aplicados';
+                header('Location: ' . BASE_URL . '/modulos');
+                exit;
+            }
+
+            // Configurar headers para descarga CSV
+            $filename = 'modulos_' . date('Y-m-d_H-i-s') . '.csv';
+            header('Content-Type: text/csv; charset=UTF-8');
+            header('Content-Disposition: attachment; filename="' . $filename . '"');
+            header('Pragma: no-cache');
+            header('Expires: 0');
+
+            // Crear archivo CSV
+            $output = fopen('php://output', 'w');
+            
+            // BOM para UTF-8 en Excel
+            fwrite($output, "\xEF\xBB\xBF");
+            
+            // Encabezados
+            fputcsv($output, [
+                'ID',
+                'Título',
+                'Descripción',
+                'Curso',
+                'Profesor',
+                'Orden',
+                'Estado',
+                'Fecha Creación'
+            ], ';');
+
+            // Datos de módulos
+            foreach ($modulos as $modulo) {
+                fputcsv($output, [
+                    $modulo['id_modulo'],
+                    $modulo['titulo'],
+                    $modulo['descripcion'],
+                    $modulo['nombre_curso'] ?? 'Sin curso',
+                    $modulo['nombre_profesor'] ?? 'Sin profesor',
+                    $modulo['orden'],
+                    $modulo['activo'] ? 'Activo' : 'Inactivo',
+                    $modulo['fecha_creacion']
+                ], ';');
+            }
+
+            fclose($output);
+            exit;
+
+        } catch (Exception $e) {
+            error_log("Error al exportar módulos: " . $e->getMessage());
+            $_SESSION['error'] = 'Error al exportar módulos: ' . $e->getMessage();
+            header('Location: ' . BASE_URL . '/modulos');
+            exit;
+        }
+    }
+
+    /**
+     * Mostrar página de importación de módulos
+     */
+    public function importar() {
+        try {
+            // Verificar permisos
+            if ($_SESSION['rol'] !== 'admin') {
+                $_SESSION['error'] = 'No tienes permisos para importar módulos';
+                header('Location: ' . BASE_URL . '/modulos');
+                exit;
+            }
+
+            $datos = [
+                'titulo' => 'Importar Módulos',
+                'csrf_token' => $this->sesion->generarTokenCSRF()
+            ];
+
+            $this->cargarVista('importar', $datos);
+            
+        } catch (Exception $e) {
+            error_log("Error en página de importación de módulos: " . $e->getMessage());
+            $_SESSION['error'] = 'Error al cargar la página de importación';
+            header('Location: ' . BASE_URL . '/modulos');
+            exit;
+        }
+    }
+
+    /**
+     * Procesar importación de módulos desde CSV
+     */
+    public function procesarImportacion() {
+        try {
+            // Verificar permisos y método
+            if ($_SESSION['rol'] !== 'admin' || $_SERVER['REQUEST_METHOD'] !== 'POST') {
+                $_SESSION['error'] = 'Acceso no autorizado';
+                header('Location: ' . BASE_URL . '/modulos');
+                exit;
+            }
+
+            // Verificar token CSRF
+            if (!$this->sesion->validarTokenCSRF($_POST['csrf_token'] ?? '')) {
+                $_SESSION['error'] = 'Token de seguridad inválido';
+                header('Location: ' . BASE_URL . '/modulos/importar');
+                exit;
+            }
+
+            // Verificar que se subió un archivo
+            if (!isset($_FILES['archivo']) || $_FILES['archivo']['error'] !== UPLOAD_ERR_OK) {
+                $_SESSION['error'] = 'No se pudo cargar el archivo';
+                header('Location: ' . BASE_URL . '/modulos/importar');
+                exit;
+            }
+
+            // Validar tipo de archivo
+            $extension = strtolower(pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION));
+            if ($extension !== 'csv') {
+                $_SESSION['error'] = 'Solo se permiten archivos CSV';
+                header('Location: ' . BASE_URL . '/modulos/importar');
+                exit;
+            }
+
+            // Procesar archivo CSV
+            $archivo = $_FILES['archivo']['tmp_name'];
+            $handle = fopen($archivo, 'r');
+            
+            if (!$handle) {
+                $_SESSION['error'] = 'No se pudo leer el archivo';
+                header('Location: ' . BASE_URL . '/modulos/importar');
+                exit;
+            }
+
+            $importados = 0;
+            $errores = 0;
+            $fila = 0;
+
+            // Saltar encabezados
+            fgetcsv($handle, 1000, ';');
+
+            while (($datos = fgetcsv($handle, 1000, ';')) !== FALSE) {
+                $fila++;
+                
+                try {
+                    // Validar datos mínimos
+                    if (count($datos) < 4) {
+                        $errores++;
+                        continue;
+                    }
+
+                    $titulo = trim($datos[0]);
+                    $descripcion = trim($datos[1]);
+                    $idCurso = (int)trim($datos[2]);
+                    $orden = (int)trim($datos[3]);
+
+                    // Validaciones básicas
+                    if (empty($titulo) || empty($descripcion) || $idCurso <= 0) {
+                        $errores++;
+                        continue;
+                    }
+
+                    // Crear módulo
+                    $datosModulo = [
+                        'titulo' => $titulo,
+                        'descripcion' => $descripcion,
+                        'id_curso' => $idCurso,
+                        'orden' => $orden > 0 ? $orden : 1,
+                        'activo' => 1
+                    ];
+
+                    if ($this->modelo->crear($datosModulo)) {
+                        $importados++;
+                    } else {
+                        $errores++;
+                    }
+
+                } catch (Exception $e) {
+                    error_log("Error importando fila $fila: " . $e->getMessage());
+                    $errores++;
+                }
+            }
+
+            fclose($handle);
+
+            // Mensaje de resultado
+            $mensaje = "Importación completada: $importados módulos importados";
+            if ($errores > 0) {
+                $mensaje .= ", $errores errores";
+            }
+
+            $_SESSION['exito'] = $mensaje;
+            header('Location: ' . BASE_URL . '/modulos');
+            exit;
+
+        } catch (Exception $e) {
+            error_log("Error procesando importación de módulos: " . $e->getMessage());
+            $_SESSION['error'] = 'Error procesando importación: ' . $e->getMessage();
+            header('Location: ' . BASE_URL . '/modulos/importar');
+            exit;
+        }
+    }
+
+    /**
+     * Mostrar estadísticas de módulos
+     */
+    public function estadisticas() {
+        try {
+            // Verificar permisos
+            if ($_SESSION['rol'] !== 'admin') {
+                $_SESSION['error'] = 'No tienes permisos para ver estadísticas';
+                header('Location: ' . BASE_URL . '/modulos');
+                exit;
+            }
+
+            // Obtener estadísticas desde el modelo
+            $estadisticas = $this->modelo->obtenerEstadisticas();
+
+            $datos = [
+                'titulo' => 'Estadísticas de Módulos',
+                'estadisticas' => $estadisticas,
+                'csrf_token' => $this->sesion->generarTokenCSRF()
+            ];
+
+            $this->cargarVista('estadisticas', $datos);
+            
+        } catch (Exception $e) {
+            error_log("Error en estadísticas de módulos: " . $e->getMessage());
+            $_SESSION['error'] = 'Error al cargar estadísticas';
+            header('Location: ' . BASE_URL . '/modulos');
+            exit;
+        }
     }
 
     // ============ MÉTODOS HELPER Y VALIDACIÓN ============

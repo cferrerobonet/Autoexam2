@@ -2,15 +2,9 @@
 /**
  * Vista: Estadísticas de Usuarios - AUTOEXAM2
  */
-
-require_once APP_PATH . '/vistas/parciales/header_admin.php';
-require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
 ?>
 
-<div class="container-fluid mt-4">
-    <div class="row">
-        <div class="col-12">
-            <!-- Breadcrumb -->
+<!-- Breadcrumb -->
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="<?= BASE_URL ?>/inicio">Inicio</a></li>
@@ -230,5 +224,3 @@ const rolesChart = new Chart(ctx, {
 });
 <?php endif; ?>
 </script>
-
-<?php require_once APP_PATH . '/vistas/parciales/footer_admin.php'; ?>

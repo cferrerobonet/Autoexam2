@@ -1219,4 +1219,305 @@ class UsuariosControlador {
         }
         exit;
     }
+    
+    /**
+     * Exportar usuarios filtrados a CSV/Excel
+     */
+    public function exportar() {
+        try {
+            // Verificar permisos
+            if ($_SESSION['rol'] !== 'admin') {
+                $_SESSION['error'] = 'No tienes permisos para exportar usuarios';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+
+            // Obtener filtros de la URL
+            $filtros = $this->obtenerFiltrosBusqueda();
+            
+            // Obtener todos los usuarios según filtros (sin paginación)
+            $usuarios = $this->usuarioModelo->listar($filtros, 9999999, 0);
+            
+            if (empty($usuarios)) {
+                $_SESSION['error'] = 'No hay usuarios para exportar con los filtros aplicados';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+
+            // Configurar headers para descarga CSV
+            $filename = 'usuarios_' . date('Y-m-d_H-i-s') . '.csv';
+            header('Content-Type: text/csv; charset=UTF-8');
+            header('Content-Disposition: attachment; filename="' . $filename . '"');
+            header('Pragma: no-cache');
+            header('Expires: 0');
+
+            // Crear archivo CSV
+            $output = fopen('php://output', 'w');
+            
+            // BOM para UTF-8 en Excel
+            fwrite($output, "\xEF\xBB\xBF");
+            
+            // Encabezados
+            fputcsv($output, [
+                'ID',
+                'Nombre',
+                'Apellidos', 
+                'Correo',
+                'Rol',
+                'Estado',
+                'Fecha Registro',
+                'Último Acceso'
+            ], ';');
+
+            // Datos de usuarios
+            foreach ($usuarios as $usuario) {
+                fputcsv($output, [
+                    $usuario['id_usuario'],
+                    $usuario['nombre'],
+                    $usuario['apellidos'],
+                    $usuario['correo'],
+                    ucfirst($usuario['rol']),
+                    $usuario['activo'] ? 'Activo' : 'Inactivo',
+                    $usuario['fecha_registro'],
+                    $usuario['ultimo_acceso'] ?? 'Nunca'
+                ], ';');
+            }
+
+            fclose($output);
+            
+            // Registrar actividad
+            $this->registroActividad->registrar(
+                $_SESSION['id_usuario'],
+                'exportar_usuarios',
+                'Exportación de ' . count($usuarios) . ' usuarios',
+                'usuarios'
+            );
+            
+        } catch (Exception $e) {
+            error_log("Error al exportar usuarios: " . $e->getMessage());
+            $_SESSION['error'] = 'Error al exportar usuarios: ' . $e->getMessage();
+            header('Location: ' . BASE_URL . '/usuarios');
+            exit;
+        }
+    }
+
+    /**
+     * Mostrar página de importación de usuarios
+     */
+    public function importar() {
+        try {
+            // Verificar permisos
+            if ($_SESSION['rol'] !== 'admin') {
+                $_SESSION['error'] = 'No tienes permisos para importar usuarios';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+
+            $datos = [
+                'titulo' => 'Importar Usuarios',
+                'csrf_token' => $this->sesion->generarTokenCSRF()
+            ];
+
+            // Cargar vista
+            require_once APP_PATH . '/vistas/parciales/head_admin.php';
+            echo '<body class="bg-light">';
+            require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
+            echo '<div class="container-fluid mt-4"><div class="row"><div class="col-12">';
+            
+            require_once APP_PATH . '/vistas/admin/usuarios/importar.php';
+            
+            echo '</div></div></div>';
+            require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+            require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
+            echo '</body></html>';
+            
+        } catch (Exception $e) {
+            error_log("Error en página de importación: " . $e->getMessage());
+            $_SESSION['error'] = 'Error al cargar la página de importación';
+            header('Location: ' . BASE_URL . '/usuarios');
+            exit;
+        }
+    }
+
+    /**
+     * Procesar importación de usuarios desde CSV
+     */
+    public function procesarImportacion() {
+        try {
+            // Verificar permisos y método
+            if ($_SESSION['rol'] !== 'admin' || $_SERVER['REQUEST_METHOD'] !== 'POST') {
+                $_SESSION['error'] = 'Acceso no autorizado';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+
+            // Verificar token CSRF
+            if (!$this->sesion->validarTokenCSRF($_POST['csrf_token'] ?? '')) {
+                $_SESSION['error'] = 'Token de seguridad inválido';
+                header('Location: ' . BASE_URL . '/usuarios/importar');
+                exit;
+            }
+
+            // Verificar que se subió un archivo
+            if (!isset($_FILES['archivo']) || $_FILES['archivo']['error'] !== UPLOAD_ERR_OK) {
+                $_SESSION['error'] = 'No se pudo cargar el archivo';
+                header('Location: ' . BASE_URL . '/usuarios/importar');
+                exit;
+            }
+
+            // Validar tipo de archivo
+            $extension = strtolower(pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION));
+            if ($extension !== 'csv') {
+                $_SESSION['error'] = 'Solo se permiten archivos CSV';
+                header('Location: ' . BASE_URL . '/usuarios/importar');
+                exit;
+            }
+
+            // Procesar archivo CSV
+            $archivo = $_FILES['archivo']['tmp_name'];
+            $handle = fopen($archivo, 'r');
+            
+            if (!$handle) {
+                $_SESSION['error'] = 'No se pudo leer el archivo';
+                header('Location: ' . BASE_URL . '/usuarios/importar');
+                exit;
+            }
+
+            $importados = 0;
+            $errores = 0;
+            $fila = 0;
+
+            // Saltar encabezados
+            fgetcsv($handle, 1000, ';');
+
+            while (($datos = fgetcsv($handle, 1000, ';')) !== FALSE) {
+                $fila++;
+                
+                try {
+                    // Validar datos mínimos
+                    if (count($datos) < 4) {
+                        $errores++;
+                        continue;
+                    }
+
+                    $nombre = trim($datos[0]);
+                    $apellidos = trim($datos[1]);
+                    $correo = trim($datos[2]);
+                    $rol = trim(strtolower($datos[3]));
+
+                    // Validaciones básicas
+                    if (empty($nombre) || empty($apellidos) || empty($correo) || empty($rol)) {
+                        $errores++;
+                        continue;
+                    }
+
+                    if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+                        $errores++;
+                        continue;
+                    }
+
+                    if (!in_array($rol, ['admin', 'profesor', 'alumno'])) {
+                        $errores++;
+                        continue;
+                    }
+
+                    // Verificar si el usuario ya existe
+                    if ($this->usuarioModelo->existeCorreo($correo)) {
+                        $errores++;
+                        continue;
+                    }
+
+                    // Crear usuario
+                    $password = bin2hex(random_bytes(8)); // Password temporal
+                    $datosUsuario = [
+                        'nombre' => $nombre,
+                        'apellidos' => $apellidos,
+                        'correo' => $correo,
+                        'password' => password_hash($password, PASSWORD_DEFAULT),
+                        'rol' => $rol,
+                        'activo' => 1
+                    ];
+
+                    if ($this->usuarioModelo->crear($datosUsuario)) {
+                        $importados++;
+                    } else {
+                        $errores++;
+                    }
+
+                } catch (Exception $e) {
+                    error_log("Error importando fila $fila: " . $e->getMessage());
+                    $errores++;
+                }
+            }
+
+            fclose($handle);
+
+            // Mensaje de resultado
+            $mensaje = "Importación completada: $importados usuarios importados";
+            if ($errores > 0) {
+                $mensaje .= ", $errores errores";
+            }
+
+            $_SESSION['exito'] = $mensaje;
+
+            // Registrar actividad
+            $this->registroActividad->registrar(
+                $_SESSION['id_usuario'],
+                'importar_usuarios',
+                "Importados: $importados, Errores: $errores",
+                'usuarios'
+            );
+
+            header('Location: ' . BASE_URL . '/usuarios');
+            exit;
+
+        } catch (Exception $e) {
+            error_log("Error procesando importación: " . $e->getMessage());
+            $_SESSION['error'] = 'Error procesando importación: ' . $e->getMessage();
+            header('Location: ' . BASE_URL . '/usuarios/importar');
+            exit;
+        }
+    }
+
+    /**
+     * Mostrar estadísticas de usuarios
+     */
+    public function estadisticas() {
+        try {
+            // Verificar permisos
+            if ($_SESSION['rol'] !== 'admin') {
+                $_SESSION['error'] = 'No tienes permisos para ver estadísticas';
+                header('Location: ' . BASE_URL . '/usuarios');
+                exit;
+            }
+
+            // Obtener estadísticas desde el modelo
+            $estadisticas = $this->usuarioModelo->obtenerEstadisticas();
+
+            $datos = [
+                'titulo' => 'Estadísticas de Usuarios',
+                'estadisticas' => $estadisticas,
+                'csrf_token' => $this->sesion->generarTokenCSRF()
+            ];
+
+            // Cargar vista
+            require_once APP_PATH . '/vistas/parciales/head_admin.php';
+            echo '<body class="bg-light">';
+            require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
+            echo '<div class="container-fluid mt-4"><div class="row"><div class="col-12">';
+            
+            require_once APP_PATH . '/vistas/admin/usuarios/estadisticas.php';
+            
+            echo '</div></div></div>';
+            require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+            require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
+            echo '</body></html>';
+            
+        } catch (Exception $e) {
+            error_log("Error en estadísticas: " . $e->getMessage());
+            $_SESSION['error'] = 'Error al cargar estadísticas';
+            header('Location: ' . BASE_URL . '/usuarios');
+            exit;
+        }
+    }
 }

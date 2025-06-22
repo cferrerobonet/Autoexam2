@@ -981,4 +981,81 @@ class Usuario {
             throw new Exception("Error al actualizar la contraseña del usuario");
         }
     }
+
+    /**
+     * Obtener estadísticas completas de usuarios
+     */
+    public function obtenerEstadisticas() {
+        try {
+            $estadisticas = [];
+
+            // Total de usuarios por rol
+            $sql = "SELECT rol, COUNT(*) as total FROM usuarios GROUP BY rol";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            $estadisticas['por_rol'] = $stmt->fetchAll();
+
+            // Usuarios activos vs inactivos
+            $sql = "SELECT activo, COUNT(*) as total FROM usuarios GROUP BY activo";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            $resultados = $stmt->fetchAll();
+            $estadisticas['por_estado'] = [
+                'activos' => 0,
+                'inactivos' => 0
+            ];
+            foreach ($resultados as $resultado) {
+                if ($resultado['activo'] == 1) {
+                    $estadisticas['por_estado']['activos'] = $resultado['total'];
+                } else {
+                    $estadisticas['por_estado']['inactivos'] = $resultado['total'];
+                }
+            }
+
+            // Registros por mes (últimos 12 meses)
+            // Temporalmente comentado hasta agregar columna fecha_registro
+            /*$sql = "SELECT 
+                        DATE_FORMAT(fecha_registro, '%Y-%m') as mes,
+                        COUNT(*) as total
+                    FROM usuarios 
+                    WHERE fecha_registro >= DATE_SUB(NOW(), INTERVAL 12 MONTH)
+                    GROUP BY mes
+                    ORDER BY mes";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            $estadisticas['registros_por_mes'] = $stmt->fetchAll();*/
+            
+            // Alternativa temporal usando la fecha del último acceso
+            $sql = "SELECT 
+                        DATE_FORMAT(COALESCE(ultimo_acceso, NOW()), '%Y-%m') as mes,
+                        COUNT(*) as total
+                    FROM usuarios 
+                    WHERE COALESCE(ultimo_acceso, NOW()) >= DATE_SUB(NOW(), INTERVAL 12 MONTH)
+                    GROUP BY mes
+                    ORDER BY mes";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            $estadisticas['registros_por_mes'] = $stmt->fetchAll();
+
+            // Último acceso (usuarios activos en últimos 30 días)
+            $sql = "SELECT COUNT(*) as activos_recientes 
+                    FROM usuarios 
+                    WHERE ultimo_acceso >= DATE_SUB(NOW(), INTERVAL 30 DAY)";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            $estadisticas['activos_recientes'] = $stmt->fetch()['activos_recientes'];
+
+            // Total general
+            $sql = "SELECT COUNT(*) as total FROM usuarios";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            $estadisticas['total_usuarios'] = $stmt->fetch()['total'];
+
+            return $estadisticas;
+
+        } catch (PDOException $e) {
+            error_log("Error obteniendo estadísticas: " . $e->getMessage());
+            throw new Exception("Error al obtener estadísticas de usuarios");
+        }
+    }
 }
