@@ -13,14 +13,17 @@ class ModulosControlador {
     private $modelo;
     private $sesion;
     private $registroActividad;
+    private $usuario;
     
     public function __construct() {
         // Cargar dependencias
         require_once APP_PATH . '/modelos/modulo_modelo.php';
+        require_once APP_PATH . '/modelos/usuario_modelo.php';
         require_once APP_PATH . '/utilidades/sesion.php';
         require_once APP_PATH . '/modelos/registro_actividad_modelo.php';
         
         $this->modelo = new ModuloModelo();
+        $this->usuario = new Usuario();
         $this->sesion = new Sesion();
         $this->registroActividad = new RegistroActividad();
         
@@ -215,15 +218,21 @@ class ModulosControlador {
             // Consumir token CSRF solo después del éxito
             $this->sesion->validarTokenCSRF($_POST['csrf_token'], true);
             
-            // Registrar actividad
-            $this->registrarActividad('modulo_creado', [
-                'id_modulo' => $idModulo,
-                'titulo' => $datos['titulo'],
-                'id_profesor' => $datos['id_profesor']
-            ]);
+            // Registrar actividad (sin bloquear el flujo si falla)
+            try {
+                $this->registrarActividad('modulo_creado', [
+                    'id_modulo' => $idModulo,
+                    'titulo' => $datos['titulo'],
+                    'id_profesor' => $datos['id_profesor']
+                ]);
+            } catch (Exception $e) {
+                error_log("Error al registrar actividad de módulo creado: " . $e->getMessage());
+                // No interrumpir el flujo, continuar con el éxito
+            }
             
             $_SESSION['exito'] = 'Módulo creado exitosamente';
             header('Location: ' . BASE_URL . '/modulos');
+            exit;
             
         } catch (Exception $e) {
             error_log("Error al crear módulo: " . $e->getMessage());
@@ -936,20 +945,48 @@ class ModulosControlador {
      */
     private function registrarActividad($accion, $detalles = []) {
         try {
-            $descripcion = $accion;
-            if (!empty($detalles)) {
-                $descripcion .= ': ' . json_encode($detalles);
+            $descripcion = '';
+            
+            switch ($accion) {
+                case 'modulo_creado':
+                    // Usar solo datos de sesión para evitar consultas adicionales que puedan fallar
+                    $profesorNombre = 'Sistema';
+                    if (isset($_SESSION['nombre']) && isset($_SESSION['apellidos'])) {
+                        $profesorNombre = $_SESSION['nombre'] . ' ' . $_SESSION['apellidos'];
+                    }
+                    $descripcion = "Nuevo módulo creado: '{$detalles['titulo']}' - Creado por: {$profesorNombre}";
+                    break;
+                case 'modulo_eliminado':
+                    $descripcion = "Módulo eliminado: '{$detalles['titulo']}'";
+                    break;
+                case 'modulo_actualizado':
+                    $descripcion = "Módulo actualizado: '{$detalles['titulo']}'";
+                    break;
+                case 'modulo_activado':
+                    $descripcion = "Módulo activado: '{$detalles['titulo']}'";
+                    break;
+                case 'modulo_desactivado':
+                    $descripcion = "Módulo desactivado: '{$detalles['titulo']}'";
+                    break;
+                default:
+                    $descripcion = $accion;
+                    if (!empty($detalles)) {
+                        $descripcion .= ': ' . json_encode($detalles);
+                    }
             }
             
+            // Registrar directamente sin consultas adicionales
             $this->registroActividad->registrar(
-                $_SESSION['id_usuario'],
+                $_SESSION['id_usuario'] ?? 0,
                 $accion,
                 $descripcion,
                 'modulos',
                 $detalles['id_modulo'] ?? null
             );
+            
         } catch (Exception $e) {
             error_log("Error registrando actividad: " . $e->getMessage());
+            // No lanzar excepción para no interrumpir el flujo principal
         }
     }
 }

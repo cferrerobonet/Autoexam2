@@ -151,12 +151,6 @@ class RegistroActividad {
             
             $resultado = $stmt->fetchAll();
             
-            // Debug para verificar la consulta
-            error_log("SQL ejecutado: " . $sql);
-            error_log("Límite: " . $limite);
-            error_log("Resultados obtenidos: " . count($resultado));
-            error_log("Datos: " . print_r($resultado, true));
-            
             return $resultado;
             
         } catch (PDOException $e) {

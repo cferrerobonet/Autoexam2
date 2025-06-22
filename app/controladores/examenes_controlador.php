@@ -144,14 +144,28 @@ class ExamenesControlador {
             $id_examen = $this->examen->crear($datos);
             
             if ($id_examen) {
-                // Registrar actividad
-                $this->registro_actividad->registrar([
-                    'id_usuario' => $_SESSION['id_usuario'],
-                    'accion' => 'crear_examen',
-                    'descripcion' => "Examen creado: {$datos['titulo']}",
-                    'modulo' => 'examenes',
-                    'elemento_id' => $id_examen
-                ]);
+                // Registrar actividad (sin bloquear el flujo si falla)
+                try {
+                    // Simplificar el contexto para evitar consultas adicionales
+                    $contexto = '';
+                    if (!empty($datos['id_curso'])) {
+                        $contexto .= " (Curso ID: {$datos['id_curso']})";
+                    }
+                    if (!empty($datos['id_modulo'])) {
+                        $contexto .= " (Módulo ID: {$datos['id_modulo']})";
+                    }
+                    
+                    $this->registro_actividad->registrar(
+                        $_SESSION['id_usuario'],
+                        'crear_examen',
+                        "Nuevo examen creado: '{$datos['titulo']}'{$contexto}",
+                        'examenes',
+                        $id_examen
+                    );
+                } catch (Exception $e) {
+                    error_log("Error al registrar actividad de examen creado: " . $e->getMessage());
+                    // No interrumpir el flujo, continuar con el éxito
+                }
                 
                 $_SESSION['mensaje_exito'] = 'Examen creado correctamente';
                 header("Location: " . BASE_URL . "/examenes/editar/" . $id_examen);
@@ -300,13 +314,13 @@ class ExamenesControlador {
             // Eliminar examen
             if ($this->examen->eliminar($id_examen)) {
                 // Registrar actividad
-                $this->registro_actividad->registrar([
-                    'id_usuario' => $_SESSION['id_usuario'],
-                    'accion' => 'eliminar_examen',
-                    'descripcion' => "Examen eliminado: {$examen['titulo']}",
-                    'modulo' => 'examenes',
-                    'elemento_id' => $id_examen
-                ]);
+                $this->registro_actividad->registrar(
+                    $_SESSION['id_usuario'],
+                    'eliminar_examen',
+                    "Examen eliminado: {$examen['titulo']} (ID: {$id_examen})",
+                    'examenes',
+                    $id_examen
+                );
                 
                 $this->responderJson(['success' => 'Examen eliminado correctamente']);
             } else {

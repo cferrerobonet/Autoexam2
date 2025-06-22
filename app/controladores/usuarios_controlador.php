@@ -494,13 +494,18 @@ class UsuariosControlador {
      * @return void
      */
     private function registrarActividadCreacion($idUsuario, $datos) {
-        $this->registroActividad->registrar(
-            $_SESSION['id_usuario'],
-            'crear_usuario',
-            "Usuario creado: {$datos['apellidos']}, {$datos['nombre']} ({$datos['correo']})",
-            'usuarios',
-            $idUsuario
-        );
+        try {
+            $this->registroActividad->registrar(
+                $_SESSION['id_usuario'],
+                'crear_usuario',
+                "Nuevo usuario registrado: {$datos['nombre']} {$datos['apellidos']} - {$datos['correo']} (Rol: {$datos['rol']})",
+                'usuarios',
+                $idUsuario
+            );
+        } catch (Exception $e) {
+            error_log("Error al registrar actividad de usuario creado: " . $e->getMessage());
+            // No interrumpir el flujo principal
+        }
     }
     
     /**
@@ -1189,17 +1194,13 @@ class UsuariosControlador {
             // Intentar eliminar el usuario
             if ($this->usuarioModelo->eliminar($id)) {
                 // Registrar la actividad
-                $this->registroActividad->registrar([
-                    'id_usuario' => $_SESSION['id_usuario'],
-                    'actividad' => 'eliminar_usuario',
-                    'detalles' => json_encode([
-                        'usuario_eliminado' => $usuario['nombre'] . ' ' . $usuario['apellidos'],
-                        'correo_eliminado' => $usuario['correo'],
-                        'rol_eliminado' => $usuario['rol']
-                    ]),
-                    'ip' => $_SERVER['REMOTE_ADDR'] ?? 'Desconocida',
-                    'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'Desconocido'
-                ]);
+                $this->registroActividad->registrar(
+                    $_SESSION['id_usuario'],
+                    'eliminar_usuario',
+                    "Usuario eliminado: {$usuario['apellidos']}, {$usuario['nombre']} ({$usuario['correo']}) - Rol: {$usuario['rol']}",
+                    'usuarios',
+                    $id
+                );
                 
                 $_SESSION['exito'] = 'Usuario eliminado correctamente';
             } else {

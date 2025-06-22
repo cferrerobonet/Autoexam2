@@ -15,26 +15,22 @@ class CursosControlador {
     private $curso;
     private $usuario;
     private $sesion;
+    private $registroActividad;
     
     /**
      * Constructor de la clase
      */
     public function __construct() {
-        try {
-            // Cargar modelos
-            require_once __DIR__ . '/../modelos/curso_modelo.php';
-            require_once __DIR__ . '/../modelos/usuario_modelo.php';
-            require_once __DIR__ . '/../utilidades/sesion.php';
-            $this->curso = new Curso();
-            $this->usuario = new Usuario();
-            $this->sesion = new Sesion();
-        } catch (Exception $e) {
-            // Si hay error de conexión a BD, usar modo desarrollo
-            error_log('Error cargando modelos en CursosControlador: ' . $e->getMessage());
-            $this->curso = null;
-            $this->usuario = null;
-            $this->sesion = null;
-        }
+        // Cargar modelos
+        require_once __DIR__ . '/../modelos/curso_modelo.php';
+        require_once __DIR__ . '/../modelos/usuario_modelo.php';
+        require_once __DIR__ . '/../modelos/registro_actividad_modelo.php';
+        require_once __DIR__ . '/../utilidades/sesion.php';
+        
+        $this->curso = new Curso();
+        $this->usuario = new Usuario();
+        $this->sesion = new Sesion();
+        $this->registroActividad = new RegistroActividad();
     }
     
     /**
@@ -62,30 +58,12 @@ class CursosControlador {
         }
         
         // Obtener datos
-        if ($this->curso !== null) {
-            try {
-                $resultado = $this->curso->obtenerTodos($limite, $pagina, $filtros);
-            } catch (Exception $e) {
-                // Si falla la BD, usar datos de ejemplo
-                $resultado = $this->obtenerDatosEjemplo();
-            }
-        } else {
-            // Sin conexión a BD, usar datos de ejemplo
-            $resultado = $this->obtenerDatosEjemplo();
-        }
+        $resultado = $this->curso->obtenerTodos($limite, $pagina, $filtros);
         
         // Obtener profesores para el filtro (solo para administradores)
         $profesores = [];
         if ($rol == 'admin') {
-            if ($this->curso !== null) {
-                try {
-                    $profesores = $this->curso->obtenerProfesores();
-                } catch (Exception $e) {
-                    $profesores = $this->obtenerProfesoresEjemplo();
-                }
-            } else {
-                $profesores = $this->obtenerProfesoresEjemplo();
-            }
+            $profesores = $this->curso->obtenerProfesores();
         }
         
         // Cargar la vista
@@ -102,18 +80,7 @@ class CursosControlador {
             // Obtener información del usuario para la vista
             $datosUsuario = [];
             if (isset($_SESSION['id_usuario'])) {
-                try {
-                    $datosUsuario = $this->usuario->buscarPorId($_SESSION['id_usuario']);
-                } catch (Exception $e) {
-                    error_log('Error al obtener datos del usuario en CursosControlador: ' . $e->getMessage());
-                    // Si hay error, usar datos de sesión
-                    $datosUsuario = [
-                        'nombre' => $_SESSION['nombre'] ?? 'Usuario',
-                        'apellidos' => $_SESSION['apellidos'] ?? '',
-                        'correo' => $_SESSION['correo'] ?? '',
-                        'rol' => $_SESSION['rol'] ?? 'profesor'
-                    ];
-                }
+                $datosUsuario = $this->usuario->buscarPorId($_SESSION['id_usuario']);
             }
             
             // Pasar datos a la vista
@@ -273,16 +240,39 @@ class CursosControlador {
         $resultado = $this->curso->crear($datos);
         
         if ($resultado) {
+            // Registrar la actividad (sin bloquear el flujo si falla)
+            try {
+                $profesorNombre = 'Sistema';
+                if ($rol == 'profesor') {
+                    $profesorNombre = $_SESSION['nombre'] . ' ' . $_SESSION['apellidos'];
+                } else {
+                    // Simplificar para evitar consultas adicionales que puedan fallar
+                    $profesorNombre = 'Profesor asignado (ID: ' . $datos['id_profesor'] . ')';
+                }
+                
+                $this->registroActividad->registrar(
+                    $_SESSION['id_usuario'],
+                    'crear_curso',
+                    "Nuevo curso creado: '{$datos['nombre_curso']}' - Creado por: {$profesorNombre}",
+                    'cursos',
+                    $resultado
+                );
+            } catch (Exception $e) {
+                error_log("Error al registrar actividad de curso creado: " . $e->getMessage());
+                // No interrumpir el flujo, continuar con el éxito
+            }
+            
             $_SESSION['mensaje'] = "Curso creado correctamente.";
             $_SESSION['tipo_mensaje'] = "success";
             header("Location: " . BASE_URL . "/cursos");
+            exit;
         } else {
             $_SESSION['mensaje'] = "Error al crear el curso.";
             $_SESSION['tipo_mensaje'] = "danger";
             $_SESSION['datos_form'] = $_POST;
             header("Location: " . BASE_URL . "/cursos/nuevo");
+            exit;
         }
-        exit;
     }
     
     /**
@@ -835,6 +825,61 @@ class CursosControlador {
     }
     
     /**
+     * Eliminar un curso individual
+     * 
+     * @param int|null $id ID del curso a eliminar
+     * @return void
+     */
+    public function eliminar($id = null) {
+        // Verificar permisos
+        if ($_SESSION['rol'] !== 'admin') {
+            $_SESSION['error'] = 'Solo administradores pueden eliminar cursos';
+            header('Location: ' . BASE_URL . '/cursos');
+            exit;
+        }
+
+        try {
+            // Validar ID
+            if (!$id || !is_numeric($id)) {
+                $_SESSION['error'] = 'ID de curso inválido';
+                header('Location: ' . BASE_URL . '/cursos');
+                exit;
+            }
+
+            // Obtener datos del curso antes de eliminarlo
+            $curso = $this->curso->obtenerPorId($id);
+            if (!$curso) {
+                $_SESSION['error'] = 'Curso no encontrado';
+                header('Location: ' . BASE_URL . '/cursos');
+                exit;
+            }
+
+            // Intentar eliminar el curso
+            if ($this->curso->eliminar($id)) {
+                // Registrar la actividad
+                $this->registroActividad->registrar(
+                    $_SESSION['id_usuario'],
+                    'eliminar_curso',
+                    "Curso eliminado: {$curso['nombre_curso']} (ID: {$id})",
+                    'cursos',
+                    $id
+                );
+                
+                $_SESSION['exito'] = 'Curso eliminado correctamente';
+            } else {
+                $_SESSION['error'] = 'No se pudo eliminar el curso';
+            }
+            
+        } catch (Exception $e) {
+            error_log("Error al eliminar curso: " . $e->getMessage());
+            $_SESSION['error'] = $e->getMessage();
+        }
+        
+        header('Location: ' . BASE_URL . '/cursos');
+        exit;
+    }
+
+    /**
      * Valida los datos del formulario de curso
      * 
      * @param array $datos Datos a validar
@@ -980,6 +1025,14 @@ class CursosControlador {
                     $_SESSION['exito'] = "Se han desactivado $totalCursos cursos correctamente";
                     break;
                     
+                case 'eliminar':
+                    if ($rol !== 'admin') {
+                        throw new Exception("Solo administradores pueden eliminar cursos");
+                    }
+                    $this->eliminarMasivo($ids);
+                    $_SESSION['exito'] = "Se han eliminado $totalCursos cursos correctamente";
+                    break;
+                    
                 case 'exportar':
                     $this->exportarSeleccionados($ids);
                     // La redirección la maneja el método exportarSeleccionados
@@ -1019,6 +1072,43 @@ class CursosControlador {
         } catch (Exception $e) {
             error_log("Error al desactivar cursos masivamente: " . $e->getMessage());
             throw new Exception("Error al desactivar los cursos");
+        }
+    }
+    
+    /**
+     * Elimina múltiples cursos de forma masiva
+     * 
+     * @param array $ids IDs de los cursos a eliminar
+     * @return bool Resultado de la operación
+     * @throws Exception Si hay error en la eliminación
+     */
+    private function eliminarMasivo($ids) {
+        if (!is_array($ids) || empty($ids)) {
+            throw new Exception("No se proporcionaron IDs de cursos para eliminar");
+        }
+        
+        try {
+            foreach ($ids as $id) {
+                // Obtener datos del curso antes de eliminarlo
+                $curso = $this->curso->obtenerPorId($id);
+                if ($curso) {
+                    // Eliminar el curso
+                    $this->curso->eliminar($id);
+                    
+                    // Registrar la actividad
+                    $this->registroActividad->registrar(
+                        $_SESSION['id_usuario'],
+                        'eliminar_curso',
+                        "Curso eliminado: {$curso['nombre_curso']} (ID: {$id})",
+                        'cursos',
+                        $id
+                    );
+                }
+            }
+            return true;
+        } catch (Exception $e) {
+            error_log("Error al eliminar cursos masivamente: " . $e->getMessage());
+            throw new Exception("Error al eliminar los cursos");
         }
     }
     

@@ -50881,3 +50881,1571 @@ Stack trace:
     [1] => estadisticas
 )
 
+[22-Jun-2025 10:11:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:11:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[22-Jun-2025 10:11:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:11:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:11:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:11:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[22-Jun-2025 10:11:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:11:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[22-Jun-2025 10:11:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:11:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:11:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:11:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:11:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:11:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:11:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:11:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:11:43 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:11:43 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:12:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:12:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:12:02 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:12:02 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:12:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:12:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[22-Jun-2025 10:12:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:12:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:12:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:12:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[22-Jun-2025 10:13:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:13:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => registros
+)
+
+[22-Jun-2025 10:13:07 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:13:07 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:13:07 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:13:07 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-22 09:12:55
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef14:5905:0:8000:0:5
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 23:42:19
+            [modulo] => autenticacion
+            [ip] => 146.75.182.19
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:39:45
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef0c:5905:0:f000:0:e
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:13:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:13:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => copias
+)
+
+[22-Jun-2025 10:13:10 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:13:10 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:13:10 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:13:10 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-22 09:12:55
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef14:5905:0:8000:0:5
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 23:42:19
+            [modulo] => autenticacion
+            [ip] => 146.75.182.19
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:39:45
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef0c:5905:0:f000:0:e
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:13:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:13:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => copias
+)
+
+[22-Jun-2025 10:13:12 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:13:12 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:13:12 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:13:12 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-22 09:12:55
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef14:5905:0:8000:0:5
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 23:42:19
+            [modulo] => autenticacion
+            [ip] => 146.75.182.19
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:39:45
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef0c:5905:0:f000:0:e
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:13:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:13:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => configuracion
+)
+
+[22-Jun-2025 10:13:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:13:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => configuracion
+    [1] => logs
+)
+
+[22-Jun-2025 10:13:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:13:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => configuracion
+    [1] => crearBackup
+)
+
+[22-Jun-2025 10:13:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:13:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => configuracion
+    [1] => logs
+)
+
+[22-Jun-2025 10:14:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:14:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:14:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:14:25 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:14:25 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:14:25 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:14:25 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:14:25 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:14:25 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:14:25 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:14:25 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:14:25 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:14:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:14:28 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:28 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:14:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => exportar
+)
+
+[22-Jun-2025 10:14:43 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:43 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => importar
+)
+
+[22-Jun-2025 10:14:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:14:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:15:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:15:06 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:15:06 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:15:06 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:15:06 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:15:06 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:15:06 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:15:06 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:15:06 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:15:06 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:15:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:15:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[22-Jun-2025 10:15:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[22-Jun-2025 10:15:23 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:15:23 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:15:23 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:15:23 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-22 09:12:55
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef14:5905:0:8000:0:5
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 23:42:19
+            [modulo] => autenticacion
+            [ip] => 146.75.182.19
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:39:45
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef0c:5905:0:f000:0:e
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:15:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:15:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:16:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:16:42 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class "Ruteador" not found in /homepages/22/d491590459/htdocs/autoexam/index.php:114
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once()
+#1 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/index.php on line 114
+[22-Jun-2025 10:16:42 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class "Ruteador" not found in /homepages/22/d491590459/htdocs/autoexam/index.php:114
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once()
+#1 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/index.php on line 114
+[22-Jun-2025 10:16:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[22-Jun-2025 10:16:45 Europe/Madrid] Error de conexión a base de datos: No such file or directory
+[22-Jun-2025 10:16:45 Europe/Madrid] PHP Fatal error:  Uncaught Exception: Error de conexión a la base de datos. Contacte al administrador. in /homepages/22/d491590459/htdocs/autoexam/config/database.php:44
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/config/config.php(178): require_once()
+#1 /homepages/22/d491590459/htdocs/autoexam/index.php(100): require_once('/homepages/22/d...')
+#2 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once('/homepages/22/d...')
+#3 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/config/database.php on line 44
+[22-Jun-2025 10:16:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[22-Jun-2025 10:16:46 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:16:46 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:16:46 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:16:46 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-22 09:12:55
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef14:5905:0:8000:0:5
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 23:42:19
+            [modulo] => autenticacion
+            [ip] => 146.75.182.19
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:39:45
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef0c:5905:0:f000:0:e
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:16:47 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:47 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[22-Jun-2025 10:16:47 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:47 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[22-Jun-2025 10:16:47 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:47 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[22-Jun-2025 10:16:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[22-Jun-2025 10:16:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+    [1] => estadisticas
+)
+
+[22-Jun-2025 10:16:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:16:56 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:16:56 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:16:56 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:16:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estilos
+    [1] => formulario.css
+)
+
+[22-Jun-2025 10:16:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:16:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:19:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:19:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[22-Jun-2025 10:19:18 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:19:18 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:19:18 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:19:18 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-22 09:12:55
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef14:5905:0:8000:0:5
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 23:42:19
+            [modulo] => autenticacion
+            [ip] => 146.75.182.19
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:39:45
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef0c:5905:0:f000:0:e
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:19:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:19:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => actividad
+)
+
+[22-Jun-2025 10:19:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:19:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => actividad
+)
+
+[22-Jun-2025 10:19:55 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:19:55 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => actividad
+)
+
+[22-Jun-2025 10:23:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:23:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[22-Jun-2025 10:23:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:23:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:23:39 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:23:39 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:23:39 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:23:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:23:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estilos
+    [1] => formulario.css
+)
+
+[22-Jun-2025 10:23:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:23:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:23:39 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:23:39 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:23:39 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:24:42 Europe/Madrid] Error de conexión a base de datos: No such file or directory
+[22-Jun-2025 10:24:42 Europe/Madrid] PHP Fatal error:  Uncaught Exception: Error de conexión a la base de datos. Contacte al administrador. in /homepages/22/d491590459/htdocs/autoexam/config/database.php:44
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/config/config.php(178): require_once()
+#1 /homepages/22/d491590459/htdocs/autoexam/index.php(100): require_once('/homepages/22/d...')
+#2 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once('/homepages/22/d...')
+#3 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/config/database.php on line 44
+[22-Jun-2025 10:24:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:24:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => actividad
+)
+
+[22-Jun-2025 10:25:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:25:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => actividad
+)
+
+[22-Jun-2025 10:25:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:25:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => actividad
+)
+
+[22-Jun-2025 10:26:42 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:26:42 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:26:42 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:26:42 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:26:42 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:26:42 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:26:42 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:26:42 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:26:42 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estilos
+    [1] => formulario.css
+)
+
+[22-Jun-2025 10:26:42 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:26:42 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:26:42 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:26:42 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:26:42 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:26:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:26:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => actividad
+)
+
+[22-Jun-2025 10:26:59 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:26:59 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => actividad
+)
+
+[22-Jun-2025 10:27:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:27:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => actividad
+)
+
+[22-Jun-2025 10:27:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:27:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:27:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:27:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[22-Jun-2025 10:27:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:27:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => crear
+)
+
+[22-Jun-2025 10:27:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:27:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[22-Jun-2025 10:27:21 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:27:21 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:27:21 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:27:21 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-22 09:12:55
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef14:5905:0:8000:0:5
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 23:42:19
+            [modulo] => autenticacion
+            [ip] => 146.75.182.19
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:39:45
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef0c:5905:0:f000:0:e
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:27:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:27:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:27:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:27:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[22-Jun-2025 10:27:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:27:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => crear
+)
+
+[22-Jun-2025 10:27:47 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:27:47 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[22-Jun-2025 10:27:47 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:27:47 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:27:47 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:27:47 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-22 09:12:55
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef14:5905:0:8000:0:5
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 23:42:19
+            [modulo] => autenticacion
+            [ip] => 146.75.182.19
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:39:45
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef0c:5905:0:f000:0:e
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:27:55 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:27:55 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[22-Jun-2025 10:27:55 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:27:55 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:27:55 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:27:55 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-22 09:12:55
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef14:5905:0:8000:0:5
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 23:42:19
+            [modulo] => autenticacion
+            [ip] => 146.75.182.19
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:39:45
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef0c:5905:0:f000:0:e
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:28:09 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:28:09 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:28:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:28:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[22-Jun-2025 10:28:33 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:28:33 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => crear
+)
+
+[22-Jun-2025 10:29:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:29:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[22-Jun-2025 10:29:28 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:29:28 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[22-Jun-2025 10:29:28 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:29:28 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:29:28 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:29:28 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-22 09:12:55
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef14:5905:0:8000:0:5
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 23:42:19
+            [modulo] => autenticacion
+            [ip] => 146.75.182.19
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => inicio_sesion
+            [descripcion] => Inicio de sesión: Sistema, Administrador
+            [fecha] => 2025-06-21 17:39:45
+            [modulo] => autenticacion
+            [ip] => 2a02:26f7:ef0c:5905:0:f000:0:e
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:29:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:29:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:29:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:29:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => eliminar
+)
+
+[22-Jun-2025 10:29:56 Europe/Madrid] Error al obtener exámenes del módulo: Unknown column 'descripcion' in 'field list'
+[22-Jun-2025 10:29:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:29:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:30:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:30:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => eliminar
+)
+
+[22-Jun-2025 10:30:01 Europe/Madrid] Error al obtener exámenes del módulo: Unknown column 'descripcion' in 'field list'
+[22-Jun-2025 10:30:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:30:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:30:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:30:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => eliminar
+)
+
+[22-Jun-2025 10:30:05 Europe/Madrid] Error al obtener exámenes del módulo: Unknown column 'descripcion' in 'field list'
+[22-Jun-2025 10:30:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:30:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:30:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:30:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[22-Jun-2025 10:30:07 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:30:07 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:30:07 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:30:07 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => modulo_eliminado
+            [descripcion] => Módulo eliminado: 'requete prueba'
+            [fecha] => 2025-06-22 10:30:05
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => modulo_eliminado
+            [descripcion] => Módulo eliminado: 'prueba'
+            [fecha] => 2025-06-22 10:30:01
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_eliminado
+            [descripcion] => Módulo eliminado: 'fbdfbf'
+            [fecha] => 2025-06-22 10:29:56
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:30:48 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:30:48 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => actividad
+)
+
+[22-Jun-2025 10:31:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:31:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[22-Jun-2025 10:31:01 Europe/Madrid] SQL ejecutado: SELECT 
+                        r.accion,
+                        r.descripcion,
+                        r.fecha,
+                        r.modulo,
+                        r.ip,
+                        u.nombre,
+                        u.apellidos
+                    FROM registro_actividad r
+                    LEFT JOIN usuarios u ON r.id_usuario = u.id_usuario
+                    ORDER BY r.fecha DESC 
+                    LIMIT :limite
+[22-Jun-2025 10:31:01 Europe/Madrid] Límite: 4
+[22-Jun-2025 10:31:01 Europe/Madrid] Resultados obtenidos: 4
+[22-Jun-2025 10:31:01 Europe/Madrid] Datos: Array
+(
+    [0] => Array
+        (
+            [accion] => modulo_eliminado
+            [descripcion] => Módulo eliminado: 'requete prueba'
+            [fecha] => 2025-06-22 10:30:05
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [1] => Array
+        (
+            [accion] => modulo_eliminado
+            [descripcion] => Módulo eliminado: 'prueba'
+            [fecha] => 2025-06-22 10:30:01
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [2] => Array
+        (
+            [accion] => modulo_eliminado
+            [descripcion] => Módulo eliminado: 'fbdfbf'
+            [fecha] => 2025-06-22 10:29:56
+            [modulo] => modulos
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+    [3] => Array
+        (
+            [accion] => exportar_usuarios
+            [descripcion] => Exportación de 30 usuarios
+            [fecha] => 2025-06-22 09:49:57
+            [modulo] => usuarios
+            [ip] => 2a09:bac3:3136:191::28:13c
+            [nombre] => Administrador
+            [apellidos] => Sistema
+        )
+
+)
+
+[22-Jun-2025 10:31:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:31:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[22-Jun-2025 10:31:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:31:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:31:39 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:31:39 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:31:39 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:31:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:31:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estilos
+    [1] => formulario.css
+)
+
+[22-Jun-2025 10:31:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:31:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[22-Jun-2025 10:31:39 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[22-Jun-2025 10:31:39 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:31:39 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[22-Jun-2025 10:37:47 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:37:47 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[22-Jun-2025 10:37:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:37:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[22-Jun-2025 10:37:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:37:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[22-Jun-2025 10:37:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:37:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:38:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:38:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[22-Jun-2025 10:38:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:38:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => crear
+)
+
+[22-Jun-2025 10:38:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:38:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[22-Jun-2025 10:38:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:38:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[22-Jun-2025 10:38:17 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:38:17 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => nuevo
+)
+
+[22-Jun-2025 10:38:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:38:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+    [1] => crear
+)
+
+[22-Jun-2025 10:39:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:39:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[22-Jun-2025 10:39:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[22-Jun-2025 10:39:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
