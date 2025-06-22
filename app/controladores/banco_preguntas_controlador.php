@@ -38,6 +38,9 @@ class BancoPreguntasControlador {
      * Acción predeterminada - Listar preguntas del banco
      */
     public function index() {
+        // Definir controlador para navegación activa
+        $GLOBALS['controlador'] = 'banco_preguntas';
+        
         // Verificar permisos (solo admin y profesor)
         $rol = $_SESSION['rol'];
         if ($rol != 'admin' && $rol != 'profesor') {
@@ -56,8 +59,12 @@ class BancoPreguntasControlador {
                 $preguntas = $this->pregunta_banco->obtenerPorProfesor($id_usuario, $filtros);
             }
             
-            // Cargar vista
-            require_once __DIR__ . '/../vistas/profesor/banco_preguntas.php';
+            // Cargar vista según el rol
+            if ($rol == 'admin') {
+                require_once __DIR__ . '/../vistas/admin/banco_preguntas.php';
+            } else {
+                require_once __DIR__ . '/../vistas/profesor/banco_preguntas.php';
+            }
             
         } catch (Exception $e) {
             error_log("Error en BancoPreguntasControlador::index(): " . $e->getMessage());
@@ -69,6 +76,9 @@ class BancoPreguntasControlador {
      * Crear nueva pregunta en el banco
      */
     public function crear() {
+        // Definir controlador para navegación activa
+        $GLOBALS['controlador'] = 'banco_preguntas';
+        
         // Verificar permisos
         $rol = $_SESSION['rol'];
         if ($rol != 'admin' && $rol != 'profesor') {
@@ -88,7 +98,14 @@ class BancoPreguntasControlador {
      */
     private function mostrarFormularioCreacion() {
         try {
-            require_once __DIR__ . '/../vistas/profesor/nueva_pregunta_banco.php';
+            $rol = $_SESSION['rol'];
+            
+            // Cargar vista según el rol
+            if ($rol == 'admin') {
+                require_once __DIR__ . '/../vistas/admin/nueva_pregunta_banco.php';
+            } else {
+                require_once __DIR__ . '/../vistas/profesor/nueva_pregunta_banco.php';
+            }
         } catch (Exception $e) {
             error_log("Error en mostrarFormularioCreacion(): " . $e->getMessage());
             $this->mostrarError('Error al cargar el formulario');
@@ -145,6 +162,9 @@ class BancoPreguntasControlador {
      * Editar pregunta del banco
      */
     public function editar($id_pregunta) {
+        // Definir controlador para navegación activa
+        $GLOBALS['controlador'] = 'banco_preguntas';
+        
         // Verificar permisos
         $rol = $_SESSION['rol'];
         if ($rol != 'admin' && $rol != 'profesor') {

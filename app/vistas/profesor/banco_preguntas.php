@@ -15,7 +15,38 @@ if (!isset($_SESSION['usuario_logueado']) || ($_SESSION['rol'] !== 'admin' && $_
 }
 
 $titulo_pagina = 'Banco de Preguntas';
-require_once __DIR__ . '/../comunes/header.php';
+
+// Incluir head y navbar según el rol
+if ($_SESSION['rol'] === 'admin') {
+    require_once APP_PATH . '/vistas/parciales/head_admin.php';
+} else {
+    require_once APP_PATH . '/vistas/parciales/head_profesor.php';
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title><?= $titulo_pagina ?> - <?= SYSTEM_NAME ?></title>
+    <?php 
+    if ($_SESSION['rol'] === 'admin') {
+        // Head admin ya incluido arriba
+    } else {
+        // Head profesor ya incluido arriba  
+    }
+    ?>
+</head>
+<body class="bg-light">
+    <?php 
+    // Incluir navbar según el rol
+    if ($_SESSION['rol'] === 'admin') {
+        require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
+    } else {
+        require_once APP_PATH . '/vistas/parciales/navbar_profesor.php';
+    }
+    ?>
+    
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+<?php
 ?>
 
 <div class="container-fluid py-4">
@@ -536,4 +567,17 @@ function eliminarPregunta(idPregunta) {
 }
 </script>
 
-<?php require_once __DIR__ . '/../comunes/footer.php'; ?>
+    </main>
+    
+    <?php 
+    // Incluir footer y scripts según el rol
+    if ($_SESSION['rol'] === 'admin') {
+        require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+        require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
+    } else {
+        require_once APP_PATH . '/vistas/parciales/footer_profesor.php';
+        require_once APP_PATH . '/vistas/parciales/scripts_profesor.php';
+    }
+    ?>
+</body>
+</html>

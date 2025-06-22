@@ -43,6 +43,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="<?= BASE_URL ?>/banco-preguntas">
+                        <i class="fas fa-question-circle"></i> Banco de Preguntas
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="<?= BASE_URL ?>/calendario">
                         <i class="fas fa-calendar-alt"></i> Calendario
                     </a>

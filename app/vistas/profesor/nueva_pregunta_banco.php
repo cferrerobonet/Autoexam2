@@ -22,8 +22,29 @@ if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 
-require_once __DIR__ . '/../comunes/header.php';
+// Incluir head y navbar según el rol
+if ($_SESSION['rol'] === 'admin') {
+    require_once APP_PATH . '/vistas/parciales/head_admin.php';
+} else {
+    require_once APP_PATH . '/vistas/parciales/head_profesor.php';
+}
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title><?= $titulo_pagina ?> - <?= SYSTEM_NAME ?></title>
+</head>
+<body class="bg-light">
+    <?php 
+    // Incluir navbar según el rol
+    if ($_SESSION['rol'] === 'admin') {
+        require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
+    } else {
+        require_once APP_PATH . '/vistas/parciales/navbar_profesor.php';
+    }
+    ?>
+    
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
 <div class="container-fluid py-4">
     <!-- Encabezado -->
@@ -452,4 +473,17 @@ document.addEventListener('DOMContentLoaded', function() {
 <?php endif; ?>
 </script>
 
-<?php require_once __DIR__ . '/../comunes/footer.php'; ?>
+    </main>
+    
+    <?php 
+    // Incluir footer y scripts según el rol
+    if ($_SESSION['rol'] === 'admin') {
+        require_once APP_PATH . '/vistas/parciales/footer_admin.php';
+        require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
+    } else {
+        require_once APP_PATH . '/vistas/parciales/footer_profesor.php';
+        require_once APP_PATH . '/vistas/parciales/scripts_profesor.php';
+    }
+    ?>
+</body>
+</html>

@@ -41,7 +41,7 @@ class ExamenesControlador {
             $this->respuesta = new Respuesta();
             $this->usuario = new Usuario();
             $this->curso = new Curso();
-            $this->modulo = new Modulo();
+            $this->modulo = new ModuloModelo();
             $this->registro_actividad = new RegistroActividad();
             $this->sesion = new Sesion();
         } catch (Exception $e) {
@@ -80,6 +80,21 @@ class ExamenesControlador {
             
             $modulos_result = $this->modulo->obtenerTodos(100);
             $modulos = isset($modulos_result['modulos']) ? $modulos_result['modulos'] : $modulos_result;
+            
+            // Preparar datos para las vistas
+            $datos = [
+                'examenes' => $examenes,
+                'cursos' => $cursos,
+                'modulos' => $modulos,
+                'filtros' => $_GET,
+                'por_pagina' => $_GET['por_pagina'] ?? 10,
+                'estadisticas' => [
+                    'total' => count($examenes),
+                    'activos' => count(array_filter($examenes, fn($e) => ($e['estado'] ?? 'borrador') === 'activo')),
+                    'borradores' => count(array_filter($examenes, fn($e) => ($e['estado'] ?? 'borrador') === 'borrador')),
+                    'alumnos_realizando' => 0 // TODO: Implementar conteo real
+                ]
+            ];
             
             // Cargar vista según el rol
             if ($rol == 'admin') {
@@ -135,7 +150,18 @@ class ExamenesControlador {
                 $modulos = $this->modulo->obtenerPorProfesor($id_usuario);
             }
             
-            require_once __DIR__ . '/../vistas/profesor/formulario_examen.php';
+            // Preparar datos para la vista unificada
+            $datos = [
+                'cursos' => $cursos,
+                'modulos' => $modulos,
+                'csrf_token' => $_SESSION['csrf_token']
+            ];
+            
+            if ($_SESSION['rol'] === 'admin') {
+                require_once __DIR__ . '/../vistas/admin/examenes/crear.php';
+            } else {
+                require_once __DIR__ . '/../vistas/profesor/examenes/crear.php';
+            }
             
         } catch (Exception $e) {
             error_log("Error en mostrarFormularioCreacion(): " . $e->getMessage());
@@ -262,7 +288,19 @@ class ExamenesControlador {
                 $modulos = $this->modulo->obtenerPorProfesor($id_usuario);
             }
             
-            require_once __DIR__ . '/../vistas/profesor/formulario_examen.php';
+            // Preparar datos para la vista unificada
+            $datos = [
+                'examen' => $examen,
+                'cursos' => $cursos,
+                'modulos' => $modulos,
+                'csrf_token' => $_SESSION['csrf_token']
+            ];
+            
+            if ($_SESSION['rol'] === 'admin') {
+                require_once __DIR__ . '/../vistas/admin/examenes/crear.php';
+            } else {
+                require_once __DIR__ . '/../vistas/profesor/examenes/crear.php';
+            }
             
         } catch (Exception $e) {
             error_log("Error en mostrarFormularioEdicion(): " . $e->getMessage());
