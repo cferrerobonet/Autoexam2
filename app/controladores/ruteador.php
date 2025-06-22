@@ -81,7 +81,7 @@ class Ruteador {
             require_once $archivo_controlador;
             
             // Instanciar el controlador
-            $nombreClase = ucfirst($this->controlador) . 'Controlador';
+            $nombreClase = $this->obtenerNombreClase($this->controlador);
             if (!class_exists($nombreClase)) {
                 throw new Exception("Clase de controlador no encontrada: " . $nombreClase);
             }
@@ -237,6 +237,24 @@ class Ruteador {
     </div>
 </body>
 </html>';
+        }
+    }
+    
+    /**
+     * Obtiene el nombre correcto de la clase del controlador
+     * 
+     * @param string $controlador Nombre del controlador
+     * @return string Nombre de la clase
+     */
+    private function obtenerNombreClase($controlador) {
+        // Casos especiales para nombres de clase compuestos
+        switch ($controlador) {
+            case 'banco_preguntas':
+                return 'BancoPreguntasControlador';
+            case 'sesiones_activas':
+                return 'SesionesActivasControlador';
+            default:
+                return ucfirst($controlador) . 'Controlador';
         }
     }
 }
