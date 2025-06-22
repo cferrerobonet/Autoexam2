@@ -41,7 +41,7 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
 
     <!-- Conteo de usuarios -->
     <div class="row mb-4">
-        <div class="col-md-3">
+        <div class="col-lg-2 col-md-3 col-sm-6">
             <div class="card text-white bg-primary shadow-sm h-100">
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-users-cog me-2"></i> Administradores</h5>
@@ -73,7 +73,7 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-2 col-md-3 col-sm-6">
             <div class="card text-white bg-info shadow-sm h-100">
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-chalkboard-teacher me-2"></i> Profesores</h5>
@@ -105,7 +105,7 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-2 col-md-3 col-sm-6">
             <div class="card text-white bg-success shadow-sm h-100">
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-user-graduate me-2"></i> Alumnos</h5>
@@ -137,7 +137,7 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-2 col-md-3 col-sm-6">
             <div class="card text-white bg-secondary shadow-sm h-100">
                 <div class="card-body">
                     <h5 class="card-title"><i class="fas fa-book-open me-2"></i> Cursos</h5>
@@ -169,11 +169,75 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
                 </div>
             </div>
         </div>
+        <div class="col-lg-2 col-md-3 col-sm-6">
+            <div class="card text-white bg-warning shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-puzzle-piece me-2"></i> Módulos</h5>
+                    <div class="d-flex align-items-end justify-content-between">
+                        <div>
+                            <h2 class="display-4 mb-0" id="contador-modulos">
+                                <?= isset($datos['estadisticas']['conteo']['modulos']['activos']) ? $datos['estadisticas']['conteo']['modulos']['activos'] : 0 ?>
+                            </h2>
+                            <small class="text-light">Activos</small>
+                        </div>
+                        <div class="text-end">
+                            <div class="badge bg-warning-dark fs-6">
+                                <?= isset($datos['estadisticas']['conteo']['modulos']['inactivos']) ? $datos['estadisticas']['conteo']['modulos']['inactivos'] : 0 ?> inactivos
+                            </div>
+                            <div class="small text-light mt-1">
+                                Total: <?= isset($datos['estadisticas']['conteo']['modulos']['total']) ? $datos['estadisticas']['conteo']['modulos']['total'] : 0 ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between bg-warning border-top-0">
+                    <a href="<?= BASE_URL ?>/modulos" class="text-white text-decoration-none">
+                        Ver detalles <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                    <button class="btn btn-sm btn-outline-light" data-bs-toggle="tooltip" 
+                            title="Crear nuevo módulo" onclick="location.href='<?= BASE_URL ?>/modulos/nuevo'">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6">
+            <div class="card text-white bg-danger shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-file-alt me-2"></i> Exámenes</h5>
+                    <div class="d-flex align-items-end justify-content-between">
+                        <div>
+                            <h2 class="display-4 mb-0" id="contador-examenes">
+                                <?= isset($datos['estadisticas']['conteo']['examenes']['activos']) ? $datos['estadisticas']['conteo']['examenes']['activos'] : 0 ?>
+                            </h2>
+                            <small class="text-light">Activos</small>
+                        </div>
+                        <div class="text-end">
+                            <div class="badge bg-danger-dark fs-6">
+                                <?= isset($datos['estadisticas']['conteo']['examenes']['inactivos']) ? $datos['estadisticas']['conteo']['examenes']['inactivos'] : 0 ?> inactivos
+                            </div>
+                            <div class="small text-light mt-1">
+                                Total: <?= isset($datos['estadisticas']['conteo']['examenes']['total']) ? $datos['estadisticas']['conteo']['examenes']['total'] : 0 ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between bg-danger border-top-0">
+                    <a href="<?= BASE_URL ?>/examenes" class="text-white text-decoration-none">
+                        Ver detalles <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                    <button class="btn btn-sm btn-outline-light" data-bs-toggle="tooltip" 
+                            title="Crear nuevo examen" onclick="location.href='<?= BASE_URL ?>/examenes/nuevo'">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Estadísticas y acciones recientes -->
     <div class="row">
-        <div class="col-md-8 mb-4">
+        <div class="col-md-7 mb-4">
             <div class="card shadow-sm h-100">
                 <div class="card-header bg-white">
                     <div class="d-flex justify-content-between align-items-center">
@@ -198,7 +262,7 @@ require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
             </div>
         </div>
         
-        <div class="col-md-4 mb-4">
+        <div class="col-md-5 mb-4">
             <div class="card shadow-sm h-100">
                 <div class="card-header bg-white">
                     <h5 class="mb-0"><i class="fas fa-history me-2"></i> Acciones recientes</h5>

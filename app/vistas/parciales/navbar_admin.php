@@ -77,12 +77,12 @@ if (!isset($_SESSION)) {
                         <div class="me-3">
                             <?php if (!empty($_SESSION['foto'])): ?>
                                 <img src="<?= BASE_URL ?>/<?= htmlspecialchars($_SESSION['foto']) ?>" 
-                                     class="rounded-circle me-2" width="80" height="80" 
+                                     class="rounded-circle me-2" width="60" height="60" 
                                      alt="Avatar" style="object-fit: cover; border: 3px solid var(--color-admin-primary);">
                             <?php else: ?>
                                 <div class="bg-primary rounded-circle me-2 d-flex align-items-center justify-content-center" 
-                                     style="width: 80px; height: 80px; min-width: 80px; border: 3px solid var(--color-admin-sidebar-border);">
-                                    <i class="fas fa-user text-white" style="font-size: 32px;"></i>
+                                     style="width: 60px; height: 60px; min-width: 60px; border: 3px solid var(--color-admin-sidebar-border);">
+                                    <i class="fas fa-user text-white" style="font-size: 24px;"></i>
                                 </div>
                             <?php endif; ?>
                         </div>
@@ -170,6 +170,14 @@ if (!isset($_SESSION)) {
                            href="<?= BASE_URL ?>/examenes">
                             <i class="fas fa-file-alt text-primary me-2"></i>
                             Exámenes
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($GLOBALS['controlador'] ?? '') === 'banco_preguntas' ? 'active' : '' ?>" 
+                           href="<?= BASE_URL ?>/banco-preguntas">
+                            <i class="fas fa-question-circle text-primary me-2"></i>
+                            Banco de Preguntas
                         </a>
                     </li>
                 </ul>

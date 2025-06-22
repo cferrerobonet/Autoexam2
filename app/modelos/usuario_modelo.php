@@ -841,6 +841,16 @@ class Usuario {
                     'activos' => $this->contarCursosActivos(),
                     'inactivos' => $this->contarCursosInactivos(),
                     'total' => $this->contarCursosActivos() + $this->contarCursosInactivos()
+                ],
+                'modulos' => [
+                    'activos' => $this->contarModulosActivos(),
+                    'inactivos' => $this->contarModulosInactivos(),
+                    'total' => $this->contarModulosActivos() + $this->contarModulosInactivos()
+                ],
+                'examenes' => [
+                    'activos' => $this->contarExamenesActivos(),
+                    'inactivos' => $this->contarExamenesInactivos(),
+                    'total' => $this->contarExamenesActivos() + $this->contarExamenesInactivos()
                 ]
             ];
             
@@ -1056,6 +1066,110 @@ class Usuario {
         } catch (PDOException $e) {
             error_log("Error obteniendo estadísticas: " . $e->getMessage());
             throw new Exception("Error al obtener estadísticas de usuarios");
+        }
+    }
+    
+    /**
+     * Cuenta los módulos activos en el sistema
+     * 
+     * @return int Número de módulos activos
+     */
+    private function contarModulosActivos() {
+        try {
+            $sql = "SELECT COUNT(*) as total FROM modulos WHERE activo = 1";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            
+            $resultado = $stmt->fetch();
+            return (int)$resultado['total'];
+            
+        } catch (PDOException $e) {
+            // Si la tabla módulos no existe aún, devolver 0
+            if (strpos($e->getMessage(), "doesn't exist") !== false || 
+                strpos($e->getMessage(), "Table") !== false) {
+                return 0;
+            }
+            
+            error_log("Error al contar módulos activos: " . $e->getMessage());
+            return 0;
+        }
+    }
+    
+    /**
+     * Cuenta los módulos inactivos en el sistema
+     * 
+     * @return int Número de módulos inactivos
+     */
+    private function contarModulosInactivos() {
+        try {
+            $sql = "SELECT COUNT(*) as total FROM modulos WHERE activo = 0";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            
+            $resultado = $stmt->fetch();
+            return (int)$resultado['total'];
+            
+        } catch (PDOException $e) {
+            // Si la tabla módulos no existe aún, devolver 0
+            if (strpos($e->getMessage(), "doesn't exist") !== false || 
+                strpos($e->getMessage(), "Table") !== false) {
+                return 0;
+            }
+            
+            error_log("Error al contar módulos inactivos: " . $e->getMessage());
+            return 0;
+        }
+    }
+    
+    /**
+     * Cuenta los exámenes activos en el sistema
+     * 
+     * @return int Número de exámenes activos
+     */
+    private function contarExamenesActivos() {
+        try {
+            $sql = "SELECT COUNT(*) as total FROM examenes WHERE activo = 1";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            
+            $resultado = $stmt->fetch();
+            return (int)$resultado['total'];
+            
+        } catch (PDOException $e) {
+            // Si la tabla exámenes no existe aún, devolver 0
+            if (strpos($e->getMessage(), "doesn't exist") !== false || 
+                strpos($e->getMessage(), "Table") !== false) {
+                return 0;
+            }
+            
+            error_log("Error al contar exámenes activos: " . $e->getMessage());
+            return 0;
+        }
+    }
+    
+    /**
+     * Cuenta los exámenes inactivos en el sistema
+     * 
+     * @return int Número de exámenes inactivos
+     */
+    private function contarExamenesInactivos() {
+        try {
+            $sql = "SELECT COUNT(*) as total FROM examenes WHERE activo = 0";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            
+            $resultado = $stmt->fetch();
+            return (int)$resultado['total'];
+            
+        } catch (PDOException $e) {
+            // Si la tabla exámenes no existe aún, devolver 0
+            if (strpos($e->getMessage(), "doesn't exist") !== false || 
+                strpos($e->getMessage(), "Table") !== false) {
+                return 0;
+            }
+            
+            error_log("Error al contar exámenes inactivos: " . $e->getMessage());
+            return 0;
         }
     }
 }

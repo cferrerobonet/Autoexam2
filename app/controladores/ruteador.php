@@ -56,6 +56,12 @@ class Ruteador {
                 } elseif ($url[0] === 'sesiones-activas' && file_exists(APP_PATH . '/controladores/sesiones_activas_controlador.php')) {
                     $this->controlador = 'sesiones_activas';
                     unset($url[0]);
+                } elseif ($url[0] === 'examenes' && file_exists(APP_PATH . '/controladores/examenes_controlador.php')) {
+                    $this->controlador = 'examenes';
+                    unset($url[0]);
+                } elseif ($url[0] === 'preguntas' && file_exists(APP_PATH . '/controladores/preguntas_controlador.php')) {
+                    $this->controlador = 'preguntas';
+                    unset($url[0]);
                 } elseif (file_exists(APP_PATH . '/controladores/' . $url[0] . '_controlador.php')) {
                     $this->controlador = $url[0];
                     unset($url[0]);

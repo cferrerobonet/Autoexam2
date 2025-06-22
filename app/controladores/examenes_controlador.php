@@ -54,6 +54,9 @@ class ExamenesControlador {
      * Acción predeterminada - Listar exámenes
      */
     public function index() {
+        // Definir controlador para el navbar
+        $GLOBALS['controlador'] = 'examenes';
+        
         // Verificar permisos (solo admin y profesor)
         $rol = $_SESSION['rol'];
         if ($rol != 'admin' && $rol != 'profesor') {
@@ -72,11 +75,18 @@ class ExamenesControlador {
             }
             
             // Obtener cursos y módulos para filtros
-            $cursos = $this->curso->obtenerTodos();
-            $modulos = $this->modulo->obtenerTodos();
+            $cursos_result = $this->curso->obtenerTodos(100);
+            $cursos = isset($cursos_result['cursos']) ? $cursos_result['cursos'] : $cursos_result;
             
-            // Cargar vista
-            require_once __DIR__ . '/../vistas/profesor/examenes.php';
+            $modulos_result = $this->modulo->obtenerTodos(100);
+            $modulos = isset($modulos_result['modulos']) ? $modulos_result['modulos'] : $modulos_result;
+            
+            // Cargar vista según el rol
+            if ($rol == 'admin') {
+                require_once __DIR__ . '/../vistas/admin/examenes.php';
+            } else {
+                require_once __DIR__ . '/../vistas/profesor/examenes.php';
+            }
             
         } catch (Exception $e) {
             error_log("Error en ExamenesControlador::index(): " . $e->getMessage(), 0, 
@@ -89,6 +99,9 @@ class ExamenesControlador {
      * Crear nuevo examen
      */
     public function crear() {
+        // Definir controlador para el navbar
+        $GLOBALS['controlador'] = 'examenes';
+        
         // Verificar permisos
         $rol = $_SESSION['rol'];
         if ($rol != 'admin' && $rol != 'profesor') {
@@ -112,8 +125,11 @@ class ExamenesControlador {
             
             // Obtener cursos y módulos disponibles
             if ($_SESSION['rol'] == 'admin') {
-                $cursos = $this->curso->obtenerTodos();
-                $modulos = $this->modulo->obtenerTodos();
+                $cursos_result = $this->curso->obtenerTodos(100);
+                $cursos = isset($cursos_result['cursos']) ? $cursos_result['cursos'] : $cursos_result;
+                
+                $modulos_result = $this->modulo->obtenerTodos(100);
+                $modulos = isset($modulos_result['modulos']) ? $modulos_result['modulos'] : $modulos_result;
             } else {
                 $cursos = $this->curso->obtenerPorProfesor($id_usuario);
                 $modulos = $this->modulo->obtenerPorProfesor($id_usuario);
@@ -236,8 +252,11 @@ class ExamenesControlador {
             // Obtener cursos y módulos
             $id_usuario = $_SESSION['id_usuario'];
             if ($_SESSION['rol'] == 'admin') {
-                $cursos = $this->curso->obtenerTodos();
-                $modulos = $this->modulo->obtenerTodos();
+                $cursos_result = $this->curso->obtenerTodos(100);
+                $cursos = isset($cursos_result['cursos']) ? $cursos_result['cursos'] : $cursos_result;
+                
+                $modulos_result = $this->modulo->obtenerTodos(100);
+                $modulos = isset($modulos_result['modulos']) ? $modulos_result['modulos'] : $modulos_result;
             } else {
                 $cursos = $this->curso->obtenerPorProfesor($id_usuario);
                 $modulos = $this->modulo->obtenerPorProfesor($id_usuario);
