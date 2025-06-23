@@ -7,11 +7,13 @@
  * Gestiona el login, logout y recuperación de contraseña
  * 
  * @author Carlos Ferrero Bonet
- * @version 1.2
+ * @version 1.3
+ * @since 23/06/2025 Refactorizado con sanitización mejorada
  */
 class AutenticacionControlador {
     private $sesion;
     private $usuarioModelo;
+    private $sanitizador;
     
     /**
      * Constructor
@@ -20,9 +22,12 @@ class AutenticacionControlador {
         // Cargar utilidades necesarias
         require_once APP_PATH . '/utilidades/sesion.php';
         require_once APP_PATH . '/modelos/usuario_modelo.php';
-        require_once APP_PATH . '/utilidades/fuerza_bruta.php'; // Añadida protección fuerza bruta
+        require_once APP_PATH . '/utilidades/fuerza_bruta.php'; // Protección fuerza bruta
+        require_once APP_PATH . '/utilidades/sanitizador.php'; // Sanitización de entradas
+        
         $this->sesion = new Sesion();
         $this->usuarioModelo = new Usuario();
+        $this->sanitizador = new Sanitizador();
     }
     
     /**
@@ -51,29 +56,35 @@ class AutenticacionControlador {
         
         // Procesar el formulario si se envió
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Validación CSRF restaurada
-            if (!isset($_POST['csrf_token']) || !$this->sesion->validarTokenCSRF($_POST['csrf_token'])) {
-                $datos['error'] = 'Error de seguridad. Por favor, inténtelo de nuevo.';
-                require_once APP_PATH . '/vistas/autenticacion/login.php';
-                return;
-            }
-            
-            // Validar campos obligatorios
-            if (empty($_POST['correo']) || empty($_POST['contrasena'])) {
-                $datos['error'] = 'Por favor, complete todos los campos.';
-                $datos['csrf_token'] = $this->sesion->generarTokenCSRF();
-                require_once APP_PATH . '/vistas/autenticacion/login.php';
-                return;
-            }
-            
-            // Sanitizar entradas
-            $correo = filter_var($_POST['correo'], FILTER_SANITIZE_EMAIL);
-            $contrasena = $_POST['contrasena'] ?? '';
-            $ip = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP) ? $_SERVER['REMOTE_ADDR'] : '0.0.0.0';
-            
-            // Verificar que el correo tenga un formato válido
-            if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
-                $datos['error'] = 'El formato del correo electrónico no es válido.';
+            try {
+                // Validación CSRF mejorada
+                if (!isset($_POST['csrf_token']) || !$this->sesion->validarTokenCSRF($_POST['csrf_token'])) {
+                    throw new Exception('Error de seguridad. Por favor, inténtelo de nuevo.');
+                }
+                
+                // Obtener y sanitizar campos del POST
+                $datos_post = Sanitizador::post(['correo', 'contrasena'], [
+                    'correo' => 'email'
+                ]);
+                
+                // Validar campos obligatorios
+                if (empty($datos_post['correo']) || empty($datos_post['contrasena'])) {
+                    throw new Exception('Por favor, complete todos los campos.');
+                }
+                
+                $correo = $datos_post['correo'];
+                $contrasena = $datos_post['contrasena'];
+                
+                // Validación mejorada del correo electrónico
+                if (!Sanitizador::esEmailValido($correo)) {
+                    throw new Exception('El formato del correo electrónico no es válido.');
+                }
+                
+                // Sanitizar IP
+                $ip = filter_var($_SERVER['REMOTE_ADDR'], FILTER_VALIDATE_IP) ? $_SERVER['REMOTE_ADDR'] : '0.0.0.0';
+                
+            } catch (Exception $e) {
+                $datos['error'] = $e->getMessage();
                 $datos['csrf_token'] = $this->sesion->generarTokenCSRF();
                 require_once APP_PATH . '/vistas/autenticacion/login.php';
                 return;
