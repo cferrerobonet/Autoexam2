@@ -1172,4 +1172,52 @@ class Usuario {
             return 0;
         }
     }
+
+    /**
+     * Cuenta los alumnos matriculados en un curso específico
+     * 
+     * @param int $idCurso ID del curso
+     * @return int Número de alumnos matriculados
+     */
+    public function contarAlumnosPorCurso($idCurso) {
+        try {
+            // Verificar si existe una tabla de matriculaciones/inscripciones
+            $sql = "SHOW TABLES LIKE 'matriculaciones'";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->execute();
+            
+            if ($stmt->rowCount() > 0) {
+                // Si existe tabla de matriculaciones (usando PDO)
+                $sql = "SELECT COUNT(DISTINCT u.id_usuario) as total 
+                        FROM usuarios u 
+                        INNER JOIN matriculaciones m ON u.id_usuario = m.id_alumno 
+                        WHERE m.id_curso = ? AND u.rol = 'alumno' AND u.activo = 1";
+                $stmt = $this->conexion->prepare($sql);
+                $stmt->execute([$idCurso]);
+                $resultado = $stmt->fetch();
+            } else {
+                // Si no existe, verificar si hay una relación directa en la tabla usuarios
+                $checkCursoColumn = "SHOW COLUMNS FROM usuarios LIKE 'id_curso'";
+                $stmtCheck = $this->conexion->prepare($checkCursoColumn);
+                $stmtCheck->execute();
+                
+                if ($stmtCheck->rowCount() > 0) {
+                    $sql = "SELECT COUNT(*) as total FROM usuarios 
+                            WHERE id_curso = ? AND rol = 'alumno' AND activo = 1";
+                    $stmt = $this->conexion->prepare($sql);
+                    $stmt->execute([$idCurso]);
+                    $resultado = $stmt->fetch();
+                } else {
+                    // Si no hay relación, devolver 0
+                    return 0;
+                }
+            }
+            
+            return (int)($resultado['total'] ?? 0);
+            
+        } catch (Exception $e) {
+            error_log("Error al contar alumnos por curso: " . $e->getMessage());
+            return 0;
+        }
+    }
 }

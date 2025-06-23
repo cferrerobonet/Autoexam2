@@ -37,3 +37,5 @@ NO hardcodees nunca datos, buscalos o referencialos siempre de .env, de la base 
 NO cambies código nunca a desarrollo ni fuerces a trabajar en local, sobre todo la base de datos.
 
 Todas nombres de las variables, funciones, clases, archivos, directorios, deben ser en español 
+
+No modificar jamás el archivo tunnel a la base de datos

@@ -130,9 +130,19 @@ class InicioControlador {
             ];
         }
         
-        // Cargar cursos y exámenes del profesor (serían reemplazados por datos reales)
-        $cursos = $this->obtenerCursosProfesor($_SESSION['id_usuario']);
-        $examenes = $this->obtenerExamenesProfesor($_SESSION['id_usuario']);
+        // Cargar datos reales del profesor
+        require_once APP_PATH . '/modelos/curso_modelo.php';
+        require_once APP_PATH . '/modelos/examen_modelo.php';
+        require_once APP_PATH . '/modelos/usuario_modelo.php';
+        
+        $cursoModelo = new Curso();
+        $examenModelo = new Examen();
+        
+        $cursos = $cursoModelo->obtenerCursosPorProfesor($_SESSION['id_usuario']);
+        $examenes = $examenModelo->obtenerPorProfesor($_SESSION['id_usuario']);
+        
+        // Obtener estadísticas del profesor
+        $estadisticas = $this->obtenerEstadisticasProfesor($_SESSION['id_usuario']);
         
         // Definir datos para la vista
         $datos = [
@@ -140,6 +150,7 @@ class InicioControlador {
             'usuario' => $usuarioActual,
             'cursos' => $cursos,
             'examenes' => $examenes,
+            'estadisticas' => $estadisticas,
             'css_adicional' => [
                 '/publico/recursos/css/profesor.css'
             ],
@@ -789,6 +800,83 @@ class InicioControlador {
             return 0;
         } catch (Exception $e) {
             return 0;
+        }
+    }
+    
+    /**
+     * Obtiene estadísticas para el dashboard del profesor
+     * 
+     * @param int $idProfesor ID del profesor
+     * @return array Estadísticas del profesor
+     */
+    private function obtenerEstadisticasProfesor($idProfesor) {
+        try {
+            require_once APP_PATH . '/modelos/curso_modelo.php';
+            require_once APP_PATH . '/modelos/examen_modelo.php';
+            require_once APP_PATH . '/modelos/usuario_modelo.php';
+            
+            $cursoModelo = new Curso();
+            $examenModelo = new Examen();
+            $usuarioModelo = new Usuario();
+            
+            // Obtener cursos del profesor
+            $cursos = $cursoModelo->obtenerCursosPorProfesor($idProfesor);
+            $totalCursos = count($cursos);
+            
+            // Obtener exámenes del profesor
+            $examenes = $examenModelo->obtenerPorProfesor($idProfesor);
+            $totalExamenes = count($examenes);
+            
+            // Contar exámenes por estado
+            $examenesPendientes = 0;
+            $examenesActivos = 0;
+            $examenesCompletados = 0;
+            
+            foreach ($examenes as $examen) {
+                $fechaInicio = strtotime($examen['fecha_inicio']);
+                $fechaFin = strtotime($examen['fecha_fin']);
+                $ahora = time();
+                
+                if ($examen['activo'] == 1 && $fechaInicio <= $ahora && $fechaFin >= $ahora) {
+                    $examenesActivos++;
+                } elseif ($examen['activo'] == 1 && $fechaInicio > $ahora) {
+                    $examenesPendientes++;
+                } else {
+                    $examenesCompletados++;
+                }
+            }
+            
+            // Contar total de alumnos en los cursos del profesor
+            $totalAlumnos = 0;
+            foreach ($cursos as $curso) {
+                $alumnosCurso = $usuarioModelo->contarAlumnosPorCurso($curso['id_curso']);
+                $totalAlumnos += $alumnosCurso;
+            }
+            
+            // Calcular promedio de notas (se puede implementar más adelante)
+            $promedioNotas = 0.0;
+            
+            return [
+                'total_cursos' => $totalCursos,
+                'total_examenes' => $totalExamenes,
+                'examenes_activos' => $examenesActivos,
+                'examenes_pendientes' => $examenesPendientes,
+                'examenes_completados' => $examenesCompletados,
+                'total_alumnos' => $totalAlumnos,
+                'promedio_notas' => $promedioNotas
+            ];
+            
+        } catch (Exception $e) {
+            error_log('Error al obtener estadísticas del profesor: ' . $e->getMessage());
+            return [
+                'total_cursos' => 0,
+                'total_examenes' => 0,
+                'examenes_activos' => 0,
+                'examenes_pendientes' => 0,
+                'examenes_completados' => 0,
+                'total_alumnos' => 0,
+                'promedio_notas' => 0.0
+            ];
         }
     }
 }

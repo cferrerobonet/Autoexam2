@@ -55,7 +55,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 <div class="container-fluid px-4 py-4">
     <!-- Header de la página -->
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1><i class="fas fa-book"></i> Mis Cursos</h1>
+        <h1><i class="fas fa-book"></i> Cursos</h1>
         <div class="d-flex gap-2">
             <!-- Acciones masivas -->
             <div class="dropdown">
@@ -202,7 +202,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
         <div class="card-header bg-light">
             <h5 class="mb-0 d-flex justify-content-between align-items-center">
                 <div>
-                    <i class="fas fa-table text-primary me-2"></i> Mis cursos
+                    <i class="fas fa-table text-primary me-2"></i> Cursos
                 </div>
                 <?php if (count($cursos) > 0): ?>
                 <span class="badge bg-primary rounded-pill">

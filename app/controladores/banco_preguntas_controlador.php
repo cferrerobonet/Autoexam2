@@ -21,6 +21,9 @@ class BancoPreguntasControlador {
      */
     public function __construct() {
         try {
+            // Cargar configuración básica
+            require_once __DIR__ . '/../../config/config.php';
+            
             require_once __DIR__ . '/../modelos/pregunta_banco_modelo.php';
             require_once __DIR__ . '/../modelos/respuesta_banco_modelo.php';
             require_once __DIR__ . '/../modelos/registro_actividad_modelo.php';

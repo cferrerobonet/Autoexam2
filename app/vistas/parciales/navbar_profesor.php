@@ -24,7 +24,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="<?= BASE_URL ?>/cursos">
-                        <i class="fas fa-book-open"></i> Mis Cursos
+                        <i class="fas fa-book-open"></i> Cursos
                     </a>
                 </li>
                 <li class="nav-item">
@@ -34,7 +34,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= BASE_URL ?>/usuarios">
-                        <i class="fas fa-users"></i> Mis Alumnos
+                        <i class="fas fa-users"></i> Alumnos
                     </a>
                 </li>
                 <li class="nav-item">
@@ -97,7 +97,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="perfilDropdown">
                         <li><a class="dropdown-item" href="<?= BASE_URL ?>/perfil">
-                            <i class="fas fa-id-card text-primary"></i> Mi Perfil
+                            <i class="fas fa-id-card text-primary"></i> Perfil
                         </a></li>
                         <li><a class="dropdown-item" href="<?= BASE_URL ?>/perfil/cambiar-contrasena">
                             <i class="fas fa-key text-warning"></i> Cambiar Contraseña

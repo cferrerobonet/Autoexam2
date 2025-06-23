@@ -23,6 +23,15 @@ class Examen {
     }
     
     /**
+     * Obtiene la conexión actual a la base de datos
+     * 
+     * @return PDO|mysqli Conexión a la base de datos
+     */
+    public function getConexion() {
+        return $this->db;
+    }
+
+    /**
      * Obtiene un examen por su ID
      * 
      * @param int $id_examen ID del examen a obtener

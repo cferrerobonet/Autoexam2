@@ -22,7 +22,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
     </div>
     <div>
         <a href="<?= BASE_URL ?>/modulos" class="btn btn-outline-secondary">
-            <i class="fas fa-arrow-left me-1"></i>Volver a mis módulos
+            <i class="fas fa-arrow-left me-1"></i>Volver a módulos
         </a>
     </div>
 </div>
@@ -109,7 +109,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
                     
                     <div class="mb-4">
                         <label class="form-label">
-                            <i class="fas fa-book-open me-1"></i>Mis cursos <span class="text-danger">*</span>
+                            <i class="fas fa-book-open me-1"></i>Cursos <span class="text-danger">*</span>
                         </label>
                         <div class="border rounded p-3 bg-light">
                             <div class="form-text mb-3">
@@ -189,11 +189,11 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
             </div>
         </div>
         
-        <!-- Mis estadísticas -->
+        <!-- Estadísticas -->
         <div class="card shadow-sm">
             <div class="card-header bg-primary text-white">
                 <h6 class="card-title mb-0">
-                    <i class="fas fa-chart-bar me-2"></i>Mis estadísticas
+                    <i class="fas fa-chart-bar me-2"></i>Estadísticas
                 </h6>
             </div>
             <div class="card-body">

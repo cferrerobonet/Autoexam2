@@ -18,8 +18,10 @@ if (!isset($_SESSION['rol']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'
 <body class="bg-light">
     <?php require_once APP_PATH . '/vistas/parciales/navbar_admin.php'; ?>
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="container-fluid py-4">
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="py-4">
             <!-- Encabezado -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
@@ -265,7 +267,9 @@ if (!isset($_SESSION['rol']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'
             }
         }
         </script>
-    </main>
+            </div>
+        </div>
+    </div>
 
     <?php require_once APP_PATH . '/vistas/parciales/footer_admin.php'; ?>
     <?php require_once APP_PATH . '/vistas/parciales/scripts_admin.php'; ?>

@@ -9,7 +9,7 @@
  */
 
 // Verificar sesión y permisos
-if (!isset($_SESSION['usuario_logueado']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'] !== 'profesor')) {
+if (!isset($_SESSION['id_usuario']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'] !== 'profesor')) {
     header("Location: " . BASE_URL . "/autenticacion/login");
     exit;
 }

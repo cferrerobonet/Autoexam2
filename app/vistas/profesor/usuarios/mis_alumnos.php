@@ -1,6 +1,6 @@
 <?php
 /**
- * Vista de Mis Alumnos - AUTOEXAM2 (Rol Profesor)
+ * Vista de Alumnos - AUTOEXAM2 (Rol Profesor)
  * 
  * Muestra todos los alumnos asignados a los cursos del profesor
  * 
@@ -38,7 +38,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
 <div class="container-fluid px-4 py-4">
     <!-- Header -->
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1><i class="fas fa-users text-primary"></i> Mis Alumnos</h1>
+        <h1><i class="fas fa-users text-primary"></i> Alumnos</h1>
         <div class="d-flex gap-2">
             <a href="<?= BASE_URL ?>/cursos" class="btn btn-outline-secondary">
                 <i class="fas fa-arrow-left"></i> Volver a Cursos

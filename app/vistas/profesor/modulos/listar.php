@@ -16,7 +16,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
     <div>
         <h1 class="h3 mb-0">
             <i class="fas fa-puzzle-piece text-primary me-2"></i>
-            Mis Módulos
+            Módulos
         </h1>
         <p class="text-muted mb-0">Gestiona tus módulos asignados</p>
     </div>
@@ -39,7 +39,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
                         </div>
                     </div>
                     <div class="flex-grow-1 ms-3">
-                        <div class="fs-6 fw-semibold text-muted">Mis Módulos</div>
+                        <div class="fs-6 fw-semibold text-muted">Módulos</div>
                         <div class="fs-4 fw-bold text-dark"><?= $datos['total_registros'] ?></div>
                     </div>
                 </div>

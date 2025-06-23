@@ -122,14 +122,14 @@
         </div>
     </div>
     
-    <!-- Mis cursos y módulos -->
+    <!-- Cursos y módulos -->
     <div class="row mb-4">
         <div class="col-12">
             <div class="card shadow-sm">
                 <div class="card-header bg-light">
                     <div class="d-flex justify-content-between align-items-center">
                         <h5 class="mb-0 d-flex align-items-center">
-                            <i class="fas fa-book-open text-primary me-2"></i> Mis cursos y módulos
+                            <i class="fas fa-book-open text-primary me-2"></i> Cursos y módulos
                         </h5>
                         <div>
                             <a href="<?= BASE_URL ?>/examenes/crear" class="btn btn-sm btn-success rounded-pill px-3 me-2 shadow-sm">
@@ -267,6 +267,9 @@
     </div>
 </div>
 
+<!-- Incluir el JavaScript de la API para datos reales -->
+<script src="<?= BASE_URL ?>/publico/recursos/js/profesor_dashboard_api.js"></script>
+
 <script>
     // Script de inicialización para dashboard de profesor
     document.addEventListener('DOMContentLoaded', function() {
@@ -285,32 +288,23 @@
                 right: 'dayGridMonth,timeGridWeek,listWeek'
             },
             height: 350,
-            events: [
-                {
-                    title: 'Examen Matemáticas',
-                    start: '2025-06-20',
-                    backgroundColor: '#4285F4',
-                    borderColor: '#3266c2',
-                    textColor: '#ffffff'
-                },
-                {
-                    title: 'Examen Literatura',
-                    start: '2025-06-22',
-                    backgroundColor: '#34A853',
-                    borderColor: '#2d8d47',
-                    textColor: '#ffffff'
-                },
-                {
-                    title: 'Examen Historia',
-                    start: '2025-06-25',
-                    backgroundColor: '#EA4335',
-                    borderColor: '#d23829',
-                    textColor: '#ffffff'
-                }
-            ],
+            events: [], // Los eventos se cargarán dinámicamente desde la API
             eventClick: function(info) {
-                // Redireccionar a la página del examen
-                alert(`Examen: ${info.event.title}`);
+                // Redireccionar a la página del examen si hay URL
+                if (info.event.url) {
+                    window.open(info.event.url, '_blank');
+                    info.jsEvent.preventDefault(); // Prevenir navegación automática
+                }
+            },
+            loading: function(isLoading) {
+                if (isLoading) {
+                    calendarioEl.querySelector('.fc-view-harness').innerHTML = `
+                        <div class="d-flex justify-content-center align-items-center h-100">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Cargando calendario...</span>
+                            </div>
+                        </div>`;
+                }
             }
         });
         calendario.render();
@@ -425,90 +419,9 @@
             });
         }
         
-        // Cargar tabla de cursos (simulación)
+        // La carga de datos reales se maneja ahora por profesor_dashboard_api.js
+        // Aplicar estilos unificados cuando se carguen los datos
         setTimeout(() => {
-            // Añadir datos de ejemplo a la tabla de cursos
-            const tablaCursos = document.getElementById('tabla-cursos-profesor');
-            tablaCursos.innerHTML = `
-                <tr>
-                    <td>Matemáticas 3º ESO</td>
-                    <td>Álgebra</td>
-                    <td><span class="badge" data-estado="activo">28 alumnos</span></td>
-                    <td><span class="badge" data-estado="pendiente">3 activos</span></td>
-                    <td>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-eye"></i> Ver</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-edit"></i> Editar</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-plus"></i> Examen</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Física 4º ESO</td>
-                    <td>Electricidad</td>
-                    <td><span class="badge" data-estado="activo">24 alumnos</span></td>
-                    <td><span class="badge" data-estado="completado">2 activos</span></td>
-                    <td>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-eye"></i> Ver</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-edit"></i> Editar</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-plus"></i> Examen</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Química 2º Bachillerato</td>
-                    <td>Química Orgánica</td>
-                    <td><span class="badge" data-estado="activo">18 alumnos</span></td>
-                    <td><span class="badge" data-estado="completado">0 activos</span></td>
-                    <td>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-eye"></i> Ver</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-edit"></i> Editar</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-plus"></i> Examen</a>
-                    </td>
-                </tr>
-            `;
-            
-            // Cargar exámenes recientes
-            const tablaExamenes = document.getElementById('tabla-examenes-recientes');
-            tablaExamenes.innerHTML = `
-                <tr>
-                    <td>Ecuaciones de segundo grado</td>
-                    <td>Álgebra</td>
-                    <td>20/06/2025</td>
-                    <td><span class="badge" data-estado="pendiente">Pendiente</span></td>
-                    <td>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-eye"></i> Ver</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-edit"></i> Editar</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-download"></i> Exportar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Leyes de Newton</td>
-                    <td>Física Mecánica</td>
-                    <td>15/06/2025</td>
-                    <td><span class="badge" data-estado="activo">Activo</span></td>
-                    <td>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-eye"></i> Ver</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-edit"></i> Editar</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-ban"></i> Cerrar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Oxidación-reducción</td>
-                    <td>Química General</td>
-                    <td>10/06/2025</td>
-                    <td><span class="badge" data-estado="completado">Completado</span></td>
-                    <td>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-eye"></i> Ver</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-chart-bar"></i> Estadísticas</a>
-                        <a href="#" class="btn btn-sm"><i class="fas fa-download"></i> Exportar</a>
-                    </td>
-                </tr>
-            `;
-            
-            // Actualizar contadores
-            document.getElementById('total-examenes-creados').innerHTML = '15';
-            document.getElementById('total-examenes-pendientes').innerHTML = '3';
-            document.getElementById('promedio-notas').innerHTML = '7.4';
-            
-            // Aplicar los estilos unificados
             unificarEstilosUI();
             
             // Inicializar tooltips de Bootstrap
@@ -516,64 +429,7 @@
             var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
               return new bootstrap.Tooltip(tooltipTriggerEl);
             });
-            
-            // Inicializar gráfico de estadísticas
-            const ctx = document.getElementById('grafico-estadisticas-profesor').getContext('2d');
-            const graficoEstadisticas = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Aprobados', 'Suspensos', 'Pendientes'],
-                    datasets: [{
-                        data: [75, 15, 10],
-                        backgroundColor: ['#34A853', '#EA4335', '#FBBC05'],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom'
-                        }
-                    }
-                }
-            });
-        }, 500);
-        
-        // Cargar notificaciones (simulación)
-        setTimeout(() => {
-            const listaNotificaciones = document.getElementById('lista-notificaciones-profesor');
-            listaNotificaciones.innerHTML = `
-                <a href="#" class="list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h6 class="mb-1">Nuevas entregas pendientes</h6>
-                        <small class="text-muted">Hoy</small>
-                    </div>
-                    <p class="mb-1 small">Tienes 5 exámenes pendientes de corrección en Matemáticas 3º ESO.</p>
-                    <small><span class="badge rounded-pill bg-danger-subtle text-danger border border-danger-subtle"><i class="fas fa-exclamation-circle"></i> Prioritario</span></small>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h6 class="mb-1">Recordatorio de examen</h6>
-                        <small class="text-muted">Ayer</small>
-                    </div>
-                    <p class="mb-1 small">El examen "Leyes de Newton" cierra mañana a las 23:59.</p>
-                    <small><span class="badge rounded-pill bg-warning-subtle text-warning border border-warning-subtle"><i class="fas fa-clock"></i> Recordatorio</span></small>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h6 class="mb-1">Nuevo estudiante asignado</h6>
-                        <small class="text-muted">12/06/2025</small>
-                    </div>
-                    <p class="mb-1 small">Se ha añadido un nuevo estudiante a tu curso de Química 2º Bachillerato.</p>
-                    <small><span class="badge rounded-pill bg-info-subtle text-info border border-info-subtle"><i class="fas fa-info-circle"></i> Información</span></small>
-                </a>
-            `;
-            
-            // Aplicar los estilos unificados a los elementos recién agregados
-            unificarEstilosUI();
-        }, 700);
+        }, 1000);
     });
 </script>
 

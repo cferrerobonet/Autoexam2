@@ -9,7 +9,7 @@
  */
 
 // Verificar sesión y permisos
-if (!isset($_SESSION['usuario_logueado']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'] !== 'profesor')) {
+if (!isset($_SESSION['id_usuario']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'] !== 'profesor')) {
     header("Location: " . BASE_URL . "/autenticacion/login");
     exit;
 }
@@ -28,8 +28,10 @@ if (!isset($_SESSION['csrf_token'])) {
 <body class="bg-light">
     <?php require_once APP_PATH . '/vistas/parciales/navbar_admin.php'; ?>
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="container-fluid py-4">
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="py-4">
             <!-- Encabezado -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div>
@@ -310,7 +312,9 @@ if (!isset($_SESSION['csrf_token'])) {
         });
         <?php endif; ?>
         </script>
-    </main>
+            </div>
+        </div>
+    </div>
 
     <?php require_once APP_PATH . '/vistas/parciales/footer_admin.php'; ?>
     <?php require_once APP_PATH . '/vistas/parciales/scripts_admin.php'; ?>
