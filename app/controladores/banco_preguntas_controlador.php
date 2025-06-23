@@ -275,14 +275,31 @@ class BancoPreguntasControlador {
      * Eliminar pregunta del banco
      */
     public function eliminar($id_pregunta) {
+        // Cargar la clase Sanitizador si aún no está disponible
+        if (!class_exists('Sanitizador')) {
+            require_once __DIR__ . '/../utilidades/sanitizador.php';
+        }
+        
         // Verificar permisos
         $rol = $_SESSION['rol'];
         if ($rol != 'admin' && $rol != 'profesor') {
-            $this->responderJson(['error' => 'Sin permisos']);
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $this->responderJson(['error' => 'Sin permisos']);
+            } else {
+                $_SESSION['mensaje_error'] = 'No tienes permisos para eliminar preguntas';
+                header("Location: " . BASE_URL . "/banco-preguntas");
+                exit;
+            }
             return;
         }
         
         try {
+            // Sanitizar el ID
+            $id_pregunta = Sanitizador::entero($id_pregunta);
+            if (!$id_pregunta) {
+                throw new Exception('ID de pregunta inválido');
+            }
+            
             // Obtener pregunta
             $pregunta = $this->pregunta_banco->obtenerPorId($id_pregunta);
             if (!$pregunta) {
@@ -305,14 +322,28 @@ class BancoPreguntasControlador {
                     $id_pregunta
                 );
                 
-                $this->responderJson(['success' => 'Pregunta eliminada correctamente']);
+                // Manejar respuesta según el tipo de solicitud
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $this->responderJson(['success' => 'Pregunta eliminada correctamente']);
+                } else {
+                    $_SESSION['mensaje_exito'] = 'Pregunta eliminada correctamente';
+                    header("Location: " . BASE_URL . "/banco-preguntas");
+                    exit;
+                }
             } else {
                 throw new Exception('Error al eliminar la pregunta');
             }
             
         } catch (Exception $e) {
             error_log("Error al eliminar pregunta del banco: " . $e->getMessage());
-            $this->responderJson(['error' => $e->getMessage()]);
+            
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $this->responderJson(['error' => $e->getMessage()]);
+            } else {
+                $_SESSION['mensaje_error'] = $e->getMessage();
+                header("Location: " . BASE_URL . "/banco-preguntas");
+                exit;
+            }
         }
     }
     
@@ -650,4 +681,6 @@ class BancoPreguntasControlador {
             $this->responderJson(['error' => $e->getMessage()]);
         }
     }
+    
+    // Nota: Este método ya está definido anteriormente en la clase
 }

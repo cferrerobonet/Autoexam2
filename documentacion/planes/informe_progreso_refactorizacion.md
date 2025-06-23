@@ -33,9 +33,24 @@ Este documento detalla el progreso en la refactorización y sanitización del c�
    - Implementación de sanitización en `obtenerFiltrosBusqueda()` para las búsquedas y filtros
    - Actualización del método `mostrarListaVacia()` para usar datos sanitizados
 
-2. Próximos pasos:
-   - Continuar refactorización de los métodos de acción restantes en el controlador de usuarios
-   - Aplicar el mismo enfoque al controlador de preguntas
+2. Refactoración del controlador de preguntas
+   - Archivo mejorado: `/app/controladores/preguntas_controlador.php`
+   - Integración de la clase Sanitizador en los métodos principales
+   - Mejora de la validación y sanitización de datos de entrada
+   - Implementación de verificación rigurosa de permisos
+   - Sanitización de datos JSON en endpoints API
+
+3. Corrección del controlador de banco de preguntas
+   - Archivo mejorado: `/app/controladores/banco_preguntas_controlador.php`
+   - Corregida inconsistencia en la eliminación de preguntas del banco
+   - Unificada respuesta entre solicitudes POST y navegación directa
+   - Mejorada la sanitización y validación de IDs
+   - Eliminada duplicidad del método `responderJson`
+   - Actualizado el código JavaScript para usar método POST en vez de DELETE
+
+4. Próximos pasos:
+   - Continuar refactorización de los métodos restantes en el controlador de preguntas
+   - Completar la refactorización del controlador de usuarios
    - Aplicar el mismo enfoque al controlador de exámenes
 
 ## Resultados Preliminares
@@ -43,6 +58,7 @@ Este documento detalla el progreso en la refactorización y sanitización del c�
 - **Mayor seguridad**: Todas las entradas de usuario son sanitizadas antes de ser procesadas
 - **Código más limpio**: Refactorización orientada a objetos y centralizada
 - **Mantenibilidad mejorada**: Menor repetición de código, funciones más especializadas
+- **Mejor experiencia de usuario**: Corregidos errores de interfaz y respuestas JSON inadecuadas
 
 ## Recomendaciones para Continuar
 

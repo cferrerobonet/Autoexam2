@@ -502,7 +502,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         fetch(`<?= BASE_URL ?>/banco-preguntas/eliminar/${idPregunta}`, {
-            method: 'DELETE'
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-Token': '<?= $_SESSION["csrf_token"] ?? "" ?>'
+            }
         })
         .then(response => response.json())
         .then(data => {

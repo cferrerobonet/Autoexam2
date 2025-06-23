@@ -604,12 +604,16 @@ function eliminarPregunta(idPregunta) {
     }
     
     fetch(`<?= BASE_URL ?>/banco-preguntas/eliminar/${idPregunta}`, {
-        method: 'DELETE'
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: idPregunta })
     })
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            location.reload();
+            window.location.href = '<?= BASE_URL ?>/banco-preguntas';
         } else {
             alert('Error: ' + data.error);
         }

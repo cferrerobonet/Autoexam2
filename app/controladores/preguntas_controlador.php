@@ -41,9 +41,14 @@ class PreguntasControlador {
      * Guardar pregunta (crear o actualizar)
      */
     public function guardar() {
+        // Cargar la clase Sanitizador si aún no está disponible
+        if (!class_exists('Sanitizador')) {
+            require_once __DIR__ . '/../utilidades/sanitizador.php';
+        }
+        
         // Verificar permisos
-        if ($_SESSION['rol'] != 'admin' && $_SESSION['rol'] != 'profesor') {
-            $this->responderJson(['error' => 'Sin permisos']);
+        if (!isset($_SESSION['rol']) || ($_SESSION['rol'] != 'admin' && $_SESSION['rol'] != 'profesor')) {
+            $this->responderJson(['error' => 'Sin permisos para esta acción']);
             return;
         }
         
@@ -52,7 +57,12 @@ class PreguntasControlador {
                 throw new Exception('Método no permitido');
             }
             
-            // Validar datos
+            // Verificar token CSRF para mayor seguridad
+            if (!isset($_POST['csrf_token']) || !$this->verificarTokenCSRF($_POST['csrf_token'])) {
+                throw new Exception('Error de validación de seguridad');
+            }
+            
+            // Validar datos con sanitización integrada
             $datos = $this->validarDatosPregunta($_POST);
             
             // Verificar permisos sobre el examen
@@ -167,16 +177,40 @@ class PreguntasControlador {
     }
     
     /**
+     * Verificar token CSRF
+     * 
+     * @param string $token Token enviado a verificar
+     * @return bool Resultado de la verificación
+     */
+    private function verificarTokenCSRF($token) {
+        if (empty($token) || !isset($_SESSION['csrf_token']) || $token !== $_SESSION['csrf_token']) {
+            return false;
+        }
+        return true;
+    }
+    
+    /**
      * Eliminar pregunta
      */
     public function eliminar($id_pregunta) {
+        // Cargar la clase Sanitizador si aún no está disponible
+        if (!class_exists('Sanitizador')) {
+            require_once __DIR__ . '/../utilidades/sanitizador.php';
+        }
+        
         // Verificar permisos
-        if ($_SESSION['rol'] != 'admin' && $_SESSION['rol'] != 'profesor') {
-            $this->responderJson(['error' => 'Sin permisos']);
+        if (!isset($_SESSION['rol']) || ($_SESSION['rol'] != 'admin' && $_SESSION['rol'] != 'profesor')) {
+            $this->responderJson(['error' => 'Sin permisos para esta acción']);
             return;
         }
         
         try {
+            // Sanitizar el ID
+            $id_pregunta = Sanitizador::entero($id_pregunta);
+            if (!$id_pregunta) {
+                throw new Exception('ID de pregunta inválido');
+            }
+            
             // Obtener datos de la pregunta
             $pregunta = $this->pregunta->obtenerPorId($id_pregunta);
             if (!$pregunta) {
@@ -214,14 +248,32 @@ class PreguntasControlador {
      * Cambiar estado de pregunta (habilitar/deshabilitar)
      */
     public function toggle($id_pregunta) {
+        // Cargar la clase Sanitizador si aún no está disponible
+        if (!class_exists('Sanitizador')) {
+            require_once __DIR__ . '/../utilidades/sanitizador.php';
+        }
+        
         // Verificar permisos
-        if ($_SESSION['rol'] != 'admin' && $_SESSION['rol'] != 'profesor') {
-            $this->responderJson(['error' => 'Sin permisos']);
+        if (!isset($_SESSION['rol']) || ($_SESSION['rol'] != 'admin' && $_SESSION['rol'] != 'profesor')) {
+            $this->responderJson(['error' => 'Sin permisos para esta acción']);
             return;
         }
         
         try {
-            $datos = json_decode(file_get_contents('php://input'), true);
+            // Sanitizar ID de pregunta
+            $id_pregunta = Sanitizador::entero($id_pregunta);
+            if (!$id_pregunta) {
+                throw new Exception('ID de pregunta inválido');
+            }
+            
+            // Obtener y sanitizar datos del cuerpo JSON
+            $rawData = file_get_contents('php://input');
+            $datos = json_decode($rawData, true);
+            
+            if (!is_array($datos)) {
+                throw new Exception('Formato de datos inválido');
+            }
+            
             $habilitada = isset($datos['habilitada']) ? (bool)$datos['habilitada'] : false;
             
             // Obtener datos de la pregunta
@@ -408,33 +460,63 @@ class PreguntasControlador {
      * Validar datos de pregunta
      */
     private function validarDatosPregunta($datos) {
+        // Cargar la clase Sanitizador si aún no está disponible
+        if (!class_exists('Sanitizador')) {
+            require_once __DIR__ . '/../utilidades/sanitizador.php';
+        }
+        
         $errores = [];
         
+        // Sanitizar datos de entrada
+        $campos = ['id_pregunta', 'id_examen', 'tipo', 'enunciado', 'media_tipo', 'media_valor', 'orden'];
+        $tipos = [
+            'id_pregunta' => 'entero',
+            'id_examen' => 'entero',
+            'tipo' => 'texto',
+            'enunciado' => 'texto',
+            'media_tipo' => 'texto',
+            'media_valor' => 'texto',
+            'orden' => 'entero'
+        ];
+        
+        $datosSanitizados = Sanitizador::array($datos, $tipos);
+        
         // Validaciones básicas
-        if (empty($datos['enunciado'])) {
+        if (empty($datosSanitizados['enunciado'])) {
             $errores[] = 'El enunciado es requerido';
         }
         
-        if (empty($datos['tipo']) || !in_array($datos['tipo'], ['test', 'desarrollo'])) {
+        if (empty($datosSanitizados['tipo']) || !in_array($datosSanitizados['tipo'], ['test', 'desarrollo'])) {
             $errores[] = 'El tipo de pregunta no es válido';
         }
         
-        if (empty($datos['id_examen'])) {
+        if (empty($datosSanitizados['id_examen'])) {
             $errores[] = 'El examen es requerido';
         }
         
-        // Validar respuestas para tipo test
-        if ($datos['tipo'] == 'test') {
+        // Sanitizar y validar respuestas para tipo test
+        if ($datosSanitizados['tipo'] == 'test') {
             if (empty($datos['respuestas']) || !is_array($datos['respuestas'])) {
                 $errores[] = 'Las preguntas tipo test deben tener respuestas';
+                $respuestasSanitizadas = [];
             } else {
                 $tiene_correcta = false;
                 $respuestas_validas = 0;
+                $respuestasSanitizadas = [];
                 
-                foreach ($datos['respuestas'] as $respuesta) {
-                    if (!empty($respuesta['texto'])) {
+                foreach ($datos['respuestas'] as $indice => $respuesta) {
+                    // Sanitizar texto de la respuesta
+                    $textoRespuesta = isset($respuesta['texto']) ? Sanitizador::texto($respuesta['texto']) : '';
+                    $correcta = isset($respuesta['correcta']) ? true : false;
+                    
+                    $respuestasSanitizadas[$indice] = [
+                        'texto' => $textoRespuesta,
+                        'correcta' => $correcta
+                    ];
+                    
+                    if (!empty($textoRespuesta)) {
                         $respuestas_validas++;
-                        if (isset($respuesta['correcta'])) {
+                        if ($correcta) {
                             $tiene_correcta = true;
                         }
                     }
@@ -448,6 +530,8 @@ class PreguntasControlador {
                     $errores[] = 'Debe marcar al menos una respuesta como correcta';
                 }
             }
+        } else {
+            $respuestasSanitizadas = [];
         }
         
         if (!empty($errores)) {
@@ -455,15 +539,15 @@ class PreguntasControlador {
         }
         
         return [
-            'id_pregunta' => !empty($datos['id_pregunta']) ? (int)$datos['id_pregunta'] : null,
-            'id_examen' => (int)$datos['id_examen'],
-            'tipo' => $datos['tipo'],
-            'enunciado' => trim($datos['enunciado']),
-            'media_tipo' => $datos['media_tipo'] ?? 'ninguno',
-            'media_valor' => $datos['media_valor'] ?? null,
+            'id_pregunta' => $datosSanitizados['id_pregunta'] ? $datosSanitizados['id_pregunta'] : null,
+            'id_examen' => $datosSanitizados['id_examen'],
+            'tipo' => $datosSanitizados['tipo'],
+            'enunciado' => $datosSanitizados['enunciado'],
+            'media_tipo' => $datosSanitizados['media_tipo'] ?? 'ninguno',
+            'media_valor' => $datosSanitizados['media_valor'] ?? null,
             'habilitada' => isset($datos['habilitada']) ? 1 : 1, // Por defecto habilitada
-            'orden' => (int)($datos['orden'] ?? 0),
-            'respuestas' => $datos['respuestas'] ?? []
+            'orden' => $datosSanitizados['orden'] ?? 0,
+            'respuestas' => $respuestasSanitizadas ?: []
         ];
     }
     
