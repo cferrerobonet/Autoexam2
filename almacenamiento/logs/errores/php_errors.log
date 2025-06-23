@@ -68516,3 +68516,4296 @@ Stack trace:
 [23-Jun-2025 09:45:45 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
 [23-Jun-2025 09:45:45 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
 [23-Jun-2025 09:45:45 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:46:04 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:46:04 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:46:04 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:46:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:46:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:46:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:46:41 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:46:41 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:46:41 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:46:41 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:46:41 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:46:41 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:46:41 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:46:41 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:46:41 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:46:50 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:50 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:46:50 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:50 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:46:50 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:46:50 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:47:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:47:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:47:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:47:58 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:47:58 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:47:58 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:47:58 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:47:58 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:47:58 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:47:58 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:47:58 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:47:58 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:47:59 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:59 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:47:59 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:59 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:47:59 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:47:59 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:48:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:48:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:48:01 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:01 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:48:01 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:48:01 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:01 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[23-Jun-2025 09:48:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[23-Jun-2025 09:48:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[23-Jun-2025 09:48:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[23-Jun-2025 09:48:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:09 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class "Ruteador" not found in /homepages/22/d491590459/htdocs/autoexam/index.php:114
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once()
+#1 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/index.php on line 114
+[23-Jun-2025 09:48:09 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class "Ruteador" not found in /homepages/22/d491590459/htdocs/autoexam/index.php:114
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once()
+#1 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/index.php on line 114
+[23-Jun-2025 09:48:09 Europe/Madrid] PHP Fatal error:  Uncaught Error: Class "Ruteador" not found in /homepages/22/d491590459/htdocs/autoexam/index.php:114
+Stack trace:
+#0 /homepages/22/d491590459/htdocs/autoexam/publico/index.php(17): require_once()
+#1 {main}
+  thrown in /homepages/22/d491590459/htdocs/autoexam/index.php on line 114
+[23-Jun-2025 09:48:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:16 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:16 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[23-Jun-2025 09:48:16 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:16 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:28 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:28 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[23-Jun-2025 09:48:28 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:28 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:29 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:29 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[23-Jun-2025 09:48:29 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:29 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:48:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => imagenes
+    [3] => favicon.ico
+)
+
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:48:37 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:48:37 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:37 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:37 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:48:37 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:37 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:48:37 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:48:37 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:37 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:48:37 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:48:37 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:37 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:43 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:43 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+    [1] => editar
+    [2] => 2
+)
+
+[23-Jun-2025 09:48:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:48:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:48:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:48:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:48:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:48:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:48:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:48:51 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:48:51 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:51 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:48:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:48:52 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:48:52 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:52 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:52 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:48:52 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:52 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:48:59 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:59 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:48:59 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:59 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:48:59 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:48:59 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:49:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:49:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:49:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:49:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:49:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:52 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:49:52 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:49:53 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:49:53 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:49:53 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:49:53 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:49:53 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:49:53 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:49:53 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:49:53 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:49:53 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:49:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:49:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:49:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:49:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:50:10 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:50:10 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:50:10 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:50:10 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:50:10 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:50:10 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:50:10 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:50:10 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:50:10 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:50:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:50:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:50:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:50:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:50:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:50:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:50:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:51:04 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:51:04 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:04 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:04 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:51:04 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:04 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:51:04 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:51:04 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:04 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:51:53 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:51:53 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:53 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:51:53 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:51:53 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:51:53 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:53 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:53 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:51:53 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:51:53 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:54:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:54:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:54:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:54:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:54:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:54:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:54:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 09:54:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:54:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[23-Jun-2025 09:54:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:54:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:54:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[23-Jun-2025 09:54:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:29 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:29 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[23-Jun-2025 09:54:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 09:54:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:54:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[23-Jun-2025 09:54:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:54:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => calendario
+)
+
+[23-Jun-2025 09:54:32 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:32 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estadisticas
+)
+
+[23-Jun-2025 09:54:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:54:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[23-Jun-2025 09:54:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[23-Jun-2025 09:54:36 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:36 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:37 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:37 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[23-Jun-2025 09:54:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:54:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:54:39 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:54:39 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:39 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:54:39 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:54:39 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:54:39 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:39 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:39 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:54:39 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:54:39 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:55:38 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:55:38 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:55:38 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:55:38 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:55:38 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:55:38 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:55:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:55:38 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:55:38 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:55:38 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:57:04 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:57:04 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:57:04 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:57:04 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:57:04 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:57:04 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:57:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:57:04 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:57:04 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:57:04 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:57:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:57:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[23-Jun-2025 09:57:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:57:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:57:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:57:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 09:58:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:58:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:58:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:58:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:58:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:58:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:58:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 09:58:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:58:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 09:58:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[23-Jun-2025 09:58:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[23-Jun-2025 09:58:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 09:58:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:58:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => modulos
+)
+
+[23-Jun-2025 09:58:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:58:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => usuarios
+)
+
+[23-Jun-2025 09:58:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:58:29 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:29 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => cursos
+)
+
+[23-Jun-2025 09:58:29 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:29 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:58:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[23-Jun-2025 09:58:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor.js
+)
+
+[23-Jun-2025 09:58:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 09:58:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => publico
+    [1] => recursos
+    [2] => js
+    [3] => profesor_dashboard_api.js
+)
+
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:00 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:00 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:00 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:00 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:00 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:00 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:00 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:00 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:00 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => logout
+)
+
+[23-Jun-2025 10:01:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:03 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:03 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:03 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => estilos
+    [1] => formulario.css
+)
+
+[23-Jun-2025 10:01:03 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:03 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:03 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:03 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:03 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:09 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:09 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:09 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:09 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[23-Jun-2025 10:01:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[23-Jun-2025 10:01:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:20 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:20 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:20 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:20 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:20 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:20 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:20 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:20 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:20 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => examenes
+)
+
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:33 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:33 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:33 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:33 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:33 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:33 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:33 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:33 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:01:33 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:33 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:01:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 10:01:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:01:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:01:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[23-Jun-2025 10:01:48 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:48 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:01:48 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:48 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:01:48 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:01:48 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:03:22 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:03:22 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:03:22 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:03:22 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:03:22 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:03:22 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:03:22 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:03:22 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:03:22 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:03:22 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:04:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:04:04 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:04 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:04:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:04:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:04:05 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:04:05 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:05 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:05 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:04:05 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:05 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:04:05 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:04:05 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:05 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:04:45 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:04:45 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:45 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:04:45 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:04:45 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:04:45 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:45 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:45 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:04:45 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:04:45 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:05:46 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:05:46 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:05:46 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:05:46 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:05:46 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:05:46 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:05:46 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:05:46 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:05:46 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:05:46 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:06:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:06:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:06:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:06:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:06:06 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:06:06 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:06:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:06:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:06:07 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:06:07 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:06:07 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:06:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:06:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:06:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:06:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:06:07 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:06:07 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:06:07 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:06:07 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:06:07 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:06:07 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:10:19 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:10:19 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:10:19 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:10:19 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:10:19 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:10:19 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:10:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:10:19 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:10:19 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:10:19 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:11:18 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:11:18 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:11:18 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:11:18 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:11:18 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:11:18 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:11:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:11:18 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:11:18 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:11:18 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:12:08 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:12:08 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:12:08 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:12:08 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:12:08 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:12:08 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:12:51 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:12:51 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:51 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:12:51 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:12:51 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:51 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:12:51 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:12:51 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:12:51 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:12:51 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:16:34 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:16:34 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:16:34 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:16:34 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:16:34 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:16:34 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:16:34 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:16:34 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:16:34 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:16:34 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:16:47 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:16:47 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:17:23 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:17:23 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:17:23 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:17:23 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:17:23 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:17:23 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:17:23 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:17:23 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:17:23 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:17:23 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:18:08 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:18:08 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:18:08 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:18:08 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:08 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:18:08 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:43 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:43 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:18:43 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:43 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:18:43 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:43 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:18:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:18:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:18:44 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:18:44 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:44 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:18:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:18:44 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:18:44 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:44 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:44 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:18:44 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:18:44 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:19:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:19:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => inicio
+)
+
+[23-Jun-2025 10:19:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:19:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 10:19:29 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:19:29 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:19:30 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:19:30 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:19:30 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:19:30 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:19:30 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:19:30 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:19:30 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:19:30 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:19:30 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:19:30 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:20:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:20:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:20:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:20:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:20:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:20:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:20:20 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:20:20 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:20:20 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:20:20 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:20:20 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:20:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:20:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:20:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:20:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:20:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:20:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:20:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:20:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:20:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:20:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:21:15 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:21:15 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:15 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:21:15 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:21:15 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:15 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:21:15 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:21:15 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:15 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:21:38 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:21:38 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:38 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:21:38 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:21:38 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:38 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:21:38 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:21:38 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:21:38 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:21:38 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:22:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:22:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:22:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:22:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:22:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:22:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:22:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:22:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:22:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:22:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:22:18 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:22:18 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:22:18 Europe/Madrid] Error al crear pregunta en banco: Las preguntas tipo test deben tener al menos 2 respuestas, Debe marcar al menos una respuesta como correcta
+[23-Jun-2025 10:22:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:22:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 10:22:29 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:22:29 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:23:50 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:23:50 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:23:50 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:23:50 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:23:50 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:23:50 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:23:50 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:23:50 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:23:50 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:23:50 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:24:26 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:24:26 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:24:26 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:24:26 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:24:26 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:24:26 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:24:26 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:24:26 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:24:26 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:24:26 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:24:56 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:24:56 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:24:56 Europe/Madrid] Error al crear pregunta en banco: Las preguntas tipo test deben tener al menos 2 respuestas, Debe marcar al menos una respuesta como correcta
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:25:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:25:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:25:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:25:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:25:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:25:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:25:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:25:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:25:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:25:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:28:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:28:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:28:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:28:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:28:44 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:28:44 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:29:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:29:13 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:29:13 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:29:13 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:29:13 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:29:13 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:29:13 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:29:13 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:29:13 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:29:13 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:30:24 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:30:24 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:30:24 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:30:24 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:30:24 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:30:24 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:30:24 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:30:24 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:30:24 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:30:24 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:31:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:31:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:31:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:31:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:31:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:31:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:31:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:31:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:31:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:31:41 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:31:41 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:31:41 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:41 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:41 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:31:41 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:41 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:41 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:31:41 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:31:41 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:33:54 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:33:54 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:33:54 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:33:54 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:33:54 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:33:54 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:33:54 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:33:54 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:33:54 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:33:54 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:35:49 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:35:49 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:35:49 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:35:49 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:35:49 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:35:49 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:35:49 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:35:49 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:35:49 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:35:49 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:39:16 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:39:16 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 10:39:19 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:39:19 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:39:25 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:39:25 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:39:25 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:39:25 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:39:25 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:39:25 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:39:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:39:25 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:39:25 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:39:25 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:40:05 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:05 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:40:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 10:40:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 10:40:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:40:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:40:10 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:10 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:40:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:40:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:40:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:40:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:40:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:40:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:40:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:40:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:40:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:40:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:40:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:40:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:40:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 10:40:17 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:17 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:40:31 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:31 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:40:33 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:40:33 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:43:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:43:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:43:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:43:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:43:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:43:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:43:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:43:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:43:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:43:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:46:14 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:46:14 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:46:14 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:46:14 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:46:14 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:46:14 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:46:14 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:46:14 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:46:14 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:46:14 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:50:25 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:50:25 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:50:25 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:50:25 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:50:25 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:50:25 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:50:25 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:50:25 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:50:25 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:50:25 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:51:35 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:51:35 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:51:35 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:51:35 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:51:35 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:51:35 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:51:35 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:51:35 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:51:35 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:51:35 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:53:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:53:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:53:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:53:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:53:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:53:21 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:53:21 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:53:21 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:53:21 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:55:57 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:55:57 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:55:57 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:55:57 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:55:57 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:55:57 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:55:57 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:55:57 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:55:57 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:55:57 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:57:07 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:57:07 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:07 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:57:07 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:57:07 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:07 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:07 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:57:07 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:07 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:57:55 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:57:55 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:55 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:57:55 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:57:55 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:55 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 10:57:55 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 10:57:55 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:55 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:55 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 10:57:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:57:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:58:07 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:58:07 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 10:58:07 Europe/Madrid] BANCO DEBUG: Iniciando procesarCreacion()
+[23-Jun-2025 10:58:07 Europe/Madrid] BANCO DEBUG: POST data: Array
+(
+    [csrf_token] => bab2c46fb2e56fd0bec06106df020c2a8eead62b107b38f5e2d1846ec1737c86
+    [enunciado] => gerveqr
+    [tipo] => test
+    [respuestas] => Array
+        (
+            [0] => Array
+                (
+                    [correcta] => on
+                    [texto] => verv
+                )
+
+            [1] => Array
+                (
+                    [texto] => sefvfe
+                )
+
+            [2] => Array
+                (
+                    [texto] => dfvsdvd
+                )
+
+        )
+
+    [categoria] => 
+    [dificultad] => media
+    [etiquetas] => 
+)
+
+[23-Jun-2025 10:58:07 Europe/Madrid] BANCO DEBUG: Datos validados: Array
+(
+    [tipo] => test
+    [enunciado] => gerveqr
+    [media_tipo] => ninguno
+    [media_valor] => 
+    [origen] => manual
+    [publica] => 0
+    [respuestas] => Array
+        (
+            [0] => Array
+                (
+                    [correcta] => on
+                    [texto] => verv
+                )
+
+            [1] => Array
+                (
+                    [texto] => sefvfe
+                )
+
+            [2] => Array
+                (
+                    [texto] => dfvsdvd
+                )
+
+        )
+
+)
+
+[23-Jun-2025 10:58:07 Europe/Madrid] BANCO DEBUG: Intentando crear pregunta
+[23-Jun-2025 10:58:09 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:58:09 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 10:58:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 10:58:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:00:27 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:00:27 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:00:27 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:00:27 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:00:27 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:00:27 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:00:27 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:00:27 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:00:27 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:00:27 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:01:13 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:01:13 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:01:13 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:01:13 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:01:13 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:01:13 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:01:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:01:13 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:01:13 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:01:13 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:02:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:02:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:11 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:02:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:02:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:11 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:02:11 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:11 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:02:58 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:02:58 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:58 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:58 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:02:58 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:58 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:02:58 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:02:58 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:02:58 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:02:58 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:03:00 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:03:00 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:00 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:03:00 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:03:00 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:00 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:00 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:03:00 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:03:00 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:00 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:02 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:02 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+    [1] => crear
+)
+
+[23-Jun-2025 11:03:12 Europe/Madrid] BANCO: POST recibido - tipo: test
+[23-Jun-2025 11:03:12 Europe/Madrid] BANCO: Respuestas recibidas: 3
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:03:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:03:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:12 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:03:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:03:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:12 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:03:12 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:12 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:03:13 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:13 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+)
+
+[23-Jun-2025 11:03:15 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:03:15 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => banco-preguntas
+)
+
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon-precomposed.png
+)
+
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => apple-touch-icon.png
+)
+
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => favicon.ico
+)
+
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:04:08 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:04:08 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:04:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:04:08 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:04:08 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:04:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: Iniciando procesarPeticion()
+[23-Jun-2025 11:04:08 Europe/Madrid] RUTEADOR DEBUG: URL obtenida: Array
+(
+    [0] => autenticacion
+    [1] => login
+)
+
+[23-Jun-2025 11:04:08 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
+[23-Jun-2025 11:04:08 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 11:04:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png

@@ -72,10 +72,23 @@ class PreguntaBanco {
                 $tipos .= "s";
             }
             
-            if (!empty($filtros['busqueda'])) {
-                $condiciones[] = "pb.enunciado LIKE ?";
-                $parametros[] = "%" . $filtros['busqueda'] . "%";
+            if (!empty($filtros['categoria'])) {
+                $condiciones[] = "pb.categoria = ?";
+                $parametros[] = $filtros['categoria'];
                 $tipos .= "s";
+            }
+            
+            if (!empty($filtros['dificultad'])) {
+                $condiciones[] = "pb.dificultad = ?";
+                $parametros[] = $filtros['dificultad'];
+                $tipos .= "s";
+            }
+            
+            if (!empty($filtros['busqueda'])) {
+                $condiciones[] = "(pb.enunciado LIKE ? OR pb.etiquetas LIKE ?)";
+                $parametros[] = "%" . $filtros['busqueda'] . "%";
+                $parametros[] = "%" . $filtros['busqueda'] . "%";
+                $tipos .= "ss";
             }
             
             if (!empty($filtros['origen'])) {
@@ -141,10 +154,23 @@ class PreguntaBanco {
                 $tipos .= "s";
             }
             
-            if (!empty($filtros['busqueda'])) {
-                $condiciones[] = "pb.enunciado LIKE ?";
-                $parametros[] = "%" . $filtros['busqueda'] . "%";
+            if (!empty($filtros['categoria'])) {
+                $condiciones[] = "pb.categoria = ?";
+                $parametros[] = $filtros['categoria'];
                 $tipos .= "s";
+            }
+            
+            if (!empty($filtros['dificultad'])) {
+                $condiciones[] = "pb.dificultad = ?";
+                $parametros[] = $filtros['dificultad'];
+                $tipos .= "s";
+            }
+            
+            if (!empty($filtros['busqueda'])) {
+                $condiciones[] = "(pb.enunciado LIKE ? OR pb.etiquetas LIKE ?)";
+                $parametros[] = "%" . $filtros['busqueda'] . "%";
+                $parametros[] = "%" . $filtros['busqueda'] . "%";
+                $tipos .= "ss";
             }
             
             if (!empty($filtros['origen'])) {
@@ -187,18 +213,31 @@ class PreguntaBanco {
      */
     public function crear($datos) {
         try {
-            $query = "INSERT INTO preguntas_banco (tipo, enunciado, media_tipo, media_valor, 
-                                                 origen, id_profesor, publica, fecha_creacion) 
-                      VALUES (?, ?, ?, ?, ?, ?, ?, NOW())";
+            $query = "INSERT INTO preguntas_banco (tipo, enunciado, categoria, dificultad, etiquetas, 
+                                                 media_tipo, media_valor, origen, id_profesor, publica, fecha_creacion) 
+                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("sssssii", 
+            
+            // Asegurar valores por defecto correctos
+            $categoria = $datos['categoria'] ?? 'otra';
+            $dificultad = $datos['dificultad'] ?? 'media';
+            $etiquetas = $datos['etiquetas'] ?? '';
+            $media_tipo = $datos['media_tipo'] ?? 'ninguno';
+            $media_valor = isset($datos['media_valor']) && $datos['media_valor'] !== null ? $datos['media_valor'] : '';
+            $origen = $datos['origen'] ?? 'manual';
+            $publica = isset($datos['publica']) ? (int)$datos['publica'] : 0;
+            
+            $stmt->bind_param("ssssssssii", 
                 $datos['tipo'],
                 $datos['enunciado'],
-                $datos['media_tipo'] ?? 'ninguno',
-                $datos['media_valor'] ?? null,
-                $datos['origen'] ?? 'manual',
+                $categoria,
+                $dificultad,
+                $etiquetas,
+                $media_tipo,
+                $media_valor,
+                $origen,
                 $datos['id_profesor'],
-                $datos['publica'] ?? 0
+                $publica
             );
             
             if ($stmt->execute()) {
@@ -220,16 +259,28 @@ class PreguntaBanco {
     public function actualizar($datos) {
         try {
             $query = "UPDATE preguntas_banco SET 
-                      tipo = ?, enunciado = ?, media_tipo = ?, media_valor = ?,
-                      publica = ?
+                      tipo = ?, enunciado = ?, categoria = ?, dificultad = ?, etiquetas = ?,
+                      media_tipo = ?, media_valor = ?, publica = ?
                       WHERE id_pregunta = ?";
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("ssssii", 
+            
+            // Asegurar valores por defecto correctos
+            $categoria = $datos['categoria'] ?? 'otra';
+            $dificultad = $datos['dificultad'] ?? 'media';
+            $etiquetas = $datos['etiquetas'] ?? '';
+            $media_tipo = isset($datos['media_tipo']) ? $datos['media_tipo'] : 'ninguno';
+            $media_valor = isset($datos['media_valor']) && $datos['media_valor'] !== null ? $datos['media_valor'] : '';
+            $publica = isset($datos['publica']) ? (int)$datos['publica'] : 0;
+            
+            $stmt->bind_param("sssssssii", 
                 $datos['tipo'],
                 $datos['enunciado'],
-                $datos['media_tipo'] ?? 'ninguno',
-                $datos['media_valor'] ?? null,
-                $datos['publica'] ?? 0,
+                $categoria,
+                $dificultad,
+                $etiquetas,
+                $media_tipo,
+                $media_valor,
+                $publica,
                 $datos['id_pregunta']
             );
             

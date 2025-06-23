@@ -97,21 +97,47 @@ if ($_SESSION['rol'] === 'admin') {
     <div class="card mb-4">
         <div class="card-body">
             <form method="GET" class="row g-3">
-                <div class="col-md-3">
-                    <label for="tipo" class="form-label">Tipo de Pregunta</label>
+                <div class="col-md-2">
+                    <label for="tipo" class="form-label">Tipo</label>
                     <select class="form-select" id="tipo" name="tipo">
-                        <option value="">Todos los tipos</option>
-                        <option value="test" <?= isset($_GET['tipo']) && $_GET['tipo'] == 'test' ? 'selected' : '' ?>>Tipo Test</option>
+                        <option value="">Todos</option>
+                        <option value="test" <?= isset($_GET['tipo']) && $_GET['tipo'] == 'test' ? 'selected' : '' ?>>Test</option>
                         <option value="desarrollo" <?= isset($_GET['tipo']) && $_GET['tipo'] == 'desarrollo' ? 'selected' : '' ?>>Desarrollo</option>
                     </select>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
+                    <label for="categoria" class="form-label">Categoría</label>
+                    <select class="form-select" id="categoria" name="categoria">
+                        <option value="">Todas</option>
+                        <option value="matematicas" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'matematicas' ? 'selected' : '' ?>>Matemáticas</option>
+                        <option value="ciencias" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'ciencias' ? 'selected' : '' ?>>Ciencias</option>
+                        <option value="lenguaje" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'lenguaje' ? 'selected' : '' ?>>Lenguaje</option>
+                        <option value="historia" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'historia' ? 'selected' : '' ?>>Historia</option>
+                        <option value="geografia" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'geografia' ? 'selected' : '' ?>>Geografía</option>
+                        <option value="idiomas" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'idiomas' ? 'selected' : '' ?>>Idiomas</option>
+                        <option value="tecnologia" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'tecnologia' ? 'selected' : '' ?>>Tecnología</option>
+                        <option value="arte" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'arte' ? 'selected' : '' ?>>Arte</option>
+                        <option value="musica" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'musica' ? 'selected' : '' ?>>Música</option>
+                        <option value="educacion_fisica" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'educacion_fisica' ? 'selected' : '' ?>>Ed. Física</option>
+                        <option value="otra" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'otra' ? 'selected' : '' ?>>Otra</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="dificultad" class="form-label">Dificultad</label>
+                    <select class="form-select" id="dificultad" name="dificultad">
+                        <option value="">Todas</option>
+                        <option value="facil" <?= isset($_GET['dificultad']) && $_GET['dificultad'] == 'facil' ? 'selected' : '' ?>>Fácil</option>
+                        <option value="media" <?= isset($_GET['dificultad']) && $_GET['dificultad'] == 'media' ? 'selected' : '' ?>>Media</option>
+                        <option value="dificil" <?= isset($_GET['dificultad']) && $_GET['dificultad'] == 'dificil' ? 'selected' : '' ?>>Difícil</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
                     <label for="origen" class="form-label">Origen</label>
                     <select class="form-select" id="origen" name="origen">
-                        <option value="">Todos los orígenes</option>
+                        <option value="">Todos</option>
                         <option value="manual" <?= isset($_GET['origen']) && $_GET['origen'] == 'manual' ? 'selected' : '' ?>>Manual</option>
-                        <option value="ia" <?= isset($_GET['origen']) && $_GET['origen'] == 'ia' ? 'selected' : '' ?>>Generado por IA</option>
-                        <option value="pdf" <?= isset($_GET['origen']) && $_GET['origen'] == 'pdf' ? 'selected' : '' ?>>Extraído de PDF</option>
+                        <option value="ia" <?= isset($_GET['origen']) && $_GET['origen'] == 'ia' ? 'selected' : '' ?>>IA</option>
+                        <option value="pdf" <?= isset($_GET['origen']) && $_GET['origen'] == 'pdf' ? 'selected' : '' ?>>PDF</option>
                     </select>
                 </div>
                 <?php if ($_SESSION['rol'] == 'admin'): ?>
@@ -124,7 +150,7 @@ if ($_SESSION['rol'] === 'admin') {
                     </select>
                 </div>
                 <?php endif; ?>
-                <div class="col-md-<?= $_SESSION['rol'] == 'admin' ? '3' : '4' ?>">
+                <div class="col-md-<?= $_SESSION['rol'] == 'admin' ? '2' : '3' ?>">
                     <label for="busqueda" class="form-label">Buscar</label>
                     <input type="text" class="form-control" id="busqueda" name="busqueda" 
                            placeholder="Buscar en enunciados..." 
@@ -175,11 +201,13 @@ if ($_SESSION['rol'] === 'admin') {
                                 </th>
                                 <th>Pregunta</th>
                                 <th width="100">Tipo</th>
-                                <th width="120">Origen</th>
-                                <th width="150">Autor</th>
+                                <th width="120">Categoría</th>
+                                <th width="100">Dificultad</th>
+                                <th width="100">Origen</th>
+                                <th width="120">Autor</th>
                                 <th width="120">Estado</th>
-                                <th width="100">Respuestas</th>
-                                <th width="150">Fecha</th>
+                                <th width="80">Resp.</th>
+                                <th width="120">Fecha</th>
                                 <th width="120">Acciones</th>
                             </tr>
                         </thead>
@@ -203,12 +231,38 @@ if ($_SESSION['rol'] === 'admin') {
                                                         Multimedia: <?= ucfirst($pregunta['media_tipo']) ?>
                                                     </small>
                                                 <?php endif; ?>
+                                                <?php if (!empty($pregunta['etiquetas'])): ?>
+                                                    <div class="mt-1">
+                                                        <?php 
+                                                        $etiquetas = explode(',', $pregunta['etiquetas']);
+                                                        foreach (array_slice($etiquetas, 0, 3) as $etiqueta): 
+                                                        ?>
+                                                            <span class="badge bg-light text-dark me-1" style="font-size: 0.7em;">
+                                                                <?= htmlspecialchars(trim($etiqueta)) ?>
+                                                            </span>
+                                                        <?php endforeach; ?>
+                                                        <?php if (count($etiquetas) > 3): ?>
+                                                            <span class="badge bg-light text-muted" style="font-size: 0.7em;">+<?= count($etiquetas) - 3 ?></span>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                <?php endif; ?>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <span class="badge bg-<?= $pregunta['tipo'] == 'test' ? 'primary' : 'info' ?>">
                                             <?= ucfirst($pregunta['tipo']) ?>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <small><?= htmlspecialchars(ucfirst($pregunta['categoria'] ?? 'Otra')) ?></small>
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-<?= 
+                                            ($pregunta['dificultad'] ?? 'media') == 'facil' ? 'success' : 
+                                            (($pregunta['dificultad'] ?? 'media') == 'media' ? 'warning' : 'danger') 
+                                        ?>" style="font-size: 0.7em;">
+                                            <?= ucfirst($pregunta['dificultad'] ?? 'Media') ?>
                                         </span>
                                     </td>
                                     <td>

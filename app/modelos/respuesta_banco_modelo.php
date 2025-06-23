@@ -84,12 +84,18 @@ class RespuestaBanco {
             $query = "INSERT INTO respuestas_banco (id_pregunta, texto, correcta, media_tipo, media_valor) 
                       VALUES (?, ?, ?, ?, ?)";
             $stmt = $this->db->prepare($query);
+            
+            // Asegurar valores por defecto correctos
+            $correcta = isset($datos['correcta']) ? (int)$datos['correcta'] : 0;
+            $media_tipo = $datos['media_tipo'] ?? 'ninguno';
+            $media_valor = isset($datos['media_valor']) && $datos['media_valor'] !== null ? $datos['media_valor'] : '';
+            
             $stmt->bind_param("isiss", 
                 $datos['id_pregunta'],
                 $datos['texto'],
-                $datos['correcta'] ?? 0,
-                $datos['media_tipo'] ?? 'ninguno',
-                $datos['media_valor'] ?? null
+                $correcta,
+                $media_tipo,
+                $media_valor
             );
             
             if ($stmt->execute()) {

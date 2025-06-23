@@ -124,7 +124,7 @@ class BancoPreguntasControlador {
             if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
                 throw new Exception('Token CSRF inválido');
             }
-            
+
             // Validar datos
             $datos = $this->validarDatosPregunta($_POST);
             $datos['id_profesor'] = $_SESSION['id_usuario'];
@@ -139,13 +139,13 @@ class BancoPreguntasControlador {
                 }
                 
                 // Registrar actividad
-                $this->registro_actividad->registrar([
-                    'id_usuario' => $_SESSION['id_usuario'],
-                    'accion' => 'crear_pregunta_banco',
-                    'descripcion' => "Pregunta creada en banco: {$datos['tipo']}",
-                    'modulo' => 'banco_preguntas',
-                    'elemento_id' => $id_pregunta
-                ]);
+                $this->registro_actividad->registrar(
+                    $_SESSION['id_usuario'],
+                    'crear_pregunta_banco',
+                    "Pregunta creada en banco: {$datos['tipo']}",
+                    'banco_preguntas',
+                    $id_pregunta
+                );
                 
                 $_SESSION['mensaje_exito'] = 'Pregunta creada en el banco correctamente';
                 header("Location: " . BASE_URL . "/banco-preguntas");
@@ -211,7 +211,14 @@ class BancoPreguntasControlador {
                 $pregunta['respuestas'] = $this->respuesta_banco->obtenerPorPregunta($id_pregunta);
             }
             
-            require_once __DIR__ . '/../vistas/profesor/nueva_pregunta_banco.php';
+            $rol = $_SESSION['rol'];
+            
+            // Cargar vista según el rol
+            if ($rol == 'admin') {
+                require_once __DIR__ . '/../vistas/admin/nueva_pregunta_banco.php';
+            } else {
+                require_once __DIR__ . '/../vistas/profesor/nueva_pregunta_banco.php';
+            }
             
         } catch (Exception $e) {
             error_log("Error en mostrarFormularioEdicion(): " . $e->getMessage());
@@ -230,7 +237,7 @@ class BancoPreguntasControlador {
             }
             
             // Validar datos
-            $datos = $this->validarDatosPregunta($_POST);
+            $datos = $this->validarDatosPregunta($_POST, $id_pregunta);
             $datos['id_pregunta'] = $id_pregunta;
             
             // Actualizar pregunta
@@ -241,13 +248,13 @@ class BancoPreguntasControlador {
                 }
                 
                 // Registrar actividad
-                $this->registro_actividad->registrar([
-                    'id_usuario' => $_SESSION['id_usuario'],
-                    'accion' => 'editar_pregunta_banco',
-                    'descripcion' => "Pregunta editada en banco",
-                    'modulo' => 'banco_preguntas',
-                    'elemento_id' => $id_pregunta
-                ]);
+                $this->registro_actividad->registrar(
+                    $_SESSION['id_usuario'],
+                    'editar_pregunta_banco',
+                    "Pregunta editada en banco",
+                    'banco_preguntas',
+                    $id_pregunta
+                );
                 
                 $_SESSION['mensaje_exito'] = 'Pregunta actualizada correctamente';
             } else {
@@ -290,13 +297,13 @@ class BancoPreguntasControlador {
             // Eliminar pregunta
             if ($this->pregunta_banco->eliminar($id_pregunta)) {
                 // Registrar actividad
-                $this->registro_actividad->registrar([
-                    'id_usuario' => $_SESSION['id_usuario'],
-                    'accion' => 'eliminar_pregunta_banco',
-                    'descripcion' => "Pregunta eliminada del banco",
-                    'modulo' => 'banco_preguntas',
-                    'elemento_id' => $id_pregunta
-                ]);
+                $this->registro_actividad->registrar(
+                    $_SESSION['id_usuario'],
+                    'eliminar_pregunta_banco',
+                    "Pregunta eliminada del banco",
+                    'banco_preguntas',
+                    $id_pregunta
+                );
                 
                 $this->responderJson(['success' => 'Pregunta eliminada correctamente']);
             } else {
@@ -327,13 +334,13 @@ class BancoPreguntasControlador {
                 $accion = $publica ? 'hacer_publica_pregunta' : 'hacer_privada_pregunta';
                 
                 // Registrar actividad
-                $this->registro_actividad->registrar([
-                    'id_usuario' => $_SESSION['id_usuario'],
-                    'accion' => $accion,
-                    'descripcion' => 'Visibilidad de pregunta cambiada',
-                    'modulo' => 'banco_preguntas',
-                    'elemento_id' => $id_pregunta
-                ]);
+                $this->registro_actividad->registrar(
+                    $_SESSION['id_usuario'],
+                    $accion,
+                    'Visibilidad de pregunta cambiada',
+                    'banco_preguntas',
+                    $id_pregunta
+                );
                 
                 $this->responderJson(['success' => 'Visibilidad actualizada correctamente']);
             } else {
@@ -379,12 +386,12 @@ class BancoPreguntasControlador {
             }
             
             // Registrar actividad
-            $this->registro_actividad->registrar([
-                'id_usuario' => $_SESSION['id_usuario'],
-                'accion' => 'exportar_banco_preguntas',
-                'descripcion' => "Banco exportado en formato $formato",
-                'modulo' => 'banco_preguntas'
-            ]);
+            $this->registro_actividad->registrar(
+                $_SESSION['id_usuario'],
+                'exportar_banco_preguntas',
+                "Banco exportado en formato $formato",
+                'banco_preguntas'
+            );
             
         } catch (Exception $e) {
             error_log("Error al exportar banco: " . $e->getMessage());
@@ -414,9 +421,93 @@ class BancoPreguntasControlador {
     }
     
     /**
+     * Procesar archivo multimedia subido
+     */
+    private function procesarArchivoMultimedia($media_tipo, $pregunta_id = null) {
+        if (!isset($_FILES['media_archivo']) || $_FILES['media_archivo']['error'] !== UPLOAD_ERR_OK) {
+            return '';
+        }
+        
+        $archivo = $_FILES['media_archivo'];
+        $ruta_destino = '';
+        
+        switch ($media_tipo) {
+            case 'imagen':
+                $ruta_destino = $this->subirImagen($archivo, $pregunta_id);
+                break;
+            case 'pdf':
+                $ruta_destino = $this->subirPDF($archivo, $pregunta_id);
+                break;
+        }
+        
+        return $ruta_destino;
+    }
+    
+    /**
+     * Subir imagen
+     */
+    private function subirImagen($archivo, $pregunta_id = null) {
+        $tipos_permitidos = ['image/jpeg', 'image/png', 'image/gif'];
+        $tamano_maximo = 5 * 1024 * 1024; // 5MB
+        
+        if (!in_array($archivo['type'], $tipos_permitidos)) {
+            throw new Exception('Tipo de imagen no permitido. Solo JPG, PNG y GIF');
+        }
+        
+        if ($archivo['size'] > $tamano_maximo) {
+            throw new Exception('La imagen es demasiado grande. Máximo 5MB');
+        }
+        
+        $directorio = STORAGE_PATH . '/subidas/imagenes';
+        if (!is_dir($directorio)) {
+            mkdir($directorio, 0755, true);
+        }
+        
+        $extension = pathinfo($archivo['name'], PATHINFO_EXTENSION);
+        $nombre_archivo = 'pregunta_' . ($pregunta_id ?? time()) . '_' . uniqid() . '.' . $extension;
+        $ruta_completa = $directorio . '/' . $nombre_archivo;
+        
+        if (move_uploaded_file($archivo['tmp_name'], $ruta_completa)) {
+            return 'subidas/imagenes/' . $nombre_archivo;
+        } else {
+            throw new Exception('Error al subir la imagen');
+        }
+    }
+    
+    /**
+     * Subir PDF
+     */
+    private function subirPDF($archivo, $pregunta_id = null) {
+        $tipos_permitidos = ['application/pdf'];
+        $tamano_maximo = 10 * 1024 * 1024; // 10MB
+        
+        if (!in_array($archivo['type'], $tipos_permitidos)) {
+            throw new Exception('Solo se permiten archivos PDF');
+        }
+        
+        if ($archivo['size'] > $tamano_maximo) {
+            throw new Exception('El PDF es demasiado grande. Máximo 10MB');
+        }
+        
+        $directorio = STORAGE_PATH . '/subidas/documentos';
+        if (!is_dir($directorio)) {
+            mkdir($directorio, 0755, true);
+        }
+        
+        $nombre_archivo = 'pregunta_' . ($pregunta_id ?? time()) . '_' . uniqid() . '.pdf';
+        $ruta_completa = $directorio . '/' . $nombre_archivo;
+        
+        if (move_uploaded_file($archivo['tmp_name'], $ruta_completa)) {
+            return 'subidas/documentos/' . $nombre_archivo;
+        } else {
+            throw new Exception('Error al subir el PDF');
+        }
+    }
+
+    /**
      * Validar datos de pregunta
      */
-    private function validarDatosPregunta($datos) {
+    private function validarDatosPregunta($datos, $pregunta_id = null) {
         $errores = [];
         
         // Validaciones básicas
@@ -436,7 +527,7 @@ class BancoPreguntasControlador {
                 $tiene_correcta = false;
                 $respuestas_validas = 0;
                 
-                foreach ($datos['respuestas'] as $respuesta) {
+                foreach ($datos['respuestas'] as $index => $respuesta) {
                     if (!empty($respuesta['texto'])) {
                         $respuestas_validas++;
                         if (isset($respuesta['correcta'])) {
@@ -459,14 +550,37 @@ class BancoPreguntasControlador {
             throw new Exception(implode(', ', $errores));
         }
         
+        // Procesar multimedia
+        $media_tipo = isset($datos['media_tipo']) ? $datos['media_tipo'] : 'ninguno';
+        $media_valor = '';
+        
+        if ($media_tipo !== 'ninguno') {
+            if (in_array($media_tipo, ['imagen', 'pdf']) && isset($_FILES['media_archivo'])) {
+                // Si hay archivo, procesarlo
+                $media_valor = $this->procesarArchivoMultimedia($media_tipo, $pregunta_id);
+            } elseif (in_array($media_tipo, ['video', 'url']) && !empty($datos['media_valor'])) {
+                // Si es URL, validar formato
+                if (!filter_var($datos['media_valor'], FILTER_VALIDATE_URL)) {
+                    throw new Exception('La URL proporcionada no es válida');
+                }
+                $media_valor = $datos['media_valor'];
+            } elseif (isset($datos['media_valor_actual']) && !empty($datos['media_valor_actual'])) {
+                // Mantener archivo actual en edición
+                $media_valor = $datos['media_valor_actual'];
+            }
+        }
+        
         return [
             'tipo' => $datos['tipo'],
             'enunciado' => trim($datos['enunciado']),
-            'media_tipo' => $datos['media_tipo'] ?? 'ninguno',
-            'media_valor' => $datos['media_valor'] ?? null,
+            'categoria' => isset($datos['categoria']) ? $datos['categoria'] : 'otra',
+            'dificultad' => isset($datos['dificultad']) ? $datos['dificultad'] : 'media',
+            'etiquetas' => isset($datos['etiquetas']) ? trim($datos['etiquetas']) : '',
+            'media_tipo' => $media_tipo,
+            'media_valor' => $media_valor,
             'origen' => 'manual',
             'publica' => isset($datos['publica']) ? 1 : 0,
-            'respuestas' => $datos['respuestas'] ?? []
+            'respuestas' => isset($datos['respuestas']) && is_array($datos['respuestas']) ? $datos['respuestas'] : []
         ];
     }
     
@@ -476,6 +590,8 @@ class BancoPreguntasControlador {
     private function obtenerFiltros() {
         return [
             'tipo' => $_GET['tipo'] ?? '',
+            'categoria' => $_GET['categoria'] ?? '',
+            'dificultad' => $_GET['dificultad'] ?? '',
             'busqueda' => $_GET['busqueda'] ?? '',
             'origen' => $_GET['origen'] ?? '',
             'publica' => $_GET['publica'] ?? ''
