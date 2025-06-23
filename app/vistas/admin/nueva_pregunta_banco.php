@@ -50,9 +50,6 @@ if (!isset($_SESSION['csrf_token'])) {
                 <!-- Header -->
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h1><i class="fas fa-<?= $es_edicion ? 'edit' : 'plus' ?>"></i> <?= $es_edicion ? 'Editar' : 'Nueva' ?> Pregunta del Banco</h1>
-                    <a href="<?= BASE_URL ?>/banco-preguntas" class="btn btn-outline-secondary rounded-pill px-4">
-                        <i class="fas fa-arrow-left me-2"></i> Volver al Banco
-                    </a>
                 </div>
 
                 <!-- Mensajes de estado -->
@@ -234,7 +231,7 @@ if (!isset($_SESSION['csrf_token'])) {
                                     </button>
                                     
                                     <a href="<?= BASE_URL ?>/banco-preguntas" class="btn btn-outline-secondary w-100">
-                                        <i class="fas fa-arrow-left"></i> Volver al Banco
+                                        <i class="fas fa-times"></i> Cancelar
                                     </a>
                                 </div>
                             </div>

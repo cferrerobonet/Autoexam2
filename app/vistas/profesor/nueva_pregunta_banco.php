@@ -54,9 +54,6 @@ if ($_SESSION['rol'] === 'admin') {
                 <?= $es_edicion ? 'Modifica los datos de la pregunta' : 'Crea una nueva pregunta reutilizable' ?>
             </p>
         </div>
-        <a href="<?= BASE_URL ?>/banco-preguntas" class="btn btn-outline-secondary">
-            <i class="fas fa-arrow-left"></i> Volver al Banco
-        </a>
     </div>
 
     <!-- Mensajes -->

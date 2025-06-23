@@ -4,8 +4,9 @@
  * 
  * Gestiona el CRUD completo de usuarios del sistema
  * 
- * @author GitHub Copilot (refactorizado)
- * @version 2.0
+ * @author Sistema AUTOEXAM2
+ * @version 2.1
+ * @since 23/06/2025 Refactorizado con sanitización mejorada
  */
 class UsuariosControlador {
     private $usuarioModelo;
@@ -18,6 +19,7 @@ class UsuariosControlador {
     public function __construct() {
         // Cargar utilidades necesarias
         require_once APP_PATH . '/utilidades/sesion.php';
+        require_once APP_PATH . '/utilidades/sanitizador.php';
         require_once APP_PATH . '/modelos/usuario_modelo.php';
         require_once APP_PATH . '/modelos/registro_actividad_modelo.php';
         
@@ -152,40 +154,50 @@ class UsuariosControlador {
     private function obtenerFiltrosBusqueda() {
         $filtros = [];
         
+        // Sanitizar datos GET
+        $campos_get = ['buscar', 'rol', 'activo', 'ordenar_por', 'orden'];
+        $tipos = [
+            'buscar' => 'texto',
+            'rol' => 'texto',
+            'activo' => 'entero',
+            'ordenar_por' => 'texto',
+            'orden' => 'texto'
+        ];
+        
+        $datos_get = Sanitizador::get($campos_get, $tipos);
+        
         // Buscar
-        if (isset($_GET['buscar'])) {
-            $buscar = trim($_GET['buscar']);
+        if (!empty($datos_get['buscar'])) {
+            $buscar = $datos_get['buscar'];
             
-            // Validar longitud mínima si hay texto
+            // Validar longitud mínima
             if (strlen($buscar) > 0 && strlen($buscar) < 3) {
                 throw new Exception("La búsqueda debe contener al menos 3 caracteres.");
             }
             
-            if (!empty($buscar)) {
-                $filtros['buscar'] = $buscar;
-            }
+            $filtros['buscar'] = $buscar;
         }
         
         // Rol
-        if (isset($_GET['rol']) && in_array($_GET['rol'], ['admin', 'profesor', 'alumno'])) {
-            $filtros['rol'] = $_GET['rol'];
+        if (!empty($datos_get['rol']) && in_array($datos_get['rol'], ['admin', 'profesor', 'alumno'])) {
+            $filtros['rol'] = $datos_get['rol'];
         }
         
         // Activo
-        if (isset($_GET['activo']) && $_GET['activo'] !== '') {
-            $filtros['activo'] = (int)$_GET['activo'];
+        if (isset($datos_get['activo']) && $datos_get['activo'] !== '') {
+            $filtros['activo'] = (int)$datos_get['activo'];
         }
         
         // Ordenación
-        if (isset($_GET['ordenar_por']) && !empty($_GET['ordenar_por'])) {
+        if (!empty($datos_get['ordenar_por'])) {
             // Validar campos de ordenación permitidos
             $camposPermitidos = ['id_usuario', 'nombre', 'apellidos', 'rol', 'activo', 'ultimo_acceso'];
             
-            if (in_array($_GET['ordenar_por'], $camposPermitidos)) {
-                $filtros['ordenar_por'] = $_GET['ordenar_por'];
+            if (in_array($datos_get['ordenar_por'], $camposPermitidos)) {
+                $filtros['ordenar_por'] = $datos_get['ordenar_por'];
                 
                 // Dirección de ordenación (ASC/DESC)
-                $filtros['orden'] = isset($_GET['orden']) && strtoupper($_GET['orden']) === 'DESC' ? 'DESC' : 'ASC';
+                $filtros['orden'] = (!empty($datos_get['orden']) && strtoupper($datos_get['orden']) === 'DESC') ? 'DESC' : 'ASC';
             }
         }
         
@@ -198,6 +210,9 @@ class UsuariosControlador {
      * @return void
      */
     private function mostrarListaVacia() {
+        // Sanitizar parámetros GET
+        $datos_get = Sanitizador::get(['buscar', 'rol', 'activo']);
+        
         $datos = [
             'titulo' => 'Gestión de Usuarios',
             'usuarios' => [],
@@ -206,9 +221,9 @@ class UsuariosControlador {
             'por_pagina' => 10,
             'total_usuarios' => 0,
             'filtros' => [
-                'buscar' => isset($_GET['buscar']) ? htmlspecialchars($_GET['buscar']) : '',
-                'rol' => isset($_GET['rol']) ? htmlspecialchars($_GET['rol']) : '',
-                'activo' => isset($_GET['activo']) ? htmlspecialchars($_GET['activo']) : ''
+                'buscar' => $datos_get['buscar'] ?? '',
+                'rol' => $datos_get['rol'] ?? '',
+                'activo' => $datos_get['activo'] ?? ''
             ],
             'csrf_token' => $this->sesion->generarTokenCSRF()
         ];
@@ -408,17 +423,26 @@ class UsuariosControlador {
      * @throws Exception Si hay errores de validación
      */
     private function obtenerDatosUsuario() {
-        $datos = [
-            'nombre' => trim($_POST['nombre']),
-            'apellidos' => trim($_POST['apellidos']),
-            'correo' => filter_var(trim($_POST['correo']), FILTER_SANITIZE_EMAIL),
-            'contrasena' => $_POST['contrasena'],
-            'rol' => $_POST['rol'],
-            'activo' => isset($_POST['activo']) ? 1 : 0
+        // Cargar clase sanitizador si no está disponible
+        if (!class_exists('Sanitizador')) {
+            require_once APP_PATH . '/utilidades/sanitizador.php';
+        }
+        
+        // Campos a obtener con sus tipos
+        $campos = ['nombre', 'apellidos', 'correo', 'contrasena', 'rol'];
+        $tipos = [
+            'correo' => 'email',
+            'rol' => 'texto'
         ];
         
+        // Sanitizar datos POST
+        $datos = Sanitizador::post($campos, $tipos);
+        
+        // Establecer estado activo
+        $datos['activo'] = isset($_POST['activo']) ? 1 : 0;
+        
         // Validar email
-        if (!filter_var($datos['correo'], FILTER_VALIDATE_EMAIL)) {
+        if (!Sanitizador::esEmailValido($datos['correo'])) {
             throw new Exception('El correo electrónico no tiene un formato válido.');
         }
         
@@ -429,7 +453,7 @@ class UsuariosControlador {
         
         // Procesar curso asignado si corresponde
         if (!empty($_POST['curso_asignado'])) {
-            $datos['curso_asignado'] = (int)$_POST['curso_asignado'];
+            $datos['curso_asignado'] = Sanitizador::entero($_POST['curso_asignado']);
         }
         
         // Procesar foto si se subió
