@@ -53,9 +53,15 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 </style>
 
 <div class="container-fluid px-4 py-4">
-    <!-- Header de la página -->
+    <!-- Header principal -->
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1><i class="fas fa-book"></i> Cursos</h1>
+        <div>
+            <h1 class="h3 mb-0">
+                <i class="fas fa-book text-primary me-2"></i>
+                Gestión de Cursos
+            </h1>
+            <p class="text-muted mb-0">Administra y organiza todos tus cursos</p>
+        </div>
         <div class="d-flex gap-2">
             <!-- Acciones masivas -->
             <div class="dropdown">
@@ -116,8 +122,80 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     endif; 
     ?>
 
+    <!-- Estadísticas -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card stats-card shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0">
+                            <div class="stats-icon bg-primary-gradient">
+                                <i class="fas fa-book text-white fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <div class="stats-label">TOTAL CURSOS</div>
+                            <div class="stats-value"><?= $total_registros ?></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stats-card shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0">
+                            <div class="stats-icon bg-success-gradient">
+                                <i class="fas fa-check-circle text-white fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <div class="stats-label">CURSOS ACTIVOS</div>
+                            <div class="stats-value"><?= count(array_filter($cursos, function($c) { return $c['activo']; })) ?></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stats-card shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0">
+                            <div class="stats-icon bg-info-gradient">
+                                <i class="fas fa-users text-white fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <div class="stats-label">TOTAL ALUMNOS</div>
+                            <div class="stats-value"><?= array_sum(array_column($cursos, 'total_alumnos')) ?></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stats-card shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0">
+                            <div class="stats-icon bg-warning-gradient">
+                                <i class="fas fa-puzzle-piece text-white fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                            <div class="stats-label">TOTAL MÓDULOS</div>
+                            <div class="stats-value"><?= array_sum(array_column($cursos, 'total_modulos')) ?></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Filtros y opciones -->
-    <div class="card shadow-sm mb-4">
+    <div class="card filters-card shadow-sm mb-4">
         <div class="card-header bg-light">
             <h5 class="mb-0 d-flex align-items-center">
                 <i class="fas fa-filter text-primary me-2"></i> Filtros y opciones
@@ -198,18 +276,18 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     </div>
 
     <!-- Tabla de cursos -->
-    <div class="card shadow-sm mb-4">
-        <div class="card-header bg-light">
-            <h5 class="mb-0 d-flex justify-content-between align-items-center">
-                <div>
-                    <i class="fas fa-table text-primary me-2"></i> Cursos
-                </div>
+    <div class="card data-table shadow-sm mb-4">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">
+                    <i class="fas fa-table text-primary me-2"></i>Cursos
+                </h5>
                 <?php if (count($cursos) > 0): ?>
-                <span class="badge bg-primary rounded-pill">
-                    <?= $total_registros ?> curso<?= $total_registros != 1 ? 's' : '' ?>
-                </span>
+                    <span class="badge bg-primary rounded-pill">
+                        <?= $total_registros ?> curso<?= $total_registros != 1 ? 's' : '' ?>
+                    </span>
                 <?php endif; ?>
-            </h5>
+            </div>
         </div>
         <div class="card-body">
             <?php if (count($cursos) > 0): ?>

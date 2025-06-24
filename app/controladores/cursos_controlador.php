@@ -792,15 +792,38 @@ class CursosControlador {
                 header('Location: ' . BASE_URL . '/cursos');
                 exit;
             }
+
+            // Parámetros de paginación
+            $pagina = isset($_GET['pagina']) ? max(1, (int)$_GET['pagina']) : 1;
+            $limite = isset($_GET['limite']) ? max(5, min(50, (int)$_GET['limite'])) : 10;
+            $offset = ($pagina - 1) * $limite;
+
+            // Filtros de búsqueda
+            $filtros = [
+                'buscar' => isset($_GET['buscar']) ? trim($_GET['buscar']) : '',
+                'estado' => isset($_GET['estado']) ? $_GET['estado'] : '',
+                'ordenar_por' => isset($_GET['ordenar_por']) ? $_GET['ordenar_por'] : 'nombre',
+                'orden' => isset($_GET['orden']) && in_array($_GET['orden'], ['ASC', 'DESC']) ? $_GET['orden'] : 'ASC',
+                'curso_id' => $id_curso
+            ];
             
-            // Obtener los alumnos asignados al curso
-            $alumnos = $this->curso->obtenerAlumnosPorCurso($id_curso);
+            // Obtener los alumnos asignados al curso con filtros y paginación
+            $alumnos = $this->curso->obtenerAlumnosPorCursoConFiltros($id_curso, $filtros, $limite, $offset);
+            
+            // Contar total para paginación
+            $totalRegistros = $this->curso->contarAlumnosPorCurso($id_curso, $filtros);
+            $totalPaginas = ceil($totalRegistros / $limite);
             
             // Datos para la vista
             $datos = [
                 'titulo' => 'Alumnos del Curso',
                 'curso' => $curso,
                 'alumnos' => $alumnos,
+                'total_registros' => $totalRegistros,
+                'pagina_actual' => $pagina,
+                'total_paginas' => $totalPaginas,
+                'limite' => $limite,
+                'filtros' => $filtros,
                 'csrf_token' => $this->sesion->generarTokenCSRF()
             ];
             

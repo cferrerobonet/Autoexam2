@@ -21,103 +21,64 @@ $examen = $datos['examen'] ?? [];
 $cursos = $datos['cursos'] ?? [];
 $modulos = $datos['modulos'] ?? [];
 $csrf_token = $datos['csrf_token'] ?? $_SESSION['csrf_token'];
-
-// Incluir archivos según el rol
-$es_admin = $_SESSION['rol'] === 'admin';
-$head_file = $es_admin ? '../parciales/head_admin.php' : '../parciales/head_profesor.php';
-$navbar_file = $es_admin ? '../parciales/navbar_admin.php' : '../parciales/navbar_profesor.php';
-$footer_file = $es_admin ? '../parciales/footer_admin.php' : '../parciales/footer_profesor.php';
 ?>
 
-<?php require_once APP_PATH . '/vistas/parciales/' . $head_file; ?>
-
-<body class="bg-light">
-    <?php require_once APP_PATH . '/vistas/parciales/' . $navbar_file; ?>
-
-    <div class="container-fluid mt-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <!-- Estilos personalizados -->
-                <style>
-                    .bg-purple {
-                        background-color: #8a5cd1 !important;
-                    }
-                    .text-purple {
-                        color: #8a5cd1 !important;
-                    }
-                    .border-purple {
-                        border-color: #8a5cd1 !important;
-                    }
-                    .bg-purple-subtle {
-                        background-color: rgba(138, 92, 209, 0.1) !important;
-                    }
-                    .pregunta-item {
-                        border: 1px solid #dee2e6;
-                        border-radius: 8px;
-                        margin-bottom: 15px;
-                        transition: all 0.3s;
-                    }
-                    .pregunta-item:hover {
-                        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                    }
-                    .respuesta-item {
-                        border-left: 3px solid #dee2e6;
-                        padding: 10px;
-                        margin: 5px 0;
-                        border-radius: 0 5px 5px 0;
-                    }
-                    .respuesta-item.correcta {
-                        border-left-color: #28a745;
-                        background-color: #f8fff9;
-                    }
-                </style>
-                
-                <!-- Header -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h1><i class="fas fa-<?= $es_edicion ? 'edit' : 'plus' ?>"></i> <?= $titulo_pagina ?></h1>
-                    <div class="d-flex gap-2">
-                        <?php if ($es_edicion): ?>
-                            <a href="<?= BASE_URL ?>/examenes/ver/<?= $examen['id_examen'] ?>" class="btn btn-outline-info rounded-pill px-4">
-                                <i class="fas fa-eye me-2"></i> Previsualizar
-                            </a>
-                        <?php endif; ?>
-                        <a href="<?= BASE_URL ?>/examenes" class="btn btn-outline-secondary rounded-pill px-4">
-                            <i class="fas fa-arrow-left me-2"></i> Volver a la lista
-                        </a>
-                    </div>
+<div class="container-fluid px-4 py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="fs-3 fw-bold text-dark mb-2">
+                        <i class="fas fa-<?= $es_edicion ? 'edit' : 'plus' ?> text-primary me-2"></i>
+                        <?= $titulo_pagina ?>
+                    </h1>
+                    <p class="text-muted mb-0">
+                        <?= $es_edicion ? 'Modifica los datos del examen seleccionado' : 'Complete los campos para crear un nuevo examen' ?>
+                    </p>
                 </div>
-
-                <!-- Mensajes de estado -->
-                <?php if (isset($_SESSION['exito'])): ?>
-                    <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
-                        <i class="fas fa-check-circle"></i> <?= htmlspecialchars($_SESSION['exito']) ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <?php unset($_SESSION['exito']); ?>
-                <?php endif; ?>
-                
-                <?php if (isset($_SESSION['error'])): ?>
-                    <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
-                        <i class="fas fa-exclamation-circle"></i> <?= htmlspecialchars($_SESSION['error']) ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <?php unset($_SESSION['error']); ?>
-                <?php endif; ?>
-
-                <!-- Formulario -->
-                <form method="POST" action="<?= BASE_URL ?>/examenes/<?= $es_edicion ? 'actualizar' : 'guardar' ?>" id="formExamen" enctype="multipart/form-data">
+                <div class="d-flex gap-2">
                     <?php if ($es_edicion): ?>
-                        <input type="hidden" name="id_examen" value="<?= $examen['id_examen'] ?>">
+                        <a href="<?= BASE_URL ?>/examenes/ver/<?= $examen['id_examen'] ?>" class="btn btn-outline-info">
+                            <i class="fas fa-eye me-2"></i>Ver examen
+                        </a>
                     <?php endif; ?>
-                    <input type="hidden" name="csrf_token" value="<?= $csrf_token ?>">
-                    
-                    <!-- Información Básica -->
-                    <div class="card shadow-sm mb-4">
-                        <div class="card-header bg-light">
-                            <h5 class="mb-0 d-flex align-items-center">
-                                <i class="fas fa-info-circle text-primary me-2"></i> Información Básica
-                            </h5>
-                        </div>
+                    <a href="<?= BASE_URL ?>/examenes" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Volver a exámenes
+                    </a>
+                </div>
+            
+            <!-- Mensajes de estado -->
+            <?php if (isset($_SESSION['exito'])): ?>
+                <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="fas fa-check-circle me-2"></i><?= htmlspecialchars($_SESSION['exito']) ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <?php unset($_SESSION['exito']); ?>
+            <?php endif; ?>
+            
+            <?php if (isset($_SESSION['error'])): ?>
+                <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="fas fa-exclamation-circle me-2"></i><?= htmlspecialchars($_SESSION['error']) ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <?php unset($_SESSION['error']); ?>
+            <?php endif; ?>
+
+            <!-- Formulario -->
+            <form method="POST" action="<?= BASE_URL ?>/examenes/<?= $es_edicion ? 'actualizar' : 'guardar' ?>" id="formExamen" enctype="multipart/form-data">
+                <?php if ($es_edicion): ?>
+                    <input type="hidden" name="id_examen" value="<?= $examen['id_examen'] ?>">
+                <?php endif; ?>
+                <input type="hidden" name="csrf_token" value="<?= $csrf_token ?>">
+                
+                <!-- Información Básica -->
+                <div class="card shadow-sm form-card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-info-circle text-primary me-2"></i>Información Básica
+                        </h5>
+                    </div>
                         <div class="card-body">
                             <div class="row">
                                 <!-- Título -->
@@ -435,7 +396,6 @@ $footer_file = $es_admin ? '../parciales/footer_admin.php' : '../parciales/foote
             });
         });
     </script>
-
-    <?php require_once APP_PATH . '/vistas/parciales/' . $footer_file; ?>
-</body>
-</html>
+        </div>
+    </div>
+</div>

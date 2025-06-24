@@ -23,53 +23,45 @@ if (!isset($_SESSION['csrf_token'])) {
 }
 ?>
 
-<?php require_once APP_PATH . '/vistas/parciales/head_profesor.php'; ?>
-
-<body class="bg-light">
-    <?php require_once APP_PATH . '/vistas/parciales/navbar_profesor.php'; ?>
-
-    <div class="container-fluid px-4 py-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <!-- Estilos personalizados -->
-                <style>
-                    .bg-purple {
-                        background-color: #8a5cd1 !important;
-                    }
-                    .text-purple {
-                        color: #8a5cd1 !important;
-                    }
-                    .border-purple {
-                        border-color: #8a5cd1 !important;
-                    }
-                    .bg-purple-subtle {
-                        background-color: rgba(138, 92, 209, 0.1) !important;
-                    }
-                </style>
-                
-                <!-- Header -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h1><i class="fas fa-<?= $es_edicion ? 'edit' : 'plus' ?>"></i> <?= $es_edicion ? 'Editar' : 'Nueva' ?> Pregunta del Banco</h1>
+<div class="container-fluid px-4 py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="fs-3 fw-bold text-dark mb-2">
+                        <i class="fas fa-<?= $es_edicion ? 'edit' : 'plus' ?> text-primary me-2"></i>
+                        <?= $es_edicion ? 'Editar' : 'Nueva' ?> Pregunta del Banco
+                    </h1>
+                    <p class="text-muted mb-0">
+                        <?= $es_edicion ? 'Modifica los datos de la pregunta seleccionada' : 'Complete los campos para crear una nueva pregunta' ?>
+                    </p>
                 </div>
+                <div class="d-flex gap-2">
+                    <a href="<?= BASE_URL ?>/banco-preguntas" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Volver al banco
+                    </a>
+                </div>
+            </div>
 
-                <!-- Mensajes de estado -->
-                <?php if (isset($_SESSION['mensaje_error'])): ?>
-                    <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
-                        <i class="fas fa-exclamation-triangle"></i> <?= $_SESSION['mensaje_error'] ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <?php unset($_SESSION['mensaje_error']); ?>
-                <?php endif; ?>
+            <!-- Mensajes de estado -->
+            <?php if (isset($_SESSION['mensaje_error'])): ?>
+                <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="fas fa-exclamation-triangle me-2"></i><?= $_SESSION['mensaje_error'] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <?php unset($_SESSION['mensaje_error']); ?>
+            <?php endif; ?>
 
-                <?php if (isset($_SESSION['mensaje_exito'])): ?>
-                    <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
-                        <i class="fas fa-check-circle"></i> <?= $_SESSION['mensaje_exito'] ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <?php unset($_SESSION['mensaje_exito']); ?>
-                <?php endif; ?>
+            <?php if (isset($_SESSION['mensaje_exito'])): ?>
+                <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="fas fa-check-circle me-2"></i><?= $_SESSION['mensaje_exito'] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <?php unset($_SESSION['mensaje_exito']); ?>
+            <?php endif; ?>
 
-                <!-- Formulario -->
+            <!-- Formulario -->
                 <form method="POST" action="<?= BASE_URL ?>/banco-preguntas/<?= $es_edicion ? 'editar/' . $pregunta['id_pregunta'] : 'crear' ?>" enctype="multipart/form-data" class="needs-validation" novalidate>
                     <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                     <?php if ($es_edicion): ?>
@@ -510,8 +502,6 @@ if (!isset($_SESSION['csrf_token'])) {
         <?php endif; ?>
     });
     </script>
-
-    <?php require_once APP_PATH . '/vistas/parciales/footer_profesor.php'; ?>
-    <?php require_once APP_PATH . '/vistas/parciales/scripts_profesor.php'; ?>
-</body>
-</html>
+        </div>
+    </div>
+</div>

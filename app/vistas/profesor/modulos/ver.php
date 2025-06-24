@@ -19,52 +19,46 @@ if ($modulo['id_profesor'] != $_SESSION['id_usuario']) {
 }
 ?>
 
-<?php require_once APP_PATH . '/vistas/parciales/head_profesor.php'; ?>
-
-<body class="bg-light">
-    <?php require_once APP_PATH . '/vistas/parciales/navbar_profesor.php'; ?>
-
-    <div class="container-fluid mt-4">
-        <div class="row">
-            <div class="col-12">
-                <!-- Título -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div>
-                        <h1 class="h3 mb-0">
-                            <i class="fas fa-puzzle-piece text-primary me-2"></i>
-                            <?= htmlspecialchars($modulo['titulo']) ?>
-                        </h1>
-                        <p class="text-muted mb-0">Detalles del módulo</p>
-                    </div>
-                    <div>
-                        <a href="<?= BASE_URL ?>/modulos" class="btn btn-outline-secondary">
-                            <i class="fas fa-arrow-left me-1"></i>Volver al listado
-                        </a>
-                        <a href="<?= BASE_URL ?>/modulos/editar/<?= $modulo['id_modulo'] ?>" class="btn btn-primary">
-                            <i class="fas fa-edit me-1"></i>Editar
-                        </a>
-                    </div>
+<div class="container-fluid px-4 py-4">
+    <div class="row">
+        <div class="col-12">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="fs-3 fw-bold text-dark mb-2">
+                        <i class="fas fa-puzzle-piece text-primary me-2"></i>
+                        <?= htmlspecialchars($modulo['titulo']) ?>
+                    </h1>
+                    <p class="text-muted mb-0">Detalles del módulo</p>
                 </div>
+                <div class="d-flex gap-2">
+                    <a href="<?= BASE_URL ?>/modulos" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Volver al listado
+                    </a>
+                    <a href="<?= BASE_URL ?>/modulos/editar/<?= $modulo['id_modulo'] ?>" class="btn btn-primary">
+                        <i class="fas fa-edit me-2"></i>Editar
+                    </a>
+                </div>
+            </div>
 
-                <!-- Mensajes -->
-                <?php if (isset($_SESSION['error'])): ?>
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <i class="fas fa-exclamation-circle me-2"></i>
-                        <?= htmlspecialchars($_SESSION['error']) ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <?php unset($_SESSION['error']); ?>
-                <?php endif; ?>
+            <!-- Mensajes de estado -->
+            <?php if (isset($_SESSION['error'])): ?>
+                <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="fas fa-exclamation-circle me-2"></i><?= htmlspecialchars($_SESSION['error']) ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <?php unset($_SESSION['error']); ?>
+            <?php endif; ?>
 
-                <div class="row">
-                    <!-- Información del módulo -->
-                    <div class="col-lg-8">
-                        <div class="card shadow-sm mb-4">
-                            <div class="card-header bg-light">
-                                <h5 class="card-title mb-0">
-                                    <i class="fas fa-info-circle me-2"></i>Información del módulo
-                                </h5>
-                            </div>
+            <div class="row">
+                <!-- Información del módulo -->
+                <div class="col-lg-8">
+                    <div class="card shadow-sm form-card mb-4">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-info-circle text-primary me-2"></i>Información del módulo
+                            </h5>
+                        </div>
                             <div class="card-body">
                                 <dl class="row">
                                     <dt class="col-sm-3">ID:</dt>
@@ -193,7 +187,4 @@ if ($modulo['id_profesor'] != $_SESSION['id_usuario']) {
             </div>
         </div>
     </div>
-
-    <?php require_once APP_PATH . '/vistas/parciales/footer.php'; ?>
-</body>
-</html>
+</div>

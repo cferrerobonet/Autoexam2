@@ -11,41 +11,40 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
 }
 ?>
 
-<!-- Título -->
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <div>
-        <h1 class="h3 mb-0">
-            <i class="fas fa-puzzle-piece text-primary me-2"></i>
-            <?= $datos['titulo'] ?>
-        </h1>
-        <p class="text-muted mb-0">Complete los campos para crear un nuevo módulo</p>
+<div class="container-fluid px-4 py-4">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="fs-3 fw-bold text-dark mb-2">
+                <i class="fas fa-puzzle-piece text-primary me-2"></i>
+                <?= $datos['titulo'] ?>
+            </h1>
+            <p class="text-muted mb-0">Complete los campos para crear un nuevo módulo</p>
+        </div>
+        <div class="d-flex gap-2">
+            <a href="<?= BASE_URL ?>/modulos" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Volver a módulos
+            </a>
+        </div>
     </div>
-    <div>
-        <a href="<?= BASE_URL ?>/modulos" class="btn btn-outline-secondary">
-            <i class="fas fa-arrow-left me-1"></i>Volver a módulos
-        </a>
-    </div>
-</div>
 
-<!-- Mensajes -->
-<?php if (isset($_SESSION['error'])): ?>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <i class="fas fa-exclamation-circle me-2"></i>
-        <?= htmlspecialchars($_SESSION['error']) ?>
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    </div>
-    <?php unset($_SESSION['error']); ?>
-<?php endif; ?>
+    <!-- Mensajes de estado -->
+    <?php if (isset($_SESSION['error'])): ?>
+        <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+            <i class="fas fa-exclamation-circle me-2"></i><?= htmlspecialchars($_SESSION['error']) ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        <?php unset($_SESSION['error']); ?>
+    <?php endif; ?>
 
-<!-- Formulario -->
-<div class="row">
-    <div class="col-lg-8">
-        <div class="card shadow-sm">
-            <div class="card-header bg-light">
-                <h5 class="card-title mb-0">
-                    <i class="fas fa-edit me-2"></i>Información del módulo
-                </h5>
-            </div>
+    <!-- Formulario -->    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow-sm form-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-edit me-2"></i>Información del módulo
+                    </h5>
+                </div>
             <div class="card-body">
                 <form method="POST" action="<?= BASE_URL ?>/modulos/crear" novalidate>
                     <input type="hidden" name="csrf_token" value="<?= $datos['csrf_token'] ?>">
@@ -148,10 +147,10 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
                     
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-primary btn-lg">
-                            <i class="fas fa-save me-1"></i>Crear módulo
+                            <i class="fas fa-save me-2"></i>Crear módulo
                         </button>
                         <a href="<?= BASE_URL ?>/modulos" class="btn btn-outline-secondary btn-lg">
-                            <i class="fas fa-times me-1"></i>Cancelar
+                            <i class="fas fa-times me-2"></i>Cancelar
                         </a>
                     </div>
                 </form>

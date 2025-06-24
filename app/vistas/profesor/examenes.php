@@ -17,70 +17,74 @@ if (!isset($_SESSION['rol']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'
 
 <body class="bg-light">
     <?php require_once APP_PATH . '/vistas/parciales/navbar_profesor.php'; ?>
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>/recursos/css/cursos.css">
+    <style>
+        .bg-purple {
+            background-color: #8a5cd1 !important;
+        }
+        .text-purple {
+            color: #8a5cd1 !important;
+        }
+        .border-purple {
+            border-color: #8a5cd1 !important;
+        }
+        .bg-purple-subtle {
+            background-color: rgba(138, 92, 209, 0.1) !important;
+        }
+    </style>
 
-    <div class="container-fluid mt-4">
-        <div class="row">
-            <div class="col-12">
-                <!-- Estilos personalizados -->
-                <link rel="stylesheet" href="<?= BASE_URL ?>/recursos/css/cursos.css">
-                <style>
-                    .bg-purple {
-                        background-color: #8a5cd1 !important;
-                    }
-                    .text-purple {
-                        color: #8a5cd1 !important;
-                    }
-                    .border-purple {
-                        border-color: #8a5cd1 !important;
-                    }
-                    .bg-purple-subtle {
-                        background-color: rgba(138, 92, 209, 0.1) !important;
-                    }
-                </style>
-
-                <!-- Header de la página -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h1><i class="fas fa-file-alt"></i> Gestión de Exámenes</h1>
-                    <div class="d-flex gap-2">
-                        <!-- Acciones masivas -->
-                        <div class="dropdown">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" 
-                                    id="accionesMasivas" data-bs-toggle="dropdown" 
-                                    aria-expanded="false" disabled>
-                                <i class="fas fa-tasks"></i> Acciones Masivas
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="accionesMasivas">
-                                <li><a class="dropdown-item" href="#" onclick="accionMasiva('desactivar')">
-                                    <i class="fas fa-ban text-danger"></i> Desactivar Seleccionados
-                                </a></li>
-                                <li><a class="dropdown-item" href="#" onclick="accionMasiva('exportar')">
-                                    <i class="fas fa-download text-success"></i> Exportar Seleccionados
-                                </a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Exportar todos -->
-                        <a href="<?= BASE_URL ?>/examenes/exportar?<?= http_build_query($datos['filtros'] ?? []) ?>" 
-                           class="btn btn-outline-success">
-                            <i class="fas fa-file-export"></i> Exportar Filtrados
-                        </a>
-
-                        <!-- Nuevo examen -->
-                        <a href="<?= BASE_URL ?>/examenes/crear" class="btn btn-primary">
-                            <i class="fas fa-plus"></i> Nuevo Examen
-                        </a>
-                        
-                        <!-- Importar exámenes -->
-                        <a href="<?= BASE_URL ?>/examenes/importar" class="btn btn-success">
-                            <i class="fas fa-upload"></i> Importar
-                        </a>
-                        
-                        <!-- Estadísticas -->
-                        <a href="<?= BASE_URL ?>/examenes/estadisticas" class="btn btn-info">
-                            <i class="fas fa-chart-bar"></i> Estadísticas
-                        </a>
-                    </div>
+    <div class="container-fluid px-4 py-4">
+        <!-- Header principal -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h3 mb-0">
+                    <i class="fas fa-file-alt text-primary me-2"></i>
+                    Gestión de Exámenes
+                </h1>
+                <p class="text-muted mb-0">Crea y administra los exámenes de tus cursos</p>
+            </div>
+            <div class="d-flex gap-2">
+                <!-- Acciones masivas -->
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" 
+                            id="accionesMasivas" data-bs-toggle="dropdown" 
+                            aria-expanded="false" disabled>
+                        <i class="fas fa-tasks"></i> Acciones Masivas
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="accionesMasivas">
+                        <li><a class="dropdown-item" href="#" onclick="accionMasiva('desactivar')">
+                            <i class="fas fa-ban text-danger"></i> Desactivar Seleccionados
+                        </a></li>
+                        <li><a class="dropdown-item" href="#" onclick="accionMasiva('exportar')">
+                            <i class="fas fa-download text-success"></i> Exportar Seleccionados
+                        </a></li>
+                    </ul>
                 </div>
+
+                <!-- Exportar todos -->
+                <a href="<?= BASE_URL ?>/examenes/exportar?<?= http_build_query($datos['filtros'] ?? []) ?>" 
+                   class="btn btn-outline-success">
+                    <i class="fas fa-file-export"></i> Exportar Filtrados
+                </a>
+
+                <!-- Nuevo examen -->
+                <a href="<?= BASE_URL ?>/examenes/crear" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Nuevo Examen
+                </a>
+                
+                <!-- Importar exámenes -->
+                <a href="<?= BASE_URL ?>/examenes/importar" class="btn btn-success">
+                    <i class="fas fa-upload"></i> Importar
+                </a>
+                
+                <!-- Estadísticas -->
+                <a href="<?= BASE_URL ?>/examenes/estadisticas" class="btn btn-info">
+                    <i class="fas fa-chart-bar"></i> Estadísticas
+                </a>
+            </div>
+        </div>
 
                 <!-- Mensajes de estado -->
                 <?php if (isset($_SESSION['exito'])): ?>
@@ -98,6 +102,78 @@ if (!isset($_SESSION['rol']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'
                     </div>
                     <?php unset($_SESSION['error']); ?>
                 <?php endif; ?>
+
+                <!-- Estadísticas -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card stats-card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="stats-icon bg-primary-gradient">
+                                    <i class="fas fa-file-alt text-white fa-lg"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="stats-label">TOTAL EXÁMENES</div>
+                                <div class="stats-value"><?= count($datos['examenes'] ?? []) ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="stats-icon bg-success-gradient">
+                                    <i class="fas fa-play text-white fa-lg"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="stats-label">ACTIVOS</div>
+                                <div class="stats-value"><?= count(array_filter($datos['examenes'] ?? [], function($e) { return $e['estado'] === 'activo'; })) ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="stats-icon bg-warning-gradient">
+                                    <i class="fas fa-edit text-white fa-lg"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="stats-label">BORRADORES</div>
+                                <div class="stats-value"><?= count(array_filter($datos['examenes'] ?? [], function($e) { return $e['estado'] === 'borrador'; })) ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="stats-icon bg-info-gradient">
+                                    <i class="fas fa-check text-white fa-lg"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="stats-label">FINALIZADOS</div>
+                                <div class="stats-value"><?= count(array_filter($datos['examenes'] ?? [], function($e) { return $e['estado'] === 'finalizado'; })) ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
                 <!-- Filtros y opciones -->
                 <div class="card mb-4">
@@ -174,70 +250,6 @@ if (!isset($_SESSION['rol']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'
                                 </a>
                             </div>
                         </form>
-                    </div>
-                </div>
-
-                <!-- Estadísticas rápidas -->
-                <div class="row mb-4">
-                    <div class="col-md-3">
-                        <div class="card border-0 shadow-sm bg-primary text-white">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <i class="fas fa-file-alt fa-2x opacity-75"></i>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <div class="h4 mb-0"><?= $datos['estadisticas']['total'] ?? 0 ?></div>
-                                        <div class="small">Total Exámenes</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card border-0 shadow-sm bg-success text-white">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <i class="fas fa-check-circle fa-2x opacity-75"></i>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <div class="h4 mb-0"><?= $datos['estadisticas']['activos'] ?? 0 ?></div>
-                                        <div class="small">Exámenes Activos</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card border-0 shadow-sm bg-warning text-dark">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <i class="fas fa-edit fa-2x opacity-75"></i>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <div class="h4 mb-0"><?= $datos['estadisticas']['borradores'] ?? 0 ?></div>
-                                        <div class="small">Borradores</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card border-0 shadow-sm bg-info text-white">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <i class="fas fa-users fa-2x opacity-75"></i>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <div class="h4 mb-0"><?= $datos['estadisticas']['alumnos_realizando'] ?? 0 ?></div>
-                                        <div class="small">Alumnos Realizando</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 

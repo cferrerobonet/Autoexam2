@@ -31,6 +31,7 @@
     <!-- Estilos personalizados unificados -->
     <link href="<?= BASE_URL ?>/recursos/css/estilos.css?v=<?= time() ?>" rel="stylesheet">
     <link href="<?= BASE_URL ?>/recursos/css/profesor.css?v=<?= time() ?>" rel="stylesheet">
+    <link href="<?= BASE_URL ?>/recursos/css/profesor-views.css?v=<?= time() ?>" rel="stylesheet">
     
     <!-- Favicon -->
     <link rel="icon" href="<?= BASE_URL ?>/publico/recursos/imagenes/favicon.ico" type="image/x-icon">

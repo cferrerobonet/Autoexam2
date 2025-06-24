@@ -16,44 +16,49 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
 extract($datos);
 ?>
 
-<?php require_once APP_PATH . '/vistas/parciales/head_admin.php'; ?>
-
-<body class="bg-light">
-    <?php require_once APP_PATH . '/vistas/parciales/navbar_profesor.php'; ?>
-
-    <div class="container-fluid mt-4">
-        <!-- Header -->
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1><i class="fas fa-users"></i> Gestión de Alumnos</h1>
+<div class="container-fluid px-4 py-4">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="fs-3 fw-bold text-dark mb-2">
+                <i class="fas fa-users text-primary me-2"></i>Gestión de Alumnos
+            </h1>
+            <p class="text-muted mb-0">Lista y gestión de todos los alumnos del sistema</p>
+        </div>
+        <div class="d-flex gap-2">
+            <a href="<?= BASE_URL ?>/usuarios/crear" class="btn btn-primary">
+                <i class="fas fa-plus me-2"></i>Nuevo Alumno
+            </a>
             <a href="<?= BASE_URL ?>/cursos" class="btn btn-outline-secondary">
-                <i class="fas fa-arrow-left"></i> Volver a Cursos
+                <i class="fas fa-arrow-left me-2"></i>Volver a Cursos
             </a>
         </div>
+    </div>
 
-        <!-- Alertas -->
-        <?php if (isset($_SESSION['exito'])): ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <i class="fas fa-check-circle"></i> <?= htmlspecialchars($_SESSION['exito']) ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
-            <?php unset($_SESSION['exito']); ?>
-        <?php endif; ?>
+    <!-- Mensajes de estado -->
+    <?php if (isset($_SESSION['exito'])): ?>
+        <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+            <i class="fas fa-check-circle me-2"></i><?= htmlspecialchars($_SESSION['exito']) ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        <?php unset($_SESSION['exito']); ?>
+    <?php endif; ?>
 
-        <?php if (isset($_SESSION['error'])): ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <i class="fas fa-exclamation-circle"></i> <?= htmlspecialchars($_SESSION['error']) ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
-            <?php unset($_SESSION['error']); ?>
-        <?php endif; ?>
+    <?php if (isset($_SESSION['error'])): ?>
+        <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+            <i class="fas fa-exclamation-circle me-2"></i><?= htmlspecialchars($_SESSION['error']) ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        <?php unset($_SESSION['error']); ?>
+    <?php endif; ?>
 
-        <!-- Filtros y búsqueda -->
-        <div class="card shadow-sm mb-4">
-            <div class="card-header bg-white">
-                <h5 class="mb-0">
-                    <i class="fas fa-filter text-primary me-2"></i> Filtros
-                </h5>
-            </div>
+    <!-- Filtros y búsqueda -->
+    <div class="card shadow-sm filters-card mb-4">
+        <div class="card-header">
+            <h5 class="card-title mb-0">
+                <i class="fas fa-filter text-primary me-2"></i>Filtros
+            </h5>
+        </div>
             <div class="card-body">
                 <form action="<?= BASE_URL ?>/usuarios" method="GET" class="row g-3">
                     <!-- Búsqueda -->
@@ -248,7 +253,4 @@ extract($datos);
             </div>
         </div>
     </div>
-    
-    <?php require_once APP_PATH . '/vistas/comunes/pie.php'; ?>
-</body>
-</html>
+</div>

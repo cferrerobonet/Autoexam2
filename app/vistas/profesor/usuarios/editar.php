@@ -13,62 +13,48 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
 }
 ?>
 
-<?php require_once APP_PATH . '/vistas/parciales/head_admin.php'; ?>
-
-<body class="bg-light">
-    <?php require_once APP_PATH . '/vistas/parciales/navbar_profesor.php'; ?>
-
-    <div class="container-fluid mt-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <!-- Estilos personalizados -->
-                <style>
-                    .bg-purple {
-                        background-color: #8a5cd1 !important;
-                    }
-                    .text-purple {
-                        color: #8a5cd1 !important;
-                    }
-                    .border-purple {
-                        border-color: #8a5cd1 !important;
-                    }
-                    .bg-purple-subtle {
-                        background-color: rgba(138, 92, 209, 0.1) !important;
-                    }
-                </style>
-                
-                <!-- Header -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h1><i class="fas fa-user-edit"></i> Editar Usuario</h1>
-                    <a href="<?= BASE_URL ?>/cursos" class="btn btn-outline-secondary">
-                        <i class="fas fa-arrow-left"></i> Volver a cursos
+<div class="container-fluid px-4 py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h1 class="fs-3 fw-bold text-dark mb-2">
+                        <i class="fas fa-user-edit text-primary me-2"></i>Editar Usuario
+                    </h1>
+                    <p class="text-muted mb-0">Modifica los datos del usuario seleccionado</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <a href="<?= BASE_URL ?>/usuarios/todos" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Volver a usuarios
                     </a>
                 </div>
+            </div>
 
-                <!-- Mensajes de estado -->
-                <?php if (isset($_SESSION['exito'])): ?>
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <i class="fas fa-check-circle"></i> <?= htmlspecialchars($_SESSION['exito']) ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <?php unset($_SESSION['exito']); ?>
-                <?php endif; ?>
-                
-                <?php if (isset($_SESSION['error'])): ?>
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <i class="fas fa-exclamation-circle"></i> <?= htmlspecialchars($_SESSION['error']) ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <?php unset($_SESSION['error']); ?>
-                <?php endif; ?>
+            <!-- Mensajes de estado -->
+            <?php if (isset($_SESSION['exito'])): ?>
+                <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="fas fa-check-circle me-2"></i><?= htmlspecialchars($_SESSION['exito']) ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <?php unset($_SESSION['exito']); ?>
+            <?php endif; ?>
+            
+            <?php if (isset($_SESSION['error'])): ?>
+                <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="fas fa-exclamation-circle me-2"></i><?= htmlspecialchars($_SESSION['error']) ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <?php unset($_SESSION['error']); ?>
+            <?php endif; ?>
 
-                <!-- Información del usuario -->
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header bg-light">
-                        <h5 class="mb-0 d-flex align-items-center">
-                            <i class="fas fa-info-circle text-primary me-2"></i> Información Actual
-                        </h5>
-                    </div>
+            <!-- Información del usuario -->
+            <div class="card mb-4 shadow-sm form-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-info-circle text-primary me-2"></i>Información Actual
+                    </h5>
+                </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-3 text-center">
@@ -510,5 +496,6 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
             }
         });
     </script>
-</body>
-</html>
+        </div>
+    </div>
+</div>

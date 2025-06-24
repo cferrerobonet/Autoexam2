@@ -49,8 +49,15 @@ if (!isset($_SESSION['csrf_token'])) {
 
     <!-- Título de la página -->
     <div class="container-fluid px-4 py-4">
+        <!-- Header principal -->
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1><i class="fas fa-question-circle me-2"></i> Banco de Preguntas</h1>
+            <div>
+                <h1 class="h3 mb-0">
+                    <i class="fas fa-question-circle text-primary me-2"></i>
+                    Banco de Preguntas
+                </h1>
+                <p class="text-muted mb-0">Crea y organiza todas tus preguntas de exámenes</p>
+            </div>
             <div class="d-flex gap-2">
                 <!-- Acciones masivas -->
                 <div class="dropdown">
@@ -110,6 +117,78 @@ if (!isset($_SESSION['csrf_token'])) {
                 </div>
                 <?php unset($_SESSION['mensaje_error']); ?>
             <?php endif; ?>
+
+        <!-- Estadísticas -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="card stats-card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="stats-icon bg-primary-gradient">
+                                    <i class="fas fa-question-circle text-white fa-lg"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="stats-label">TOTAL PREGUNTAS</div>
+                                <div class="stats-value"><?= $total_registros ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="stats-icon bg-success-gradient">
+                                    <i class="fas fa-check-square text-white fa-lg"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="stats-label">TEST</div>
+                                <div class="stats-value"><?= count(array_filter($preguntas, function($p) { return $p['tipo'] === 'test'; })) ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="stats-icon bg-info-gradient">
+                                    <i class="fas fa-edit text-white fa-lg"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="stats-label">DESARROLLO</div>
+                                <div class="stats-value"><?= count(array_filter($preguntas, function($p) { return $p['tipo'] === 'desarrollo'; })) ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="stats-icon bg-warning-gradient">
+                                    <i class="fas fa-eye text-white fa-lg"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="stats-label">PÚBLICAS</div>
+                                <div class="stats-value"><?= count(array_filter($preguntas, function($p) { return $p['publica']; })) ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Filtros y opciones -->
         <div class="card mb-4">

@@ -15,44 +15,29 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'profesor') {
 }
 ?>
 
-<!-- Estilos personalizados -->
-<style>
-    .bg-purple {
-        background-color: #8a5cd1 !important;
-    }
-    .text-purple {
-        color: #8a5cd1 !important;
-    }
-    .border-purple {
-        border-color: #8a5cd1 !important;
-    }
-    .bg-purple-subtle {
-        background-color: rgba(138, 92, 209, 0.1) !important;
-    }
-    .curso-badge {
-        font-size: 0.75rem;
-        padding: 0.25rem 0.5rem;
-    }
-</style>
-
 <div class="container-fluid px-4 py-4">
     <!-- Header -->
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1><i class="fas fa-users text-primary"></i> Alumnos</h1>
+        <div>
+            <h1 class="fs-3 fw-bold text-dark mb-2">
+                <i class="fas fa-users text-primary me-2"></i>Alumnos
+            </h1>
+            <p class="text-muted mb-0">Gestión de alumnos asignados a tus cursos</p>
+        </div>
         <div class="d-flex gap-2">
-            <a href="<?= BASE_URL ?>/cursos" class="btn btn-outline-secondary">
-                <i class="fas fa-arrow-left"></i> Volver a Cursos
-            </a>
             <a href="<?= BASE_URL ?>/usuarios/crear" class="btn btn-primary">
-                <i class="fas fa-user-plus"></i> Nuevo Alumno
+                <i class="fas fa-user-plus me-2"></i>Nuevo Alumno
+            </a>
+            <a href="<?= BASE_URL ?>/cursos" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Volver a Cursos
             </a>
         </div>
     </div>
 
     <!-- Mensajes de estado -->
     <?php if (isset($_SESSION['exito'])): ?>
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <i class="fas fa-check-circle"></i> <?= htmlspecialchars($_SESSION['exito']) ?>
+        <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+            <i class="fas fa-check-circle me-2"></i><?= htmlspecialchars($_SESSION['exito']) ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
         <?php unset($_SESSION['exito']); ?>

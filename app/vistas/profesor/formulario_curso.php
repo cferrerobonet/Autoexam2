@@ -33,37 +33,31 @@ $activo = $es_edicion ? $curso['activo'] :
          (isset($datos_form['activo']) ? $datos_form['activo'] : '1');
 ?>
 
-<div class="container-fluid mt-4">
+<div class="container-fluid px-4 py-4">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <!-- Estilos personalizados -->
-            <style>
-                .bg-purple {
-                    background-color: #8a5cd1 !important;
-                }
-                .text-purple {
-                    color: #8a5cd1 !important;
-                }
-                .border-purple {
-                    border-color: #8a5cd1 !important;
-                }
-                .bg-purple-subtle {
-                    background-color: rgba(138, 92, 209, 0.1) !important;
-                }
-            </style>
-            
             <!-- Header -->
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h1><i class="fas fa-<?= $es_edicion ? 'edit' : 'plus' ?>"></i> <?= $es_edicion ? 'Editar Curso' : 'Crear Curso' ?></h1>
-                <a href="<?= BASE_URL ?>/cursos" class="btn btn-outline-secondary rounded-pill px-4">
-                    <i class="fas fa-arrow-left me-2"></i> Volver a la lista
-                </a>
+                <div>
+                    <h1 class="fs-3 fw-bold text-dark mb-2">
+                        <i class="fas fa-<?= $es_edicion ? 'edit' : 'plus' ?> text-primary me-2"></i>
+                        <?= $es_edicion ? 'Editar Curso' : 'Crear Curso' ?>
+                    </h1>
+                    <p class="text-muted mb-0">
+                        <?= $es_edicion ? 'Modifica los datos del curso seleccionado' : 'Complete los campos para crear un nuevo curso' ?>
+                    </p>
+                </div>
+                <div class="d-flex gap-2">
+                    <a href="<?= BASE_URL ?>/cursos" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-2"></i> Volver a la lista
+                    </a>
+                </div>
             </div>
 
             <!-- Mensajes de estado -->
             <?php if (isset($_SESSION['exito'])): ?>
                 <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
-                    <i class="fas fa-check-circle"></i> <?= htmlspecialchars($_SESSION['exito']) ?>
+                    <i class="fas fa-check-circle me-2"></i><?= htmlspecialchars($_SESSION['exito']) ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </div>
                 <?php unset($_SESSION['exito']); ?>
@@ -71,29 +65,28 @@ $activo = $es_edicion ? $curso['activo'] :
             
             <?php if (isset($_SESSION['error'])): ?>
                 <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
-                    <i class="fas fa-exclamation-circle"></i> <?= htmlspecialchars($_SESSION['error']) ?>
+                    <i class="fas fa-exclamation-circle me-2"></i><?= htmlspecialchars($_SESSION['error']) ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </div>
                 <?php unset($_SESSION['error']); ?>
             <?php endif; ?>
 
-            <!-- Mensajes legacy -->
             <?php if(isset($_SESSION['mensaje'])): ?>
-            <div class="alert alert-<?= $_SESSION['tipo_mensaje'] ?> alert-dismissible fade show shadow-sm" role="alert">
-                <i class="fas fa-info-circle"></i> <?= $_SESSION['mensaje'] ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php 
-            unset($_SESSION['mensaje']); 
-            unset($_SESSION['tipo_mensaje']);
-            endif; 
+                <div class="alert alert-<?= $_SESSION['tipo_mensaje'] ?> alert-dismissible fade show shadow-sm" role="alert">
+                    <i class="fas fa-info-circle me-2"></i><?= $_SESSION['mensaje'] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php 
+                unset($_SESSION['mensaje']); 
+                unset($_SESSION['tipo_mensaje']);
+                endif; 
             ?>
 
             <!-- Formulario -->
-            <div class="card shadow-sm">
-                <div class="card-header bg-light">
-                    <h5 class="mb-0 d-flex align-items-center">
-                        <i class="fas fa-book text-primary me-2"></i> Datos del Curso
+            <div class="card shadow-sm form-card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-book text-primary me-2"></i>Datos del Curso
                     </h5>
                 </div>
                 <div class="card-body">
@@ -163,19 +156,20 @@ $activo = $es_edicion ? $curso['activo'] :
                         <div class="row">
                             <div class="col-12">
                                 <hr class="my-4">
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between flex-wrap gap-2">
                                     <a href="<?= BASE_URL ?>/cursos" class="btn btn-outline-secondary">
-                                        <i class="fas fa-times me-2"></i> Cancelar
+                                        <i class="fas fa-times me-2"></i>Cancelar
                                     </a>
-                                    <button type="submit" class="btn btn-primary px-4">
-                                        <i class="fas fa-save me-2"></i> 
-                                        <?= $es_edicion ? 'Actualizar Curso' : 'Crear Curso' ?>
-                                    </button>
-                                    <?php if($es_edicion): ?>
-                                    <a href="<?= BASE_URL ?>/cursos/asignarAlumnos?id=<?= $id_curso ?>" class="btn btn-info">
-                                        <i class="fas fa-user-graduate me-1"></i> Gestionar alumnos
-                                    </a>
-                                    <?php endif; ?>
+                                    <div class="d-flex gap-2">
+                                        <?php if($es_edicion): ?>
+                                            <a href="<?= BASE_URL ?>/cursos/asignarAlumnos?id=<?= $id_curso ?>" class="btn btn-info">
+                                                <i class="fas fa-user-graduate me-1"></i>Gestionar alumnos
+                                            </a>
+                                        <?php endif; ?>
+                                        <button type="submit" class="btn btn-primary px-4">
+                                            <i class="fas fa-save me-2"></i><?= $es_edicion ? 'Actualizar Curso' : 'Crear Curso' ?>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

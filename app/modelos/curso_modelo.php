@@ -930,16 +930,40 @@ class Curso {
     }
     
     /**
-     * Cuenta el número de alumnos asignados a un curso
+     * Cuenta el número de alumnos asignados a un curso con filtros
      * 
      * @param int $id_curso ID del curso
+     * @param array $filtros Filtros de búsqueda
      * @return int Número de alumnos asignados
      */
-    public function contarAlumnosPorCurso($id_curso) {
+    public function contarAlumnosPorCurso($id_curso, $filtros = []) {
         try {
-            $query = "SELECT COUNT(*) as total FROM curso_alumno WHERE id_curso = ?";
+            $query = "SELECT COUNT(*) as total 
+                      FROM usuarios u 
+                      INNER JOIN curso_alumno ca ON u.id_usuario = ca.id_alumno 
+                      WHERE ca.id_curso = ? AND u.rol = 'alumno'";
+            
+            $params = [$id_curso];
+            $types = "i";
+            
+            // Aplicar filtros
+            if (!empty($filtros['buscar'])) {
+                $query .= " AND (u.nombre LIKE ? OR u.apellidos LIKE ? OR u.correo LIKE ?)";
+                $buscarTerm = "%" . $filtros['buscar'] . "%";
+                $params[] = $buscarTerm;
+                $params[] = $buscarTerm;
+                $params[] = $buscarTerm;
+                $types .= "sss";
+            }
+            
+            if (isset($filtros['estado']) && $filtros['estado'] !== '') {
+                $query .= " AND u.activo = ?";
+                $params[] = (int)$filtros['estado'];
+                $types .= "i";
+            }
+            
             $stmt = $this->db->prepare($query);
-            $stmt->bind_param("i", $id_curso);
+            $stmt->bind_param($types, ...$params);
             $stmt->execute();
             $resultado = $stmt->get_result();
             $fila = $resultado->fetch_assoc();
@@ -949,6 +973,81 @@ class Curso {
             error_log("Error al contar alumnos por curso: " . $e->getMessage(), 0, 
                       __DIR__ . "/../../almacenamiento/logs/app/cursos_error.log");
             return 0;
+        }
+    }
+
+    /**
+     * Obtiene los alumnos de un curso con filtros, paginación y ordenamiento
+     * 
+     * @param int $id_curso ID del curso
+     * @param array $filtros Filtros de búsqueda
+     * @param int $limite Límite de registros por página
+     * @param int $offset Desplazamiento para paginación
+     * @return array|false Lista de alumnos o false en caso de error
+     */
+    public function obtenerAlumnosPorCursoConFiltros($id_curso, $filtros = [], $limite = 10, $offset = 0) {
+        try {
+            $query = "SELECT u.id_usuario, u.nombre, u.apellidos, u.correo, u.activo, 
+                      ca.fecha_asignacion, u.ultimo_acceso
+                      FROM usuarios u 
+                      INNER JOIN curso_alumno ca ON u.id_usuario = ca.id_alumno 
+                      WHERE ca.id_curso = ? AND u.rol = 'alumno'";
+            
+            $params = [$id_curso];
+            $types = "i";
+            
+            // Aplicar filtros
+            if (!empty($filtros['buscar'])) {
+                $query .= " AND (u.nombre LIKE ? OR u.apellidos LIKE ? OR u.correo LIKE ?)";
+                $buscarTerm = "%" . $filtros['buscar'] . "%";
+                $params[] = $buscarTerm;
+                $params[] = $buscarTerm;
+                $params[] = $buscarTerm;
+                $types .= "sss";
+            }
+            
+            if (isset($filtros['estado']) && $filtros['estado'] !== '') {
+                $query .= " AND u.activo = ?";
+                $params[] = (int)$filtros['estado'];
+                $types .= "i";
+            }
+            
+            // Aplicar ordenamiento
+            $ordenarPor = $filtros['ordenar_por'] ?? 'nombre';
+            $orden = $filtros['orden'] ?? 'ASC';
+            
+            $columnasValidas = ['id_usuario', 'nombre', 'apellidos', 'correo', 'activo'];
+            if (!in_array($ordenarPor, $columnasValidas)) {
+                $ordenarPor = 'nombre';
+            }
+            
+            if ($ordenarPor === 'nombre') {
+                $query .= " ORDER BY u.apellidos " . $orden . ", u.nombre " . $orden;
+            } else {
+                $query .= " ORDER BY u." . $ordenarPor . " " . $orden;
+            }
+            
+            // Aplicar límite y offset
+            $query .= " LIMIT ? OFFSET ?";
+            $params[] = $limite;
+            $params[] = $offset;
+            $types .= "ii";
+            
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param($types, ...$params);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            
+            $alumnos = [];
+            while ($alumno = $resultado->fetch_assoc()) {
+                $alumnos[] = $alumno;
+            }
+            
+            return $alumnos;
+        } catch (Exception $e) {
+            error_log("Error al obtener alumnos del curso con filtros: " . $e->getMessage(), 0, 
+                      __DIR__ . "/../../almacenamiento/logs/app/cursos_error.log");
+            return false;
         }
     }
 }
