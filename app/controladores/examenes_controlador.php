@@ -54,6 +54,11 @@ class ExamenesControlador {
      * Acción predeterminada - Listar exámenes
      */
     public function index() {
+        // Cargar la clase Sanitizador si aún no está disponible
+        if (!class_exists('Sanitizador')) {
+            require_once __DIR__ . '/../utilidades/sanitizador.php';
+        }
+        
         // Definir controlador para el navbar
         $GLOBALS['controlador'] = 'examenes';
         
@@ -67,11 +72,14 @@ class ExamenesControlador {
         try {
             $id_usuario = $_SESSION['id_usuario'];
             
+            // Obtener y sanitizar filtros
+            $filtros = $this->obtenerFiltrosSanitizados();
+            
             // Obtener exámenes según el rol
             if ($rol == 'admin') {
-                $examenes = $this->examen->obtenerTodos();
+                $examenes = $this->examen->obtenerTodos($filtros);
             } else {
-                $examenes = $this->examen->obtenerPorProfesor($id_usuario);
+                $examenes = $this->examen->obtenerPorProfesor($id_usuario, $filtros);
             }
             
             // Obtener cursos y módulos para filtros
@@ -86,8 +94,8 @@ class ExamenesControlador {
                 'examenes' => $examenes,
                 'cursos' => $cursos,
                 'modulos' => $modulos,
-                'filtros' => $_GET,
-                'por_pagina' => $_GET['por_pagina'] ?? 10,
+                'filtros' => $filtros,
+                'por_pagina' => $filtros['por_pagina'],
                 'estadisticas' => [
                     'total' => count($examenes),
                     'activos' => count(array_filter($examenes, fn($e) => ($e['estado'] ?? 'borrador') === 'activo')),
@@ -141,20 +149,24 @@ class ExamenesControlador {
             // Obtener cursos y módulos disponibles
             if ($_SESSION['rol'] == 'admin') {
                 $cursos_result = $this->curso->obtenerTodos(100);
-                $cursos = isset($cursos_result['cursos']) ? $cursos_result['cursos'] : $cursos_result;
+                $cursos = isset($cursos_result['cursos']) ? $cursos_result['cursos'] : [];
                 
-                $modulos_result = $this->modulo->obtenerTodos(100);
-                $modulos = isset($modulos_result['modulos']) ? $modulos_result['modulos'] : $modulos_result;
+                $modulos = $this->modulo->obtenerParaFormularios();
             } else {
-                $cursos = $this->curso->obtenerPorProfesor($id_usuario);
-                $modulos = $this->modulo->obtenerPorProfesor($id_usuario);
+                $cursos = $this->curso->obtenerCursosPorProfesor($id_usuario);
+                $modulos = $this->modulo->obtenerParaFormularios($id_usuario);
             }
+            
+            // Asegurar que tenemos arrays válidos
+            $cursos = is_array($cursos) ? $cursos : [];
+            $modulos = is_array($modulos) ? $modulos : [];
             
             // Preparar datos para la vista unificada
             $datos = [
                 'cursos' => $cursos,
                 'modulos' => $modulos,
-                'csrf_token' => $_SESSION['csrf_token']
+                'csrf_token' => $_SESSION['csrf_token'],
+                'examen' => [] // Inicializar array vacío para modo creación
             ];
             
             if ($_SESSION['rol'] === 'admin') {
@@ -279,14 +291,17 @@ class ExamenesControlador {
             $id_usuario = $_SESSION['id_usuario'];
             if ($_SESSION['rol'] == 'admin') {
                 $cursos_result = $this->curso->obtenerTodos(100);
-                $cursos = isset($cursos_result['cursos']) ? $cursos_result['cursos'] : $cursos_result;
+                $cursos = isset($cursos_result['cursos']) ? $cursos_result['cursos'] : [];
                 
-                $modulos_result = $this->modulo->obtenerTodos(100);
-                $modulos = isset($modulos_result['modulos']) ? $modulos_result['modulos'] : $modulos_result;
+                $modulos = $this->modulo->obtenerParaFormularios();
             } else {
-                $cursos = $this->curso->obtenerPorProfesor($id_usuario);
-                $modulos = $this->modulo->obtenerPorProfesor($id_usuario);
+                $cursos = $this->curso->obtenerCursosPorProfesor($id_usuario);
+                $modulos = $this->modulo->obtenerParaFormularios($id_usuario);
             }
+            
+            // Asegurar que tenemos arrays válidos
+            $cursos = is_array($cursos) ? $cursos : [];
+            $modulos = is_array($modulos) ? $modulos : [];
             
             // Preparar datos para la vista unificada
             $datos = [
@@ -438,27 +453,60 @@ class ExamenesControlador {
      * Validar datos del examen
      */
     private function validarDatosExamen($datos) {
+        // Cargar la clase Sanitizador si aún no está disponible
+        if (!class_exists('Sanitizador')) {
+            require_once __DIR__ . '/../utilidades/sanitizador.php';
+        }
+        
         $errores = [];
         
-        // Título requerido
-        if (empty($datos['titulo'])) {
+        // Sanitizar datos de entrada
+        $tipos = [
+            'titulo' => 'texto',
+            'id_modulo' => 'entero',
+            'id_curso' => 'entero',
+            'tiempo_limite' => 'entero',
+            'fecha_inicio' => 'texto',
+            'fecha_fin' => 'texto'
+        ];
+        
+        $datosSanitizados = Sanitizador::array($datos, $tipos);
+        
+        // Validaciones obligatorias
+        if (empty($datosSanitizados['titulo'])) {
             $errores[] = 'El título es requerido';
         }
         
-        // Módulo requerido
-        if (empty($datos['id_modulo'])) {
+        if (empty($datosSanitizados['id_modulo'])) {
             $errores[] = 'El módulo es requerido';
         }
         
-        // Curso requerido
-        if (empty($datos['id_curso'])) {
+        if (empty($datosSanitizados['id_curso'])) {
             $errores[] = 'El curso es requerido';
         }
         
         // Validar fechas
-        if (!empty($datos['fecha_inicio']) && !empty($datos['fecha_fin'])) {
-            if (strtotime($datos['fecha_inicio']) >= strtotime($datos['fecha_fin'])) {
-                $errores[] = 'La fecha de fin debe ser posterior a la fecha de inicio';
+        if (!empty($datosSanitizados['fecha_inicio']) && !empty($datosSanitizados['fecha_fin'])) {
+            try {
+                // Sanitizar para prevenir inyección y verificar formato
+                $fecha_inicio = Sanitizador::fecha($datosSanitizados['fecha_inicio'], 'Y-m-d H:i:s');
+                $fecha_fin = Sanitizador::fecha($datosSanitizados['fecha_fin'], 'Y-m-d H:i:s');
+                
+                if (!$fecha_inicio || !$fecha_fin) {
+                    $errores[] = 'Las fechas deben tener un formato válido (YYYY-MM-DD HH:MM:SS)';
+                } else {
+                    $timestamp_inicio = strtotime($fecha_inicio);
+                    $timestamp_fin = strtotime($fecha_fin);
+                    
+                    if ($timestamp_inicio === false || $timestamp_fin === false) {
+                        $errores[] = 'Error al procesar las fechas. Formato incorrecto.';
+                    } else if ($timestamp_inicio >= $timestamp_fin) {
+                        $errores[] = 'La fecha de fin debe ser posterior a la fecha de inicio';
+                    }
+                }
+            } catch (Exception $e) {
+                error_log("Error al validar fechas: " . $e->getMessage());
+                $errores[] = 'Error al procesar las fechas';
             }
         }
         
@@ -467,14 +515,14 @@ class ExamenesControlador {
         }
         
         return [
-            'titulo' => trim($datos['titulo']),
-            'id_modulo' => (int)$datos['id_modulo'],
-            'id_curso' => (int)$datos['id_curso'],
-            'tiempo_limite' => !empty($datos['tiempo_limite']) ? (int)$datos['tiempo_limite'] : null,
+            'titulo' => $datosSanitizados['titulo'],
+            'id_modulo' => $datosSanitizados['id_modulo'],
+            'id_curso' => $datosSanitizados['id_curso'],
+            'tiempo_limite' => $datosSanitizados['tiempo_limite'] ? $datosSanitizados['tiempo_limite'] : null,
             'aleatorio_preg' => isset($datos['aleatorio_preg']) ? 1 : 0,
             'aleatorio_resp' => isset($datos['aleatorio_resp']) ? 1 : 0,
-            'fecha_inicio' => !empty($datos['fecha_inicio']) ? $datos['fecha_inicio'] : null,
-            'fecha_fin' => !empty($datos['fecha_fin']) ? $datos['fecha_fin'] : null,
+            'fecha_inicio' => $datosSanitizados['fecha_inicio'] ? $datosSanitizados['fecha_inicio'] : null,
+            'fecha_fin' => $datosSanitizados['fecha_fin'] ? $datosSanitizados['fecha_fin'] : null,
             'visible' => isset($datos['visible']) ? 1 : 0,
             'activo' => isset($datos['activo']) ? 1 : 0
         ];
@@ -571,6 +619,11 @@ class ExamenesControlador {
      * Enviar examen completado
      */
     public function enviar($id_examen) {
+        // Cargar la clase Sanitizador si aún no está disponible
+        if (!class_exists('Sanitizador')) {
+            require_once __DIR__ . '/../utilidades/sanitizador.php';
+        }
+        
         // Solo alumnos pueden enviar exámenes
         if ($_SESSION['rol'] != 'alumno' || $_SERVER['REQUEST_METHOD'] != 'POST') {
             header("Location: " . BASE_URL . "/inicio");
@@ -579,6 +632,12 @@ class ExamenesControlador {
         
         try {
             $id_alumno = $_SESSION['id_usuario'];
+            
+            // Sanitizar el ID del examen
+            $id_examen = Sanitizador::entero($id_examen);
+            if (!$id_examen) {
+                throw new Exception('ID de examen no válido');
+            }
             
             // Verificar que el examen existe y está disponible
             $examen = $this->examen->obtenerPorId($id_examen);
@@ -589,14 +648,19 @@ class ExamenesControlador {
             // Iniciar transacción
             $this->examen->db->begin_transaction();
             
-            // Crear registro del intento
-            $tiempo_transcurrido = $_POST['tiempo_transcurrido'] ?? 0;
+            // Sanitizar y crear registro del intento
+            $tiempo_transcurrido = Sanitizador::entero($_POST['tiempo_transcurrido'] ?? 0);
             $fecha_fin = date('Y-m-d H:i:s');
+            $fecha_inicio = Sanitizador::fecha($_POST['inicio_examen'] ?? '', 'Y-m-d H:i:s');
+            
+            if (!$fecha_inicio) {
+                $fecha_inicio = date('Y-m-d H:i:s', strtotime('-' . $tiempo_transcurrido . ' seconds'));
+            }
             
             $datos_intento = [
                 'id_examen' => $id_examen,
                 'id_alumno' => $id_alumno,
-                'fecha_inicio' => $_POST['inicio_examen'],
+                'fecha_inicio' => $fecha_inicio,
                 'fecha_fin' => $fecha_fin,
                 'tiempo_transcurrido' => $tiempo_transcurrido,
                 'estado' => 'completado'
@@ -614,7 +678,9 @@ class ExamenesControlador {
             
             foreach ($_POST as $key => $value) {
                 if (strpos($key, 'respuesta_') === 0) {
-                    $id_pregunta = str_replace('respuesta_', '', $key);
+                    // Sanitizar el ID de pregunta extraído del nombre del campo
+                    $id_pregunta = Sanitizador::entero(str_replace('respuesta_', '', $key));
+                    if (!$id_pregunta) continue;
                     
                     // Obtener datos de la pregunta
                     $pregunta = $this->pregunta->obtenerPorId($id_pregunta);
@@ -625,7 +691,23 @@ class ExamenesControlador {
                     
                     if ($pregunta['tipo'] == 'test') {
                         // Evaluar pregunta tipo test
-                        $respuestas_seleccionadas = is_array($value) ? $value : [$value];
+                        $respuestas_seleccionadas = [];
+                        
+                        // Sanitizar las respuestas seleccionadas
+                        if (is_array($value)) {
+                            foreach ($value as $resp_id) {
+                                $resp_id_sanitizado = Sanitizador::entero($resp_id);
+                                if ($resp_id_sanitizado) {
+                                    $respuestas_seleccionadas[] = $resp_id_sanitizado;
+                                }
+                            }
+                        } else {
+                            $resp_id_sanitizado = Sanitizador::entero($value);
+                            if ($resp_id_sanitizado) {
+                                $respuestas_seleccionadas[] = $resp_id_sanitizado;
+                            }
+                        }
+                        
                         $respuestas_correctas = $this->respuesta->obtenerCorrectas($id_pregunta);
                         
                         if (count($respuestas_seleccionadas) == count($respuestas_correctas)) {
@@ -648,8 +730,9 @@ class ExamenesControlador {
                             $this->guardarRespuestaAlumno($id_intento, $id_pregunta, $resp_seleccionada);
                         }
                     } else {
-                        // Para preguntas de desarrollo, guardar la respuesta sin puntuar
-                        $this->guardarRespuestaAlumno($id_intento, $id_pregunta, null, $value);
+                        // Para preguntas de desarrollo, sanitizar y guardar la respuesta sin puntuar
+                        $texto_respuesta = Sanitizador::texto($value);
+                        $this->guardarRespuestaAlumno($id_intento, $id_pregunta, null, $texto_respuesta);
                     }
                     
                     $puntuacion_total += $puntos_pregunta;
@@ -843,6 +926,21 @@ class ExamenesControlador {
      */
     private function guardarRespuestaAlumno($id_intento, $id_pregunta, $id_respuesta = null, $texto_respuesta = null) {
         try {
+            // Cargar la clase Sanitizador si aún no está disponible
+            if (!class_exists('Sanitizador')) {
+                require_once __DIR__ . '/../utilidades/sanitizador.php';
+            }
+            
+            // Sanitizar todas las entradas
+            $id_intento = Sanitizador::entero($id_intento);
+            $id_pregunta = Sanitizador::entero($id_pregunta);
+            $id_respuesta = $id_respuesta !== null ? Sanitizador::entero($id_respuesta) : null;
+            $texto_respuesta = $texto_respuesta !== null ? Sanitizador::texto($texto_respuesta) : null;
+            
+            if (!$id_intento || !$id_pregunta) {
+                return false;
+            }
+            
             $query = "INSERT INTO respuestas_estudiante (id_intento, id_pregunta, id_respuesta, texto_respuesta) 
                       VALUES (?, ?, ?, ?)";
             $stmt = $this->examen->db->prepare($query);
@@ -1402,6 +1500,42 @@ class ExamenesControlador {
             $_SESSION['error'] = 'Error al exportar el historial.';
             header('Location: ' . BASE_URL . '/examenes/historial-examenes');
             exit;
+        }
+    }
+    
+    /**
+     * Obtener y sanitizar filtros de la URL
+     */
+    private function obtenerFiltrosSanitizados() {
+        // Cargar la clase Sanitizador si aún no está disponible
+        if (!class_exists('Sanitizador')) {
+            require_once __DIR__ . '/../utilidades/sanitizador.php';
+        }
+        
+        try {
+            return [
+                'curso_id' => Sanitizador::entero($_GET['curso_id'] ?? 0),
+                'modulo_id' => Sanitizador::entero($_GET['modulo_id'] ?? 0),
+                'estado' => Sanitizador::texto($_GET['estado'] ?? ''),
+                'busqueda' => Sanitizador::texto($_GET['busqueda'] ?? ''),
+                'fecha_desde' => Sanitizador::fecha($_GET['fecha_desde'] ?? ''),
+                'fecha_hasta' => Sanitizador::fecha($_GET['fecha_hasta'] ?? ''),
+                'pagina' => max(1, Sanitizador::entero($_GET['pagina'] ?? 1)),
+                'por_pagina' => min(100, max(5, Sanitizador::entero($_GET['por_pagina'] ?? 10)))
+            ];
+        } catch (Exception $e) {
+            error_log("Error al sanitizar filtros: " . $e->getMessage());
+            // Devolver valores por defecto si hay algún error
+            return [
+                'curso_id' => 0,
+                'modulo_id' => 0,
+                'estado' => '',
+                'busqueda' => '',
+                'fecha_desde' => null,
+                'fecha_hasta' => null,
+                'pagina' => 1,
+                'por_pagina' => 10
+            ];
         }
     }
 }

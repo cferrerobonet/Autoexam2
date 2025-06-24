@@ -8,6 +8,11 @@
  * y define las constantes necesarias para el sistema.
  */
 
+// Definir ROOT_PATH si no está definido
+if (!defined('ROOT_PATH')) {
+    define('ROOT_PATH', dirname(__DIR__));
+}
+
 // Cargar la biblioteca para gestionar variables de entorno
 require_once ROOT_PATH . '/app/utilidades/env.php';
 

@@ -477,6 +477,87 @@ class ModuloModelo {
         }
     }
 
+    /**
+     * Obtener módulos para dropdowns en formularios
+     * Devuelve cada combinación módulo-curso como una entrada separada
+     */
+    public function obtenerParaFormularios($id_profesor = null) {
+        try {
+            $where = "WHERE m.activo = 1";
+            $params = [];
+            $tipos = "";
+            
+            if ($id_profesor) {
+                $where .= " AND m.id_profesor = ?";
+                $params[] = $id_profesor;
+                $tipos .= "i";
+            }
+            
+            $query = "SELECT m.id_modulo, m.titulo, mc.id_curso, c.nombre_curso,
+                             u.nombre as nombre_profesor, u.apellidos as apellidos_profesor
+                      FROM modulos m
+                      LEFT JOIN usuarios u ON m.id_profesor = u.id_usuario
+                      LEFT JOIN modulo_curso mc ON m.id_modulo = mc.id_modulo
+                      LEFT JOIN cursos c ON mc.id_curso = c.id_curso
+                      $where
+                      ORDER BY c.nombre_curso ASC, m.titulo ASC";
+            
+            $stmt = $this->db->prepare($query);
+            if (!empty($params)) {
+                $stmt->bind_param($tipos, ...$params);
+            }
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            
+            $modulos = [];
+            while ($modulo = $resultado->fetch_assoc()) {
+                // Solo incluir módulos que tengan curso asignado
+                if ($modulo['id_curso']) {
+                    $modulos[] = $modulo;
+                }
+            }
+            
+            return $modulos;
+        } catch (Exception $e) {
+            error_log("Error al obtener módulos para formularios: " . $e->getMessage());
+            return [];
+        }
+    }
+
+    /**
+     * Obtener módulos de un profesor específico para formularios
+     */
+    public function obtenerPorProfesor($id_profesor) {
+        try {
+            $query = "SELECT m.id_modulo, m.titulo, mc.id_curso, c.nombre_curso,
+                             u.nombre as nombre_profesor, u.apellidos as apellidos_profesor
+                      FROM modulos m
+                      LEFT JOIN usuarios u ON m.id_profesor = u.id_usuario
+                      LEFT JOIN modulo_curso mc ON m.id_modulo = mc.id_modulo
+                      LEFT JOIN cursos c ON mc.id_curso = c.id_curso
+                      WHERE m.activo = 1 AND m.id_profesor = ?
+                      ORDER BY c.nombre_curso ASC, m.titulo ASC";
+            
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("i", $id_profesor);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            
+            $modulos = [];
+            while ($modulo = $resultado->fetch_assoc()) {
+                // Solo incluir módulos que tengan curso asignado
+                if ($modulo['id_curso']) {
+                    $modulos[] = $modulo;
+                }
+            }
+            
+            return $modulos;
+        } catch (Exception $e) {
+            error_log("Error al obtener módulos del profesor: " . $e->getMessage());
+            return [];
+        }
+    }
+
     // ============ MÉTODOS DE VALIDACIÓN Y UTILIDADES ============
     
     /**

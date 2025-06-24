@@ -24,9 +24,9 @@ $csrf_token = $datos['csrf_token'] ?? $_SESSION['csrf_token'];
 
 // Incluir archivos según el rol
 $es_admin = $_SESSION['rol'] === 'admin';
-$head_file = $es_admin ? '../parciales/head_admin.php' : '../parciales/head_profesor.php';
-$navbar_file = $es_admin ? '../parciales/navbar_admin.php' : '../parciales/navbar_profesor.php';
-$footer_file = $es_admin ? '../parciales/footer_admin.php' : '../parciales/footer_profesor.php';
+$head_file = $es_admin ? 'head_admin.php' : 'head_profesor.php';
+$navbar_file = $es_admin ? 'navbar_admin.php' : 'navbar_profesor.php';
+$footer_file = $es_admin ? 'footer_admin.php' : 'footer_profesor.php';
 ?>
 
 <?php require_once APP_PATH . '/vistas/parciales/' . $head_file; ?>
@@ -185,7 +185,7 @@ $footer_file = $es_admin ? '../parciales/footer_admin.php' : '../parciales/foote
                                                 <?php foreach ($cursos as $curso): ?>
                                                 <option value="<?= $curso['id_curso'] ?>"
                                                         <?= ($examen['id_curso'] ?? '') == $curso['id_curso'] ? 'selected' : '' ?>>
-                                                    <?= htmlspecialchars($curso['nombre_curso']) ?>
+                                                    <?= htmlspecialchars($curso['nombre']) ?>
                                                 </option>
                                                 <?php endforeach; ?>
                                             <?php endif; ?>
@@ -207,7 +207,7 @@ $footer_file = $es_admin ? '../parciales/footer_admin.php' : '../parciales/foote
                                                 <option value="<?= $modulo['id_modulo'] ?>" 
                                                         data-curso="<?= $modulo['id_curso'] ?>"
                                                         <?= ($examen['id_modulo'] ?? '') == $modulo['id_modulo'] ? 'selected' : '' ?>>
-                                                    <?= htmlspecialchars($modulo['titulo']) ?>
+                                                    <?= htmlspecialchars($modulo['nombre']) ?>
                                                 </option>
                                                 <?php endforeach; ?>
                                             <?php endif; ?>

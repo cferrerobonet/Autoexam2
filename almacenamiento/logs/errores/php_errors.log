@@ -72809,3 +72809,5 @@ Stack trace:
 [23-Jun-2025 11:04:08 Europe/Madrid] get_resource_url - Ruta: recursos/logo.png, es producción: sí, BASE_URL: https://autoexam.epla.es
 [23-Jun-2025 11:04:08 Europe/Madrid] get_logo_url - URL generada para el logo: https://autoexam.epla.es/recursos/logo.png
 [23-Jun-2025 11:04:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
+[23-Jun-2025 20:48:33 Europe/Madrid] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for db5017707563.hosting-data.io failed: nodename nor servname provided, or not known in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/config/database.php on line 20
+[23-Jun-2025 20:48:33 Europe/Madrid] Error de conexión a base de datos: php_network_getaddresses: getaddrinfo for db5017707563.hosting-data.io failed: nodename nor servname provided, or not known

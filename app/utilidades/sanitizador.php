@@ -101,6 +101,51 @@ class Sanitizador {
     }
     
     /**
+     * Sanitiza y valida una fecha
+     * 
+     * @param string $fecha Fecha a sanitizar
+     * @param string $formato Formato de fecha esperado (por defecto Y-m-d)
+     * @return string|null Fecha sanitizada o null si está vacía o no es válida
+     */
+    public static function fecha($fecha, $formato = 'Y-m-d') {
+        if (empty($fecha)) {
+            return null;
+        }
+        
+        // Sanitizar la cadena
+        $fecha = self::texto($fecha);
+        
+        try {
+            // Validar formato de fecha
+            $fecha_obj = DateTime::createFromFormat($formato, $fecha);
+            
+            if ($fecha_obj && $fecha_obj->format($formato) === $fecha) {
+                return $fecha;
+            }
+            
+            // Intentar con formato alternativo si falla el primero
+            if ($formato === 'Y-m-d') {
+                $alt_formato = 'Y-m-d H:i:s';
+                $fecha_obj = DateTime::createFromFormat($alt_formato, $fecha);
+                
+                if ($fecha_obj && $fecha_obj->format($alt_formato) === $fecha) {
+                    return $fecha;
+                }
+            }
+            
+            // Intentar interpretar la fecha con strtotime como último recurso
+            $timestamp = strtotime($fecha);
+            if ($timestamp !== false) {
+                return date($formato, $timestamp);
+            }
+        } catch (Exception $e) {
+            error_log("Error al validar fecha: " . $e->getMessage());
+        }
+        
+        return null;
+    }
+    
+    /**
      * Sanitiza un array de datos según el tipo especificado
      * 
      * @param array $datos Array con datos a sanitizar
