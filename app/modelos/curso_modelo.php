@@ -928,4 +928,27 @@ class Curso {
             ];
         }
     }
+    
+    /**
+     * Cuenta el número de alumnos asignados a un curso
+     * 
+     * @param int $id_curso ID del curso
+     * @return int Número de alumnos asignados
+     */
+    public function contarAlumnosPorCurso($id_curso) {
+        try {
+            $query = "SELECT COUNT(*) as total FROM curso_alumno WHERE id_curso = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("i", $id_curso);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            $fila = $resultado->fetch_assoc();
+            
+            return (int)$fila['total'];
+        } catch (Exception $e) {
+            error_log("Error al contar alumnos por curso: " . $e->getMessage(), 0, 
+                      __DIR__ . "/../../almacenamiento/logs/app/cursos_error.log");
+            return 0;
+        }
+    }
 }

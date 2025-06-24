@@ -72811,3 +72811,11 @@ Stack trace:
 [23-Jun-2025 11:04:08 Europe/Madrid] Login.php - Intentando cargar logo desde: https://autoexam.epla.es/recursos/logo.png
 [23-Jun-2025 20:48:33 Europe/Madrid] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for db5017707563.hosting-data.io failed: nodename nor servname provided, or not known in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/config/database.php on line 20
 [23-Jun-2025 20:48:33 Europe/Madrid] Error de conexión a base de datos: php_network_getaddresses: getaddrinfo for db5017707563.hosting-data.io failed: nodename nor servname provided, or not known
+[24-Jun-2025 10:37:52 Europe/Madrid] PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo for db5017707563.hosting-data.io failed: nodename nor servname provided, or not known in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/config/database.php on line 20
+[24-Jun-2025 10:37:52 Europe/Madrid] Error de conexión a base de datos: php_network_getaddresses: getaddrinfo for db5017707563.hosting-data.io failed: nodename nor servname provided, or not known
+[24-Jun-2025 10:37:52 Europe/Madrid] PHP Fatal error:  Uncaught Exception: Error de conexión a la base de datos. Contacte al administrador. in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/config/database.php:44
+Stack trace:
+#0 /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/config/config.php(183): require_once()
+#1 /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/diagnostico_banco_preguntas.php(15): require_once('/Users/cferrero...')
+#2 {main}
+  thrown in /Users/cferrerobonet/Documents/04 DESARROLLADOR/Web/EPLA/AutoExam2/config/database.php on line 44

@@ -185,15 +185,28 @@ class ProfesorAPIControlador {
             $eventos = [];
             
             foreach ($examenes as $examen) {
+                // Determinar estado del examen para color
+                $ahora = time();
+                $fechaInicio = strtotime($examen['fecha_inicio']);
+                $fechaFin = strtotime($examen['fecha_fin']);
+                
+                $color = '#4285F4'; // Azul por defecto
+                if (isset($examen['activo']) && $examen['activo'] == 1) {
+                    if ($fechaInicio <= $ahora && $fechaFin >= $ahora) {
+                        $color = '#34A853'; // Verde - Activo
+                    } elseif ($fechaInicio > $ahora) {
+                        $color = '#FBBC05'; // Amarillo - Pendiente
+                    }
+                }
+                
                 $eventos[] = [
                     'id' => $examen['id_examen'],
                     'title' => $examen['titulo'],
-                    'start' => $examen['fecha_inicio'],
-                    'end' => $examen['fecha_fin'],
-                    'backgroundColor' => $this->obtenerColorPorEstado($examen),
-                    'borderColor' => $this->obtenerColorPorEstado($examen, true),
-                    'textColor' => '#ffffff',
-                    'url' => BASE_URL . '/examenes/ver/' . $examen['id_examen']
+                    'start' => date('Y-m-d\TH:i:s', strtotime($examen['fecha_inicio'])),
+                    'end' => date('Y-m-d\TH:i:s', strtotime($examen['fecha_fin'])),
+                    'backgroundColor' => $color,
+                    'borderColor' => $color,
+                    'textColor' => '#ffffff'
                 ];
             }
             

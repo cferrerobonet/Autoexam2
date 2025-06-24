@@ -1,641 +1,517 @@
 <?php
 /**
- * Vista del banco de preguntas
+ * Vista de Gestión del Banco de Preguntas - Profesor - AUTOEXAM2
  * 
- * @package AUTOEXAM2
- * @author Sistema AUTOEXAM2
+ * @author GitHub Copilot
  * @version 1.0
- * @since 21/06/2025
  */
 
-// Verificar sesión y permisos
-if (!isset($_SESSION['usuario_logueado']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'] !== 'profesor')) {
-    header("Location: " . BASE_URL . "/autenticacion/login");
+// Verificar permisos
+if (!isset($_SESSION['rol']) || ($_SESSION['rol'] !== 'admin' && $_SESSION['rol'] !== 'profesor')) {
+    header('Location: ' . BASE_URL . '/error/acceso');
     exit;
 }
 
-$titulo_pagina = 'Banco de Preguntas';
+// Variables para la vista
+$total_registros = count($preguntas);
+$pagina_actual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+$limite = isset($_GET['limite']) ? (int)$_GET['limite'] : 20;
 
-// Incluir head y navbar según el rol
-if ($_SESSION['rol'] === 'admin') {
-    require_once APP_PATH . '/vistas/parciales/head_admin.php';
-} else {
-    require_once APP_PATH . '/vistas/parciales/head_profesor.php';
+// Opciones de límite
+$opciones_limite = [10, 20, 50, 100];
+
+// Generar token CSRF para formularios
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <title><?= $titulo_pagina ?> - <?= SYSTEM_NAME ?></title>
-    <?php 
-    if ($_SESSION['rol'] === 'admin') {
-        // Head admin ya incluido arriba
-    } else {
-        // Head profesor ya incluido arriba  
-    }
-    ?>
-</head>
+
+<?php require_once APP_PATH . '/vistas/parciales/head_profesor.php'; ?>
+
 <body class="bg-light">
-    <?php 
-    // Incluir navbar según el rol
-    if ($_SESSION['rol'] === 'admin') {
-        require_once APP_PATH . '/vistas/parciales/navbar_admin.php';
-    } else {
-        require_once APP_PATH . '/vistas/parciales/navbar_profesor.php';
-    }
-    ?>
-    
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-<?php
-?>
+    <?php require_once APP_PATH . '/vistas/parciales/navbar_profesor.php'; ?>
 
-<div class="container-fluid py-4">
-    <!-- Encabezado -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <div>
-            <h1 class="h3 mb-1">🏦 Banco de Preguntas</h1>
-            <p class="text-muted">Gestiona y reutiliza preguntas para tus exámenes</p>
-        </div>
-        <div>
-            <a href="<?= BASE_URL ?>/banco-preguntas/crear" class="btn btn-primary">
-                <i class="fas fa-plus"></i> Nueva Pregunta
-            </a>
-            <div class="btn-group ms-2">
-                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
-                    <i class="fas fa-download"></i> Exportar
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="<?= BASE_URL ?>/banco-preguntas/exportar?formato=excel">
-                        <i class="fas fa-file-excel"></i> Excel (XLSX)
-                    </a></li>
-                    <li><a class="dropdown-item" href="<?= BASE_URL ?>/banco-preguntas/exportar?formato=pdf">
-                        <i class="fas fa-file-pdf"></i> PDF
-                    </a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <!-- Estilos personalizados -->
+    <style>
+        .bg-purple {
+            background-color: #8a5cd1 !important;
+        }
+        .text-purple {
+            color: #8a5cd1 !important;
+        }
+        .border-purple {
+            border-color: #8a5cd1 !important;
+        }
+        .bg-purple-subtle {
+            background-color: rgba(138, 92, 209, 0.1) !important;
+        }
+    </style>
 
-    <!-- Mensajes -->
-    <?php if (isset($_SESSION['mensaje_exito'])): ?>
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <i class="fas fa-check-circle"></i> <?= $_SESSION['mensaje_exito'] ?>
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        </div>
-        <?php unset($_SESSION['mensaje_exito']); ?>
-    <?php endif; ?>
-
-    <?php if (isset($_SESSION['mensaje_error'])): ?>
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <i class="fas fa-exclamation-triangle"></i> <?= $_SESSION['mensaje_error'] ?>
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        </div>
-        <?php unset($_SESSION['mensaje_error']); ?>
-    <?php endif; ?>
-
-    <!-- Filtros -->
-    <div class="card mb-4">
-        <div class="card-body">
-            <form method="GET" class="row g-3">
-                <div class="col-md-2">
-                    <label for="tipo" class="form-label">Tipo</label>
-                    <select class="form-select" id="tipo" name="tipo">
-                        <option value="">Todos</option>
-                        <option value="test" <?= isset($_GET['tipo']) && $_GET['tipo'] == 'test' ? 'selected' : '' ?>>Test</option>
-                        <option value="desarrollo" <?= isset($_GET['tipo']) && $_GET['tipo'] == 'desarrollo' ? 'selected' : '' ?>>Desarrollo</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <label for="categoria" class="form-label">Categoría</label>
-                    <select class="form-select" id="categoria" name="categoria">
-                        <option value="">Todas</option>
-                        <option value="matematicas" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'matematicas' ? 'selected' : '' ?>>Matemáticas</option>
-                        <option value="ciencias" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'ciencias' ? 'selected' : '' ?>>Ciencias</option>
-                        <option value="lenguaje" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'lenguaje' ? 'selected' : '' ?>>Lenguaje</option>
-                        <option value="historia" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'historia' ? 'selected' : '' ?>>Historia</option>
-                        <option value="geografia" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'geografia' ? 'selected' : '' ?>>Geografía</option>
-                        <option value="idiomas" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'idiomas' ? 'selected' : '' ?>>Idiomas</option>
-                        <option value="tecnologia" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'tecnologia' ? 'selected' : '' ?>>Tecnología</option>
-                        <option value="arte" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'arte' ? 'selected' : '' ?>>Arte</option>
-                        <option value="musica" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'musica' ? 'selected' : '' ?>>Música</option>
-                        <option value="educacion_fisica" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'educacion_fisica' ? 'selected' : '' ?>>Ed. Física</option>
-                        <option value="otra" <?= isset($_GET['categoria']) && $_GET['categoria'] == 'otra' ? 'selected' : '' ?>>Otra</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <label for="dificultad" class="form-label">Dificultad</label>
-                    <select class="form-select" id="dificultad" name="dificultad">
-                        <option value="">Todas</option>
-                        <option value="facil" <?= isset($_GET['dificultad']) && $_GET['dificultad'] == 'facil' ? 'selected' : '' ?>>Fácil</option>
-                        <option value="media" <?= isset($_GET['dificultad']) && $_GET['dificultad'] == 'media' ? 'selected' : '' ?>>Media</option>
-                        <option value="dificil" <?= isset($_GET['dificultad']) && $_GET['dificultad'] == 'dificil' ? 'selected' : '' ?>>Difícil</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <label for="origen" class="form-label">Origen</label>
-                    <select class="form-select" id="origen" name="origen">
-                        <option value="">Todos</option>
-                        <option value="manual" <?= isset($_GET['origen']) && $_GET['origen'] == 'manual' ? 'selected' : '' ?>>Manual</option>
-                        <option value="ia" <?= isset($_GET['origen']) && $_GET['origen'] == 'ia' ? 'selected' : '' ?>>IA</option>
-                        <option value="pdf" <?= isset($_GET['origen']) && $_GET['origen'] == 'pdf' ? 'selected' : '' ?>>PDF</option>
-                    </select>
-                </div>
-                <?php if ($_SESSION['rol'] == 'admin'): ?>
-                <div class="col-md-2">
-                    <label for="publica" class="form-label">Visibilidad</label>
-                    <select class="form-select" id="publica" name="publica">
-                        <option value="">Todas</option>
-                        <option value="si" <?= isset($_GET['publica']) && $_GET['publica'] == 'si' ? 'selected' : '' ?>>Públicas</option>
-                        <option value="no" <?= isset($_GET['publica']) && $_GET['publica'] == 'no' ? 'selected' : '' ?>>Privadas</option>
-                    </select>
-                </div>
-                <?php endif; ?>
-                <div class="col-md-<?= $_SESSION['rol'] == 'admin' ? '2' : '3' ?>">
-                    <label for="busqueda" class="form-label">Buscar</label>
-                    <input type="text" class="form-control" id="busqueda" name="busqueda" 
-                           placeholder="Buscar en enunciados..." 
-                           value="<?= htmlspecialchars($_GET['busqueda'] ?? '') ?>">
-                </div>
-                <div class="col-md-1 d-flex align-items-end">
-                    <button type="submit" class="btn btn-outline-primary w-100">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Lista de preguntas -->
-    <div class="card">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">
-                <i class="fas fa-question-circle"></i> 
-                Preguntas del Banco (<?= count($preguntas) ?>)
-            </h5>
+    <!-- Título de la página -->
+    <div class="container-fluid px-4 py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="fas fa-question-circle me-2"></i> Banco de Preguntas</h1>
             <div class="d-flex gap-2">
-                <button class="btn btn-sm btn-outline-secondary" onclick="seleccionarTodas()">
-                    <i class="fas fa-check-square"></i> Seleccionar todas
-                </button>
-                <button class="btn btn-sm btn-outline-secondary" onclick="limpiarSeleccion()">
-                    <i class="fas fa-square"></i> Limpiar selección
-                </button>
+                <!-- Acciones masivas -->
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" 
+                            id="accionesMasivas" data-bs-toggle="dropdown" 
+                            aria-expanded="false" disabled>
+                        <i class="fas fa-tasks"></i> Acciones Masivas
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="accionesMasivas">
+                        <li><a class="dropdown-item" href="#" onclick="accionMasiva('eliminar')">
+                            <i class="fas fa-trash text-danger"></i> Eliminar Seleccionadas
+                        </a></li>
+                        <li><a class="dropdown-item" href="#" onclick="accionMasiva('exportar')">
+                            <i class="fas fa-download text-success"></i> Exportar Seleccionadas
+                        </a></li>
+                        <li><a class="dropdown-item" href="#" onclick="accionMasiva('duplicar')">
+                            <i class="fas fa-copy text-info"></i> Duplicar Seleccionadas
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Exportar todos -->
+                <a href="<?= BASE_URL ?>/banco-preguntas/exportar?<?= http_build_query($_GET) ?>" class="btn btn-outline-success">
+                    <i class="fas fa-file-export"></i> Exportar Filtradas
+                </a>
+                
+                <!-- Nueva pregunta -->
+                <a href="<?= BASE_URL ?>/banco-preguntas/crear" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Nueva Pregunta
+                </a>
+                
+                <!-- Importar preguntas -->
+                <a href="<?= BASE_URL ?>/banco-preguntas/importar" class="btn btn-success">
+                    <i class="fas fa-upload"></i> Importar
+                </a>
+                
+                <!-- Estadísticas -->
+                <a href="<?= BASE_URL ?>/banco-preguntas/estadisticas" class="btn btn-info">
+                    <i class="fas fa-chart-bar"></i> Estadísticas
+                </a>
             </div>
         </div>
-        <div class="card-body p-0">
-            <?php if (empty($preguntas)): ?>
-                <div class="text-center py-5">
-                    <i class="fas fa-question-circle fa-3x text-muted mb-3"></i>
-                    <h5 class="text-muted">No hay preguntas en el banco</h5>
-                    <p class="text-muted">Comienza creando tu primera pregunta reutilizable</p>
-                    <a href="<?= BASE_URL ?>/banco-preguntas/crear" class="btn btn-primary">
-                        <i class="fas fa-plus"></i> Crear Primera Pregunta
-                    </a>
+
+            <!-- Mensajes -->
+            <?php if (isset($_SESSION['mensaje_exito'])): ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="fas fa-check-circle"></i> <?= $_SESSION['mensaje_exito'] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </div>
-            <?php else: ?>
-                <div class="table-responsive">
-                    <table class="table table-hover mb-0">
-                        <thead class="table-light">
-                            <tr>
-                                <th width="50">
-                                    <input type="checkbox" id="selectAll" onchange="toggleSelectAll()">
-                                </th>
-                                <th>Pregunta</th>
-                                <th width="100">Tipo</th>
-                                <th width="120">Categoría</th>
-                                <th width="100">Dificultad</th>
-                                <th width="100">Origen</th>
-                                <th width="120">Autor</th>
-                                <th width="120">Estado</th>
-                                <th width="80">Resp.</th>
-                                <th width="120">Fecha</th>
-                                <th width="120">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($preguntas as $pregunta): ?>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" class="pregunta-checkbox" 
-                                               value="<?= $pregunta['id_pregunta'] ?>">
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-start">
-                                            <div class="flex-grow-1">
-                                                <div class="fw-medium">
-                                                    <?= htmlspecialchars(substr($pregunta['enunciado'], 0, 100)) ?>
-                                                    <?= strlen($pregunta['enunciado']) > 100 ? '...' : '' ?>
+                <?php unset($_SESSION['mensaje_exito']); ?>
+            <?php endif; ?>
+
+            <?php if (isset($_SESSION['mensaje_error'])): ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fas fa-exclamation-triangle"></i> <?= $_SESSION['mensaje_error'] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <?php unset($_SESSION['mensaje_error']); ?>
+            <?php endif; ?>
+
+        <!-- Filtros y opciones -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-filter me-1"></i> Filtros y opciones
+            </div>
+            <div class="card-body">
+                <form method="GET" action="<?= BASE_URL ?>/banco-preguntas" class="row g-3" id="formFiltros">
+                    <div class="col-md-3">
+                        <label for="buscar" class="form-label"><i class="fas fa-search me-2"></i>Buscar</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-search text-muted"></i></span>
+                            <input type="text" class="form-control filtro-auto" id="buscar" name="buscar" 
+                                   value="<?= htmlspecialchars($_GET['buscar'] ?? '') ?>" 
+                                   placeholder="Enunciado, etiquetas..."
+                                   data-bs-toggle="tooltip" data-bs-placement="top" 
+                                   title="Los resultados se actualizan automáticamente mientras escribes">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="categoria" class="form-label"><i class="fas fa-tag me-2"></i>Categoría</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-tag text-muted"></i></span>
+                            <select class="form-select filtro-auto" id="categoria" name="categoria"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" 
+                                    title="Filtrar por categoría de la pregunta">
+                                <option value="">Todas</option>
+                                <option value="matematicas" <?= ($_GET['categoria'] ?? '') === 'matematicas' ? 'selected' : '' ?>>Matemáticas</option>
+                                <option value="ciencias" <?= ($_GET['categoria'] ?? '') === 'ciencias' ? 'selected' : '' ?>>Ciencias</option>
+                                <option value="lenguaje" <?= ($_GET['categoria'] ?? '') === 'lenguaje' ? 'selected' : '' ?>>Lenguaje</option>
+                                <option value="historia" <?= ($_GET['categoria'] ?? '') === 'historia' ? 'selected' : '' ?>>Historia</option>
+                                <option value="geografia" <?= ($_GET['categoria'] ?? '') === 'geografia' ? 'selected' : '' ?>>Geografía</option>
+                                <option value="idiomas" <?= ($_GET['categoria'] ?? '') === 'idiomas' ? 'selected' : '' ?>>Idiomas</option>
+                                <option value="tecnologia" <?= ($_GET['categoria'] ?? '') === 'tecnologia' ? 'selected' : '' ?>>Tecnología</option>
+                                <option value="otra" <?= ($_GET['categoria'] ?? '') === 'otra' ? 'selected' : '' ?>>Otra</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="tipo" class="form-label"><i class="fas fa-list me-2"></i>Tipo</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-list text-muted"></i></span>
+                            <select class="form-select filtro-auto" id="tipo" name="tipo"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" 
+                                    title="Filtrar por tipo de pregunta">
+                                <option value="">Todos</option>
+                                <option value="test" <?= ($_GET['tipo'] ?? '') === 'test' ? 'selected' : '' ?>>Test</option>
+                                <option value="desarrollo" <?= ($_GET['tipo'] ?? '') === 'desarrollo' ? 'selected' : '' ?>>Desarrollo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="dificultad" class="form-label"><i class="fas fa-signal me-2"></i>Dificultad</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-signal text-muted"></i></span>
+                            <select class="form-select filtro-auto" id="dificultad" name="dificultad"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" 
+                                    title="Filtrar por nivel de dificultad">
+                                <option value="">Todas</option>
+                                <option value="facil" <?= ($_GET['dificultad'] ?? '') === 'facil' ? 'selected' : '' ?>>Fácil</option>
+                                <option value="media" <?= ($_GET['dificultad'] ?? '') === 'media' ? 'selected' : '' ?>>Media</option>
+                                <option value="dificil" <?= ($_GET['dificultad'] ?? '') === 'dificil' ? 'selected' : '' ?>>Difícil</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="por_pagina" class="form-label"><i class="fas fa-list-ol me-2"></i>Por página</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-list-ol text-muted"></i></span>
+                            <select class="form-select filtro-auto" id="por_pagina" name="por_pagina">
+                                <option value="10" <?= ($limite ?? 20) == 10 ? 'selected' : '' ?>>10</option>
+                                <option value="20" <?= ($limite ?? 20) == 20 ? 'selected' : '' ?>>20</option>
+                                <option value="50" <?= ($limite ?? 20) == 50 ? 'selected' : '' ?>>50</option>
+                                <option value="100" <?= ($limite ?? 20) == 100 ? 'selected' : '' ?>>100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-1 d-flex align-items-end">
+                        <a href="<?= BASE_URL ?>/banco-preguntas" class="btn btn-light border shadow-sm rounded-pill w-100">
+                            <i class="fas fa-times"></i> Limpiar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tabla de preguntas -->
+        <div class="card">
+            <div class="card-header bg-light">
+                <h5 class="mb-0 d-flex align-items-center justify-content-between">
+                    <span>
+                        <i class="fas fa-question-circle text-primary me-2"></i> Banco de Preguntas
+                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle ms-2 rounded-pill" id="contador-resultados">
+                            <?= $total_registros ?> <?= $total_registros == 1 ? 'pregunta' : 'preguntas' ?>
+                        </span>
+                    </span>
+                    <?php if (!empty($_GET) && array_filter($_GET)): ?>
+                        <small class="text-muted">
+                            <i class="fas fa-filter me-1"></i>Filtros aplicados
+                        </small>
+                    <?php endif; ?>
+                </h5>
+            </div>
+            <div class="card-body p-0">
+                <?php if (empty($preguntas)): ?>
+                    <div class="text-center py-5">
+                        <i class="fas fa-question-circle fa-3x text-muted mb-3"></i>
+                        <h5 class="text-muted">No se encontraron preguntas</h5>
+                        <p class="text-muted">Ajusta los filtros o crea una nueva pregunta.</p>
+                        <a href="<?= BASE_URL ?>/banco-preguntas/crear" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Nueva Pregunta
+                        </a>
+                    </div>
+                <?php else: ?>
+                    <!-- Formulario para acciones masivas -->
+                    <form id="formAccionMasiva" method="POST" action="<?= BASE_URL ?>/banco-preguntas/accion-masiva">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+                        <input type="hidden" name="accion" id="accion_masiva" value="">
+                        
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0 border">
+                                <thead class="bg-light border-bottom">
+                                    <tr>
+                                        <th width="40" class="py-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" 
+                                                       id="seleccionar_todos" onchange="toggleSeleccionarTodos(this)">
+                                                <label class="form-check-label" for="seleccionar_todos">
+                                                    <span class="visually-hidden">Seleccionar todos</span>
+                                                </label>
+                                            </div>
+                                        </th>
+                                        <th class="py-3 text-muted fw-semibold">Enunciado</th>
+                                        <th class="py-3 text-muted fw-semibold">Tipo</th>
+                                        <th class="py-3 text-muted fw-semibold">Categoría</th>
+                                        <th class="py-3 text-muted fw-semibold">Dificultad</th>
+                                        <th class="py-3 text-muted fw-semibold">Autor</th>
+                                        <th class="py-3 text-muted fw-semibold">Fecha</th>
+                                        <th class="py-3 text-muted fw-semibold text-center">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($preguntas as $pregunta): ?>
+                                        <tr>
+                                            <td class="py-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input pregunta-checkbox" type="checkbox" 
+                                                           value="<?= $pregunta['id_pregunta'] ?>" 
+                                                           id="pregunta_<?= $pregunta['id_pregunta'] ?>"
+                                                           onchange="actualizarAccionesMasivas()">
+                                                    <label class="form-check-label" for="pregunta_<?= $pregunta['id_pregunta'] ?>">
+                                                        <span class="visually-hidden">Seleccionar pregunta</span>
+                                                    </label>
                                                 </div>
-                                                <?php if ($pregunta['media_tipo'] != 'ninguno'): ?>
-                                                    <small class="text-muted">
-                                                        <i class="fas fa-paperclip"></i> 
-                                                        Multimedia: <?= ucfirst($pregunta['media_tipo']) ?>
-                                                    </small>
-                                                <?php endif; ?>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="fw-semibold mb-1">
+                                                    <?= htmlspecialchars(substr($pregunta['enunciado'], 0, 80)) ?><?= strlen($pregunta['enunciado']) > 80 ? '...' : '' ?>
+                                                </div>
                                                 <?php if (!empty($pregunta['etiquetas'])): ?>
                                                     <div class="mt-1">
                                                         <?php 
                                                         $etiquetas = explode(',', $pregunta['etiquetas']);
                                                         foreach (array_slice($etiquetas, 0, 3) as $etiqueta): 
                                                         ?>
-                                                            <span class="badge bg-light text-dark me-1" style="font-size: 0.7em;">
-                                                                <?= htmlspecialchars(trim($etiqueta)) ?>
-                                                            </span>
+                                                            <span class="badge bg-light text-dark border me-1"><?= htmlspecialchars(trim($etiqueta)) ?></span>
                                                         <?php endforeach; ?>
                                                         <?php if (count($etiquetas) > 3): ?>
-                                                            <span class="badge bg-light text-muted" style="font-size: 0.7em;">+<?= count($etiquetas) - 3 ?></span>
+                                                            <span class="badge bg-secondary">+<?= count($etiquetas) - 3 ?></span>
                                                         <?php endif; ?>
                                                     </div>
                                                 <?php endif; ?>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="badge bg-<?= $pregunta['tipo'] == 'test' ? 'primary' : 'info' ?>">
-                                            <?= ucfirst($pregunta['tipo']) ?>
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <small><?= htmlspecialchars(ucfirst($pregunta['categoria'] ?? 'Otra')) ?></small>
-                                    </td>
-                                    <td>
-                                        <span class="badge bg-<?= 
-                                            ($pregunta['dificultad'] ?? 'media') == 'facil' ? 'success' : 
-                                            (($pregunta['dificultad'] ?? 'media') == 'media' ? 'warning' : 'danger') 
-                                        ?>" style="font-size: 0.7em;">
-                                            <?= ucfirst($pregunta['dificultad'] ?? 'Media') ?>
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span class="badge bg-<?= 
-                                            $pregunta['origen'] == 'manual' ? 'secondary' : 
-                                            ($pregunta['origen'] == 'ia' ? 'warning' : 'success') 
-                                        ?>">
-                                            <i class="fas fa-<?= 
-                                                $pregunta['origen'] == 'manual' ? 'hand-paper' : 
-                                                ($pregunta['origen'] == 'ia' ? 'robot' : 'file-pdf') 
-                                            ?>"></i>
-                                            <?= ucfirst($pregunta['origen']) ?>
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <small>
-                                            <?= htmlspecialchars($pregunta['nombre_profesor'] . ' ' . $pregunta['apellidos_profesor']) ?>
-                                            <?php if ($pregunta['id_profesor'] == $_SESSION['id_usuario']): ?>
-                                                <span class="badge bg-success ms-1">Tuya</span>
-                                            <?php endif; ?>
-                                        </small>
-                                    </td>
-                                    <td>
-                                        <?php if ($_SESSION['rol'] == 'admin'): ?>
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" 
-                                                       id="publica_<?= $pregunta['id_pregunta'] ?>"
-                                                       <?= $pregunta['publica'] ? 'checked' : '' ?>
-                                                       onchange="cambiarVisibilidad(<?= $pregunta['id_pregunta'] ?>, this.checked)">
-                                                <label class="form-check-label" for="publica_<?= $pregunta['id_pregunta'] ?>">
-                                                    <small><?= $pregunta['publica'] ? 'Pública' : 'Privada' ?></small>
-                                                </label>
-                                            </div>
-                                        <?php else: ?>
-                                            <span class="badge bg-<?= $pregunta['publica'] ? 'success' : 'secondary' ?>">
-                                                <?= $pregunta['publica'] ? 'Pública' : 'Privada' ?>
-                                            </span>
-                                        <?php endif; ?>
-                                    </td>
-                                    <td>
-                                        <?php if ($pregunta['tipo'] == 'test'): ?>
-                                            <span class="badge bg-light text-dark">
-                                                <?= $pregunta['total_respuestas'] ?? 0 ?>
-                                            </span>
-                                        <?php else: ?>
-                                            <span class="text-muted">-</span>
-                                        <?php endif; ?>
-                                    </td>
-                                    <td>
-                                        <small class="text-muted">
-                                            <?= date('d/m/Y', strtotime($pregunta['fecha_creacion'])) ?>
-                                        </small>
-                                    </td>
-                                    <td>
-                                        <div class="btn-group btn-group-sm">
-                                            <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" 
-                                                    data-bs-toggle="dropdown">
-                                                <i class="fas fa-cog"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <?php if ($_SESSION['rol'] == 'admin' || $pregunta['id_profesor'] == $_SESSION['id_usuario']): ?>
-                                                    <li>
-                                                        <a class="dropdown-item" 
-                                                           href="<?= BASE_URL ?>/banco-preguntas/editar/<?= $pregunta['id_pregunta'] ?>">
-                                                            <i class="fas fa-edit"></i> Editar
-                                                        </a>
-                                                    </li>
-                                                <?php endif; ?>
-                                                <li>
-                                                    <a class="dropdown-item" href="#" 
-                                                       onclick="verDetalle(<?= $pregunta['id_pregunta'] ?>)">
-                                                        <i class="fas fa-eye"></i> Ver detalle
+                                            </td>
+                                            <td class="py-3">
+                                                <span class="badge bg-<?= $pregunta['tipo'] == 'test' ? 'info' : 'warning' ?> rounded-pill">
+                                                    <i class="fas fa-<?= $pregunta['tipo'] == 'test' ? 'list-ul' : 'edit' ?> me-1"></i>
+                                                    <?= ucfirst($pregunta['tipo']) ?>
+                                                </span>
+                                            </td>
+                                            <td class="py-3">
+                                                <span class="text-muted">
+                                                    <?= htmlspecialchars(ucfirst($pregunta['categoria'] ?? 'Sin categoría')) ?>
+                                                </span>
+                                            </td>
+                                            <td class="py-3">
+                                                <span class="badge bg-<?= 
+                                                    ($pregunta['dificultad'] ?? 'media') == 'facil' ? 'success' : 
+                                                    (($pregunta['dificultad'] ?? 'media') == 'media' ? 'warning' : 'danger') 
+                                                ?> rounded-pill">
+                                                    <i class="fas fa-signal me-1"></i>
+                                                    <?= ucfirst($pregunta['dificultad'] ?? 'Media') ?>
+                                                </span>
+                                            </td>
+                                            <td class="py-3">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fas fa-user-circle text-muted me-2"></i>
+                                                    <small class="text-muted">
+                                                        <?= htmlspecialchars($pregunta['nombre_profesor'] ?? 'Sistema') ?>
+                                                    </small>
+                                                </div>
+                                            </td>
+                                            <td class="py-3">
+                                                <small class="text-muted">
+                                                    <?= date('d/m/Y', strtotime($pregunta['fecha_creacion'])) ?>
+                                                </small>
+                                            </td>
+                                            <td class="py-3 text-center">
+                                                <div class="btn-group btn-group-sm">
+                                                    <a href="<?= BASE_URL ?>/banco-preguntas/ver/<?= $pregunta['id_pregunta'] ?>" 
+                                                       class="btn btn-outline-info btn-sm" title="Ver detalle">
+                                                        <i class="fas fa-eye"></i>
                                                     </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="#" 
-                                                       onclick="duplicarAExamen(<?= $pregunta['id_pregunta'] ?>)">
-                                                        <i class="fas fa-copy"></i> Usar en examen
+                                                    <a href="<?= BASE_URL ?>/banco-preguntas/editar/<?= $pregunta['id_pregunta'] ?>" 
+                                                       class="btn btn-outline-warning btn-sm" title="Editar">
+                                                        <i class="fas fa-edit"></i>
                                                     </a>
-                                                </li>
-                                                <li><hr class="dropdown-divider"></li>
-                                                <?php if ($_SESSION['rol'] == 'admin' || $pregunta['id_profesor'] == $_SESSION['id_usuario']): ?>
-                                                    <li>
-                                                        <a class="dropdown-item text-danger" href="#" 
-                                                           onclick="eliminarPregunta(<?= $pregunta['id_pregunta'] ?>)">
-                                                            <i class="fas fa-trash"></i> Eliminar
-                                                        </a>
-                                                    </li>
-                                                <?php endif; ?>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                </div>
-            <?php endif; ?>
+                                                    <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle dropdown-toggle-split" 
+                                                            data-bs-toggle="dropdown" title="Más opciones">
+                                                        <span class="visually-hidden">Toggle Dropdown</span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <a class="dropdown-item" href="#" 
+                                                               onclick="duplicarPregunta(<?= $pregunta['id_pregunta'] ?>)">
+                                                                <i class="fas fa-copy text-info"></i> Duplicar
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#" 
+                                                               onclick="usarEnExamen(<?= $pregunta['id_pregunta'] ?>)">
+                                                                <i class="fas fa-plus-circle text-success"></i> Usar en examen
+                                                            </a>
+                                                        </li>
+                                                        <li><hr class="dropdown-divider"></li>
+                                                        <li>
+                                                            <a class="dropdown-item text-danger" href="#" 
+                                                               onclick="eliminarPregunta(<?= $pregunta['id_pregunta'] ?>)">
+                                                                <i class="fas fa-trash"></i> Eliminar
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                <?php endif; ?>
+            </div>
         </div>
+        </div>
+
     </div>
-</div>
 
-<!-- Modal para ver detalle de pregunta -->
-<div class="modal fade" id="modalDetalle" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Detalle de la Pregunta</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body" id="contenidoDetalle">
-                <div class="text-center">
-                    <div class="spinner-border" role="status"></div>
-                    <p class="mt-2">Cargando...</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal para seleccionar examen -->
-<div class="modal fade" id="modalSeleccionarExamen" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Seleccionar Examen</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <div class="mb-3">
-                    <label for="selectExamen" class="form-label">Elige el examen donde usar la pregunta:</label>
-                    <select class="form-select" id="selectExamen">
-                        <option value="">Cargando exámenes...</option>
-                    </select>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary" onclick="confirmarDuplicacion()">
-                    <i class="fas fa-copy"></i> Usar Pregunta
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-let preguntaSeleccionada = null;
-
-// Seleccionar/deseleccionar todas las preguntas
-function toggleSelectAll() {
-    const selectAll = document.getElementById('selectAll');
-    const checkboxes = document.querySelectorAll('.pregunta-checkbox');
-    
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = selectAll.checked;
-    });
-}
-
-function seleccionarTodas() {
-    document.getElementById('selectAll').checked = true;
-    toggleSelectAll();
-}
-
-function limpiarSeleccion() {
-    document.getElementById('selectAll').checked = false;
-    toggleSelectAll();
-}
-
-// Cambiar visibilidad de pregunta (solo admin)
-function cambiarVisibilidad(idPregunta, publica) {
-    fetch(`<?= BASE_URL ?>/banco-preguntas/cambiar-visibilidad/${idPregunta}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ publica: publica })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.error) {
-            alert('Error: ' + data.error);
-            // Revertir el switch
-            document.getElementById(`publica_${idPregunta}`).checked = !publica;
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error de conexión');
-        // Revertir el switch
-        document.getElementById(`publica_${idPregunta}`).checked = !publica;
-    });
-}
-
-// Ver detalle de pregunta
-function verDetalle(idPregunta) {
-    const modal = new bootstrap.Modal(document.getElementById('modalDetalle'));
-    modal.show();
-    
-    fetch(`<?= BASE_URL ?>/banco-preguntas/obtener/${idPregunta}`)
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            document.getElementById('contenidoDetalle').innerHTML = formatearDetallePregunta(data.pregunta);
-        } else {
-            document.getElementById('contenidoDetalle').innerHTML = 
-                '<div class="alert alert-danger">Error al cargar la pregunta</div>';
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('contenidoDetalle').innerHTML = 
-            '<div class="alert alert-danger">Error de conexión</div>';
-    });
-}
-
-// Formatear detalle de pregunta para el modal
-function formatearDetallePregunta(pregunta) {
-    let html = `
-        <div class="mb-3">
-            <h6>Tipo de Pregunta</h6>
-            <span class="badge bg-${pregunta.tipo == 'test' ? 'primary' : 'info'}">${pregunta.tipo.toUpperCase()}</span>
-        </div>
-        
-        <div class="mb-3">
-            <h6>Enunciado</h6>
-            <div class="border p-3 rounded">${pregunta.enunciado}</div>
-        </div>
-    `;
-    
-    if (pregunta.respuestas && pregunta.respuestas.length > 0) {
-        html += `
-            <div class="mb-3">
-                <h6>Respuestas</h6>
-                <div class="list-group">
-        `;
-        
-        pregunta.respuestas.forEach((respuesta, index) => {
-            html += `
-                <div class="list-group-item ${respuesta.correcta == 1 ? 'list-group-item-success' : ''}">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span>${respuesta.texto}</span>
-                        ${respuesta.correcta == 1 ? '<i class="fas fa-check text-success"></i>' : ''}
-                    </div>
-                </div>
-            `;
-        });
-        
-        html += `
-                </div>
-            </div>
-        `;
-    }
-    
-    html += `
-        <div class="row">
-            <div class="col-md-6">
-                <h6>Origen</h6>
-                <span class="badge bg-secondary">${pregunta.origen.toUpperCase()}</span>
-            </div>
-            <div class="col-md-6">
-                <h6>Visibilidad</h6>
-                <span class="badge bg-${pregunta.publica == 1 ? 'success' : 'secondary'}">
-                    ${pregunta.publica == 1 ? 'Pública' : 'Privada'}
-                </span>
-            </div>
-        </div>
-    `;
-    
-    return html;
-}
-
-// Duplicar pregunta a examen
-function duplicarAExamen(idPregunta) {
-    preguntaSeleccionada = idPregunta;
-    cargarExamenes();
-    const modal = new bootstrap.Modal(document.getElementById('modalSeleccionarExamen'));
-    modal.show();
-}
-
-// Cargar lista de exámenes
-function cargarExamenes() {
-    fetch(`<?= BASE_URL ?>/examenes/obtener-lista`)
-    .then(response => response.json())
-    .then(data => {
-        const select = document.getElementById('selectExamen');
-        select.innerHTML = '<option value="">Selecciona un examen...</option>';
-        
-        if (data.success && data.examenes) {
-            data.examenes.forEach(examen => {
-                select.innerHTML += `<option value="${examen.id_examen}">${examen.titulo} - ${examen.nombre_curso}</option>`;
+    <!-- Scripts personalizados -->
+    <script>
+        // Filtros proactivos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar tooltips
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
             });
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('selectExamen').innerHTML = '<option value="">Error al cargar exámenes</option>';
-    });
-}
+            
+            const filtrosAuto = document.querySelectorAll('.filtro-auto');
+            let timeoutId;
+            
+            filtrosAuto.forEach(filtro => {
+                // Para selects - cambio inmediato
+                if (filtro.tagName === 'SELECT') {
+                    filtro.addEventListener('change', function() {
+                        aplicarFiltros();
+                    });
+                }
+                
+                // Para inputs de texto - con delay para evitar muchas consultas
+                if (filtro.tagName === 'INPUT') {
+                    filtro.addEventListener('input', function() {
+                        clearTimeout(timeoutId);
+                        
+                        // Mostrar indicador de "escribiendo"
+                        mostrarIndicadorEscribiendo(true);
+                        
+                        timeoutId = setTimeout(() => {
+                            mostrarIndicadorEscribiendo(false);
+                            aplicarFiltros();
+                        }, 800); // 800ms de delay para dar tiempo a escribir
+                    });
+                }
+            });
+            
+            function aplicarFiltros() {
+                // Mostrar indicador de carga
+                mostrarIndicadorCarga(true);
+                
+                // Enviar formulario
+                document.getElementById('formFiltros').submit();
+            }
+            
+            function mostrarIndicadorCarga(mostrar) {
+                const btnLimpiar = document.querySelector('.btn-light.border');
+                if (mostrar) {
+                    btnLimpiar.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Filtrando...';
+                    btnLimpiar.disabled = true;
+                } else {
+                    btnLimpiar.innerHTML = '<i class="fas fa-times"></i> Limpiar';
+                    btnLimpiar.disabled = false;
+                }
+            }
+            
+            function mostrarIndicadorEscribiendo(mostrar) {
+                const iconoBuscar = document.querySelector('#buscar').previousElementSibling.querySelector('i');
+                if (mostrar) {
+                    iconoBuscar.className = 'fas fa-keyboard text-warning';
+                } else {
+                    iconoBuscar.className = 'fas fa-search text-muted';
+                }
+            }
+        });
 
-// Confirmar duplicación de pregunta
-function confirmarDuplicacion() {
-    const idExamen = document.getElementById('selectExamen').value;
-    
-    if (!idExamen) {
-        alert('Por favor selecciona un examen');
-        return;
-    }
-    
-    fetch(`<?= BASE_URL ?>/preguntas/importar`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            preguntas: [preguntaSeleccionada],
-            id_examen: parseInt(idExamen)
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Pregunta agregada al examen correctamente');
-            bootstrap.Modal.getInstance(document.getElementById('modalSeleccionarExamen')).hide();
-        } else {
-            alert('Error: ' + data.error);
+        // Selección masiva
+        function toggleSeleccionarTodos(checkbox) {
+            const checkboxes = document.querySelectorAll('.pregunta-checkbox');
+            checkboxes.forEach(cb => {
+                cb.checked = checkbox.checked;
+            });
+            actualizarAccionesMasivas();
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error de conexión');
-    });
-}
 
-// Eliminar pregunta
-function eliminarPregunta(idPregunta) {
-    if (!confirm('¿Estás seguro de que quieres eliminar esta pregunta? Esta acción no se puede deshacer.')) {
-        return;
-    }
-    
-    fetch(`<?= BASE_URL ?>/banco-preguntas/eliminar/${idPregunta}`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ id: idPregunta })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            window.location.href = '<?= BASE_URL ?>/banco-preguntas';
-        } else {
-            alert('Error: ' + data.error);
+        function actualizarAccionesMasivas() {
+            const checkboxes = document.querySelectorAll('.pregunta-checkbox:checked');
+            const botonAcciones = document.getElementById('accionesMasivas');
+            
+            if (checkboxes.length > 0) {
+                botonAcciones.disabled = false;
+                botonAcciones.innerHTML = `<i class="fas fa-tasks"></i> Acciones Masivas (${checkboxes.length})`;
+            } else {
+                botonAcciones.disabled = true;
+                botonAcciones.innerHTML = '<i class="fas fa-tasks"></i> Acciones Masivas';
+            }
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error de conexión');
-    });
-}
-</script>
 
-    </main>
-    
-    <?php 
-    // Incluir footer y scripts según el rol
-    if ($_SESSION['rol'] === 'admin') {
-        require_once APP_PATH . '/vistas/parciales/footer_admin.php';
-        require_once APP_PATH . '/vistas/parciales/scripts_admin.php';
-    } else {
-        require_once APP_PATH . '/vistas/parciales/footer_profesor.php';
-        require_once APP_PATH . '/vistas/parciales/scripts_profesor.php';
-    }
-    ?>
+        // Acciones masivas
+        function accionMasiva(accion) {
+            const checkboxes = document.querySelectorAll('.pregunta-checkbox:checked');
+            if (checkboxes.length === 0) {
+                alert('Selecciona al menos una pregunta');
+                return;
+            }
+
+            let mensaje = '';
+            switch(accion) {
+                case 'eliminar':
+                    mensaje = `¿Eliminar ${checkboxes.length} pregunta(s) seleccionada(s)?`;
+                    break;
+                case 'exportar':
+                    mensaje = `¿Exportar ${checkboxes.length} pregunta(s) seleccionada(s)?`;
+                    break;
+                case 'duplicar':
+                    mensaje = `¿Duplicar ${checkboxes.length} pregunta(s) seleccionada(s)?`;
+                    break;
+            }
+
+            if (confirm(mensaje)) {
+                const form = document.getElementById('formAccionMasiva');
+                document.getElementById('accion_masiva').value = accion;
+                
+                // Agregar IDs seleccionados
+                checkboxes.forEach(checkbox => {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'ids[]';
+                    input.value = checkbox.value;
+                    form.appendChild(input);
+                });
+                
+                form.submit();
+            }
+        }
+
+        // Acciones individuales
+        function duplicarPregunta(id) {
+            if (confirm('¿Duplicar esta pregunta?')) {
+                window.location.href = `<?= BASE_URL ?>/banco-preguntas/duplicar/${id}`;
+            }
+        }
+
+        function usarEnExamen(id) {
+            // Redireccionar a selección de examen
+            window.location.href = `<?= BASE_URL ?>/examenes/agregar-pregunta/${id}`;
+        }
+
+        function eliminarPregunta(id) {
+            if (confirm('¿Está seguro de eliminar esta pregunta? Esta acción no se puede deshacer.')) {
+                window.location.href = `<?= BASE_URL ?>/banco-preguntas/eliminar/${id}`;
+            }
+        }
+    </script>
+
+    <?php require_once APP_PATH . '/vistas/parciales/footer_profesor.php'; ?>
+    <?php require_once APP_PATH . '/vistas/parciales/scripts_profesor.php'; ?>
 </body>
 </html>

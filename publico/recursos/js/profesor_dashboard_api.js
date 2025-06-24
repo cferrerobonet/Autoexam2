@@ -18,16 +18,37 @@ class ProfesorDashboardAPI {
      */
     async init() {
         try {
-            await Promise.all([
-                this.cargarCursosReales(),
-                this.cargarExamenesReales(),
-                this.cargarEstadisticasReales(),
-                this.cargarNotificacionesReales(),
-                this.cargarCalendarioReales()
-            ]);
+            // Verificar si los datos ya están cargados desde PHP
+            const tablaCursos = document.getElementById('tabla-cursos-profesor');
+            const tablaExamenes = document.getElementById('tabla-examenes-recientes');
+            
+            // Solo cargar via API si no hay datos iniciales (solo spinners)
+            const cursosNecesitaAPI = tablaCursos && tablaCursos.querySelector('.spinner-border');
+            const examenesNecesitaAPI = tablaExamenes && tablaExamenes.querySelector('.spinner-border');
+            
+            const promesas = [];
+            
+            if (cursosNecesitaAPI) {
+                promesas.push(this.cargarCursosReales());
+            }
+            
+            if (examenesNecesitaAPI) {
+                promesas.push(this.cargarExamenesReales());
+            }
+            
+            // Estas siempre se pueden actualizar dinámicamente
+            promesas.push(this.cargarCalendarioReales());
+            
+            // Solo cargar notificaciones si hay spinner
+            const notificaciones = document.getElementById('lista-notificaciones-profesor');
+            if (notificaciones && notificaciones.querySelector('.spinner-border')) {
+                promesas.push(this.cargarNotificacionesReales());
+            }
+            
+            await Promise.all(promesas);
         } catch (error) {
             console.error('Error al inicializar dashboard:', error);
-            this.mostrarErrorGeneral();
+            // No mostrar error general si los datos básicos ya están cargados
         }
     }
 
@@ -36,7 +57,7 @@ class ProfesorDashboardAPI {
      */
     async cargarCursosReales() {
         try {
-            const response = await fetch(`${this.baseUrl}/api/profesor/cursos`);
+            const response = await fetch(`${this.baseUrl}/publico/api/profesor/index.php?ruta=cursos`);
             if (!response.ok) {
                 throw new Error('Error al obtener cursos');
             }
@@ -54,7 +75,7 @@ class ProfesorDashboardAPI {
      */
     async cargarExamenesReales() {
         try {
-            const response = await fetch(`${this.baseUrl}/api/profesor/examenes`);
+            const response = await fetch(`${this.baseUrl}/publico/api/profesor/index.php?ruta=examenes`);
             if (!response.ok) {
                 throw new Error('Error al obtener exámenes');
             }
@@ -72,7 +93,7 @@ class ProfesorDashboardAPI {
      */
     async cargarEstadisticasReales() {
         try {
-            const response = await fetch(`${this.baseUrl}/api/profesor/estadisticas`);
+            const response = await fetch(`${this.baseUrl}/publico/api/profesor/index.php?ruta=estadisticas`);
             if (!response.ok) {
                 throw new Error('Error al obtener estadísticas');
             }
@@ -91,7 +112,7 @@ class ProfesorDashboardAPI {
      */
     async cargarNotificacionesReales() {
         try {
-            const response = await fetch(`${this.baseUrl}/api/profesor/notificaciones`);
+            const response = await fetch(`${this.baseUrl}/publico/api/profesor/index.php?ruta=notificaciones`);
             if (!response.ok) {
                 throw new Error('Error al obtener notificaciones');
             }
@@ -109,7 +130,7 @@ class ProfesorDashboardAPI {
      */
     async cargarCalendarioReales() {
         try {
-            const response = await fetch(`${this.baseUrl}/api/profesor/calendario`);
+            const response = await fetch(`${this.baseUrl}/publico/api/profesor/index.php?ruta=calendario`);
             if (!response.ok) {
                 throw new Error('Error al obtener eventos del calendario');
             }

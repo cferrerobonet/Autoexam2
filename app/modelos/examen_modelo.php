@@ -585,4 +585,32 @@ class Examen {
             return [];
         }
     }
+
+    /**
+     * Obtiene los exámenes de un curso específico
+     * 
+     * @param int $id_curso ID del curso
+     * @return array Lista de exámenes del curso
+     */
+    public function obtenerPorCurso($id_curso) {
+        try {
+            $query = "SELECT e.*, 
+                             m.titulo as nombre_modulo,
+                             c.nombre_curso
+                      FROM examenes e 
+                      LEFT JOIN modulos m ON e.id_modulo = m.id_modulo
+                      LEFT JOIN cursos c ON e.id_curso = c.id_curso
+                      WHERE e.id_curso = ?
+                      ORDER BY e.fecha_inicio DESC";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param("i", $id_curso);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            
+            return $resultado->fetch_all(MYSQLI_ASSOC);
+        } catch (Exception $e) {
+            error_log("Error al obtener exámenes por curso: " . $e->getMessage());
+            return [];
+        }
+    }
 }

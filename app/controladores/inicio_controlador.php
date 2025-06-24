@@ -144,13 +144,11 @@ class InicioControlador {
         // Obtener estadísticas del profesor
         $estadisticas = $this->obtenerEstadisticasProfesor($_SESSION['id_usuario']);
         
-        // Definir datos para la vista
+        // Definir datos para la vista - Solo información básica, el resto se carga via API
         $datos = [
             'titulo' => 'Panel de Profesor',
             'usuario' => $usuarioActual,
-            'cursos' => $cursos,
-            'examenes' => $examenes,
-            'estadisticas' => $estadisticas,
+            'carga_via_api' => true, // Indicador para usar API
             'css_adicional' => [
                 '/publico/recursos/css/profesor.css'
             ],
